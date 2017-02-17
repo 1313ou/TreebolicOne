@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- builtin provider -->
+    <string name="provider_name" translatable="false">xml</string>
+    <string name="provider_class" translatable="false">treebolic.provider.xml.dom.Provider</string>
+    <string name="provider_mime" translatable="false">application/xml</string>
+    <string name="provider_extension" translatable="false">xml</string>
+    <string name="provider_scheme" translatable="false">xml:</string>
+    
+</resources>

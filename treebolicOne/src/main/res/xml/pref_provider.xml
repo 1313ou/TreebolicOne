@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:capitalize="none"
+        android:inputType="text"
+        android:key="pref_provider"
+        android:defaultValue="@string/provider_class"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_description_provider"
+        android:title="@string/pref_title_provider" />
+
+</PreferenceScreen>

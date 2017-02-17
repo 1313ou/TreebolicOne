@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Headers settings -->
+    <string name="pref_header_provider">Provider</string>
+    <string name="pref_summary_header_provider">Settings for provider</string>
+    <string name="pref_header_data">Data</string>
+    <string name="pref_summary_header_data">Settings for data</string>
+    <string name="pref_header_download">Download</string>
+    <string name="pref_summary_header_download">Settings for download</string>
+
+    <!-- active built-in provider -->
+    <!-- provider -->
+    <string name="pref_description_provider">Data provider</string>
+    <string name="pref_title_provider">Provider</string>
+    <!-- source -->
+    <string name="pref_title_provider_name">Name</string>
+    <string name="pref_description_provider_name">Active provider name (volatile)</string>
+    <!-- source -->
+    <string name="pref_title_source">Source</string>
+    <string name="pref_description_source">Source string</string>
+    <!-- source entry -->
+    <string name="pref_title_source_entry">Source Entry</string>
+    <string name="pref_description_source_entry">Source entry string in bundled sources</string>
+    <!-- base -->
+    <string name="pref_title_base">Base</string>
+    <string name="pref_description_base">Base URL</string>
+    <!-- imagebase -->
+    <string name="pref_title_imagebase">Image Base</string>
+    <string name="pref_description_imagebase">Image base URL</string>
+    <!-- settings -->
+    <string name="pref_title_settings">Rendering</string>
+    <string name="pref_description_settings">Rendering properties</string>
+
+</resources>

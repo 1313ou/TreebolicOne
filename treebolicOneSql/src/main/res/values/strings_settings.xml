@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Headers settings -->
+    <string name="pref_header_provider">Provider</string>
+    <string name="pref_summary_header_provider">Settings for provider</string>
+    <string name="pref_header_data">Data</string>
+    <string name="pref_summary_header_data">Settings for data</string>
+    <string name="pref_header_download">Download</string>
+    <string name="pref_summary_header_download">Settings for download</string>
+
+    <!-- active built-in provider -->
+    <!-- provider -->
+    <string name="pref_description_provider">Data provider</string>
+    <string name="pref_title_provider">Provider</string>
+    <!-- name -->
+    <string name="pref_title_provider_name">Name</string>
+    <string name="pref_description_provider_name">Provider name</string>
+    <!-- source -->
+    <string name="pref_title_source">Source</string>
+    <string name="pref_description_source">Source string</string>
+    <!-- base -->
+    <string name="pref_title_base">Base</string>
+    <string name="pref_description_base">Base URL</string>
+    <!-- imagebase -->
+    <string name="pref_title_imagebase">Image Base</string>
+    <string name="pref_description_imagebase">Image base URL</string>
+    <!-- truncate -->
+    <string name="pref_title_truncate">Truncate</string>
+    <string name="pref_description_truncate">Truncating restriction on data</string>
+    <!-- prune -->
+    <string name="pref_title_prune">Prune</string>
+    <string name="pref_description_prune">Pruning restriction on data</string>
+    <!-- settings -->
+    <string name="pref_title_settings">Rendering</string>
+    <string name="pref_description_settings">Rendering properties</string>
+
+</resources>

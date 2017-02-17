@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/data/template/data.zip</string>
+
+    <string-array name="pref_download_urls" translatable="false" tools:ignore="InconsistentArrays">
+        <item>http://treebolic.sourceforge.net/data/template/data.zip</item>
+        <item>http://treebolic.sourceforge.net/data/template/data1.zip</item>
+        <item>http://treebolic.sourceforge.net/data/template/data2.zip</item>
+        <item>http://treebolic.sourceforge.net/data/template/data3.zip</item>
+    </string-array>
+
+</resources>
