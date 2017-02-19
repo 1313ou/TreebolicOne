@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="UnusedAttribute" >
+        tools:ignore="AllowBackup,UnusedAttribute" >
         <activity
             android:name="org.treebolic.one.MainActivity"
             android:label="@string/title_activity_main"

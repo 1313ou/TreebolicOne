@@ -1,13 +1,6 @@
 package org.treebolic.one.sql;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.storage.Storage;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +9,14 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
+
+import org.treebolic.TreebolicIface;
+import org.treebolic.storage.Storage;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * Settings
@@ -110,6 +111,7 @@ public class Settings
 	 * @param context
 	 *            context
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void setDefaults(final Context context)
 	{
 		final Resources resources = context.getResources();
@@ -161,6 +163,7 @@ public class Settings
 	 * @param value
 	 *            value
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void putStringPref(final Context context, final String key, final String value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -178,7 +181,7 @@ public class Settings
 	static public void clearPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		sharedPref.edit().remove(key).commit();
+		sharedPref.edit().remove(key).apply();
 	}
 
 	/**
@@ -191,6 +194,7 @@ public class Settings
 	 * @param value
 	 *            value
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void putIntPref(final Context context, final String key, final int value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -209,8 +213,7 @@ public class Settings
 	static public String getStringPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		final String result = sharedPref.getString(key, null);
-		return result;
+		return sharedPref.getString(key, null);
 	}
 
 	/**
@@ -225,8 +228,7 @@ public class Settings
 	static public int getIntPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		final int result = sharedPref.getInt(key, 0);
-		return result;
+		return sharedPref.getInt(key, 0);
 	}
 
 	/**
@@ -308,12 +310,12 @@ public class Settings
 		if (source != null && !source.isEmpty())
 		{
 			final String base = Settings.getStringPref(context, TreebolicIface.PREF_BASE);
+			//noinspection TryWithIdenticalCatches
 			try
 			{
 				final URL url = new URL(base);
 				final File basedir = new File(url.toURI());
-				final File query = new File(basedir, source);
-				return query;
+				return new File(basedir, source);
 			}
 			catch (URISyntaxException e)
 			{

@@ -1,10 +1,5 @@
 package org.treebolic.one;
 
-import java.util.List;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.preference.AutoEditTextPreference;
-
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -12,6 +7,11 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+
+import org.treebolic.TreebolicIface;
+import org.treebolic.preference.AutoEditTextPreference;
+
+import java.util.List;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On handset devices, settings are presented as a single list. On tablets, settings
@@ -36,13 +36,6 @@ public class SettingsActivity extends PreferenceActivity
 	public static final String ACTION_DOWNLOAD = "org.treebolic.one.prefs.DOWNLOAD"; //$NON-NLS-1$
 
 	// E V E N T S
-
-	@Override
-	protected void onCreate(final Bundle savedInstanceState)
-	{
-		// super
-		super.onCreate(savedInstanceState);
-	}
 
 	/*
 	 * (non-Javadoc)
@@ -80,11 +73,9 @@ public class SettingsActivity extends PreferenceActivity
 	@Override
 	protected boolean isValidFragment(final String fragmentName)
 	{
-		if (ProviderPreferenceFragment.class.getName().equals(fragmentName) || //
+		return ProviderPreferenceFragment.class.getName().equals(fragmentName) || //
 				DataPreferenceFragment.class.getName().equals(fragmentName) || //
-				DownloadPreferenceFragment.class.getName().equals(fragmentName)) //
-			return true;
-		return false;
+				DownloadPreferenceFragment.class.getName().equals(fragmentName);
 	}
 
 	/**
@@ -97,23 +88,27 @@ public class SettingsActivity extends PreferenceActivity
 		final String action = getIntent().getAction();
 		if (action != null)
 		{
-			if (action.equals(SettingsActivity.ACTION_DATA))
+			switch (action)
 			{
-				addPreferencesFromResource(R.xml.pref_data);
-			}
-			else if (action.equals(SettingsActivity.ACTION_PROVIDER))
-			{
-				addPreferencesFromResource(R.xml.pref_provider);
-				final Preference pref = findPreference(Settings.PREF_PROVIDER);
-				final String key = pref.getKey();
-				pref.setSummary(Settings.getStringPref(this, key));
-			}
-			else if (action.equals(SettingsActivity.ACTION_DOWNLOAD))
-			{
-				addPreferencesFromResource(R.xml.pref_download);
-				final Preference pref = findPreference(Settings.PREF_DOWNLOAD);
-				final String key = pref.getKey();
-				pref.setSummary(Settings.getStringPref(this, key));
+				case SettingsActivity.ACTION_DATA:
+					addPreferencesFromResource(R.xml.pref_data);
+					break;
+				case SettingsActivity.ACTION_PROVIDER:
+				{
+					addPreferencesFromResource(R.xml.pref_provider);
+					final Preference pref = findPreference(Settings.PREF_PROVIDER);
+					final String key = pref.getKey();
+					pref.setSummary(Settings.getStringPref(this, key));
+					break;
+				}
+				case SettingsActivity.ACTION_DOWNLOAD:
+				{
+					addPreferencesFromResource(R.xml.pref_download);
+					final Preference pref = findPreference(Settings.PREF_DOWNLOAD);
+					final String key = pref.getKey();
+					pref.setSummary(Settings.getStringPref(this, key));
+					break;
+				}
 			}
 		}
 		else
@@ -147,6 +142,7 @@ public class SettingsActivity extends PreferenceActivity
 	 */
 	private static boolean isSimplePreferences(final Context context)
 	{
+		//noinspection ConstantConditions
 		return SettingsActivity.ALWAYS_SIMPLE_PREFS || !SettingsActivity.isLargeTablet(context);
 	}
 

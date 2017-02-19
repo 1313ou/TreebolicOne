@@ -1,12 +1,6 @@
 package org.treebolic.one;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.storage.Storage;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +9,13 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
+
+import org.treebolic.TreebolicIface;
+import org.treebolic.storage.Storage;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Settings
@@ -59,7 +60,7 @@ public class Settings
 	public static final String PREF_MIMETYPE = "pref_mimetype"; //$NON-NLS-1$
 
 	/**
-	 * File extendsions preference name
+	 * File extensions preference name
 	 */
 	public static final String PREF_EXTENSIONS = "pref_extensions"; //$NON-NLS-1$
 
@@ -84,6 +85,7 @@ public class Settings
 	 * @param context
 	 *            context
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void setDefaults(final Context context)
 	{
 		final Resources resources = context.getResources();
@@ -128,6 +130,7 @@ public class Settings
 	 * @param value
 	 *            value
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void putStringPref(final Context context, final String key, final String value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -144,6 +147,7 @@ public class Settings
 	 * @param value
 	 *            value
 	 */
+	@SuppressLint("CommitPrefEdits")
 	static public void putIntPref(final Context context, final String key, final int value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -162,8 +166,7 @@ public class Settings
 	static public String getStringPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		final String result = sharedPref.getString(key, null);
-		return result;
+		return sharedPref.getString(key, null);
 	}
 
 	/**
@@ -178,8 +181,7 @@ public class Settings
 	static public int getIntPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		final int result = sharedPref.getInt(key, 0);
-		return result;
+		return sharedPref.getInt(key, 0);
 	}
 
 	/**

@@ -107,16 +107,16 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	 */
 	static public String toString(final Properties theseProperties)
 	{
-		final StringBuffer thisBuffer = new StringBuffer();
+		final StringBuilder thisBuilder = new StringBuilder();
 		for (final Enumeration<?> thisEnum = theseProperties.propertyNames(); thisEnum.hasMoreElements();)
 		{
 			final String thisName = (String) thisEnum.nextElement();
 			final String thisValue = theseProperties.getProperty(thisName);
-			thisBuffer.append(thisName);
-			thisBuffer.append("="); //$NON-NLS-1$
-			thisBuffer.append(thisValue);
-			thisBuffer.append("\n"); //$NON-NLS-1$
+			thisBuilder.append(thisName);
+			thisBuilder.append("="); //$NON-NLS-1$
+			thisBuilder.append(thisValue);
+			thisBuilder.append("\n"); //$NON-NLS-1$
 		}
-		return thisBuffer.toString();
+		return thisBuilder.toString();
 	}
 }

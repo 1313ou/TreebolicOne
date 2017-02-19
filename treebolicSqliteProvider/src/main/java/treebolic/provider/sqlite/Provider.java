@@ -9,10 +9,12 @@
  */
 package treebolic.provider.sqlite;
 
-import java.util.Properties;
-
+import android.annotation.SuppressLint;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.Properties;
+
 import treebolic.provider.sqlx.AbstractProvider;
 
 /**
@@ -199,6 +201,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		@Override
 		public AndroidCursor query(String thisSql) throws SQLException
 		{
+			@SuppressLint("Recycle")
 			final android.database.Cursor thisCursor = this.theDB.rawQuery(thisSql, null);
 			return new AndroidCursor(thisCursor);
 		}

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="source" translatable="false">template.xml</string>
-    <string name="source_entry" translatable="false"></string>
-    <string name="settings" translatable="false"></string>
+    <string name="source_entry" translatable="false"/>
+    <string name="settings" translatable="false"/>
 
 </resources>

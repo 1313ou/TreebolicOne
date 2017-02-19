@@ -1,14 +1,5 @@
 package org.treebolic.one.sql;
 
-import java.io.File;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.filechooser.FileChooserActivity;
-import org.treebolic.guide.AboutActivity;
-import org.treebolic.guide.HelpActivity;
-import org.treebolic.guide.Tip;
-import org.treebolic.storage.Storage;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
@@ -30,6 +21,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import org.treebolic.TreebolicIface;
+import org.treebolic.filechooser.FileChooserActivity;
+import org.treebolic.guide.AboutActivity;
+import org.treebolic.guide.HelpActivity;
+import org.treebolic.guide.Tip;
+import org.treebolic.storage.Storage;
+
+import java.io.File;
+
 import treebolic.glue.component.Statusbar;
 import treebolic.glue.component.WebDialog;
 
@@ -124,7 +125,7 @@ public class MainActivity extends Activity implements OnClickListener
 	@Override
 	public void onClick(final View arg0)
 	{
-		tryStartTreebolic((String) null);
+		tryStartTreebolic(null);
 	}
 
 	/*
@@ -138,7 +139,7 @@ public class MainActivity extends Activity implements OnClickListener
 		int itemId = item.getItemId();
 		if (itemId == R.id.action_treebolic)
 		{
-			tryStartTreebolic((String) null);
+			tryStartTreebolic(null);
 			return true;
 		}
 		else if (itemId == R.id.action_peek)
@@ -197,16 +198,14 @@ public class MainActivity extends Activity implements OnClickListener
 			Settings.applicationSettings(this, getApplicationContext().getPackageName());
 			return true;
 		}
-		else
-		{
-			//
-		}
+
 		return false;
 	}
 
 	/**
 	 * Initialize
 	 */
+	@SuppressLint("CommitPrefEdits")
 	private void initialize()
 	{
 		// version of this code
@@ -289,8 +288,7 @@ public class MainActivity extends Activity implements OnClickListener
 		@Override
 		public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
 		{
-			final View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-			return rootView;
+			return inflater.inflate(R.layout.fragment_main, container, false);
 		}
 	}
 
@@ -298,7 +296,7 @@ public class MainActivity extends Activity implements OnClickListener
 
 	// F O L D E R P R E F E R E N C E
 
-	static String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder"; //$NON-NLS-1$
+	static final String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder"; //$NON-NLS-1$
 
 	/**
 	 * Get initial folder

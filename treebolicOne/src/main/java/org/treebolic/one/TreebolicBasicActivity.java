@@ -1,14 +1,5 @@
 package org.treebolic.one;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Properties;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.guide.HelpActivity;
-import org.treebolic.guide.Tip;
-import org.treebolic.search.SearchSettings;
-
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -27,6 +18,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import org.treebolic.TreebolicIface;
+import org.treebolic.guide.HelpActivity;
+import org.treebolic.guide.Tip;
+import org.treebolic.search.SearchSettings;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Properties;
+
 import treebolic.IContext;
 import treebolic.Widget;
 import treebolic.view.View;
@@ -41,7 +42,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "Treebolic Basic Activity"; //$NON-NLS-1$
+	private static final String TAG = "TreebolicBasicA"; //$NON-NLS-1$
 
 	/**
 	 * Parameter : Document base
@@ -88,7 +89,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	/**
 	 * Input
 	 */
-	protected String input;
+	protected final String input;
 
 	// parent
 
@@ -126,7 +127,10 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 		// action bar
 		final ActionBar actionBar = getActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		if (actionBar != null)
+		{
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
 
 		// widget
 		this.widget = new Widget(this, this);
@@ -178,7 +182,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			final SharedPreferences.Editor edit = prefs.edit();
 
 			// flag as 'has run'
-			edit.putBoolean(Settings.PREF_FIRSTRUN, true).commit();
+			edit.putBoolean(Settings.PREF_FIRSTRUN, true).apply();
 
 			// tips
 			Tip.show(getFragmentManager());
@@ -223,7 +227,9 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		this.searchView = (SearchView) searchMenuItem.getActionView();
 		int width = this.getResources().getInteger(R.integer.search_view_max_width);
 		if (width != -1)
+		{
 			this.searchView.setMaxWidth(width);
+		}
 		this.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
 		{
 			/*
@@ -317,9 +323,13 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	public Intent getParentActivityIntent()
 	{
 		if (this.parentActivity != null)
+		{
 			return this.parentActivity;
+		}
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
+		{
 			return super.getParentActivityIntent();
+		}
 		return null;
 	}
 
@@ -328,8 +338,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	/**
 	 * Unmarshal model and parameters from intent
 	 *
-	 * @param intent
-	 *            intent
+	 * @param intent intent
 	 */
 	protected void unmarshalArgs(final Intent intent)
 	{
@@ -411,8 +420,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	@Override
 	public String getStyle()
 	{
-		return this.style != null ? this.style
-				: //
+		return this.style != null ? this.style : //
 				Settings.STYLE_DEFAULT;
 	}
 
@@ -440,9 +448,13 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			final String extension = MimeTypeMap.getFileExtensionFromUrl(uri.toString());
 			final String mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
 			if (mimetype == null)
+			{
 				intent.setData(uri);
+			}
 			else
+			{
 				intent.setDataAndType(uri, mimetype);
+			}
 			startActivity(intent);
 			return true;
 		}
@@ -496,8 +508,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	/**
 	 * Requery (linkTo, or searchView)
 	 *
-	 * @param source
-	 *            source
+	 * @param source source
 	 */
 	abstract protected void requery(final String source);
 
@@ -524,17 +535,17 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 	/**
 	 * SearchView query change listener
-	 * 
-	 * @param query
-	 *            new query
-	 * @param submit
-	 *            whether submit was changed
+	 *
+	 * @param query  new query
+	 * @param submit whether submit was changed
 	 */
 	protected void handleQueryChanged(final String query, boolean submit)
 	{
 		// clear keyboard out of the way
 		if (submit)
+		{
 			closeKeyboard();
+		}
 
 		// reset current search if any
 		resetSearch();
@@ -548,7 +559,9 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			{
 				Log.d(TAG, "Source" + ' ' + '"' + query + '"'); //$NON-NLS-1$
 				if (submit)
+				{
 					requery(query);
+				}
 				return;
 			}
 
@@ -604,7 +617,9 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 		// query was already empty
 		if ("".equals(query)) //$NON-NLS-1$
+		{
 			resetSearch();
+		}
 
 		// home
 		this.widget.focus(null);
@@ -625,7 +640,9 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	protected void runSearch(String scope, String mode, String target)
 	{
 		if (target == null || target.isEmpty())
+		{
 			return;
+		}
 
 		Log.d(TAG, "Search run" + scope + ' ' + mode + ' ' + target); //$NON-NLS-1$
 		this.searchPending = true;
@@ -674,10 +691,8 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 	/**
 	 * Put toast on UI thread
 	 *
-	 * @param message
-	 *            message
-	 * @param duration
-	 *            duration
+	 * @param message  message
+	 * @param duration duration
 	 */
 	private void toast(final String message, final int duration)
 	{
