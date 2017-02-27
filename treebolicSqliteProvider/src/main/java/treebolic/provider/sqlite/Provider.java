@@ -158,7 +158,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		public AndroidDatabase(final String thisDatabasePath)
 		{
 			// path
-			System.out.println("Sqlite path: " + thisDatabasePath); //$NON-NLS-1$
+			System.out.println("Sqlite path: " + thisDatabasePath);
 
 			try
 			{
@@ -169,7 +169,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			catch (final SQLException thisException)
 			{
 				this.theDB = null;
-				System.err.println("Sqlite exception : " + thisException.getMessage()); //$NON-NLS-1$
+				System.err.println("Sqlite exception : " + thisException.getMessage());
 			}
 		}
 
@@ -207,11 +207,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.provider.sqlx.AbstractProvider#openDatabase(java.util.Properties)
-	 */
 	@Override
 	protected AndroidDatabase openDatabase(Properties theseProperties)
 	{

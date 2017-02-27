@@ -31,17 +31,12 @@ public class SettingsActivity extends PreferenceActivity
 	/**
 	 * Subactions
 	 */
-	public static final String ACTION_DATA = "org.treebolic.one.sql.prefs.DATA"; //$NON-NLS-1$
-	public static final String ACTION_PROVIDER = "org.treebolic.one.sql.prefs.PROVIDER"; //$NON-NLS-1$
-	public static final String ACTION_DOWNLOAD = "org.treebolic.one.sql.prefs.DOWNLOAD"; //$NON-NLS-1$
+	public static final String ACTION_DATA = "org.treebolic.one.sql.prefs.DATA";
+	public static final String ACTION_PROVIDER = "org.treebolic.one.sql.prefs.PROVIDER";
+	public static final String ACTION_DOWNLOAD = "org.treebolic.one.sql.prefs.DOWNLOAD";
 
 	// E V E N T S
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onPostCreate(android.os.Bundle)
-	 */
 	@Override
 	protected void onPostCreate(final Bundle savedInstanceState)
 	{
@@ -65,11 +60,6 @@ public class SettingsActivity extends PreferenceActivity
 
 	// S E T U P
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.preference.PreferenceActivity#isValidFragment(java.lang.String)
-	 */
 	@Override
 	protected boolean isValidFragment(final String fragmentName)
 	{
@@ -157,7 +147,7 @@ public class SettingsActivity extends PreferenceActivity
 		public boolean onPreferenceChange(final Preference preference, final Object value)
 		{
 			// set the summary to the value's simple string representation.
-			final String stringValue = value == null ? "" : value.toString(); //$NON-NLS-1$
+			final String stringValue = value == null ? "" : value.toString();
 			preference.setSummary(stringValue);
 			return true;
 		}

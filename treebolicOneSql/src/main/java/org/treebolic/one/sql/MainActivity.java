@@ -1,8 +1,8 @@
 package org.treebolic.one.sql;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -39,12 +39,12 @@ import treebolic.glue.component.WebDialog;
  *
  * @author Bernard Bou
  */
-public class MainActivity extends Activity implements OnClickListener
+public class MainActivity extends AppCompatActivity implements OnClickListener
 {
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "OneSQL MainActivity"; //$NON-NLS-1$
+	private static final String TAG = "OneSQL MainActivity";
 
 	/**
 	 * File request code
@@ -68,11 +68,6 @@ public class MainActivity extends Activity implements OnClickListener
 
 	// L I F E C Y C L E O V E R R I D E S
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
-	 */
 	@SuppressLint("InflateParams")
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
@@ -87,15 +82,10 @@ public class MainActivity extends Activity implements OnClickListener
 		// fragment
 		if (savedInstanceState == null)
 		{
-			getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
+			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onResume()
-	 */
 	@Override
 	protected void onResume()
 	{
@@ -103,11 +93,6 @@ public class MainActivity extends Activity implements OnClickListener
 		updateButton();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
-	 */
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu)
 	{
@@ -117,22 +102,12 @@ public class MainActivity extends Activity implements OnClickListener
 		return true;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(final View arg0)
 	{
 		tryStartTreebolic(null);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-	 */
 	@Override
 	public boolean onOptionsItemSelected(final MenuItem item)
 	{
@@ -149,12 +124,12 @@ public class MainActivity extends Activity implements OnClickListener
 		}
 		else if (itemId == R.id.action_reset)
 		{
-			Log.d(MainActivity.TAG, "data cleanup"); //$NON-NLS-1$
+			Log.d(MainActivity.TAG, "data cleanup");
 			Storage.cleanup(this);
-			Log.d(MainActivity.TAG, "settings reset"); //$NON-NLS-1$
+			Log.d(MainActivity.TAG, "settings reset");
 			Settings.setDefaults(this);
-			Log.d(MainActivity.TAG, "data reset from internal source"); //$NON-NLS-1$
-			Storage.expandZipAssetFile(this, "data.zip"); //$NON-NLS-1$
+			Log.d(MainActivity.TAG, "data reset from internal source");
+			Storage.expandZipAssetFile(this, "data.zip");
 		}
 		else if (itemId == R.id.action_download)
 		{
@@ -170,7 +145,7 @@ public class MainActivity extends Activity implements OnClickListener
 		}
 		else if (itemId == R.id.action_tips)
 		{
-			Tip.show(getFragmentManager());
+			Tip.show(getSupportFragmentManager());
 			return true;
 		}
 		else if (itemId == R.id.action_help)
@@ -229,7 +204,7 @@ public class MainActivity extends Activity implements OnClickListener
 			Settings.setDefaults(this);
 
 			// deploy
-			Storage.expandZipAssetFile(this, "data.zip"); //$NON-NLS-1$
+			Storage.expandZipAssetFile(this, "data.zip");
 
 			// flag as initialized
 			sharedPref.edit().putInt(Settings.PREF_INITIALIZED, verCode).commit();
@@ -246,11 +221,6 @@ public class MainActivity extends Activity implements OnClickListener
 
 	// S P E C I F I C R E T U R N S
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onActivityResult(int, int, android.content.Intent)
-	 */
 	@Override
 	protected void onActivityResult(final int requestCode, final int resultCode, final Intent returnIntent)
 	{
@@ -296,7 +266,7 @@ public class MainActivity extends Activity implements OnClickListener
 
 	// F O L D E R P R E F E R E N C E
 
-	static final String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder"; //$NON-NLS-1$
+	static final String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder";
 
 	/**
 	 * Get initial folder
@@ -342,7 +312,7 @@ public class MainActivity extends Activity implements OnClickListener
 		final File query = Settings.getQuery(this);
 		if (query != null)
 		{
-			Log.d(MainActivity.TAG, "query=" + query); //$NON-NLS-1$
+			Log.d(MainActivity.TAG, "query=" + query);
 			return query.exists();
 		}
 		return false;
@@ -387,7 +357,7 @@ public class MainActivity extends Activity implements OnClickListener
 		}
 
 		final Intent intent = TreebolicActivity.makeTreebolicIntent(this, provider, source, base, imageBase, settings, null, urlScheme, more);
-		Log.d(MainActivity.TAG, "Start treebolic from provider:" + provider + " source:" + source + " base:" + base + " more:" + more); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		Log.d(MainActivity.TAG, "Start treebolic from provider:" + provider + " source:" + source + " base:" + base + " more:" + more);
 		startActivity(intent);
 	}
 
@@ -397,7 +367,7 @@ public class MainActivity extends Activity implements OnClickListener
 	private void tryStartPeek()
 	{
 		final Intent intent = new Intent(this, PeekActivity.class);
-		Log.d(MainActivity.TAG, "Start peek"); //$NON-NLS-1$
+		Log.d(MainActivity.TAG, "Start peek");
 		startActivity(intent);
 	}
 

@@ -33,11 +33,6 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	
 	// L I F E C Y C L E
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
-	 */
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
@@ -47,11 +42,6 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 		this.restoring = savedInstanceState != null;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onRestoreInstanceState(android.os.Bundle)
-	 */
 	@Override
 	public void onRestoreInstanceState(final Bundle savedInstanceState)
 	{
@@ -62,11 +52,6 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 		this.source = savedInstanceState.getString(TreebolicIface.ARG_SOURCE);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onSaveInstanceState(android.os.Bundle)
-	 */
 	@Override
 	public void onSaveInstanceState(final Bundle savedInstanceState)
 	{
@@ -79,11 +64,6 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	
 	// T R E E B O L I C C O N T E X T
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.treebolic.one.TreebolicBasicActivity#makeParameters()
-	 */
 	@Override
 	protected Properties makeParameters()
 	{
@@ -91,12 +71,12 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 
 		if (this.source != null)
 		{
-			theseParameters.setProperty("source", this.source); //$NON-NLS-1$
-			theseParameters.setProperty("doc", this.source); //$NON-NLS-1$
+			theseParameters.setProperty("source", this.source);
+			theseParameters.setProperty("doc", this.source);
 		}
 		if (this.providerName != null)
 		{
-			theseParameters.setProperty("provider", this.providerName); //$NON-NLS-1$
+			theseParameters.setProperty("provider", this.providerName);
 		}
 		return theseParameters;
 	}

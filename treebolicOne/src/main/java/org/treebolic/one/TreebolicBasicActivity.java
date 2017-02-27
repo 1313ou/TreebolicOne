@@ -1,8 +1,8 @@
 package org.treebolic.one;
 
 import android.annotation.TargetApi;
-import android.app.ActionBar;
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -37,12 +37,12 @@ import treebolic.view.View;
  *
  * @author Bernard Bou
  */
-abstract public class TreebolicBasicActivity extends Activity implements IContext
+abstract public class TreebolicBasicActivity extends AppCompatActivity implements IContext
 {
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "TreebolicBasicA"; //$NON-NLS-1$
+	private static final String TAG = "TreebolicBasicA";
 
 	/**
 	 * Parameter : Document base
@@ -115,18 +115,13 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 	// L I F E C Y C L E
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
-	 */
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
 		// action bar
-		final ActionBar actionBar = getActionBar();
+		final ActionBar actionBar = getSupportActionBar();
 		if (actionBar != null)
 		{
 			actionBar.setDisplayHomeAsUpEnabled(true);
@@ -137,11 +132,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		setContentView(this.widget);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onNewIntent(android.content.Intent)
-	 */
 	@Override
 	protected void onNewIntent(final Intent intent)
 	{
@@ -152,15 +142,10 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		setIntent(intent);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onResume()
-	 */
 	@Override
 	protected void onResume()
 	{
-		Log.d(TreebolicBasicActivity.TAG, "Activity resumed"); //$NON-NLS-1$
+		Log.d(TreebolicBasicActivity.TAG, "Activity resumed");
 
 		// super
 		super.onResume();
@@ -185,19 +170,14 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			edit.putBoolean(Settings.PREF_FIRSTRUN, true).apply();
 
 			// tips
-			Tip.show(getFragmentManager());
+			Tip.show(getSupportFragmentManager());
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onPause()
-	 */
 	@Override
 	protected void onPause()
 	{
-		Log.d(TreebolicBasicActivity.TAG, "Activity paused, terminating surface drawing thread"); //$NON-NLS-1$
+		Log.d(TreebolicBasicActivity.TAG, "Activity paused, terminating surface drawing thread");
 
 		// terminate thread
 		final View view = this.widget.getView();
@@ -210,11 +190,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		super.onPause();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
-	 */
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu)
 	{
@@ -260,11 +235,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		return super.onCreateOptionsMenu(menu);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-	 */
 	@Override
 	public boolean onOptionsItemSelected(final MenuItem item)
 	{
@@ -282,7 +252,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		}
 		else if (itemId == R.id.action_tips)
 		{
-			Tip.show(getFragmentManager());
+			Tip.show(getSupportFragmentManager());
 			return true;
 		}
 		else if (itemId == R.id.action_help)
@@ -307,17 +277,12 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		}
 		else if (itemId == R.id.action_search_settings)
 		{
-			SearchSettings.show(getFragmentManager());
+			SearchSettings.show(getSupportFragmentManager());
 			return true;
 		}
 		return false;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#getParentActivityIntent()
-	 */
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	@Override
 	public Intent getParentActivityIntent()
@@ -357,11 +322,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 	// T R E E B O L I C C O N T E X T
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#getBase()
-	 */
 	@Override
 	public URL getBase()
 	{
@@ -379,11 +339,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		return Settings.getURLPref(this, TreebolicIface.PREF_BASE);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#getImagesBase()
-	 */
 	@Override
 	public URL getImagesBase()
 	{
@@ -401,22 +356,12 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		return Settings.getURLPref(this, TreebolicIface.PREF_IMAGEBASE);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#getParameters()
-	 */
 	@Override
 	public Properties getParameters()
 	{
 		return this.parameters;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#getStyle()
-	 */
 	@Override
 	public String getStyle()
 	{
@@ -424,11 +369,6 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 				Settings.STYLE_DEFAULT;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#linkTo(java.lang.String, java.lang.String)
-	 */
 	@Override
 	public boolean linkTo(final String url, final String target)
 	{
@@ -465,33 +405,18 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		return false;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#getInput()
-	 */
 	@Override
 	public String getInput()
 	{
 		return this.input;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#warn(java.lang.String)
-	 */
 	@Override
 	public void warn(final String message)
 	{
 		toast(message, Toast.LENGTH_LONG);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see treebolic.IContext#status(java.lang.String)
-	 */
 	@Override
 	public void status(final String message)
 	{
@@ -514,17 +439,17 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 
 	// S E A R C H
 
-	static private final String CMD_SEARCH = "SEARCH"; //$NON-NLS-1$
+	static private final String CMD_SEARCH = "SEARCH";
 
-	static private final String CMD_RESET = "RESET"; //$NON-NLS-1$
+	static private final String CMD_RESET = "RESET";
 
-	static private final String CMD_CONTINUE = "CONTINUE"; //$NON-NLS-1$
+	static private final String CMD_CONTINUE = "CONTINUE";
 
-	static private final String SCOPE_SOURCE = "SOURCE"; //$NON-NLS-1$
+	static private final String SCOPE_SOURCE = "SOURCE";
 
-	static private final String SCOPE_LABEL = "LABEL"; //$NON-NLS-1$
+	static private final String SCOPE_LABEL = "LABEL";
 
-	static private final String MODE_STARTSWITH = "STARTSWITH"; //$NON-NLS-1$
+	static private final String MODE_STARTSWITH = "STARTSWITH";
 
 	static private final int SEARCH_TRIGGER_LEVEL = Integer.MAX_VALUE;
 
@@ -557,7 +482,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			final String scope = sharedPrefs.getString(SearchSettings.PREF_SEARCH_SCOPE, SCOPE_LABEL); // label, content, link, id
 			if (SCOPE_SOURCE.equals(scope))
 			{
-				Log.d(TAG, "Source" + ' ' + '"' + query + '"'); //$NON-NLS-1$
+				Log.d(TAG, "Source" + ' ' + '"' + query + '"');
 				if (submit)
 				{
 					requery(query);
@@ -587,7 +512,7 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			final String scope = sharedPrefs.getString(SearchSettings.PREF_SEARCH_SCOPE, SCOPE_LABEL); // label, content, link, id
 			if (SCOPE_SOURCE.equals(scope))
 			{
-				Log.d(TAG, "Source" + ' ' + '"' + query + '"'); //$NON-NLS-1$
+				Log.d(TAG, "Source" + ' ' + '"' + query + '"');
 				requery(query);
 				return;
 			}
@@ -613,10 +538,10 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		String query = TreebolicBasicActivity.this.searchView.getQuery().toString();
 
 		// clear current query
-		TreebolicBasicActivity.this.searchView.setQuery("", false); //$NON-NLS-1$
+		TreebolicBasicActivity.this.searchView.setQuery("", false);
 
 		// query was already empty
-		if ("".equals(query)) //$NON-NLS-1$
+		if ("".equals(query))
 		{
 			resetSearch();
 		}
@@ -644,20 +569,20 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 			return;
 		}
 
-		Log.d(TAG, "Search run" + scope + ' ' + mode + ' ' + target); //$NON-NLS-1$
+		Log.d(TAG, "Search run" + scope + ' ' + mode + ' ' + target);
 		this.searchPending = true;
 		this.widget.search(CMD_SEARCH, scope, mode, target);
 	}
 
 	protected void continueSearch()
 	{
-		Log.d(TAG, "Search continue"); //$NON-NLS-1$
+		Log.d(TAG, "Search continue");
 		this.widget.search(CMD_CONTINUE);
 	}
 
 	protected void resetSearch()
 	{
-		Log.d(TAG, "Search reset"); //$NON-NLS-1$
+		Log.d(TAG, "Search reset");
 		this.searchPending = false;
 		this.widget.search(CMD_RESET);
 	}
@@ -674,17 +599,17 @@ abstract public class TreebolicBasicActivity extends Activity implements IContex
 		final Properties theseParameters = new Properties();
 		if (this.base != null)
 		{
-			theseParameters.setProperty("base", this.base); //$NON-NLS-1$
+			theseParameters.setProperty("base", this.base);
 		}
 		if (this.imageBase != null)
 		{
-			theseParameters.setProperty("imagebase", this.imageBase); //$NON-NLS-1$
+			theseParameters.setProperty("imagebase", this.imageBase);
 		}
 		if (this.settings != null)
 		{
-			theseParameters.setProperty("settings", this.settings); //$NON-NLS-1$
+			theseParameters.setProperty("settings", this.settings);
 		}
-		theseParameters.setProperty("debug", Boolean.toString(BuildConfig.DEBUG)); //$NON-NLS-1$
+		theseParameters.setProperty("debug", Boolean.toString(BuildConfig.DEBUG));
 		return theseParameters;
 	}
 

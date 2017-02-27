@@ -56,7 +56,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		}
 		catch (final IOException e)
 		{
-			System.err.println("Sqlite load: Cannot load <" + thisUrl.toString() + ">"); //$NON-NLS-1$ //$NON-NLS-2$
+			System.err.println("Sqlite load: Cannot load <" + thisUrl.toString() + ">");
 			return null;
 		}
 		finally
@@ -82,7 +82,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		try
 		{
 			fos = new FileOutputStream(thisPropertyFile);
-			theseProperties.store(fos, "TREEBOLIC-SQLITE"); //$NON-NLS-1$
+			theseProperties.store(fos, "TREEBOLIC-SQLITE");
 		}
 		catch (final IOException e)
 		{
@@ -113,9 +113,9 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 			final String thisName = (String) thisEnum.nextElement();
 			final String thisValue = theseProperties.getProperty(thisName);
 			thisBuilder.append(thisName);
-			thisBuilder.append("="); //$NON-NLS-1$
+			thisBuilder.append("=");
 			thisBuilder.append(thisValue);
-			thisBuilder.append("\n"); //$NON-NLS-1$
+			thisBuilder.append("\n");
 		}
 		return thisBuilder.toString();
 	}

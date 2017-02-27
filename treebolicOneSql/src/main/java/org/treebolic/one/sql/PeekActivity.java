@@ -1,20 +1,21 @@
 package org.treebolic.one.sql;
 
-import java.net.URL;
-import java.util.Properties;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
 
 import org.treebolic.TreebolicIface;
+
+import java.net.URL;
+import java.util.Properties;
 
 import treebolic.IContext;
 import treebolic.model.Model;
 import treebolic.model.ModelDump;
 import treebolic.provider.IProviderContext;
 import treebolic.provider.sqlite.Provider;
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
 
-public class PeekActivity extends Activity
+public class PeekActivity extends AppCompatActivity
 {
 	private TextView textView;
 
@@ -75,7 +76,9 @@ public class PeekActivity extends Activity
 	private static String modelToString(final Model model)
 	{
 		if (model == null)
-			return "<null>"; //$NON-NLS-1$
+		{
+			return "<null>";
+		}
 		return ModelDump.toString(model);
 	}
 }

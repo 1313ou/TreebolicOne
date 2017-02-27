@@ -28,62 +28,62 @@ public class Settings
 	/**
 	 * Initialized preference name
 	 */
-	public static final String PREF_INITIALIZED = "pref_initialized"; //$NON-NLS-1$
+	public static final String PREF_INITIALIZED = "pref_initialized";
 
 	/**
 	 * First preference name
 	 */
-	public static final String PREF_FIRSTRUN = "pref_first_run"; //$NON-NLS-1$
+	public static final String PREF_FIRSTRUN = "pref_first_run";
 
 	/**
 	 * Style preference name
 	 */
-	public static final String PREF_STYLE = "pref_style"; //$NON-NLS-1$
+	public static final String PREF_STYLE = "pref_style";
 
 	/**
 	 * Source entry preference name
 	 */
-	public static final String PREF_SOURCE_ENTRY = "pref_source_entry"; //$NON-NLS-1$
+	public static final String PREF_SOURCE_ENTRY = "pref_source_entry";
 
 	/**
 	 * Download preference name
 	 */
-	public static final String PREF_DOWNLOAD = "pref_download"; //$NON-NLS-1$
+	public static final String PREF_DOWNLOAD = "pref_download";
 
 	/**
 	 * Provider preference name
 	 */
-	public static final String PREF_PROVIDER = "pref_provider"; //$NON-NLS-1$
+	public static final String PREF_PROVIDER = "pref_provider";
 
 	/**
 	 * Mimetype preference name
 	 */
-	public static final String PREF_MIMETYPE = "pref_mimetype"; //$NON-NLS-1$
+	public static final String PREF_MIMETYPE = "pref_mimetype";
 
 	/**
 	 * File extensions preference name
 	 */
-	public static final String PREF_EXTENSIONS = "pref_extensions"; //$NON-NLS-1$
+	public static final String PREF_EXTENSIONS = "pref_extensions";
 
 	/**
 	 * URL scheme preference name
 	 */
-	public static final String PREF_URLSCHEME = "pref_urlscheme"; //$NON-NLS-1$
+	public static final String PREF_URLSCHEME = "pref_urlscheme";
 
 	/**
 	 * Truncate restrict preference name
 	 */
-	public static final String PREF_TRUNCATE = "pref_truncate"; //$NON-NLS-1$
+	public static final String PREF_TRUNCATE = "pref_truncate";
 
 	/**
 	 * Prune restrict preference name
 	 */
-	public static final String PREF_PRUNE = "pref_prune"; //$NON-NLS-1$
+	public static final String PREF_PRUNE = "pref_prune";
 
 	/**
 	 * Provider
 	 */
-	public static final String PROVIDER = "treebolic.provider.sqlite.Provider"; //$NON-NLS-1$
+	public static final String PROVIDER = "treebolic.provider.sqlite.Provider";
 
 	/**
 	 * URL scheme
@@ -93,17 +93,17 @@ public class Settings
 	/**
 	 * Data
 	 */
-	public static final String DATA = "data.zip"; //$NON-NLS-1$
+	public static final String DATA = "data.zip";
 
 	/**
 	 * Default CSS
 	 */
-	public static final String STYLE_DEFAULT = ".content { }\n" + // //$NON-NLS-1$
-			".link {color: #FFA500;font-size: small;}\n" + // //$NON-NLS-1$
-			".linking {color: #FFA500; font-size: small; }" + // //$NON-NLS-1$
-			".mount {color: #CD5C5C; font-size: small;}" + // //$NON-NLS-1$
-			".mounting {color: #CD5C5C; font-size: small; }" + // //$NON-NLS-1$
-			".searching {color: #FF7F50; font-size: small; }"; //$NON-NLS-1$
+	public static final String STYLE_DEFAULT = ".content { }\n" + //
+			".link {color: #FFA500;font-size: small;}\n" + //
+			".linking {color: #FFA500; font-size: small; }" + //
+			".mount {color: #CD5C5C; font-size: small;}" + //
+			".mounting {color: #CD5C5C; font-size: small; }" + //
+			".searching {color: #FF7F50; font-size: small; }";
 
 	/**
 	 * Set providers default settings from provider data
@@ -284,18 +284,18 @@ public class Settings
 		if (apiLevel >= 9)
 		{
 			intent.setAction(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-			intent.setData(Uri.parse("package:" + pkgName)); //$NON-NLS-1$
+			intent.setData(Uri.parse("package:" + pkgName));
 		}
 		else
 		{
-			final String appPkgName = apiLevel == 8 ? "pkg" : "com.android.settings.ApplicationPkgName"; //$NON-NLS-1$ //$NON-NLS-2$
+			final String appPkgName = apiLevel == 8 ? "pkg" : "com.android.settings.ApplicationPkgName";
 
 			intent.setAction(Intent.ACTION_VIEW);
-			intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails"); //$NON-NLS-1$ //$NON-NLS-2$
+			intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
 			intent.putExtra(appPkgName, pkgName);
 		}
 
-		// start Activity
+		// start activity
 		context.startActivity(intent);
 	}
 

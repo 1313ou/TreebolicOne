@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
-import org.treebolic.one.sql.R;
 
 /**
  * Treebolic standard activity
@@ -19,7 +18,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "Treebolic Activity"; //$NON-NLS-1$
+	private static final String TAG = "TreebolicA";
 
 	// C O N S T R U C T O R
 
@@ -30,11 +29,6 @@ public class TreebolicActivity extends TreebolicSourceActivity
 
 	// Q U E R Y
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.treebolic.one.sql.TreebolicBasicActivity#query()
-	 */
 	@Override
 	protected void query()
 	{
@@ -50,18 +44,13 @@ public class TreebolicActivity extends TreebolicSourceActivity
 		this.widget.init(this.providerName, this.source);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.treebolic.one.sql.TreebolicBasicActivity#requery(java.lang.String)
-	 */
 	@Override
 	protected void requery(String source0)
 	{
-		final String[] fields0 = source0.split(","); //$NON-NLS-1$
-		final String[] fields = this.source.split(","); //$NON-NLS-1$
+		final String[] fields0 = source0.split(",");
+		final String[] fields = this.source.split(",");
 		this.source = fields[0] + ',' + (fields0.length > 1 ? fields0[1] : source0) + ',';
-		Log.d(TAG, "New source: " + source0 + " saved:" + this.source); //$NON-NLS-1$ //$NON-NLS-2$
+		Log.d(TAG, "New source: " + source0 + " saved:" + this.source);
 
 		this.restoring = true;
 		this.widget.reinit(source0);

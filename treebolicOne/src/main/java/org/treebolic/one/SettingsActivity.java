@@ -1,5 +1,6 @@
 package org.treebolic.one;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import java.util.List;
  * See <a href="http://developer.android.com/design/patterns/settings.html"> Android Design: Settings</a> for design guidelines and the <a
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings API Guide</a> for more information on developing a Settings UI.
  */
+@SuppressLint("Registered")
 public class SettingsActivity extends PreferenceActivity
 {
 	/**
@@ -31,17 +33,12 @@ public class SettingsActivity extends PreferenceActivity
 	/**
 	 * Subactions
 	 */
-	public static final String ACTION_DATA = "org.treebolic.one.prefs.DATA"; //$NON-NLS-1$
-	public static final String ACTION_PROVIDER = "org.treebolic.one.prefs.PROVIDER"; //$NON-NLS-1$
-	public static final String ACTION_DOWNLOAD = "org.treebolic.one.prefs.DOWNLOAD"; //$NON-NLS-1$
+	public static final String ACTION_DATA = "org.treebolic.one.prefs.DATA";
+	public static final String ACTION_PROVIDER = "org.treebolic.one.prefs.PROVIDER";
+	public static final String ACTION_DOWNLOAD = "org.treebolic.one.prefs.DOWNLOAD";
 
 	// E V E N T S
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onPostCreate(android.os.Bundle)
-	 */
 	@Override
 	protected void onPostCreate(final Bundle savedInstanceState)
 	{
@@ -53,7 +50,6 @@ public class SettingsActivity extends PreferenceActivity
 		}
 	}
 
-	/** {@inheritDoc} */
 	@Override
 	public void onBuildHeaders(final List<Header> target)
 	{
@@ -65,11 +61,6 @@ public class SettingsActivity extends PreferenceActivity
 
 	// S E T U P
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.preference.PreferenceActivity#isValidFragment(java.lang.String)
-	 */
 	@Override
 	protected boolean isValidFragment(final String fragmentName)
 	{
@@ -157,7 +148,7 @@ public class SettingsActivity extends PreferenceActivity
 		public boolean onPreferenceChange(final Preference preference, final Object value)
 		{
 			// set the summary to the value's simple string representation.
-			final String stringValue = value == null ? "" : value.toString(); //$NON-NLS-1$
+			final String stringValue = value == null ? "" : value.toString();
 			preference.setSummary(stringValue);
 			return true;
 		}

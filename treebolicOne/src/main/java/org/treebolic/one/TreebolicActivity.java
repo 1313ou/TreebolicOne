@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
-import org.treebolic.one.R;
 
 /**
  * Treebolic standard activity
@@ -17,7 +16,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "Treebolic Activity"; //$NON-NLS-1$
+	private static final String TAG = "TreebolicA";
 
 	// C O N S T R U C T O R
 
@@ -28,11 +27,6 @@ public class TreebolicActivity extends TreebolicSourceActivity
 
 	// Q U E R Y
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.treebolic.one.TreebolicBasicActivity#query()
-	 */
 	@Override
 	protected void query()
 	{
@@ -48,15 +42,10 @@ public class TreebolicActivity extends TreebolicSourceActivity
 		this.widget.init(this.providerName, this.source);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.treebolic.one.TreebolicBasicActivity#requery(java.lang.String)
-	 */
 	@Override
 	protected void requery(String source0)
 	{
-		this.source = source0.endsWith(".xml") ? source0 : source0 + ".xml"; //$NON-NLS-1$ //$NON-NLS-2$
+		this.source = source0.endsWith(".xml") ? source0 : source0 + ".xml";
 		this.widget.reinit(this.source);
 	}
 
