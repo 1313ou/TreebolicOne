@@ -1,8 +1,6 @@
 package org.treebolic.one;
 
 import android.annotation.TargetApi;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,12 +9,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
 import android.preference.PreferenceManager;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
-import android.widget.SearchView;
+import android.support.v7.widget.SearchView;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
@@ -197,9 +198,9 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		getMenuInflater().inflate(this.menuId, menu);
 
 		// search view listener
-		final MenuItem searchMenuItem = menu.findItem(R.id.searchView);
+		final MenuItem searchMenuItem = menu.findItem(R.id.action_search);
 		searchMenuItem.expandActionView();
-		this.searchView = (SearchView) searchMenuItem.getActionView();
+		this.searchView = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
 		int width = this.getResources().getInteger(R.integer.search_view_max_width);
 		if (width != -1)
 		{
@@ -207,11 +208,6 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		}
 		this.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
 		{
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see android.widget.SearchView.OnQueryTextListener#onQueryTextSubmit(java.lang.String)
-			 */
 			@Override
 			public boolean onQueryTextSubmit(final String query)
 			{
@@ -219,11 +215,6 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 				return true;
 			}
 
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see android.widget.SearchView.OnQueryTextListener#onQueryTextChange(java.lang.String)
-			 */
 			@Override
 			public boolean onQueryTextChange(final String query)
 			{

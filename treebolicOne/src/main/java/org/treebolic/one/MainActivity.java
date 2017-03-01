@@ -1,8 +1,6 @@
 package org.treebolic.one;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +10,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Process;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -288,11 +289,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 			this.layoutId = layoutId0;
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
-		 */
 		@Override
 		public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
 		{
@@ -341,7 +337,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	/**
 	 * Update button visibility
 	 */
-	static protected void updateButton(final AppCompatActivity activity)
+	static protected void updateButton(final FragmentActivity activity)
 	{
 		final Button button = (Button) activity.findViewById(R.id.treebolicButton);
 		if (button != null)

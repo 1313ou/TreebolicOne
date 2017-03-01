@@ -8,6 +8,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+import android.support.v7.app.contrib.AppCompatPreferenceActivity;
 
 import org.treebolic.TreebolicIface;
 import org.treebolic.preference.AutoEditTextPreference;
@@ -22,7 +23,7 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings API Guide</a> for more information on developing a Settings UI.
  */
 @SuppressLint("Registered")
-public class SettingsActivity extends PreferenceActivity
+public class SettingsActivity extends AppCompatPreferenceActivity
 {
 	/**
 	 * Determines whether to always show the simplified settings UI, where settings are presented in a single list. When false, settings are shown as a
