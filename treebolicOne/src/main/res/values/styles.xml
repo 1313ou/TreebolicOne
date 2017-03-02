@@ -18,7 +18,7 @@
         <item name="colorAccent">@color/accent</item>
 
         <!-- action bar -->
-        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarStyle">@style/ActionBarAppTheme</item>
 
         <!-- activated background indicator -->
         <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
@@ -26,7 +26,7 @@
     </style>
 
     <!-- Action bar -->
-    <style name="ActionBar" parent="Widget.AppCompat.ActionBar">
+    <style name="ActionBarAppTheme" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/primary</item>
     </style>
 

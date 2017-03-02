@@ -39,11 +39,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			this.theCursor = thisCursor;
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#close()
-		 */
 		@Override
 		public void close()
 		{
@@ -59,66 +54,36 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 				}
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#moveToNext()
-		 */
 		@Override
 		public boolean moveToNext() throws Exception
 		{
 			return this.theCursor.moveToNext();
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getPosition()
-		 */
 		@Override
 		public int getPosition() throws SQLException
 		{
 			return this.theCursor.getPosition();
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getColumnIndex(java.lang.String)
-		 */
 		@Override
 		public int getColumnIndex(String thisColumnName) throws Exception
 		{
 			return this.theCursor.getColumnIndex(thisColumnName);
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#isNull(int)
-		 */
 		@Override
 		public boolean isNull(int thisColumnIndex) throws Exception
 		{
 			return this.theCursor.isNull(thisColumnIndex);
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getString(int)
-		 */
 		@Override
 		public String getString(int thisColumnIndex) throws Exception
 		{
 			return this.theCursor.getString(thisColumnIndex);
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getInt(int)
-		 */
 		@SuppressWarnings("boxing")
 		@Override
 		public Integer getInt(int thisColumnIndex) throws Exception
@@ -126,11 +91,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			return this.theCursor.getInt(thisColumnIndex);
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getFloat(int)
-		 */
 		@SuppressWarnings("boxing")
 		@Override
 		public Float getFloat(int thisColumnIndex) throws Exception
@@ -138,11 +98,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			return this.theCursor.getFloat(thisColumnIndex);
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Cursor#getDouble(int)
-		 */
 		@SuppressWarnings("boxing")
 		@Override
 		public Double getDouble(int thisColumnIndex) throws Exception
@@ -173,11 +128,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			}
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Database#close()
-		 */
 		@Override
 		public void close()
 		{
@@ -192,11 +142,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 				}
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see treebolic.provider.sqlx.AbstractProvider.Database#query(java.lang.String)
-		 */
 		@SuppressWarnings("resource")
 		@Override
 		public AndroidCursor query(String thisSql) throws SQLException

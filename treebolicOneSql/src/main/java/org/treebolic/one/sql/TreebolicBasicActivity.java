@@ -130,7 +130,8 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		final ActionBar actionBar = getSupportActionBar();
 		if (actionBar != null)
 		{
-			actionBar.setDisplayHomeAsUpEnabled(true);
+			actionBar.setElevation(0);
+			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
 		}
 
 		// widget
@@ -202,22 +203,18 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		// inflate
 		getMenuInflater().inflate(this.menuId, menu);
 
-		// search view listener
+		// search view
 		final MenuItem searchMenuItem = menu.findItem(R.id.action_search);
 		searchMenuItem.expandActionView();
 		this.searchView = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
-		int width = this.getResources().getInteger(R.integer.search_view_max_width);
-		if (width != -1)
-		{
-			this.searchView.setMaxWidth(width);
-		}
+
+		// search view width
+		int screenWidth = treebolic.glue.component.Utils.screenWidth(this);
+		this.searchView.setMaxWidth(screenWidth / 2);
+
+		// search view listener
 		this.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
 		{
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see android.widget.SearchView.OnQueryTextListener#onQueryTextSubmit(java.lang.String)
-			 */
 			@Override
 			public boolean onQueryTextSubmit(final String query)
 			{
@@ -225,11 +222,6 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 				return true;
 			}
 
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see android.widget.SearchView.OnQueryTextListener#onQueryTextChange(java.lang.String)
-			 */
 			@Override
 			public boolean onQueryTextChange(final String query)
 			{

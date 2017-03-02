@@ -250,11 +250,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 			//
 		}
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
-		 */
 		@Override
 		public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
 		{
