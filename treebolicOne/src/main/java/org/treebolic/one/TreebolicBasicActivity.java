@@ -12,12 +12,12 @@ import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
-import android.support.v7.widget.SearchView;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
@@ -92,14 +92,14 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	 */
 	protected final String input;
 
-	// parent
+	// Parent
 
 	/**
 	 * Parent (client) activity
 	 */
 	protected Intent parentActivity;
 
-	// menu
+	// Menu
 
 	/**
 	 * Menu id
@@ -224,6 +224,9 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 				return true;
 			}
 		});
+
+		// icon tint
+		org.treebolic.search.Utils.tint(this, menu, R.id.action_search_run, R.id.action_search_reset);
 
 		return super.onCreateOptionsMenu(menu);
 	}
