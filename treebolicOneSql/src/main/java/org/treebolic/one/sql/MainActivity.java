@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	/**
 	 * Initialize
 	 */
-	@SuppressLint("CommitPrefEdits")
+	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	private void initialize()
 	{
 		// version of this code

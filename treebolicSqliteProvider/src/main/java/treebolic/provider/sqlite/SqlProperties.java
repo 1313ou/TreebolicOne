@@ -1,11 +1,10 @@
-/**
- * Title : Treebolic SQL provider
- * Description : Treebolic SQL provider
- * Version : 3.x
- * Copyright : (c) 2001-2014
- * Terms of use : see license agreement at http://treebolic.sourceforge.net/en/license.htm
- * Author : Bernard Bou
- *
+/*
+  Title : Treebolic SQL provider
+  Description : Treebolic SQL provider
+  Version : 3.x
+  Copyright : (c) 2001-2014
+  Terms of use : see license agreement at http://treebolic.sourceforge.net/en/license.htm
+  Author : Bernard Bou
  */
 package treebolic.provider.sqlite;
 
