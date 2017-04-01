@@ -28,6 +28,7 @@ public class PeekActivity extends AppCompatActivity
 	{
 		super.onCreate(savedInstanceState);
 
+		// layout
 		setContentView(R.layout.activity_peek);
 
 		// toolbar

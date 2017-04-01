@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	{
 		super.onCreate(savedInstanceState);
 
+		// layout
 		setContentView(R.layout.activity_main);
 
 		// toolbar
