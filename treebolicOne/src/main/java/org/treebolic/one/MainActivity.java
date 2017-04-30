@@ -22,7 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	{
 		super.onCreate(savedInstanceState);
 
+		// init
+		initialize();
+
 		// layout
 		setContentView(R.layout.activity_main);
 
@@ -88,11 +91,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		final ActionBar actionBar = getSupportActionBar();
 		if (actionBar != null)
 		{
-			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP);
+			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE);
 		}
-
-		// init
-		initialize();
 
 		// fragment
 		if (savedInstanceState == null)
@@ -353,7 +353,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	 */
 	static protected void updateButton(final FragmentActivity activity)
 	{
-		final Button button = (Button) activity.findViewById(R.id.treebolicButton);
+		final ImageButton button = (ImageButton) activity.findViewById(R.id.treebolicButton);
 		if (button != null)
 		{
 			boolean sourceSet = sourceSet(activity);

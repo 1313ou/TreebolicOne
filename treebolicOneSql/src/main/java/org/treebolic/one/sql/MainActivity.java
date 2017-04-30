@@ -20,7 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		final ActionBar actionBar = getSupportActionBar();
 		if (actionBar != null)
 		{
-			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP);
+			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE);
 		}
 
 		// init
@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	 */
 	protected void updateButton()
 	{
-		final Button button = (Button) findViewById(R.id.treebolicButton);
+		final ImageButton button = (ImageButton) findViewById(R.id.treebolicButton);
 		button.setVisibility(sourceSet() ? View.VISIBLE : View.INVISIBLE);
 	}
 

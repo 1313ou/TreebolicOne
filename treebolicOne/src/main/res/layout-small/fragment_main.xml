@@ -8,17 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.treebolic.one.MainActivity$MainFragment" >
 
-    <Button
-        android:id="@+id/treebolicButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/bg_button"
-        android:contentDescription="@string/title_start"
-        android:drawableTop="@drawable/ic_treebolic"
-        android:onClick="onClick"
-        android:visibility="invisible" />
+        android:contentDescription="@string/treebolic"
+        android:paddingBottom="20dp"
+        android:src="@drawable/ic_splash" />
 
 </RelativeLayout>
