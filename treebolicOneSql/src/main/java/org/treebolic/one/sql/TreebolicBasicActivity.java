@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -429,13 +430,15 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	@Override
 	public void warn(final String message)
 	{
-		toast(message, Toast.LENGTH_LONG);
+		// toast(message, Toast.LENGTH_LONG);
+		snackbar(message, Snackbar.LENGTH_LONG);
 	}
 
 	@Override
 	public void status(final String message)
 	{
-		toast(message, Toast.LENGTH_SHORT);
+		// toast(message, Toast.LENGTH_SHORT);
+		snackbar(message, Snackbar.LENGTH_SHORT);
 	}
 
 	// Q U E R Y
@@ -575,7 +578,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		}
 	}
 
-	// SEARCH INTERFACE
+	// S E A R C H   I N T E R F A C E
 
 	protected void runSearch(String scope, String mode, String target)
 	{
@@ -656,6 +659,24 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 			public void run()
 			{
 				Toast.makeText(TreebolicBasicActivity.this, message, duration).show();
+			}
+		});
+	}
+
+	/**
+	 * Put snackbar on UI thread
+	 *
+	 * @param message  message
+	 * @param duration duration
+	 */
+	private void snackbar(final String message, final int duration)
+	{
+		runOnUiThread(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				Snackbar.make(TreebolicBasicActivity.this.widget, message, duration).show();
 			}
 		});
 	}
