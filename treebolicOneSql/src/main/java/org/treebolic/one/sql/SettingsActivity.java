@@ -114,8 +114,36 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			switch (action)
 			{
 				case SettingsActivity.ACTION_DATA:
+				{
 					addPreferencesFromResource(R.xml.pref_data);
-					break;
+
+					// bind
+					final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
+					final String sourceValue = Settings.getStringPref(this, sourcePreference.getKey());
+					bind(sourcePreference, sourceValue, this.listener);
+
+					final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
+					final String value = Settings.getStringPref(this, basePreference.getKey());
+					bind(basePreference, value, this.listener);
+
+					final Preference imageBasePreference = findPreference(TreebolicIface.PREF_IMAGEBASE);
+					final String imageBaseValue = Settings.getStringPref(this, imageBasePreference.getKey());
+					bind(imageBasePreference, imageBaseValue, this.listener);
+
+					final Preference restrictPreference = findPreference(Settings.PREF_TRUNCATE);
+					final String restrictValue = Settings.getStringPref(this, restrictPreference.getKey());
+					bind(restrictPreference, restrictValue, this.listener);
+
+					final Preference extraRestrictPreference = findPreference(Settings.PREF_PRUNE);
+					final String extraRestrictValue = Settings.getStringPref(this, extraRestrictPreference.getKey());
+					bind(extraRestrictPreference, extraRestrictValue, this.listener);
+
+					final Preference settingsPreference = findPreference(TreebolicIface.PREF_SETTINGS);
+					final String settingsValue = Settings.getStringPref(this, settingsPreference.getKey());
+					bind(settingsPreference, settingsValue, this.listener);
+				}
+
+				break;
 				case SettingsActivity.ACTION_PROVIDER:
 				{
 					addPreferencesFromResource(R.xml.pref_provider);
@@ -129,7 +157,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 					addPreferencesFromResource(R.xml.pref_download);
 					final Preference pref = findPreference(Settings.PREF_DOWNLOAD);
 					final String key = pref.getKey();
-					pref.setSummary(Settings.getStringPref(this, key));
+					final String value = Settings.getStringPref(this, key);
+					bind(pref, value, this.listener);
 					break;
 				}
 			}
@@ -207,7 +236,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 
 	public static class ProviderPreferenceFragment extends PreferenceFragment
 	{
-		@SuppressWarnings({ "synthetic-access" })
+		@SuppressWarnings({"synthetic-access"})
 		@Override
 		public void onCreate(final Bundle savedInstanceState)
 		{
@@ -246,13 +275,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			{
 				final String value = Settings.getStringPref(activity, sourcePreference.getKey());
 				activity.bind(sourcePreference, value, activity.listener);
-			}
-
-			final Preference sourceEntryPreference = findPreference(Settings.PREF_SOURCE_ENTRY);
-			if (sourceEntryPreference != null)
-			{
-				final String value = Settings.getStringPref(activity, sourceEntryPreference.getKey());
-				activity.bind(sourceEntryPreference, value, activity.listener);
 			}
 
 			final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);

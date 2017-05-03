@@ -41,11 +41,6 @@ public class Settings
 	public static final String PREF_STYLE = "pref_style";
 
 	/**
-	 * Source entry preference name
-	 */
-	public static final String PREF_SOURCE_ENTRY = "pref_source_entry";
-
-	/**
 	 * Download preference name
 	 */
 	public static final String PREF_DOWNLOAD = "pref_download";

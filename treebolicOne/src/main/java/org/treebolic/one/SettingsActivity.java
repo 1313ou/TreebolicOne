@@ -116,8 +116,30 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			switch (action)
 			{
 				case SettingsActivity.ACTION_DATA:
+				{
 					addPreferencesFromResource(R.xml.pref_data);
+
+					final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
+					final String sourceValue = Settings.getStringPref(this, sourcePreference.getKey());
+					bind(sourcePreference, sourceValue, this.listener);
+
+					final Preference sourceEntryPreference = findPreference(Settings.PREF_SOURCE_ENTRY);
+					final String sourceEntryValue = Settings.getStringPref(this, sourceEntryPreference.getKey());
+					bind(sourceEntryPreference, sourceEntryValue, this.listener);
+
+					final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
+					final String baseValue = Settings.getStringPref(this, basePreference.getKey());
+					bind(basePreference, baseValue, this.listener);
+
+					final Preference imageBasePreference = findPreference(TreebolicIface.PREF_IMAGEBASE);
+					final String imageBaseValue = Settings.getStringPref(this, imageBasePreference.getKey());
+					bind(imageBasePreference, imageBaseValue, this.listener);
+
+					final Preference settingsPreference = findPreference(TreebolicIface.PREF_SETTINGS);
+					final String settingsValue = Settings.getStringPref(this, settingsPreference.getKey());
+					bind(settingsPreference, settingsValue, this.listener);
 					break;
+				}
 				case SettingsActivity.ACTION_PROVIDER:
 				{
 					addPreferencesFromResource(R.xml.pref_provider);
@@ -131,7 +153,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 					addPreferencesFromResource(R.xml.pref_download);
 					final Preference pref = findPreference(Settings.PREF_DOWNLOAD);
 					final String key = pref.getKey();
-					pref.setSummary(Settings.getStringPref(this, key));
+					final String value = Settings.getStringPref(this, key);
+					bind(pref, value, this.listener);
 					break;
 				}
 			}
@@ -209,7 +232,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 
 	public static class ProviderPreferenceFragment extends PreferenceFragment
 	{
-		@SuppressWarnings({ "synthetic-access" })
+		@SuppressWarnings({"synthetic-access"})
 		@Override
 		public void onCreate(final Bundle savedInstanceState)
 		{
