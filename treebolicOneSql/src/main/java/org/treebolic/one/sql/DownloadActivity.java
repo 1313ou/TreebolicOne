@@ -1,15 +1,15 @@
 package org.treebolic.one.sql;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import org.treebolic.download.Deploy;
+import org.treebolic.storage.Storage;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
-import org.treebolic.download.Deploy;
-import org.treebolic.one.sql.R;
-import org.treebolic.storage.Storage;
-
-import android.os.Bundle;
-import android.widget.Toast;
 
 /**
  * Dot download activity
@@ -22,8 +22,9 @@ public class DownloadActivity extends org.treebolic.download.DownloadActivity
 	protected void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+
+		this.expandArchiveCheckbox.setVisibility(View.VISIBLE);
 		this.destDir = Storage.getCacheDir(this);
-		this.downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD);
 		this.downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD);
 		if (this.downloadUrl == null || this.downloadUrl.isEmpty())
 		{
