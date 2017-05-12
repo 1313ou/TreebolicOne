@@ -11,6 +11,9 @@
 	<item name="blue_color" type="color">#FF4251bd</item>
 	<item name="blue2_color" type="color">#FF3765B1</item>
 
+	<!-- gray -->
+	<color name="light_gray">#ffB0B0B0</color>
+
 	<!-- MAIN -->
 
 	<!-- app branding color for the app bar -->

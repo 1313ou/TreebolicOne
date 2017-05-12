@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":treebolicSqliteProvider" external.linked.project.path="$MODULE_DIR$" external.root.project.path="/opt/devel/android-treebolic-as/TreebolicAll" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":treebolicSqliteProvider" external.linked.project.path="$MODULE_DIR$" external.root.project.path="/opt/devel/android-treebolic-as/TreebolicOne" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -112,7 +112,6 @@
     <orderEntry type="module" module-name="treebolicGlueIface" exported="" />
     <orderEntry type="module" module-name="treebolicLibView" exported="" />
     <orderEntry type="module" module-name="treebolicLibModel" exported="" />
-    <orderEntry type="module" module-name="treebolicMutable" exported="" />
     <orderEntry type="module" module-name="treebolicGraph" exported="" />
     <orderEntry type="module" module-name="treebolicIface" exported="" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-core-2.2.2" level="project" />
