@@ -234,6 +234,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 			// flag as initialized
 			sharedPref.edit().putInt(Settings.PREF_INITIALIZED, verCode).commit();
 		}
+
+		// deploy
+		final File dir = Storage.getTreebolicStorage(this);
+		if (dir.isDirectory())
+		{
+			if (dir.list().length == 0)
+			{
+				// deploy
+				Storage.expandZipAssetFile(this, "data.zip");
+			}
+		}
 	}
 
 	// S P E C I F I C R E T U R N S
