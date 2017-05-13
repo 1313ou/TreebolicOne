@@ -8,8 +8,8 @@
 		android:title="@string/title_settings"
 		app:showAsAction="ifRoom"/>
 	<item
-		android:id="@+id/action_treebolic"
-		android:title="@string/title_treebolic"
+		android:id="@+id/action_run"
+		android:title="@string/title_run"
 		app:showAsAction="never"/>
 	<item
 		android:id="@+id/action_peek"
@@ -43,9 +43,11 @@
 		android:id="@+id/action_finish"
 		android:title="@string/title_finish"
 		app:showAsAction="never"/>
+	<!--
 	<item
 		android:id="@+id/action_kill"
 		android:title="@string/title_kill"
 		app:showAsAction="never"/>
+	-->
 
 </menu>

@@ -130,17 +130,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	public boolean onOptionsItemSelected(final MenuItem item)
 	{
 		int itemId = item.getItemId();
-		if (itemId == R.id.action_treebolic)
+		if (itemId == R.id.action_run)
 		{
 			tryStartTreebolic((String) null);
 			return true;
 		}
-		else if (itemId == R.id.action_treebolic_source)
+		else if (itemId == R.id.action_run_source)
 		{
 			requestTreebolicSource();
 			return true;
 		}
-		else if (itemId == R.id.action_treebolic_bundle)
+		else if (itemId == R.id.action_run_bundle)
 		{
 			requestTreebolicBundle();
 			return true;
@@ -186,11 +186,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		else if (itemId == R.id.action_finish)
 		{
 			finish();
-			return true;
-		}
-		else if (itemId == R.id.action_kill)
-		{
-			Process.killProcess(Process.myPid());
 			return true;
 		}
 		else if (itemId == R.id.action_app_settings)

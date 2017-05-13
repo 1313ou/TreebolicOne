@@ -1,8 +1,17 @@
 <resources>
 
-    <string name="title_download">Download</string>
-    <string name="title_activity_download">Download</string>
-    <string name="pref_title_download">Download URL</string>
-    <string name="pref_description_download">Download URL for extra data</string>
+	<string name="title_download">Download</string>
+	<string name="title_activity_download">Download</string>
+
+	<!-- pref -->
+	<string name="pref_header_download">Download</string>
+	<string name="pref_summary_header_download">Settings for download</string>
+	<string name="pref_title_download">Download URL</string>
+	<string name="pref_description_download">Download URL for extra data</string>
+
+	<!-- see pref_download_urls, same order -->
+	<string-array name="pref_download_labels">
+		<item>Data set 1</item>
+	</string-array>
 
 </resources>

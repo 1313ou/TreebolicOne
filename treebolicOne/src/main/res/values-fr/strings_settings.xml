@@ -6,8 +6,6 @@
     <string name="pref_summary_header_provider">Paramètres du fournisseur</string>
     <string name="pref_header_data">Données</string>
     <string name="pref_summary_header_data">Paramètres des données</string>
-    <string name="pref_header_download">Téléchargement</string>
-    <string name="pref_summary_header_download">Paramètres de téléchargement</string>
 
     <!-- active built-in provider -->
     <!-- provider -->

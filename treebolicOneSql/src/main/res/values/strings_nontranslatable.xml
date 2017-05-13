@@ -6,8 +6,9 @@
     <string name="urlScheme" translatable="false">sql:</string>
     <string name="truncate_default" translatable="false"/>
     <string name="prune_default" translatable="false"/>
-    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/sql/data.zip</string>
 
+    <!-- download -->
+    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/sql/data.zip</string>
     <string-array name="pref_download_urls" translatable="false">
         <item>@string/pref_download_url_default</item>
     </string-array>

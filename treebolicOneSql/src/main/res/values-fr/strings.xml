@@ -22,14 +22,13 @@
     <string name="title_about">À propos</string>
 
     <!-- menu -->
-    <string name="title_treebolic">Ouvrir</string>
-    <string name="title_query">Requête</string>
+    <string name="title_run">Lancer</string>
     <string name="title_peek">Aperçu</string>
     <string name="title_settings">Paramètres</string>
     <string name="title_finish">Finir</string>
-    <string name="title_kill">Terminer</string>
     <string name="title_start">Démarrer</string>
-    
+    <!-- <string name="title_kill">Terminer</string> -->
+
     <!-- search settings -->
     <string name="title_search_settings_dialog">Recherche Treebolic</string>
     <string name="message_search_settings_dialog">Paramètres de recherche</string>

@@ -277,11 +277,6 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 			HelpActivity.start(this);
 			return true;
 		}
-		else if (itemId == R.id.action_kill)
-		{
-			Process.killProcess(Process.myPid());
-			return true;
-		}
 		else if (itemId == R.id.action_search_run)
 		{
 			handleSearchRun();

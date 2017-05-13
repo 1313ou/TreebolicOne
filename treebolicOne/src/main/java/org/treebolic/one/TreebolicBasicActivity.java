@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -270,11 +269,6 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		else if (itemId == R.id.action_help)
 		{
 			HelpActivity.start(this);
-			return true;
-		}
-		else if (itemId == R.id.action_kill)
-		{
-			Process.killProcess(Process.myPid());
 			return true;
 		}
 		else if (itemId == R.id.action_search_run)

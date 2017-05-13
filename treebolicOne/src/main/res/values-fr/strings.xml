@@ -21,15 +21,14 @@
     <string name="title_about">À propos</string>
 
     <!-- menu -->
-    <string name="title_treebolic">Ouvrir</string>
-    <string name="title_treebolic_source">Ouvrir source</string>
-    <string name="title_treebolic_bundle">Open archive</string>
+    <string name="title_treebolic">Lancer</string>
+    <string name="title_run_source">Ouvrir source</string>
+    <string name="title_run_bundle">Ouvrir archive</string>
     <string name="title_builtin_data">Données intégrées</string>
-    <string name="title_query">Requête</string>
     <string name="title_settings">Paramètres</string>
     <string name="title_finish">Finir</string>
-    <string name="title_kill">Terminer</string>
     <string name="title_start">Démarrer</string>
+    <!-- <string name="title_kill">Terminer</string> -->
 
     <!-- search settings -->
     <string name="title_search_settings_dialog">Recherche Treebolic</string>

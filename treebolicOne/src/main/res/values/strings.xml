@@ -21,15 +21,14 @@
     <string name="title_about">About</string>
 
     <!-- menu -->
-    <string name="title_treebolic">Open</string>
-    <string name="title_treebolic_source">Open source</string>
-    <string name="title_treebolic_bundle">Open bundle</string>
+    <string name="title_treebolic">Run</string>
+    <string name="title_run_source">Open source</string>
+    <string name="title_run_bundle">Open bundle</string>
     <string name="title_builtin_data">Built-in data</string>
-    <string name="title_query">Query</string>
     <string name="title_settings">Settings</string>
     <string name="title_finish">Finish</string>
-    <string name="title_kill">Kill</string>
     <string name="title_start">Start</string>
+    <!-- <string name="title_kill">Kill</string> -->
 
     <!-- search settings -->
     <string name="title_search_settings_dialog">Treebolic search</string>

@@ -8,17 +8,17 @@
 		app:showAsAction="ifRoom"
 		android:title="@string/title_settings"/>
 	<item
-		android:id="@+id/action_treebolic"
+		android:id="@+id/action_run"
 		app:showAsAction="never"
 		android:title="@string/title_treebolic"/>
 	<item
-		android:id="@+id/action_treebolic_source"
+		android:id="@+id/action_run_source"
 		app:showAsAction="never"
-		android:title="@string/title_treebolic_source"/>
+		android:title="@string/title_run_source"/>
 	<item
-		android:id="@+id/action_treebolic_bundle"
+		android:id="@+id/action_run_bundle"
 		app:showAsAction="never"
-		android:title="@string/title_treebolic_bundle"/>
+		android:title="@string/title_run_bundle"/>
 	<item
 		android:id="@+id/action_builtin_data"
 		app:showAsAction="never"
@@ -51,9 +51,11 @@
 		android:id="@+id/action_finish"
 		app:showAsAction="never"
 		android:title="@string/title_finish"/>
+	<!--
 	<item
 		android:id="@+id/action_kill"
 		app:showAsAction="never"
 		android:title="@string/title_kill"/>
+	-->
 
 </menu>
