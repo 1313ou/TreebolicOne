@@ -11,9 +11,7 @@
 
     <!-- see pref_download_urls, same order -->
     <string-array name="pref_download_labels">
-		<item>Data set 1</item>
-		<item>Data set 2</item>
-		<item>Data set 3</item>
+		<item>Data set</item>
 	</string-array>
 
 </resources>

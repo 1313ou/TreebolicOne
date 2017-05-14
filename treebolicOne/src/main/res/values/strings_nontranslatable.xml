@@ -4,12 +4,11 @@
     <string name="source" translatable="false">test.zip</string>
     <string name="source_entry" translatable="false">test.xml</string>
     <string name="settings" translatable="false">test.properties</string>
-    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/data.zip</string>
 
+	<!-- download -->
+    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/data.zip</string>
     <string-array name="pref_download_urls" translatable="false">
         <item>@string/pref_download_url_default</item>
-        <item>http://treebolic.sourceforge.net/one/data1.zip</item>
-        <item>http://treebolic.sourceforge.net/one/data2.zip</item>
     </string-array>
 
 </resources>

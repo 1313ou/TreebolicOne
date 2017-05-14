@@ -9,7 +9,7 @@
 
 	<!-- see pref_download_urls, same order -->
 	<string-array name="pref_download_labels">
-		<item>Données 1</item>
+		<item>Données</item>
 	</string-array>
 
 </resources>

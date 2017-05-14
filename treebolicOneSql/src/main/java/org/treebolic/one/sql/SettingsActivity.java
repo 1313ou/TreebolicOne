@@ -13,7 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import org.treebolic.TreebolicIface;
-import org.treebolic.preference.AutoEditTextPreference;
+import org.treebolic.preference.OpenEditTextPreference;
 
 import java.util.List;
 
@@ -329,7 +329,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			addPreferencesFromResource(R.xml.pref_download);
 
 			// override
-			final AutoEditTextPreference pref = (AutoEditTextPreference) findPreference(Settings.PREF_DOWNLOAD);
+			final OpenEditTextPreference pref = (OpenEditTextPreference) findPreference(Settings.PREF_DOWNLOAD);
 			pref.setValues(getResources().getStringArray(R.array.pref_download_urls));
 
 			// bind
