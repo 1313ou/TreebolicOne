@@ -71,8 +71,9 @@ public class ModelFactory
 	public Model make(final String source, final String base, final String imageBase, final String settings)
 	{
 		// provider
-		this.provider.setup(this.providerContext);
-		this.provider.setup(this.context);
+		this.provider.setContext(this.providerContext);
+		this.provider.setLocator(this.context);
+		this.provider.setHandle(null);
 
 		// model
 		final Model model = this.provider.makeModel(source, ModelFactory.makeBaseURL(base), ModelFactory.makeParameters(source, base, imageBase, settings));

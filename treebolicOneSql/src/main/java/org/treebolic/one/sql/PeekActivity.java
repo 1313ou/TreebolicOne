@@ -75,8 +75,9 @@ public class PeekActivity extends AppCompatActivity
 
 		// create provider
 		final Provider provider = new Provider();
-		provider.setup(this.providerContext);
-		provider.setup((IContext) null);
+		provider.setContext(this.providerContext);
+		provider.setLocator((IContext) null);
+		provider.setHandle(null);
 
 		// query provider
 		final URL base = Settings.getBase(this);
