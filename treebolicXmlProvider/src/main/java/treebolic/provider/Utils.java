@@ -1,6 +1,5 @@
 package treebolic.provider;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -8,40 +7,17 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 /**
- * Photo utilities
+ * Image utilities
  *
  * @author <a href="mailto:1313ou@gmail.com">Bernard Bou</a>
  */
 public class Utils
 {
-	/**
-	 * Get thumbnail photo from photoId
-	 *
-	 * @param context  context
-	 * @param photoUri id as per ContactsContract.Contacts.PHOTO_THUMBNAIL_URI
-	 * @return bitmap
-	 */
-	static public Bitmap queryThumbnailPhotoFromPhotoUri(final Context context, final String photoUri)
-	{
-		try
-		{
-			return MediaStore.Images.Media.getBitmap(context.getContentResolver(), Uri.parse(photoUri));
-		}
-		catch (IOException e)
-		{
-			//
-		}
-		return null;
-	}
-
 	static private Bitmap bytesToImage(final byte[] imageBytes)
 	{
 		return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
