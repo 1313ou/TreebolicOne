@@ -52,6 +52,7 @@ project(':storageLib').projectDir = new File('../TreebolicSupportLibs/storageLib
 
 // STUB
 
+include ':treebolicXmlProvider'
 include ':treebolicSqliteProvider'
 include ':treebolicOne'
 include ':treebolicOneSql'

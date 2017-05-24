@@ -23,7 +23,6 @@ dependencies {
     compile project(':treebolicIface')
     compile project(':treebolicLib')
     compile project(':treebolicMutable')
-    compile files('libs/treebolic-provider-xml-dom.jar')
 
     compile project(':storageLib')
     compile project(':searchLib')
