@@ -296,7 +296,7 @@ public class DocumentAdapter
 				if (thisImageSrc != null && !thisImageSrc.isEmpty())
 				{
 					final StringBuilder sb = new StringBuilder();
-					sb.append("<table><tr><td><img src='");
+					sb.append("<table><tr><td valign='top'><img src='");
 					sb.append(thisImageSrc);
 					sb.append("'/></td><td>");
 					sb.append(thisContent);
