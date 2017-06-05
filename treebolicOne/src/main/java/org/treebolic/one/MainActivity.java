@@ -8,7 +8,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -203,6 +202,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	private void initialize()
 	{
+		// permissions
+		Permissions.check(this);
+
 		// version of this code
 		int verCode = -1;
 		try

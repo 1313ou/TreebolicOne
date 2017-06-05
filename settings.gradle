@@ -15,6 +15,9 @@ project(':treebolicGraph').projectDir = new File('../TreebolicLib/treebolicGraph
 include ':treebolicMutable'
 project(':treebolicMutable').projectDir = new File('../TreebolicLib/treebolicMutable/')
 
+include ':treebolicLoadBalancer'
+project(':treebolicLoadBalancer').projectDir = new File('../TreebolicLib/treebolicLoadBalancer/')
+
 include ':treebolicGlue'
 project(':treebolicGlue').projectDir = new File('../TreebolicLib/treebolicGlue/')
 

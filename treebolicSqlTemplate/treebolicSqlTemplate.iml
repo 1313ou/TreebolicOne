@@ -114,6 +114,7 @@
     <orderEntry type="module" module-name="treebolicMutable" exported="" />
     <orderEntry type="module" module-name="fileChooserLib" exported="" />
     <orderEntry type="module" module-name="treebolicOneSql" exported="" />
+    <orderEntry type="module" module-name="treebolicLoadBalancer" exported="" />
     <orderEntry type="module" module-name="storageLib" exported="" />
     <orderEntry type="module" module-name="treebolicIface" exported="" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-core-2.2.2" level="project" />

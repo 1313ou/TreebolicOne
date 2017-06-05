@@ -8,20 +8,19 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
-import android.support.v7.widget.SearchView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -247,7 +246,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		});
 
 		// icon tint
-		Tint.tint(this, menu, R.id.action_search_run, R.id.action_search_reset);
+		Tint.tint(this, menu, R.id.action_search_run, R.id.action_search_reset, R.id.action_search_settings);
 
 		return super.onCreateOptionsMenu(menu);
 	}

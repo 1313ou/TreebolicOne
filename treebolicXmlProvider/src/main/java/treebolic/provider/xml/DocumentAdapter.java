@@ -55,7 +55,7 @@ public class DocumentAdapter
 		/**
 		 * Constructor
 		 *
-		 * @param thisMountPoint mount point
+		 * @param thisMountPoint   mount point
 		 * @param thisMountingNode Node to mount graph at
 		 */
 		public MountTask(final MountPoint.Mounting thisMountPoint, final MutableNode thisMountingNode)
@@ -115,8 +115,8 @@ public class DocumentAdapter
 	/**
 	 * Constructor
 	 *
-	 * @param thisProvider provider (used in recursion)
-	 * @param thisBase base
+	 * @param thisProvider    provider (used in recursion)
+	 * @param thisBase        base
 	 * @param theseParameters parameters
 	 */
 	public DocumentAdapter(final IProvider thisProvider, final URL thisBase, final Properties theseParameters)
@@ -159,7 +159,9 @@ public class DocumentAdapter
 		this.theIdToNodeMap = new TreeMap<String, MutableNode>();
 		final Tree thisTree = toTree(thisDocument);
 		if (thisTree == null)
+		{
 			return null;
+		}
 		final Settings theseSettings = DocumentAdapter.toSettings(thisDocument);
 		return new Model(thisTree, theseSettings);
 	}
@@ -183,7 +185,7 @@ public class DocumentAdapter
 	 * Make model node
 	 *
 	 * @param thisParent model parent
-	 * @param thisId id
+	 * @param thisId     id
 	 * @return model node
 	 */
 	protected MutableNode makeNode(final MutableNode thisParent, final String thisId)
@@ -195,7 +197,7 @@ public class DocumentAdapter
 	 * Make model edge
 	 *
 	 * @param thisFromNode model from-node end
-	 * @param thisToNode model to-node end
+	 * @param thisToNode   model to-node end
 	 * @return model edge
 	 */
 	protected MutableEdge makeEdge(final MutableNode thisFromNode, final MutableNode thisToNode)
@@ -214,7 +216,9 @@ public class DocumentAdapter
 		// nodes
 		final Element thisRootElement = DocumentAdapter.getFirstElementByTagName(thisDocument.getDocumentElement(), "node"); //$NON-NLS-1$
 		if (thisRootElement == null)
+		{
 			return null;
+		}
 		final MutableNode thisRoot = toNode(thisRootElement, null);
 
 		// edges
@@ -238,7 +242,7 @@ public class DocumentAdapter
 	 * Make model node
 	 *
 	 * @param thisNodeElement starting DOM element
-	 * @param thisParent model parent node
+	 * @param thisParent      model parent node
 	 * @return model node
 	 */
 	private MutableNode toNode(final Element thisNodeElement, final MutableNode thisParent)
@@ -296,15 +300,24 @@ public class DocumentAdapter
 				if (thisImageSrc != null && !thisImageSrc.isEmpty())
 				{
 					final StringBuilder sb = new StringBuilder();
+					/*
 					sb.append("<table><tr><td valign='top'><img src='");
 					sb.append(thisImageSrc);
 					sb.append("'/></td><td>");
 					sb.append(thisContent);
 					sb.append("</td></tr></table>");
+					*/
+					sb.append("<p><img src='") //
+							.append(thisImageSrc) //
+							.append("' style='float:left;margin-right:10px;'/>") //
+							.append(thisContent) //
+							.append("</p>");
 					thisNode.setContent(sb.toString());
 				}
 				else
+				{
 					thisNode.setContent(thisContent);
+				}
 
 			}
 		}
@@ -823,7 +836,9 @@ public class DocumentAdapter
 		{
 			final NodeList thisList = thisElement.getElementsByTagName(thisTagName);
 			if (thisList.getLength() > 0)
+			{
 				return (Element) thisList.item(0);
+			}
 		}
 		return null;
 	}
@@ -839,7 +854,9 @@ public class DocumentAdapter
 	{
 		final List<Element> theseChildElements = DocumentAdapter.getLevel1ChildElementsByTagName(thisElement, thisTagName);
 		if (!theseChildElements.isEmpty())
+		{
 			return theseChildElements.get(0);
+		}
 		return null;
 	}
 
