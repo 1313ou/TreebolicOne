@@ -27,22 +27,22 @@ public class ModelFactory
 	/**
 	 * Provider
 	 */
-	final IProvider provider;
+	private final IProvider provider;
 
 	/**
 	 * Provider context
 	 */
-	final IProviderContext providerContext;
+	private final IProviderContext providerContext;
 
 	/**
 	 * Locator Context
 	 */
-	final IContext locatorContext;
+	private final IContext locatorContext;
 
 	/**
 	 * Application context
 	 */
-	final Context applicationContext;
+	private final Context applicationContext;
 
 	/**
 	 * Constructor

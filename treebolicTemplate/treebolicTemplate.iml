@@ -84,7 +84,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 25 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="transition-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
@@ -109,6 +109,7 @@
     <orderEntry type="module" module-name="treebolicGraph" exported="" />
     <orderEntry type="module" module-name="preferenceLib" exported="" />
     <orderEntry type="module" module-name="treebolicGlue" exported="" />
+    <orderEntry type="module" module-name="commonLib" exported="" />
     <orderEntry type="module" module-name="guideLib" exported="" />
     <orderEntry type="module" module-name="wheelLib" exported="" />
     <orderEntry type="module" module-name="treebolicLibView" exported="" />

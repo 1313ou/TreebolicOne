@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0">
+      <entry_point TYPE="method" FQNAME="treebolic.provider.sqlite.SqlProperties java.util.Properties load(java.io.File thisPath)" />
+      <entry_point TYPE="method" FQNAME="treebolic.provider.sqlite.SqlProperties void save(java.util.Properties theseProperties, java.lang.String thisPropertyFile)" />
+      <entry_point TYPE="method" FQNAME="treebolic.provider.sqlite.SqlProperties java.lang.String toString(java.util.Properties theseProperties)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Utils java.lang.ClassLoader getClassLoader(android.content.Context context, java.lang.String pkgName)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Utils android.content.res.Resources getResources(android.content.Context context, java.lang.String pkgName)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Utils android.content.SharedPreferences getPluginDefaultSharedPreferences(android.content.Context context, java.lang.String pkg)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.Utils android.content.SharedPreferences getPluginDefaultSharedPreferences(android.content.Context context, java.lang.String pkg)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.Utils android.content.res.Resources getResources(android.content.Context context, java.lang.String pkgName)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.Utils java.lang.ClassLoader getClassLoader(android.content.Context context, java.lang.String pkgName)" />
+      <entry_point TYPE="field" FQNAME="org.treebolic.one.sql.Settings PREF_STYLE" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.Settings void putIntPref(android.content.Context context, java.lang.String key, int value)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.Settings int getIntPref(android.content.Context context, java.lang.String key)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Settings int getIntPref(android.content.Context context, java.lang.String key)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Settings void putIntPref(android.content.Context context, java.lang.String key, int value)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.Settings void putStringPref(android.content.Context context, java.lang.String key, java.lang.String value)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.ModelFactory ModelFactory(treebolic.provider.IProvider provider0, treebolic.provider.IProviderContext providerContext0, treebolic.IContext context0)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.ModelFactory ModelFactory(treebolic.provider.IProvider provider0, treebolic.provider.IProviderContext providerContext0, treebolic.IContext locatorContext0, android.content.Context applicationContext0)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.MainActivity void setFolder(android.net.Uri fileUri)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.MainActivity java.lang.String getFolder()" />
+      <entry_point TYPE="field" FQNAME="org.treebolic.one.sql.MainActivity adapter" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.MainActivity java.lang.String getFolder()" />
+      <entry_point TYPE="field" FQNAME="org.treebolic.one.MainActivity adapter" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.ModelFactory treebolic.model.Model make(java.lang.String source, java.lang.String base, java.lang.String imageBase, java.lang.String settings)" />
+      <entry_point TYPE="method" FQNAME="org.treebolic.one.sql.ModelFactory treebolic.model.Model make(java.lang.String source, java.lang.String base, java.lang.String imageBase, java.lang.String settings)" />
+      <entry_point TYPE="field" FQNAME="org.treebolic.one.sql.Settings DATA" />
+    </entry_points>
   </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
@@ -37,7 +63,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

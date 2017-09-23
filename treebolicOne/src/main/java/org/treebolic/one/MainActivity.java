@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		}
 	}
 
-	@SuppressWarnings("static-method")
+	@SuppressWarnings({"static-method", "WeakerAccess"})
 	protected Fragment makeMainFragment()
 	{
 		return new MainFragment();
@@ -174,12 +174,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		}
 		else if (itemId == R.id.action_help)
 		{
-			HelpActivity.start(this);
+			startActivity(new Intent(this, HelpActivity.class));
 			return true;
 		}
 		else if (itemId == R.id.action_about)
 		{
-			AboutActivity.start(this);
+			startActivity(new Intent(this, AboutActivity.class));
 			return true;
 		}
 		else if (itemId == R.id.action_finish)
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		/**
 		 * Constructor
 		 */
-		protected PlaceholderFragment(int layoutId0)
+		PlaceholderFragment(int layoutId0)
 		{
 			this.layoutId = layoutId0;
 		}
@@ -322,7 +322,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 
 	// F O L D E R P R E F E R E N C E
 
-	static final String PREF_CURRENTFOLDER = "org.treebolic.one.folder";
+	private static final String PREF_CURRENTFOLDER = "org.treebolic.one.folder";
 
 	/**
 	 * Get initial folder
@@ -359,6 +359,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	/**
 	 * Update button visibility
 	 */
+	@SuppressWarnings("WeakerAccess")
 	static protected void updateButton(final FragmentActivity activity)
 	{
 		final ImageButton button = (ImageButton) activity.findViewById(R.id.treebolicButton);
@@ -548,7 +549,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	/**
 	 * Try to start Treebolic settings activity
 	 */
-	protected void tryStartTreebolicSettings()
+	private void tryStartTreebolicSettings()
 	{
 		final Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);

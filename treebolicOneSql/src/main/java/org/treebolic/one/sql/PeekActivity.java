@@ -1,8 +1,8 @@
 package org.treebolic.one.sql;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
@@ -11,7 +11,6 @@ import org.treebolic.TreebolicIface;
 import java.net.URL;
 import java.util.Properties;
 
-import treebolic.IContext;
 import treebolic.model.Model;
 import treebolic.model.ModelDump;
 import treebolic.provider.IProviderContext;
@@ -76,7 +75,7 @@ public class PeekActivity extends AppCompatActivity
 		// create provider
 		final Provider provider = new Provider();
 		provider.setContext(this.providerContext);
-		provider.setLocator((IContext) null);
+		provider.setLocator(null);
 		provider.setHandle(null);
 
 		// query provider

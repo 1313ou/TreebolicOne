@@ -22,6 +22,7 @@ import java.util.Properties;
  *
  * @author Bernard Bou
  */
+@SuppressWarnings("WeakerAccess")
 public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 {
 	/**
@@ -43,6 +44,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Load properties
 	 */
+	@SuppressWarnings("WeakerAccess")
 	static public Properties load(final URL thisUrl)
 	{
 		InputStream thisInputStream = null;

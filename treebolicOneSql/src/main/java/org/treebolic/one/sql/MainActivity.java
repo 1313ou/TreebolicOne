@@ -48,16 +48,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	private static final String TAG = "OneSQL MainActivity";
 
 	/**
-	 * File request code
-	 */
-	private static final int REQUEST_FILE_CODE = 1;
-
-	/**
-	 * Bundle request code
-	 */
-	private static final int REQUEST_BUNDLE_CODE = 2;
-
-	/**
 	 * Download request
 	 */
 	private static final int REQUEST_DOWNLOAD_CODE = 10;
@@ -163,12 +153,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		}
 		else if (itemId == R.id.action_help)
 		{
-			HelpActivity.start(this);
+			startActivity(new Intent(this, HelpActivity.class));
 			return true;
 		}
 		else if (itemId == R.id.action_about)
 		{
-			AboutActivity.start(this);
+			startActivity(new Intent(this, AboutActivity.class));
 			return true;
 		}
 		else if (itemId == R.id.action_finish)
@@ -283,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 
 	// F O L D E R P R E F E R E N C E
 
-	static final String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder";
+	private static final String PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder";
 
 	/**
 	 * Get initial folder
@@ -313,6 +303,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	/**
 	 * Update button visibility
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected void updateButton()
 	{
 		final ImageButton button = (ImageButton) findViewById(R.id.treebolicButton);
@@ -343,7 +334,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 	 * @param source0
 	 *            source
 	 */
-	private void tryStartTreebolic(final String source0)
+	private void tryStartTreebolic(@SuppressWarnings("SameParameterValue") final String source0)
 	{
 		String source = source0 != null ? source0 : Settings.getStringPref(this, TreebolicIface.PREF_SOURCE);
 		if (source == null || source.isEmpty())

@@ -23,6 +23,7 @@ import java.net.URL;
  *
  * @author Bernard Bou
  */
+@SuppressWarnings("WeakerAccess")
 public class Settings
 {
 	/**
@@ -159,7 +160,7 @@ public class Settings
 	 *            value
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	static public void putStringPref(final Context context, final String key, final String value)
+	static public void putStringPref(final Context context, @SuppressWarnings("SameParameterValue") final String key, final String value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		sharedPref.edit().putString(key, value).commit();
@@ -173,7 +174,7 @@ public class Settings
 	 * @param key
 	 *            key
 	 */
-	static public void clearPref(final Context context, final String key)
+	static public void clearPref(final Context context, @SuppressWarnings("SameParameterValue") final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		sharedPref.edit().remove(key).apply();

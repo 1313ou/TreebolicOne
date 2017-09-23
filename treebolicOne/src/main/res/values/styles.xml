@@ -19,9 +19,6 @@
 
 	    <!-- T R E E B O L I C -->
 
-	    <!-- treebolic action bar colors -->
-	    <item name="treebolic_actionbar_icon_color">@android:color/white</item>
-
 	    <!-- treebolic colors -->
 	    <item name="treebolic_toolbar_background">@color/primary_dark</item>
 	    <item name="treebolic_toolbar_icon_color">@android:color/white</item>

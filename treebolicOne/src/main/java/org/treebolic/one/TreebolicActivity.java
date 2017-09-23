@@ -13,10 +13,12 @@ import org.treebolic.TreebolicIface;
  */
 public class TreebolicActivity extends TreebolicSourceActivity
 {
-	/**
-	 * Log tag
-	 */
-	private static final String TAG = "TreebolicA";
+// --Commented out by Inspection START (9/23/17 5:08 PM):
+//	/**
+//	 * Log tag
+//	 */
+//	private static final String TAG = "TreebolicA";
+// --Commented out by Inspection STOP (9/23/17 5:08 PM)
 
 	// C O N S T R U C T O R
 

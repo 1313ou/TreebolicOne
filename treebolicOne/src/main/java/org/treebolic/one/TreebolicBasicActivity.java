@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
+import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
 import org.treebolic.search.SearchSettings;
@@ -39,6 +40,7 @@ import treebolic.IContext;
 import treebolic.Widget;
 import treebolic.glue.component.Container;
 import treebolic.glue.component.Statusbar;
+import treebolic.glue.component.TreebolicThread;
 import treebolic.glue.component.WebDialog;
 import treebolic.view.View;
 
@@ -57,31 +59,37 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	/**
 	 * Parameter : Document base
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String base;
 
 	/**
 	 * Parameter : Image base
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String imageBase;
 
 	/**
 	 * Parameter : Settings
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String settings;
 
 	/**
 	 * Parameter : CSS style for WebViews
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String style;
 
 	/**
 	 * Parameter : Returned URL urlScheme that is handled
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String urlScheme;
 
 	/**
 	 * Parameter : parameters
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Properties parameters;
 
 	// components
@@ -89,16 +97,19 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	/**
 	 * Treebolic widget
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Widget widget;
 
 	/**
 	 * Search view on action bar
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected SearchView searchView;
 
 	/**
 	 * Input
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected final String input;
 
 	// Parent
@@ -106,6 +117,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	/**
 	 * Parent (client) activity
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Intent parentActivity;
 
 	// Menu
@@ -210,7 +222,11 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		final View view = this.widget.getView();
 		if (view != null)
 		{
-			view.getThread().terminate();
+			final TreebolicThread thread = view.getThread();
+			if (thread != null)
+			{
+				thread.terminate();
+			}
 		}
 
 		// super
@@ -251,7 +267,8 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		});
 
 		// icon tint
-		Tint.tint(this, menu, R.id.action_search_run, R.id.action_search_reset, R.id.action_search_settings);
+		final int iconTint = Tint.getActionBarForegroundColorFromTheme(this);
+		Tint.tint(iconTint, menu, R.id.action_search_run, R.id.action_search_reset, R.id.action_search_settings);
 
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -278,7 +295,12 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		}
 		else if (itemId == R.id.action_help)
 		{
-			HelpActivity.start(this);
+			startActivity(new Intent(this, HelpActivity.class));
+			return true;
+		}
+		else if (itemId == R.id.action_about)
+		{
+			startActivity(new Intent(this, AboutActivity.class));
 			return true;
 		}
 		else if (itemId == R.id.action_search_run)
@@ -321,6 +343,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	 *
 	 * @param intent intent
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected void unmarshalArgs(final Intent intent)
 	{
 		// retrieve arguments
@@ -480,6 +503,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	 * @param query  new query
 	 * @param submit whether submit was changed
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected void handleQueryChanged(final String query, boolean submit)
 	{
 		// clear keyboard out of the way
@@ -515,6 +539,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	/**
 	 * Tree search handler
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected void handleSearchRun()
 	{
 		// clear keyboard out of the way
@@ -545,6 +570,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	/**
 	 * Tree search reset handler
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected void handleSearchReset()
 	{
 		// clear keyboard out of the way
@@ -578,6 +604,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 
 	// S E A R C H   I N T E R F A C E
 
+	@SuppressWarnings("WeakerAccess")
 	protected void runSearch(String scope, String mode, String target)
 	{
 		if (target == null || target.isEmpty())
@@ -590,12 +617,14 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		this.widget.search(CMD_SEARCH, scope, mode, target);
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	protected void continueSearch()
 	{
 		Log.d(TAG, "Search continue");
 		this.widget.search(CMD_CONTINUE);
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	protected void resetSearch()
 	{
 		Log.d(TAG, "Search reset");
@@ -610,6 +639,7 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 	 *
 	 * @return properties
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Properties makeParameters()
 	{
 		final Properties theseParameters = new Properties();
@@ -629,23 +659,25 @@ abstract public class TreebolicBasicActivity extends AppCompatActivity implement
 		return theseParameters;
 	}
 
-	/**
-	 * Put toast on UI thread
-	 *
-	 * @param message  message
-	 * @param duration duration
-	 */
-	private void toast(final String message, final int duration)
-	{
-		runOnUiThread(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				Toast.makeText(TreebolicBasicActivity.this, message, duration).show();
-			}
-		});
-	}
+// --Commented out by Inspection START (9/23/17 5:08 PM):
+//	/**
+//	 * Put toast on UI thread
+//	 *
+//	 * @param message  message
+//	 * @param duration duration
+//	 */
+//	private void toast(final String message, final int duration)
+//	{
+//		runOnUiThread(new Runnable()
+//		{
+//			@Override
+//			public void run()
+//			{
+//				Toast.makeText(TreebolicBasicActivity.this, message, duration).show();
+//			}
+//		});
+//	}
+// --Commented out by Inspection STOP (9/23/17 5:08 PM)
 
 	/**
 	 * Put snackbar on UI thread

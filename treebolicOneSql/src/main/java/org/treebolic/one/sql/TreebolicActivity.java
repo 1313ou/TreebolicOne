@@ -82,7 +82,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	 * @return intent
 	 */
 	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase,
-			final String settings, final String style, final String urlScheme, final Bundle more)
+			final String settings, @SuppressWarnings("SameParameterValue") final String style, final String urlScheme, final Bundle more)
 	{
 		final Intent intent = new Intent(context, TreebolicActivity.class);
 		intent.putExtra(TreebolicIface.ARG_PROVIDER, providerName);

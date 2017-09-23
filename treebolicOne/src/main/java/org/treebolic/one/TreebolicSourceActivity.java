@@ -1,22 +1,24 @@
 package org.treebolic.one;
 
-import java.util.Properties;
+import android.content.Intent;
+import android.os.Bundle;
 
 import org.treebolic.TreebolicIface;
 
-import android.content.Intent;
-import android.os.Bundle;
+import java.util.Properties;
 
 public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 {
 	/**
 	 * Parameter : source (interpreted by provider)
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String source;
 
 	/**
 	 * Parameter : data provider
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String providerName;
 
 	/**

@@ -22,6 +22,7 @@ import java.net.URL;
  *
  * @author Bernard Bou
  */
+@SuppressWarnings("WeakerAccess")
 public class Settings
 {
 	/**
@@ -209,6 +210,7 @@ public class Settings
 	 *            url string
 	 * @return url
 	 */
+	@SuppressWarnings("WeakerAccess")
 	static public URL makeURL(final String url)
 	{
 		try

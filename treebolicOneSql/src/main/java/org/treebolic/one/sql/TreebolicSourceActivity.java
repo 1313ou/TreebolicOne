@@ -1,28 +1,31 @@
 package org.treebolic.one.sql;
 
-import java.util.Properties;
-
-import org.treebolic.TreebolicIface;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import org.treebolic.TreebolicIface;
+
+import java.util.Properties;
 
 public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 {
 	/**
 	 * Parameter : source (interpreted by provider)
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String source;
 
 	/**
 	 * Parameter : data provider
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected String providerName;
 
 	/**
 	 * Restoring
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected boolean restoring;
 
 	// C O N S T R U C T O R
