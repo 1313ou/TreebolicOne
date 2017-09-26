@@ -55,13 +55,13 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		return super.onOptionsItemSelected(item);
 	}
 
+	// S E T U P
+
 	@Override
 	public void onBuildHeaders(final List<Header> target)
 	{
 		loadHeadersFromResource(R.xml.pref_headers, target);
 	}
-
-	// S E T U P
 
 	@Override
 	protected boolean isValidFragment(final String fragmentName)
