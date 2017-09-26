@@ -25,7 +25,7 @@
 			  android:icon="@drawable/ic_launcher"
 			  android:label="@string/app_name"
 			  android:supportsRtl="true"
-			  android:theme="@style/CompatAppTheme"
+			  android:theme="@style/MyTheme"
 			  tools:ignore="UnusedAttribute" >
 			  <activity
 				  android:name=".MainActivity"

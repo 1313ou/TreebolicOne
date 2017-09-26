@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import org.treebolic.AppCompatCommonActivity;
 import org.treebolic.TreebolicIface;
 import org.treebolic.filechooser.FileChooserActivity;
 import org.treebolic.guide.AboutActivity;
@@ -40,7 +40,7 @@ import treebolic.glue.component.WebDialog;
  *
  * @author Bernard Bou
  */
-public class MainActivity extends AppCompatActivity implements OnClickListener
+public class MainActivity extends AppCompatCommonActivity implements OnClickListener
 {
 	/**
 	 * Log tag

@@ -2,10 +2,10 @@ package org.treebolic.one.sql;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
+import org.treebolic.AppCompatCommonActivity;
 import org.treebolic.TreebolicIface;
 
 import java.net.URL;
@@ -16,7 +16,7 @@ import treebolic.model.ModelDump;
 import treebolic.provider.IProviderContext;
 import treebolic.provider.sqlite.Provider;
 
-public class PeekActivity extends AppCompatActivity
+public class PeekActivity extends AppCompatCommonActivity
 {
 	private TextView textView;
 

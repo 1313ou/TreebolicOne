@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Dot download activity
+ * Download activity
  *
  * @author Bernard Bou
  */
@@ -23,6 +23,7 @@ public class DownloadActivity extends org.treebolic.download.DownloadActivity
 	{
 		super.onCreate(savedInstanceState);
 
+		// parameters
 		this.expandArchiveCheckbox.setVisibility(View.VISIBLE);
 		this.destDir = Storage.getCacheDir(this);
 		this.downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD);

@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import org.treebolic.AppCompatCommonActivity;
 import org.treebolic.TreebolicIface;
 import org.treebolic.filechooser.EntryChooser;
 import org.treebolic.filechooser.FileChooserActivity;
@@ -41,7 +42,7 @@ import java.io.IOException;
  *
  * @author Bernard Bou
  */
-public class MainActivity extends AppCompatActivity implements OnClickListener
+public class MainActivity extends AppCompatCommonActivity implements OnClickListener
 {
 	/**
 	 * Log tag

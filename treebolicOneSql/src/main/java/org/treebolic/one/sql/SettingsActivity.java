@@ -1,5 +1,6 @@
 package org.treebolic.one.sql;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -8,10 +9,9 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7app.contrib.AppCompatPreferenceActivity;
 import android.view.MenuItem;
 
+import org.treebolic.AppCompatCommonPreferenceActivity;
 import org.treebolic.TreebolicIface;
 import org.treebolic.preference.OpenEditTextPreference;
 
@@ -22,7 +22,7 @@ import java.util.List;
  *
  * @author Bernard Bou
  */
-public class SettingsActivity extends AppCompatPreferenceActivity
+public class SettingsActivity extends AppCompatCommonPreferenceActivity
 {
 	// E V E N T S
 
@@ -136,7 +136,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			addPreferencesFromResource(R.xml.pref_provider);
 
 			// activity
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 
 			// bind
 			final Preference providerPreference = findPreference(Settings.PREF_PROVIDER);
@@ -157,7 +157,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			addPreferencesFromResource(R.xml.pref_data);
 
 			// activity
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 
 			// bind
 			final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
@@ -220,7 +220,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity
 			pref.setValues(getResources().getStringArray(R.array.pref_download_urls));
 
 			// bind
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 			final Preference preference = findPreference(Settings.PREF_DOWNLOAD);
 			final String value = Settings.getStringPref(activity, preference.getKey());
 			SettingsActivity.bind(preference, value, SettingsActivity.listener);

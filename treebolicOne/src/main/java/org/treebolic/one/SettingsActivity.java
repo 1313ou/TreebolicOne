@@ -1,5 +1,6 @@
 package org.treebolic.one;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -8,7 +9,6 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.treebolic.AppCompatCommonPreferenceActivity;
@@ -136,7 +136,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			addPreferencesFromResource(R.xml.pref_provider);
 
 			// activity
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 
 			// bind
 			final Preference providerPreference = findPreference(Settings.PREF_PROVIDER);
@@ -157,7 +157,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			addPreferencesFromResource(R.xml.pref_data);
 
 			// activity
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 
 			// bind
 			final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
@@ -213,7 +213,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			pref.setValues(getResources().getStringArray(R.array.pref_download_urls));
 
 			// bind
-			final AppCompatActivity activity = (AppCompatActivity) getActivity();
+			final Activity activity = getActivity();
 			final Preference preference = findPreference(Settings.PREF_DOWNLOAD);
 			final String value = Settings.getStringPref(activity, preference.getKey());
 			SettingsActivity.bind(preference, value, SettingsActivity.listener);
