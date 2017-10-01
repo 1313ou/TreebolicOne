@@ -25,12 +25,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.treebolic.AppCompatCommonActivity;
+import org.treebolic.ColorUtils;
 import org.treebolic.TreebolicIface;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
 import org.treebolic.search.SearchSettings;
-import org.treebolic.search.Tint;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -267,8 +267,8 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		});
 
 		// icon tint
-		final int iconTint = Tint.getActionBarForegroundColorFromTheme(this);
-		Tint.tint(iconTint, menu, R.id.action_search_run, R.id.action_search_reset, R.id.action_search_settings);
+		final int iconTint = ColorUtils.getActionBarForegroundColorFromTheme(this);
+		ColorUtils.tint(iconTint, menu, R.id.action_search_run, R.id.action_search_reset, R.id.action_search_settings);
 
 		return super.onCreateOptionsMenu(menu);
 	}
