@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		/**
 		 * Constructor
 		 */
-		PlaceholderFragment(int layoutId0)
+		public PlaceholderFragment(int layoutId0)
 		{
 			this.layoutId = layoutId0;
 		}
