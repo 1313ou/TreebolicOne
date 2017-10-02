@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
 import android.widget.LinearLayout;
@@ -145,7 +146,8 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		super.onCreate(savedInstanceState);
 
 		// toolbar
-		@SuppressLint("InflateParams") final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
+		@SuppressLint("InflateParams")
+		final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
 
 		// widget
 		this.widget = new Widget(this, this);
@@ -154,7 +156,8 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		final LinearLayout contentView = new LinearLayout(this);
 		contentView.setOrientation(LinearLayout.VERTICAL);
 		contentView.addView(toolbar);
-		contentView.addView(this.widget);
+		final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1.F);
+		contentView.addView(this.widget, params);
 		setContentView(contentView);
 
 		// action bar
