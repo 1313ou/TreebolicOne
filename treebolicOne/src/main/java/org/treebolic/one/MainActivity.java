@@ -22,7 +22,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import org.treebolic.AppCompatCommonActivity;
@@ -63,11 +62,6 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * Download request
 	 */
 	private static final int REQUEST_DOWNLOAD_CODE = 10;
-
-	/**
-	 * Provider adapter
-	 */
-	private SimpleAdapter adapter;
 
 	// L I F E C Y C L E O V E R R I D E S
 

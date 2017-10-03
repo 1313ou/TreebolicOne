@@ -132,7 +132,7 @@ public class Settings
 	 *            value
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	static public void putStringPref(final Context context, final String key, final String value)
+	static public void putStringPref(final Context context, @SuppressWarnings("SameParameterValue") final String key, final String value)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		sharedPref.edit().putString(key, value).commit();

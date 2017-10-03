@@ -1,5 +1,12 @@
 package treebolic.provider.xml;
 
+import org.w3c.dom.Document;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -8,31 +15,24 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
-
-import org.w3c.dom.Document;
-import org.xml.sax.EntityResolver;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  * DOM Parser
  *
  * @author Bernard Bou
  */
+@SuppressWarnings("WeakerAccess")
 public class Parser
 {
 	/**
 	 * Validate XML
 	 */
-	protected boolean validate;
+	@SuppressWarnings("WeakerAccess")
+	protected final boolean validate;
 
 	/**
 	 * Constructor
@@ -45,7 +45,8 @@ public class Parser
 	/**
 	 * Constructor
 	 */
-	public Parser(final boolean thisValidateFlag)
+	@SuppressWarnings("WeakerAccess")
+	public Parser(@SuppressWarnings("SameParameterValue") final boolean thisValidateFlag)
 	{
 		this.validate = thisValidateFlag;
 	}
@@ -53,14 +54,12 @@ public class Parser
 	/**
 	 * Make document
 	 *
-	 * @param thisUrl
-	 *        in data url
-	 * @param thisResolver
-	 *        entity resolver
+	 * @param thisUrl      in data url
+	 * @param thisResolver entity resolver
 	 * @return DOM document
-	 * @throws ParserConfigurationException 
-	 * @throws IOException 
-	 * @throws SAXException 
+	 * @throws ParserConfigurationException parser configuration exception
+	 * @throws IOException                  io exception
+	 * @throws SAXException                 sax parser exception
 	 */
 	public Document makeDocument(final URL thisUrl, final EntityResolver thisResolver) throws ParserConfigurationException, SAXException, IOException
 	{
@@ -73,8 +72,7 @@ public class Parser
 			{
 				thisBuilder.setEntityResolver(thisResolver);
 			}
-			final Document thisDocument = thisBuilder.parse(thisUrl.openStream());
-			return thisDocument;
+			return thisBuilder.parse(thisUrl.openStream());
 		}
 		finally
 		{
@@ -86,7 +84,7 @@ public class Parser
 	 * Make Document builder
 	 *
 	 * @return document builder
-	 * @throws ParserConfigurationException
+	 * @throws ParserConfigurationException parser configuration exception
 	 */
 	private DocumentBuilder makeDocumentBuilder() throws ParserConfigurationException
 	{
@@ -110,15 +108,10 @@ public class Parser
 	/**
 	 * Document
 	 *
-	 * @param thisIn
-	 *        in data url
-	 * @param thisXslt
-	 *        xslt url
-	 * @param thisResolver
-	 *        entity resolver, null if none
+	 * @param thisIn       in data url
+	 * @param thisXslt     xslt url
+	 * @param thisResolver entity resolver, null if none
 	 * @return DOM document
-	 * @throws TransformerException
-	 * @throws IOException
 	 */
 	public Document makeDocument(final URL thisIn, final URL thisXslt, final EntityResolver thisResolver)
 	{
@@ -128,7 +121,7 @@ public class Parser
 			final Source thisXslSource = new StreamSource(thisXslt.openStream());
 
 			// in
-			Source thisSource = null;
+			Source thisSource;
 			if (thisResolver == null)
 			{
 				thisSource = new StreamSource(thisIn.openStream());
@@ -150,18 +143,6 @@ public class Parser
 			thisTransformer.transform(thisSource, thisResult);
 
 			return (Document) thisResult.getNode();
-		}
-		catch (final IOException e)
-		{
-			System.err.println("Dom parser: " + e.getMessage()); //$NON-NLS-1$
-		}
-		catch (final TransformerConfigurationException e)
-		{
-			System.err.println("Dom parser: " + e.getMessage()); //$NON-NLS-1$
-		}
-		catch (final TransformerException e)
-		{
-			System.err.println("Dom parser: " + e.getMessage()); //$NON-NLS-1$
 		}
 		catch (final Exception e)
 		{

@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream;
  *
  * @author <a href="mailto:1313ou@gmail.com">Bernard Bou</a>
  */
+@SuppressWarnings("WeakerAccess")
 public class Utils
 {
 	static private Bitmap bytesToImage(final byte[] imageBytes)
@@ -55,9 +56,8 @@ public class Utils
 		bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
 		final byte[] byteArray = byteArrayOutputStream.toByteArray();
 		final String imageBase64 = Base64.encodeToString(byteArray, Base64.DEFAULT);
-		final String dataUrl = "data:image/png;base64," + imageBase64;
-		return dataUrl;
+		return "data:image/png;base64," + imageBase64;
 
-		// webview.loadUrl(dataURL); //pass the bitmap base64 dataurl in URL parameter
+		// webview.loadUrl(dataURL); //pass the bitmap base64 dataUrl in URL parameter
 	}
 }

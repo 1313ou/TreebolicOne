@@ -1,16 +1,16 @@
 package treebolic.provider.xml;
 
+import org.w3c.dom.Document;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.net.URL;
 import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.xml.sax.EntityResolver;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
 import treebolic.ILocator;
 import treebolic.model.Model;
@@ -26,11 +26,13 @@ public class Provider implements IProvider
 	/**
 	 * Context used to query for Url
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected IProviderContext theContext;
 
 	/**
 	 * Url
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected URL theUrl;
 
 	// C O N S T R U C T O R
@@ -130,6 +132,7 @@ public class Provider implements IProvider
 	 *        url
 	 * @return model
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Model makeModel(final URL thisUrl, final URL thisBase, final Properties theseParameters)
 	{
 		final Document thisDocument = makeDocument(thisUrl);
@@ -145,6 +148,7 @@ public class Provider implements IProvider
 	 *        url
 	 * @return tree
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Tree makeTree(final URL thisUrl, final URL thisBase, final Properties theseParameters)
 	{
 		final Document thisDocument = makeDocument(thisUrl);
@@ -160,6 +164,7 @@ public class Provider implements IProvider
 	 *        document url
 	 * @return DOM document
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected Document makeDocument(final URL thisUrl)
 	{
 		try

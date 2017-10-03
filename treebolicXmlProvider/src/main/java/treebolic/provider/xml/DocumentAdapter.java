@@ -31,6 +31,7 @@ import treebolic.provider.IProvider;
  *
  * @author Bernard Bou
  */
+@SuppressWarnings("WeakerAccess")
 public class DocumentAdapter
 {
 	// D A T A
@@ -45,12 +46,12 @@ public class DocumentAdapter
 		/**
 		 * Mount point
 		 */
-		public MountPoint.Mounting theMountPoint;
+		public final MountPoint.Mounting theMountPoint;
 
 		/**
 		 * Node to mount graph at
 		 */
-		public MutableNode theMountingNode;
+		public final MutableNode theMountingNode;
 
 		/**
 		 * Constructor
@@ -156,7 +157,7 @@ public class DocumentAdapter
 	 */
 	public Model makeModel(final Document thisDocument)
 	{
-		this.theIdToNodeMap = new TreeMap<String, MutableNode>();
+		this.theIdToNodeMap = new TreeMap<>();
 		final Tree thisTree = toTree(thisDocument);
 		if (thisTree == null)
 		{
@@ -174,9 +175,8 @@ public class DocumentAdapter
 	 */
 	public Tree makeTree(final Document thisDocument)
 	{
-		this.theIdToNodeMap = new Hashtable<String, MutableNode>();
-		final Tree thisTree = toTree(thisDocument);
-		return thisTree;
+		this.theIdToNodeMap = new Hashtable<>();
+		return toTree(thisDocument);
 	}
 
 	// P A R S E
@@ -188,6 +188,7 @@ public class DocumentAdapter
 	 * @param thisId     id
 	 * @return model node
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected MutableNode makeNode(final MutableNode thisParent, final String thisId)
 	{
 		return new MutableNode(thisParent, thisId);
@@ -200,6 +201,7 @@ public class DocumentAdapter
 	 * @param thisToNode   model to-node end
 	 * @return model edge
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected MutableEdge makeEdge(final MutableNode thisFromNode, final MutableNode thisToNode)
 	{
 		return new MutableEdge(thisFromNode, thisToNode);
@@ -299,7 +301,11 @@ public class DocumentAdapter
 			{
 				if (thisImageSrc != null && !thisImageSrc.isEmpty())
 				{
-					final StringBuilder sb = new StringBuilder();
+					String sb = "<p><img src='" + //
+							thisImageSrc + //
+							"' style='float:left;margin-right:10px;'/>" + //
+							thisContent + //
+							"</p>";
 					/*
 					sb.append("<table><tr><td valign='top'><img src='");
 					sb.append(thisImageSrc);
@@ -307,12 +313,7 @@ public class DocumentAdapter
 					sb.append(thisContent);
 					sb.append("</td></tr></table>");
 					*/
-					sb.append("<p><img src='") //
-							.append(thisImageSrc) //
-							.append("' style='float:left;margin-right:10px;'/>") //
-							.append(thisContent) //
-							.append("</p>");
-					thisNode.setContent(sb.toString());
+					thisNode.setContent(sb);
 				}
 				else
 				{
@@ -396,7 +397,7 @@ public class DocumentAdapter
 						final MountTask thisTask = new MountTask(thisMountPoint, thisNode);
 						if (this.theMountTasks == null)
 						{
-							this.theMountTasks = new ArrayList<MountTask>();
+							this.theMountTasks = new ArrayList<>();
 						}
 						this.theMountTasks.add(thisTask);
 					}
@@ -485,7 +486,7 @@ public class DocumentAdapter
 			final MutableEdge thisEdge = toEdge(thisEdgeElement);
 			if (thisEdgeList == null)
 			{
-				thisEdgeList = new ArrayList<IEdge>();
+				thisEdgeList = new ArrayList<>();
 			}
 			thisEdgeList.add(thisEdge);
 		}
@@ -544,22 +545,22 @@ public class DocumentAdapter
 			thisAttribute = thisElement.getAttribute("xmoveto"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theXMoveTo = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theXMoveTo = Float.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("ymoveto"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theYMoveTo = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theYMoveTo = Float.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("xshift"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theXShift = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theXShift = Float.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("yshift"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theYShift = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theYShift = Float.valueOf(thisAttribute);
 			}
 		}
 
@@ -600,12 +601,12 @@ public class DocumentAdapter
 			thisAttribute = thisElement.getAttribute("expansion"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theExpansion = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theExpansion = Float.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("sweep"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theSweep = Float.valueOf(thisAttribute).floatValue();
+				theseSettings.theSweep = Float.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("preserve-orientation"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
@@ -620,7 +621,7 @@ public class DocumentAdapter
 			thisAttribute = thisElement.getAttribute("fontsize"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
 			{
-				theseSettings.theFontSize = Integer.valueOf(thisAttribute).intValue();
+				theseSettings.theFontSize = Integer.valueOf(thisAttribute);
 			}
 			thisAttribute = thisElement.getAttribute("scalefonts"); //$NON-NLS-1$
 			if (thisAttribute != null && !thisAttribute.isEmpty())
@@ -779,7 +780,7 @@ public class DocumentAdapter
 
 			if (thisMenuItemList == null)
 			{
-				thisMenuItemList = new ArrayList<MenuItem>();
+				thisMenuItemList = new ArrayList<>();
 			}
 			thisMenuItemList.add(thisMenuItem);
 		}
@@ -800,8 +801,7 @@ public class DocumentAdapter
 		Utils.parseMenuItem(thisMenuItem, thisElement.getAttribute("action"), thisElement.getAttribute("match-scope"), thisElement.getAttribute("match-mode")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 		// match target
-		final String thisAttribute = thisElement.getAttribute("match-target"); //$NON-NLS-1$
-		thisMenuItem.theMatchTarget = thisAttribute;
+		thisMenuItem.theMatchTarget = thisElement.getAttribute("match-target");
 
 		// label
 		final Element thisLabelElement = DocumentAdapter.getFirstElementByTagName(thisElement, "label"); //$NON-NLS-1$
@@ -869,7 +869,7 @@ public class DocumentAdapter
 	 */
 	static private List<Element> getLevel1ChildElementsByTagName(final Element thisElement, final String thisTagName)
 	{
-		final ArrayList<Element> thisList = new ArrayList<Element>();
+		final ArrayList<Element> thisList = new ArrayList<>();
 		final NodeList theseChildren = thisElement.getChildNodes();
 		for (int i = 0; i < theseChildren.getLength(); i++)
 		{

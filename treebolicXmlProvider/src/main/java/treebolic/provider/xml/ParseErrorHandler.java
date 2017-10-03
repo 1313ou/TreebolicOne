@@ -13,21 +13,25 @@ class ParseErrorHandler implements ErrorHandler
 	/**
 	 * Warning count
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected int theWarnings;
 
 	/**
 	 * Error count
 	 */
-	protected int theErrors;
+	@SuppressWarnings("WeakerAccess")
+	protected final int theErrors;
 
 	/**
 	 * Fatal error count
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected int theFatalErrors;
 
 	/**
 	 * Constructor
 	 */
+	@SuppressWarnings("WeakerAccess")
 	protected ParseErrorHandler()
 	{
 		this.theWarnings = 0;
