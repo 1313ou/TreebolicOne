@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="source" translatable="false">test.zip</string>
-    <string name="source_entry" translatable="false">test.xml</string>
-    <string name="settings" translatable="false">test.properties</string>
+	<string name="source" translatable="false">test.zip</string>
+	<string name="source_entry" translatable="false">test.xml</string>
+	<string name="settings" translatable="false">test.properties</string>
 
 	<!-- download -->
-    <string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/data.zip</string>
-    <string-array name="pref_download_urls" translatable="false" tools:ignore="InconsistentArrays">
-        <item>@string/pref_download_url_default</item>
-    </string-array>
+	<string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/data.zip</string>
+	<string-array name="pref_download_urls" translatable="false" tools:ignore="InconsistentArrays">
+		<item>@string/pref_download_url_default</item>
+	</string-array>
 
 </resources>

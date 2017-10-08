@@ -29,9 +29,8 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 
 		/**
 		 * Constructor
-		 * 
-		 * @param thisCursor
-		 *            android cursor
+		 *
+		 * @param thisCursor android cursor
 		 */
 		public AndroidCursor(android.database.Cursor thisCursor)
 		{
@@ -42,6 +41,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		public void close()
 		{
 			if (this.theCursor != null)
+			{
 				try
 				{
 					this.theCursor.close();
@@ -51,6 +51,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 					//
 					thisException.printStackTrace();
 				}
+			}
 		}
 
 		@Override
@@ -131,6 +132,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		public void close()
 		{
 			if (this.theDB != null)
+			{
 				try
 				{
 					this.theDB.close();
@@ -139,14 +141,14 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 				{
 					thisException.printStackTrace();
 				}
+			}
 		}
 
 		@SuppressWarnings("resource")
 		@Override
 		public AndroidCursor query(String thisSql) throws SQLException
 		{
-			@SuppressLint("Recycle")
-			final android.database.Cursor thisCursor = this.theDB.rawQuery(thisSql, null);
+			@SuppressLint("Recycle") final android.database.Cursor thisCursor = this.theDB.rawQuery(thisSql, null);
 			return new AndroidCursor(thisCursor);
 		}
 	}

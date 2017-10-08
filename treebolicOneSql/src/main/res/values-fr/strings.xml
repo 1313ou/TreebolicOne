@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Treebolic One Sql</string>
-    <string name="treebolic">Treebolic</string>
+	<string name="app_name">Treebolic One Sql</string>
+	<string name="treebolic">Treebolic</string>
 
-    <!-- menu+actionbar -->
-    <string name="hint_search">source</string>
-    <string name="hint_search_treebolic">requête</string>
+	<!-- menu+actionbar -->
+	<string name="hint_search">source</string>
+	<string name="hint_search_treebolic">requête</string>
 
-    <!-- activity -->
-    <string name="title_activity_main">Treebolic One Sql</string>
-    <string name="title_activity_treebolic">Treebolic One Sql</string>
-    <string name="title_activity_settings">Paramètres</string>
-    <string name="title_activity_app_settings">Application</string>
-    <string name="title_activity_peek">Aperçu</string>
-    <string name="title_save_narrowing">Sauvegarder restriction</string>
-    <string name="title_clear_narrowing">Effacer restriction</string>
-    <string name="title_reset">Réinitialiser données</string>
-    <string name="title_help">Aide</string>
-    <string name="title_tips">Astuces</string>
-    <string name="title_about">À propos</string>
+	<!-- activity -->
+	<string name="title_activity_main">Treebolic One Sql</string>
+	<string name="title_activity_treebolic">Treebolic One Sql</string>
+	<string name="title_activity_settings">Paramètres</string>
+	<string name="title_activity_app_settings">Application</string>
+	<string name="title_activity_peek">Aperçu</string>
+	<string name="title_save_narrowing">Sauvegarder restriction</string>
+	<string name="title_clear_narrowing">Effacer restriction</string>
+	<string name="title_reset">Réinitialiser données</string>
+	<string name="title_help">Aide</string>
+	<string name="title_tips">Astuces</string>
+	<string name="title_about">À propos</string>
 
-    <!-- menu -->
-    <string name="title_run">Lancer</string>
-    <string name="title_peek">Aperçu</string>
-    <string name="title_settings">Paramètres</string>
-    <string name="title_finish">Finir</string>
-    <string name="title_start">Démarrer</string>
-    <!-- <string name="title_kill">Terminer</string> -->
+	<!-- menu -->
+	<string name="title_run">Lancer</string>
+	<string name="title_peek">Aperçu</string>
+	<string name="title_settings">Paramètres</string>
+	<string name="title_finish">Finir</string>
+	<string name="title_start">Démarrer</string>
+	<!-- <string name="title_kill">Terminer</string> -->
 
-    <!-- search settings -->
-    <string name="title_search_settings_dialog">Recherche Treebolic</string>
-    <string name="message_search_settings_dialog">Paramètres de recherche</string>
-    <string name="ok_search_settings_dialog">OK</string>
-    <string name="cancel_search_settings_dialog">Annuler</string>
+	<!-- search settings -->
+	<string name="title_search_settings_dialog">Recherche Treebolic</string>
+	<string name="message_search_settings_dialog">Paramètres de recherche</string>
+	<string name="ok_search_settings_dialog">OK</string>
+	<string name="cancel_search_settings_dialog">Annuler</string>
 
-    <!-- errors -->
-    <string name="error_null_source">Source nulle</string>
-    <string name="error_null_zipentry">Entrée zip nulle</string>
-    <string name="error_null_model">Modèle null</string>
-    <string name="error_null_data">Données  nulles</string>
-    <string name="error_link">Error de lien</string>
-    <string name="error_query">Error dans la requête</string>
+	<!-- errors -->
+	<string name="error_null_source">Source nulle</string>
+	<string name="error_null_zipentry">Entrée zip nulle</string>
+	<string name="error_null_model">Modèle null</string>
+	<string name="error_null_data">Données  nulles</string>
+	<string name="error_link">Error de lien</string>
+	<string name="error_query">Error dans la requête</string>
 
 </resources>

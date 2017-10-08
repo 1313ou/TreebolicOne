@@ -144,8 +144,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		super.onCreate(savedInstanceState);
 
 		// toolbar
-		@SuppressLint("InflateParams")
-		final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
+		@SuppressLint("InflateParams") final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
 
 		// setup
 		final TypedValue value = new TypedValue();
@@ -662,25 +661,25 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		return theseParameters;
 	}
 
-// --Commented out by Inspection START (9/23/17 5:08 PM):
-//	/**
-//	 * Put toast on UI thread
-//	 *
-//	 * @param message  message
-//	 * @param duration duration
-//	 */
-//	private void toast(final String message, final int duration)
-//	{
-//		runOnUiThread(new Runnable()
-//		{
-//			@Override
-//			public void run()
-//			{
-//				Toast.makeText(TreebolicBasicActivity.this, message, duration).show();
-//			}
-//		});
-//	}
-// --Commented out by Inspection STOP (9/23/17 5:08 PM)
+	// --Commented out by Inspection START (9/23/17 5:08 PM):
+	//	/**
+	//	 * Put toast on UI thread
+	//	 *
+	//	 * @param message  message
+	//	 * @param duration duration
+	//	 */
+	//	private void toast(final String message, final int duration)
+	//	{
+	//		runOnUiThread(new Runnable()
+	//		{
+	//			@Override
+	//			public void run()
+	//			{
+	//				Toast.makeText(TreebolicBasicActivity.this, message, duration).show();
+	//			}
+	//		});
+	//	}
+	// --Commented out by Inspection STOP (9/23/17 5:08 PM)
 
 	/**
 	 * Put snackbar on UI thread

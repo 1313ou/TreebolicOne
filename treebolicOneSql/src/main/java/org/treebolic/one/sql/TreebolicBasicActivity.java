@@ -146,8 +146,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		super.onCreate(savedInstanceState);
 
 		// toolbar
-		@SuppressLint("InflateParams")
-		final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
+		@SuppressLint("InflateParams") final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
 
 		// widget
 		this.widget = new Widget(this, this);

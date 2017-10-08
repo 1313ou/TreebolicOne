@@ -12,10 +12,8 @@ public class Utils
 	/**
 	 * Get package class loader
 	 *
-	 * @param context
-	 *            current context
-	 * @param pkgName
-	 *            package name
+	 * @param context current context
+	 * @param pkgName package name
 	 * @return package class loader
 	 * @throws NameNotFoundException name not found exception
 	 */
@@ -28,10 +26,8 @@ public class Utils
 	/**
 	 * Get package resources
 	 *
-	 * @param context
-	 *            current context
-	 * @param pkgName
-	 *            package name
+	 * @param context current context
+	 * @param pkgName package name
 	 * @return package resources
 	 * @throws NameNotFoundException name not found exception
 	 */
@@ -44,10 +40,8 @@ public class Utils
 	/**
 	 * Get plugin default shared preferences
 	 *
-	 * @param context
-	 *            current context
-	 * @param pkg
-	 *            package name
+	 * @param context current context
+	 * @param pkg     package name
 	 * @return default shared preferences
 	 */
 	static SharedPreferences getPluginDefaultSharedPreferences(final Context context, final String pkg)

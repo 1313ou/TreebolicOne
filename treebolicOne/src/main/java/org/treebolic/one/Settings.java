@@ -44,7 +44,7 @@ public class Settings
 	 * Source entry preference name
 	 */
 	public static final String PREF_SOURCE_ENTRY = "pref_source_entry";
-	
+
 	/**
 	 * Download preference name
 	 */
@@ -83,8 +83,7 @@ public class Settings
 	/**
 	 * Set providers default settings from provider data
 	 *
-	 * @param context
-	 *            context
+	 * @param context context
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	static public void setDefaults(final Context context)
@@ -124,12 +123,9 @@ public class Settings
 	/**
 	 * Put string preference
 	 *
-	 * @param context
-	 *            context
-	 * @param key
-	 *            key
-	 * @param value
-	 *            value
+	 * @param context context
+	 * @param key     key
+	 * @param value   value
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	static public void putStringPref(final Context context, @SuppressWarnings("SameParameterValue") final String key, final String value)
@@ -141,12 +137,9 @@ public class Settings
 	/**
 	 * Put integer preference
 	 *
-	 * @param context
-	 *            context
-	 * @param key
-	 *            key
-	 * @param value
-	 *            value
+	 * @param context context
+	 * @param key     key
+	 * @param value   value
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	static public void putIntPref(final Context context, final String key, final int value)
@@ -158,10 +151,8 @@ public class Settings
 	/**
 	 * Get string preference
 	 *
-	 * @param context
-	 *            context
-	 * @param key
-	 *            key
+	 * @param context context
+	 * @param key     key
 	 * @return value
 	 */
 	static public String getStringPref(final Context context, final String key)
@@ -173,10 +164,8 @@ public class Settings
 	/**
 	 * Get int preference
 	 *
-	 * @param context
-	 *            context
-	 * @param key
-	 *            key
+	 * @param context context
+	 * @param key     key
 	 * @return value
 	 */
 	static public int getIntPref(final Context context, final String key)
@@ -188,10 +177,8 @@ public class Settings
 	/**
 	 * Get preference value as url
 	 *
-	 * @param context
-	 *            context
-	 * @param key
-	 *            key
+	 * @param context context
+	 * @param key     key
 	 * @return preference value as
 	 */
 	static public URL getURLPref(final Context context, final String key)
@@ -206,8 +193,7 @@ public class Settings
 	/**
 	 * Make URL from string
 	 *
-	 * @param url
-	 *            url string
+	 * @param url url string
 	 * @return url
 	 */
 	@SuppressWarnings("WeakerAccess")
@@ -226,10 +212,8 @@ public class Settings
 	/**
 	 * Application settings
 	 *
-	 * @param context
-	 *            context
-	 * @param pkgName
-	 *            package name
+	 * @param context context
+	 * @param pkgName package name
 	 */
 	static public void applicationSettings(final Context context, final String pkgName)
 	{

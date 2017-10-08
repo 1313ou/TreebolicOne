@@ -42,12 +42,9 @@ public class ModelFactory
 	/**
 	 * Constructor
 	 *
-	 * @param provider0
-	 *            provider
-	 * @param providerContext0
-	 *            provider context
-	 * @param context0
-	 *            context
+	 * @param provider0        provider
+	 * @param providerContext0 provider context
+	 * @param context0         context
 	 */
 	public ModelFactory(final IProvider provider0, final IProviderContext providerContext0, final IContext context0)
 	{
@@ -59,14 +56,10 @@ public class ModelFactory
 	/**
 	 * Make model
 	 *
-	 * @param source
-	 *            source
-	 * @param base
-	 *            base
-	 * @param imageBase
-	 *            image base
-	 * @param settings
-	 *            settings
+	 * @param source    source
+	 * @param base      base
+	 * @param imageBase image base
+	 * @param settings  settings
 	 * @return model
 	 */
 	public Model make(final String source, final String base, final String imageBase, final String settings)
@@ -85,8 +78,7 @@ public class ModelFactory
 	/**
 	 * Make base URL
 	 *
-	 * @param base
-	 *            base
+	 * @param base base
 	 * @return base URL
 	 */
 	private static URL makeBaseURL(final String base)
@@ -105,14 +97,10 @@ public class ModelFactory
 	/**
 	 * Make parameters
 	 *
-	 * @param source
-	 *            source
-	 * @param base
-	 *            base
-	 * @param imageBase
-	 *            image base
-	 * @param settings
-	 *            settings
+	 * @param source    source
+	 * @param base      base
+	 * @param imageBase image base
+	 * @param settings  settings
 	 * @return parameters
 	 */
 	private static Properties makeParameters(final String source, final String base, final String imageBase, final String settings)

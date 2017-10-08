@@ -233,10 +233,10 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		// handle selection of input by other activity which returns selected input
 		switch (requestCode)
 		{
-		case REQUEST_DOWNLOAD_CODE:
-			break;
-		default:
-			break;
+			case REQUEST_DOWNLOAD_CODE:
+				break;
+			default:
+				break;
 		}
 		super.onActivityResult(requestCode, resultCode, returnIntent);
 	}
@@ -278,15 +278,16 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	{
 		final File thisFolder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
 		if (thisFolder != null)
+		{
 			return thisFolder.getPath();
+		}
 		return Storage.getTreebolicStorage(this).getAbsolutePath();
 	}
 
 	/**
 	 * Set folder to parent of given uri
 	 *
-	 * @param fileUri
-	 *            uri
+	 * @param fileUri uri
 	 */
 	private void setFolder(final Uri fileUri)
 	{
@@ -325,8 +326,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	/**
 	 * Try to start Treebolic activity from source
 	 *
-	 * @param source0
-	 *            source
+	 * @param source0 source
 	 */
 	private void tryStartTreebolic(@SuppressWarnings("SameParameterValue") final String source0)
 	{

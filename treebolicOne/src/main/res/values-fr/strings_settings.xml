@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Headers settings -->
-    <string name="pref_header_provider">Fournisseur de données</string>
-    <string name="pref_summary_header_provider">Paramètres du fournisseur</string>
-    <string name="pref_header_data">Données</string>
-    <string name="pref_summary_header_data">Paramètres des données</string>
+	<!-- Headers settings -->
+	<string name="pref_header_provider">Fournisseur de données</string>
+	<string name="pref_summary_header_provider">Paramètres du fournisseur</string>
+	<string name="pref_header_data">Données</string>
+	<string name="pref_summary_header_data">Paramètres des données</string>
 
-    <!-- active built-in provider -->
-    <!-- provider -->
-    <string name="pref_description_provider">Fournisseur de données</string>
-    <string name="pref_title_provider">Fournisseur de données</string>
-    <!-- name -->
-    <string name="pref_title_provider_name">Nom</string>
-    <string name="pref_description_provider_name">Nom du fournisseur de données</string>
-    <!-- source -->
-    <string name="pref_title_source">Source</string>
-    <string name="pref_description_source">Source (chaîne de caractères)</string>
-    <!-- source entry -->
-    <string name="pref_title_source_entry">Entrée source</string>
-    <string name="pref_description_source_entry">Entrée dans le cas d\'une source archive</string>
-    <!-- base -->
-    <string name="pref_title_base">Base</string>
-    <string name="pref_description_base">URL de base</string>
-    <!-- imagebase -->
-    <string name="pref_title_imagebase">Base pour images</string>
-    <string name="pref_description_imagebase">URL de base pour images</string>
-    <!-- settings -->
-    <string name="pref_title_settings">Rendu</string>
-    <string name="pref_description_settings">Propriétés du rendu</string>
+	<!-- active built-in provider -->
+	<!-- provider -->
+	<string name="pref_description_provider">Fournisseur de données</string>
+	<string name="pref_title_provider">Fournisseur de données</string>
+	<!-- name -->
+	<string name="pref_title_provider_name">Nom</string>
+	<string name="pref_description_provider_name">Nom du fournisseur de données</string>
+	<!-- source -->
+	<string name="pref_title_source">Source</string>
+	<string name="pref_description_source">Source (chaîne de caractères)</string>
+	<!-- source entry -->
+	<string name="pref_title_source_entry">Entrée source</string>
+	<string name="pref_description_source_entry">Entrée dans le cas d\'une source archive</string>
+	<!-- base -->
+	<string name="pref_title_base">Base</string>
+	<string name="pref_description_base">URL de base</string>
+	<!-- imagebase -->
+	<string name="pref_title_imagebase">Base pour images</string>
+	<string name="pref_description_imagebase">URL de base pour images</string>
+	<!-- settings -->
+	<string name="pref_title_settings">Rendu</string>
+	<string name="pref_description_settings">Propriétés du rendu</string>
 
 </resources>

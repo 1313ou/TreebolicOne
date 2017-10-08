@@ -63,6 +63,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		finally
 		{
 			if (thisInputStream != null)
+			{
 				try
 				{
 					thisInputStream.close();
@@ -71,6 +72,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 				{
 					//
 				}
+			}
 		}
 	}
 
@@ -92,6 +94,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		finally
 		{
 			if (fos != null)
+			{
 				try
 				{
 					fos.close();
@@ -100,6 +103,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 				{
 					//
 				}
+			}
 		}
 	}
 
@@ -109,7 +113,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	static public String toString(final Properties theseProperties)
 	{
 		final StringBuilder thisBuilder = new StringBuilder();
-		for (final Enumeration<?> thisEnum = theseProperties.propertyNames(); thisEnum.hasMoreElements();)
+		for (final Enumeration<?> thisEnum = theseProperties.propertyNames(); thisEnum.hasMoreElements(); )
 		{
 			final String thisName = (String) thisEnum.nextElement();
 			final String thisValue = theseProperties.getProperty(thisName);

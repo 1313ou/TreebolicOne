@@ -13,12 +13,12 @@ import org.treebolic.TreebolicIface;
  */
 public class TreebolicActivity extends TreebolicSourceActivity
 {
-// --Commented out by Inspection START (9/23/17 5:08 PM):
-//	/**
-//	 * Log tag
-//	 */
-//	private static final String TAG = "TreebolicA";
-// --Commented out by Inspection STOP (9/23/17 5:08 PM)
+	// --Commented out by Inspection START (9/23/17 5:08 PM):
+	//	/**
+	//	 * Log tag
+	//	 */
+	//	private static final String TAG = "TreebolicA";
+	// --Commented out by Inspection STOP (9/23/17 5:08 PM)
 
 	// C O N S T R U C T O R
 
@@ -56,24 +56,16 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	/**
 	 * Make Treebolic activity intent
 	 *
-	 * @param context
-	 *            context
-	 * @param providerName
-	 *            providerName class
-	 * @param source
-	 *            source
-	 * @param base
-	 *            base
-	 * @param imageBase
-	 *            image base
-	 * @param settings
-	 *            settings
-	 * @param style
-	 *            style
+	 * @param context      context
+	 * @param providerName providerName class
+	 * @param source       source
+	 * @param base         base
+	 * @param imageBase    image base
+	 * @param settings     settings
+	 * @param style        style
 	 * @return intent
 	 */
-	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase,
-			final String settings, final String style)
+	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase, final String settings, final String style)
 	{
 		final Intent intent = new Intent(context, TreebolicActivity.class);
 		intent.putExtra(TreebolicIface.ARG_PROVIDER, providerName);
