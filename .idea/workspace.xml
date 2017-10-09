@@ -12,66 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/libs/treebolic-provider-sqlx-common.jar" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/libs/treebolic-provider-sqlx-common.jar" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/workspace.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/DownloadActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/DownloadActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Settings.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Settings.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Utils.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Utils.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout-small/fragment_main.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout-small/fragment_main.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/fragment_main.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/fragment_main.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings_download.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings_settings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-fr/strings_settings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-w820dp/dimens.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_download.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_nontranslatable.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_nontranslatable.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_provider.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_provider.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_settings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/strings_settings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_data.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_data.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_download.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_headers.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_headers.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_provider.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/xml/pref_provider.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/treebolicOne.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/treebolicOne.iml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/DownloadActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/DownloadActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/fragment_main.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/fragment_main.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-fr/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-fr/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-fr/strings_settings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-fr/strings_settings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-w820dp/dimens.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/dimens.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_nontranslatable.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_nontranslatable.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_provider.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_provider.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_settings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/values/strings_settings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_data.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_data.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_download.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_headers.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_headers.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_provider.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/xml/pref_provider.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/treebolicOneSql.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/treebolicOneSql.iml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings_data.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings_data.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/res/values/strings_download.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/treebolicSqlTemplate.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/treebolicSqlTemplate.iml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/res/values/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/treebolicSqliteProvider.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/treebolicSqliteProvider.iml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings_data.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings_data.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings_download.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/values/strings_download.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/treebolicTemplate.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/treebolicTemplate.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/treebolicXmlProvider.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/treebolicXmlProvider.iml" />
     </list>
@@ -20991,7 +20937,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Analyzed">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -21003,16 +20958,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Analyzed">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -21023,6 +20968,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -21615,7 +21561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507007146303</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="formatted">
+      <created>1507467777113</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1507467777113</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -21629,15 +21582,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33232015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33232015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16134185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16134185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20393658" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -21648,9 +21599,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986331" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -21722,7 +21675,8 @@
     <MESSAGE value="tint error in scope search wheel" />
     <MESSAGE value="widget's container's layout params" />
     <MESSAGE value="lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="lint" />
+    <MESSAGE value="formatted" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -21730,34 +21684,34 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/styles.xml" />
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/toolbar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="8" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="88" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout-v21/toolbar.xml" />
@@ -21769,13 +21723,13 @@
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/actionbutton.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/values/dimens.xml">
@@ -21786,13 +21740,13 @@
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicSupportLibs/downloadLib/src/main/res/layout/activity_download.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="90" column="43" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java">
@@ -22020,33 +21974,33 @@
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicSupportLibs/searchLib/src/main/res/layout/item_mode.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/item_mode.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/item_mode.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/layout/item_mode.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java">
@@ -22057,46 +22011,46 @@
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
-    </entry>
-    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
-    </entry>
-    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
-    </entry>
-    <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
           <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file:///mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java">
@@ -22111,7 +22065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
