@@ -118,7 +118,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			try
 			{
 				// connect
-				this.theDB = SQLiteDatabase.openDatabase(thisDatabasePath, null, SQLiteDatabase.OPEN_READONLY);
+				this.theDB = SQLiteDatabase.openDatabase(thisDatabasePath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS | SQLiteDatabase.OPEN_READONLY);
 
 			}
 			catch (final SQLException thisException)
