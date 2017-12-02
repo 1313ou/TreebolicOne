@@ -18,6 +18,8 @@ import treebolic.provider.sqlite.Provider;
 
 public class PeekActivity extends AppCompatCommonActivity
 {
+	private String text;
+
 	private TextView textView;
 
 	private IProviderContext providerContext;
@@ -31,7 +33,7 @@ public class PeekActivity extends AppCompatCommonActivity
 		setContentView(R.layout.activity_peek);
 
 		// toolbar
-		final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		final Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
 		// set up the action bar
@@ -41,7 +43,7 @@ public class PeekActivity extends AppCompatCommonActivity
 			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
 		}
 
-		this.textView = (TextView) findViewById(R.id.peek);
+		this.textView = findViewById(R.id.peek);
 		this.providerContext = new IProviderContext()
 		{
 			@SuppressWarnings("synthetic-access")
@@ -49,6 +51,7 @@ public class PeekActivity extends AppCompatCommonActivity
 			public void message(String text)
 			{
 				PeekActivity.this.textView.setText(text);
+				PeekActivity.this.text = text;
 			}
 
 			@SuppressWarnings("synthetic-access")
@@ -56,6 +59,7 @@ public class PeekActivity extends AppCompatCommonActivity
 			public void progress(String text, boolean arg1)
 			{
 				PeekActivity.this.textView.setText(text);
+				PeekActivity.this.text = text;
 			}
 
 			@SuppressWarnings("synthetic-access")
@@ -63,6 +67,7 @@ public class PeekActivity extends AppCompatCommonActivity
 			public void warn(String text)
 			{
 				PeekActivity.this.textView.setText(text);
+				PeekActivity.this.text = text;
 			}
 		};
 	}
@@ -85,8 +90,8 @@ public class PeekActivity extends AppCompatCommonActivity
 		final Model model = provider.makeModel(source, base, properties);
 
 		// display
-		final String text = modelToString(model);
-		this.textView.setText(this.textView.getText().toString() + '\n' + text);
+		final String text = this.text + '\n' + modelToString(model);
+		this.textView.setText(text);
 	}
 
 	private static String modelToString(final Model model)

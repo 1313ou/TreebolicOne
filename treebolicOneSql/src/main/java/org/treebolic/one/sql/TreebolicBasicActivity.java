@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -240,7 +239,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		// search view
 		final MenuItem searchMenuItem = menu.findItem(R.id.action_search);
 		searchMenuItem.expandActionView();
-		this.searchView = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
+		this.searchView = (SearchView) searchMenuItem.getActionView();
 
 		// search view width
 		int screenWidth = treebolic.glue.component.Utils.screenWidth(this);
@@ -346,6 +345,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	{
 		// retrieve arguments
 		final Bundle params = intent.getExtras();
+		assert params != null;
 		params.setClassLoader(getClassLoader());
 
 		// retrieve arguments
@@ -593,6 +593,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		if (view != null)
 		{
 			final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+			assert imm != null;
 			imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 		}
 	}

@@ -9,6 +9,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		setContentView(R.layout.activity_main);
 
 		// toolbar
-		final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		final Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
 		// set up the action bar
@@ -307,7 +308,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		}
 
 		@Override
-		public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
+		public View onCreateView(@NonNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
 		{
 			return inflater.inflate(this.layoutId, container, false);
 		}
@@ -357,7 +358,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	@SuppressWarnings("WeakerAccess")
 	static protected void updateButton(final FragmentActivity activity)
 	{
-		final ImageButton button = (ImageButton) activity.findViewById(R.id.treebolicButton);
+		final ImageButton button = activity.findViewById(R.id.treebolicButton);
 		if (button != null)
 		{
 			boolean sourceSet = sourceSet(activity);
