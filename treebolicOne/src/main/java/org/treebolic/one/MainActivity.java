@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	protected void onResume()
 	{
 		super.onResume();
-		updateButton(this);
+		updateButton();
 	}
 
 	@Override
@@ -356,12 +355,12 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * Update button visibility
 	 */
 	@SuppressWarnings("WeakerAccess")
-	static protected void updateButton(final FragmentActivity activity)
+	protected void updateButton()
 	{
-		final ImageButton button = activity.findViewById(R.id.treebolicButton);
+		final ImageButton button = findViewById(R.id.treebolicButton);
 		if (button != null)
 		{
-			boolean sourceSet = sourceSet(activity);
+			boolean sourceSet = sourceSet(this);
 			Log.d(TAG, "treebolicButton" + ' ' + sourceSet);
 			button.setVisibility(sourceSet ? View.VISIBLE : View.INVISIBLE);
 		}

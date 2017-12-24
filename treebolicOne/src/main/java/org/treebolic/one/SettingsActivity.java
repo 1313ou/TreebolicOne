@@ -15,6 +15,7 @@ import org.treebolic.AppCompatCommonPreferenceActivity;
 import org.treebolic.TreebolicIface;
 import org.treebolic.preference.OpenEditTextPreference;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -57,18 +58,25 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	// S E T U P
 
+	private static List<String> allowedFragments = new ArrayList<>();
+
 	@Override
 	public void onBuildHeaders(final List<Header> target)
 	{
 		loadHeadersFromResource(R.xml.pref_headers, target);
+
+		// allowed fragments
+		SettingsActivity.allowedFragments.clear();
+		for (Header header : target)
+		{
+			SettingsActivity.allowedFragments.add(header.fragment);
+		}
 	}
 
 	@Override
 	protected boolean isValidFragment(final String fragmentName)
 	{
-		return ProviderPreferenceFragment.class.getName().equals(fragmentName) || //
-				DataPreferenceFragment.class.getName().equals(fragmentName) || //
-				DownloadPreferenceFragment.class.getName().equals(fragmentName);
+		return SettingsActivity.allowedFragments.contains(fragmentName);
 	}
 
 	// D E T E C T I O N
