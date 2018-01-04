@@ -17,19 +17,17 @@ android {
 }
 
 dependencies {
-    compile project(':treebolicIface')
-    compile project(':treebolicLib')
-    compile project(':treebolicMutable')
+    api project(':treebolicLib')
+    api project(':treebolicMutable')
+    api project(':storageLib')
+    api project(':commonLib')
+    api project(':searchLib')
+    api project(':preferenceLib')
+    api project(':downloadLib')
+    api project(':fileChooserLib')
+    api project(':guideLib')
 
-    compile project(':storageLib')
-    compile project(':searchLib')
-
-    compile project(':preferenceLib')
-    compile project(':downloadLib')
-    compile project(':fileChooserLib')
-    compile project(':guideLib')
-
-    compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.android.support:support-v4:27.0.2'
-    compile 'com.android.support:design:27.0.2'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
 }

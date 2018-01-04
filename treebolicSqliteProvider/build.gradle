@@ -17,7 +17,7 @@ android {
 }
 
 dependencies {
-    compile project(':treebolicLib')
-    compile project(':treebolicLoadBalancer')
-    compile files('libs/treebolic-provider-sqlx-common.jar')
+    implementation project(':treebolicLib')
+    implementation project(':treebolicLoadBalancer')
+    api files('libs/treebolic-provider-sqlx-common.jar')
 }

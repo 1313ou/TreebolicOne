@@ -18,6 +18,6 @@ android {
 }
 
 dependencies {
-    compile project(':treebolicOne')
-    compile project(':treebolicXmlProvider')
+    implementation project(':treebolicOne')
+    implementation project(':treebolicXmlProvider')
 }
