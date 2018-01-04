@@ -58,7 +58,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	// S E T U P
 
-	private static List<String> allowedFragments = new ArrayList<>();
+	private static final List<String> allowedFragments = new ArrayList<>();
 
 	@Override
 	public void onBuildHeaders(final List<Header> target)

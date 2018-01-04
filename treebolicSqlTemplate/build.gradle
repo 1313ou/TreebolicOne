@@ -19,4 +19,6 @@ android {
 
 dependencies {
     implementation project(':treebolicOneSql')
+
+    implementation 'com.android.support:appcompat-v7:27.0.2'
 }

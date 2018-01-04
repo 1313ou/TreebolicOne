@@ -20,4 +20,6 @@ android {
 dependencies {
     implementation project(':treebolicOne')
     implementation project(':treebolicXmlProvider')
+
+    implementation 'com.android.support:appcompat-v7:27.0.2'
 }
