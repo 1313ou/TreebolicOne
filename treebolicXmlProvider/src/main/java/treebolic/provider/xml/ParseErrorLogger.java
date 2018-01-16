@@ -73,7 +73,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 				this.theOutputStream.close();
 			}
 		}
-		catch (final IOException ole)
+		catch (final IOException ignored)
 		{
 			// do nothing
 		}

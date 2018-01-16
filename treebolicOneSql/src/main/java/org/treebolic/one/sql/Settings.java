@@ -242,7 +242,7 @@ public class Settings
 		{
 			return new URL(url);
 		}
-		catch (final MalformedURLException e)
+		catch (final MalformedURLException ignored)
 		{
 			return null;
 		}
@@ -288,18 +288,17 @@ public class Settings
 		if (source != null && !source.isEmpty())
 		{
 			final String base = Settings.getStringPref(context, TreebolicIface.PREF_BASE);
-			//noinspection TryWithIdenticalCatches
 			try
 			{
 				final URL url = new URL(base);
 				final File basedir = new File(url.toURI());
 				return new File(basedir, source);
 			}
-			catch (URISyntaxException e)
+			catch (URISyntaxException ignored)
 			{
 				//
 			}
-			catch (MalformedURLException e)
+			catch (MalformedURLException ignored)
 			{
 				//
 			}
@@ -319,7 +318,7 @@ public class Settings
 		{
 			return new URL(base);
 		}
-		catch (MalformedURLException e)
+		catch (MalformedURLException ignored)
 		{
 			//
 		}

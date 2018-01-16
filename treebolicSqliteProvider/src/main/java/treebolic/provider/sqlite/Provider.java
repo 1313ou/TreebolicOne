@@ -144,7 +144,6 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			}
 		}
 
-		@SuppressWarnings("resource")
 		@Override
 		public AndroidCursor query(String thisSql) throws SQLException
 		{

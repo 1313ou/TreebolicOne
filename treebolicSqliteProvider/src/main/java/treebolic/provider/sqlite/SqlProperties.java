@@ -34,7 +34,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		{
 			return load(thisPath.toURI().toURL());
 		}
-		catch (MalformedURLException e)
+		catch (MalformedURLException ignored)
 		{
 			//
 		}
@@ -55,7 +55,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 			theseProperties.load(thisInputStream);
 			return theseProperties;
 		}
-		catch (final IOException e)
+		catch (final IOException ignored)
 		{
 			System.err.println("Sqlite load: Cannot load <" + thisUrl.toString() + ">");
 			return null;
@@ -68,7 +68,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 				{
 					thisInputStream.close();
 				}
-				catch (IOException e)
+				catch (IOException ignored)
 				{
 					//
 				}
@@ -99,7 +99,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 				{
 					fos.close();
 				}
-				catch (IOException e)
+				catch (IOException ignored)
 				{
 					//
 				}

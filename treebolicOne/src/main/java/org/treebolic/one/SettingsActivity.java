@@ -100,16 +100,12 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	/**
 	 * A preference value change listener that updates the preference's summary to reflect its new value.
 	 */
-	static private final Preference.OnPreferenceChangeListener listener = new Preference.OnPreferenceChangeListener()
+	static private final Preference.OnPreferenceChangeListener listener = (preference, value) ->
 	{
-		@Override
-		public boolean onPreferenceChange(final Preference preference, final Object value)
-		{
-			// set the summary to the value's simple string representation.
-			final String stringValue = value == null ? "" : value.toString();
-			preference.setSummary(stringValue);
-			return true;
-		}
+		// set the summary to the value's simple string representation.
+		final String stringValue = value == null ? "" : value.toString();
+		preference.setSummary(stringValue);
+		return true;
 	};
 
 	// B I N D S U M M A R Y
@@ -134,7 +130,6 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	public static class ProviderPreferenceFragment extends PreferenceFragment
 	{
-		@SuppressWarnings({"synthetic-access"})
 		@Override
 		public void onCreate(final Bundle savedInstanceState)
 		{
@@ -155,7 +150,6 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	public static class DataPreferenceFragment extends PreferenceFragment
 	{
-		@SuppressWarnings("synthetic-access")
 		@Override
 		public void onCreate(final Bundle savedInstanceState)
 		{
@@ -207,7 +201,6 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	public static class DownloadPreferenceFragment extends PreferenceFragment
 	{
-		@SuppressWarnings("synthetic-access")
 		@Override
 		public void onCreate(final Bundle savedInstanceState)
 		{

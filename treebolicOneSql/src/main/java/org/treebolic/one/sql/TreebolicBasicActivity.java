@@ -369,7 +369,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			{
 				return new URL(this.base);
 			}
-			catch (final MalformedURLException e)
+			catch (final MalformedURLException ignored)
 			{
 				//
 			}
@@ -386,7 +386,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			{
 				return new URL(this.imageBase);
 			}
-			catch (final MalformedURLException e)
+			catch (final MalformedURLException ignored)
 			{
 				//
 			}
@@ -436,7 +436,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			startActivity(intent);
 			return true;
 		}
-		catch (final Exception e)
+		catch (final Exception ignored)
 		{
 			Toast.makeText(this, R.string.error_link, Toast.LENGTH_LONG).show();
 		}
@@ -697,17 +697,13 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	 */
 	private void snackbar(final String message, final int duration)
 	{
-		runOnUiThread(new Runnable()
+		runOnUiThread(() ->
 		{
-			@Override
-			public void run()
-			{
-				Snackbar.make(TreebolicBasicActivity.this.widget, message, duration).show();
-				final Snackbar snack = Snackbar.make(TreebolicBasicActivity.this.widget, message, duration);
-				final android.view.View view = snack.getView();
-				view.setBackgroundColor(ContextCompat.getColor(TreebolicBasicActivity.this, R.color.snackbar_color));
-				snack.show();
-			}
+			Snackbar.make(TreebolicBasicActivity.this.widget, message, duration).show();
+			final Snackbar snack = Snackbar.make(TreebolicBasicActivity.this.widget, message, duration);
+			final android.view.View view = snack.getView();
+			view.setBackgroundColor(ContextCompat.getColor(TreebolicBasicActivity.this, R.color.snackbar_color));
+			snack.show();
 		});
 	}
 }

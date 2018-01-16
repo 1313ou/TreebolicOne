@@ -12,39 +12,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.gitignore" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/android_arch_lifecycle_common_1_0_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/android_arch_lifecycle_runtime_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_animated_vector_drawable_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_appcompat_v7_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_design_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_recyclerview_v7_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_annotations_27_0_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_compat_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_core_ui_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_core_utils_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_fragment_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_media_compat_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_v13_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_v4_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_support_vector_drawable_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/libraries/com_android_support_transition_27_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/import-summary.txt" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/res/drawable-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/drawable-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/res/drawable-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/res/values/strings.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/workspace.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/build.gradle" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/build.gradle" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/lint.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/lint.xml" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/AndroidManifest.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Settings.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Settings.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Utils.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/src/main/java/org/treebolic/one/Utils.java" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/treebolicOne.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne/treebolicOne.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/build.gradle" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/lint.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/lint.xml" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/AndroidManifest.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/PeekActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/PeekActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/activity_peek.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/src/main/res/layout/activity_peek.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/treebolicOneSql.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql/treebolicOneSql.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/build.gradle" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/AndroidManifest.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/treebolicSqlTemplate.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate/treebolicSqlTemplate.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/build.gradle" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/treebolicSqliteProvider.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider/treebolicSqliteProvider.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/build.gradle" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/lint.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/lint.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/AndroidManifest.xml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/treebolicTemplate.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate/treebolicTemplate.iml" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/build.gradle" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/build.gradle" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/DocumentAdapter.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/DocumentAdapter.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/ParseErrorLogger.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/ParseErrorLogger.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/Parser.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/Parser.java" />
+      <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/Provider.java" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/src/main/java/treebolic/provider/xml/Provider.java" />
       <change type="MODIFICATION" beforePath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/treebolicXmlProvider.iml" afterPath="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider/treebolicXmlProvider.iml" />
     </list>
     <ignored path="TreebolicOne.iws" />
@@ -576,6 +599,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlue:extractTryWithResourcesSupportJarDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlue:validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -924,6 +951,10 @@
                 <option name="name" value=":treebolicGlue:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlue:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlue:extractReleaseAnnotations" />
@@ -1128,6 +1159,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlue:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlue:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1241,6 +1276,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlueIface:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlueIface:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -1592,6 +1631,10 @@
                 <option name="name" value=":treebolicGlueIface:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlueIface:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlueIface:extractReleaseAnnotations" />
@@ -1796,6 +1839,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGlueIface:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGlueIface:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1909,6 +1956,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGraph:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGraph:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -2260,6 +2311,10 @@
                 <option name="name" value=":treebolicGraph:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGraph:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGraph:extractReleaseAnnotations" />
@@ -2464,6 +2519,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicGraph:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicGraph:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -2577,6 +2636,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicIface:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicIface:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -2928,6 +2991,10 @@
                 <option name="name" value=":treebolicIface:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicIface:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicIface:extractReleaseAnnotations" />
@@ -3132,6 +3199,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicIface:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicIface:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -3245,6 +3316,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -3596,6 +3671,10 @@
                 <option name="name" value=":treebolicLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLib:extractReleaseAnnotations" />
@@ -3800,6 +3879,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -3913,6 +3996,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibModel:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibModel:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -4264,6 +4351,10 @@
                 <option name="name" value=":treebolicLibModel:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibModel:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibModel:extractReleaseAnnotations" />
@@ -4468,6 +4559,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibModel:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibModel:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -4581,6 +4676,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibView:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibView:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -4932,6 +5031,10 @@
                 <option name="name" value=":treebolicLibView:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibView:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibView:extractReleaseAnnotations" />
@@ -5136,6 +5239,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLibView:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLibView:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -5249,6 +5356,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLoadBalancer:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLoadBalancer:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -5600,6 +5711,10 @@
                 <option name="name" value=":treebolicLoadBalancer:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLoadBalancer:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLoadBalancer:extractReleaseAnnotations" />
@@ -5804,6 +5919,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicLoadBalancer:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicLoadBalancer:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -5917,6 +6036,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicMutable:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicMutable:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6268,6 +6391,10 @@
                 <option name="name" value=":treebolicMutable:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicMutable:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicMutable:extractReleaseAnnotations" />
@@ -6472,6 +6599,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":treebolicMutable:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":treebolicMutable:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -6574,10 +6705,6 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="splitsDiscoveryTaskDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the sub-projects of root project 'TreebolicOne'." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="projects" />
@@ -6588,15 +6715,440 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeReleaseConsumerProguardFiles" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="bundleAppClassesRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="validateSigningDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assembleDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mockableAndroidJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="extractTryWithResourcesSupportJarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesAndResourcesWithPrepareIntermediateJarsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileReleaseNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateDebugAndroidTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build cache directory." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="cleanBuildCache" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assembleDefault" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugAndroidTestShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'TreebolicOne'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugUnitTestJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformResourcesWithMergeJavaResForReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processDebugAndroidTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processReleaseUnitTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="uninstallRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformNativeLibsWithIntermediateJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="javaPreCompileDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="verifyReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="packageDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformNativeLibsWithSyncJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeReleaseJniLibFolders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="prepareLintJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformDexWithDexForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="deviceAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="uninstallDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="writeDebugApplicationId" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileReleaseUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="installDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="splitsDiscoveryTaskRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for debug on connected devices." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="connectedDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assembleAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="processDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="extractReleaseAnnotations" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="validateSigningDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="preDebugUnitTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugAndroidTestNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeDebugAndroidTestJniLibFolders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="extractProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="consumeConfigAttr" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for all variants." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="preReleaseUnitTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateDebugResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the debug build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="testDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'TreebolicOne'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'TreebolicOne'." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="checkDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prints out all the source sets defined in this project." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="sourceSets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformResourcesWithMergeJavaResForDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="compileDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="packageDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the release build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Debug build." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="uninstallDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="bundleAppClassesDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="preDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds." />
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeDebugConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="writeReleaseApplicationId" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="generateReleaseResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="splitsDiscoveryTaskDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value="mergeReleaseConsumerProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6638,18 +7190,9 @@
                 <option name="name" value="bundleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assembleDebugUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the configuration model of root project 'TreebolicOne'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mockableAndroidJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6665,14 +7208,6 @@
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugSources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformClassesAndResourcesWithPrepareIntermediateJarsForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Initializes a new Gradle build." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="init" />
@@ -6680,11 +7215,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="packageReleaseRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="deviceCheck" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6697,28 +7227,11 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs lint on all variants." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="lint" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="packageDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileReleaseNdk" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="generateDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6731,29 +7244,12 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateDebugAndroidTestBuildConfig" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="processDebugUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for the release build." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="testReleaseUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build cache directory." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="cleanBuildCache" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assembleDefault" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugAndroidTestShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6765,15 +7261,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'TreebolicOne'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -6782,33 +7269,9 @@
                 <option name="name" value="assembleDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processDebugAndroidTestManifest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugUnitTestJavaWithJavac" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformResourcesWithMergeJavaResForReleaseUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="preDebugAndroidTestBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="extractDebugAnnotations" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processDebugAndroidTestJavaRes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6820,56 +7283,11 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="bundleAppClassesDebugUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the Release build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="uninstallRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileReleaseShaders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeReleaseResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformNativeLibsWithIntermediateJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="generateDebugAndroidTestSources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="checkReleaseManifest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="javaPreCompileDebugUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="verifyReleaseResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="packageDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformNativeLibsWithSyncJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6878,40 +7296,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="createDebugCompatibleScreenManifests" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeReleaseJniLibFolders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="prepareLintJar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformDexWithDexForRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processReleaseResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="deviceAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeDebugAndroidTestAssets" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processReleaseManifest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="uninstallDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the insight into a specific dependency in root project 'TreebolicOne'." />
@@ -6928,30 +7312,12 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="writeDebugApplicationId" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles all variants of all applications and secondary packages." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="createFullJarDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileReleaseUnitTestSources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs the android (on device) tests for the Debug build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="installDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -6971,20 +7337,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="splitsDiscoveryTaskRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all device checks on currently connected devices." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="connectedCheck" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs and runs the tests for debug on connected devices." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="connectedDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="transformDexArchiveWithDexMergerForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -6997,34 +7349,12 @@
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles all the Test applications." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assembleAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="processDebugAndroidTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="extractReleaseAnnotations" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="validateSigningDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="compileDebugAidl" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Generates Gradle wrapper files." />
@@ -7033,23 +7363,11 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="preDebugUnitTestBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileLint" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeReleaseShaders" />
+                <option name="name" value="transformClassesWithStackFramesFixerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the Android dependencies of the project." />
@@ -7058,15 +7376,7 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugAndroidTestNdk" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="compileDebugUnitTestSources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -7078,27 +7388,7 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeDebugAndroidTestJniLibFolders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="extractProguardFiles" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assembleDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="processDebugJavaRes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="consumeConfigAttr" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateDebugAndroidTestAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -7106,56 +7396,16 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Run unit tests for all variants." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="compileDebugNdk" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeDebugAndroidTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="preReleaseUnitTestBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateDebugResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="javaPreCompileDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Run unit tests for the debug build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="testDebugUnitTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs the Debug build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="installDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="preBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -7178,53 +7428,17 @@
                 <option name="name" value="transformResourcesWithMergeJavaResForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileReleaseAidl" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs lint on the Release build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="lintRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects that depend on it." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateDebugAssets" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="transformDexArchiveWithDexMergerForDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'TreebolicOne'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'TreebolicOne'." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="checkDebugManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="mergeDebugJniLibFolders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prints out all the source sets defined in this project." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="sourceSets" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformResourcesWithMergeJavaResForDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -7236,33 +7450,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="compileDebugRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="packageDebugRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="generateReleaseBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateReleaseResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs lint on just the fatal issues in the release build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="lintVitalRelease" />
+                <option name="name" value="transformClassesWithDesugarForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="platformAttrExtractor" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the Debug build." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="uninstallDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant." />
@@ -7278,25 +7474,13 @@
                 <option name="name" value="mergeDebugAndroidTestShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="bundleAppClassesDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="preDebugBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateDebugBuildConfig" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+                <option name="name" value="transformClassesWithDesugarForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -7304,17 +7488,8 @@
                 <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles all Release builds." />
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="assembleRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="resolveConfigAttr" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="mergeDebugConsumerProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -7330,15 +7505,7 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="writeReleaseApplicationId" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value="packageDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
-                <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project 'TreebolicOne'." />
@@ -7363,6 +7530,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
@@ -7714,6 +7885,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -7918,6 +8093,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOne" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -8031,6 +8210,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
@@ -8382,6 +8565,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -8586,6 +8773,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicOneSql" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -8692,6 +8883,10 @@
                 <option name="name" value="splitsDiscoveryTaskDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the sub-projects of project ':treebolicSqlTemplate'." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="projects" />
@@ -8699,6 +8894,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="bundleAppClassesRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
@@ -8748,6 +8947,10 @@
                 <option name="name" value="bundleAppClassesDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from project ':treebolicSqlTemplate'." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="tasks" />
@@ -8755,6 +8958,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
@@ -9041,6 +9248,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -9074,6 +9285,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="mergeReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the Android dependencies of the project." />
@@ -9252,6 +9467,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -9261,6 +9480,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithDesugarForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
@@ -9313,6 +9536,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
                 <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqlTemplate" />
+                <option name="name" value="transformClassesWithDesugarForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -9375,6 +9602,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
@@ -9726,6 +9957,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -9930,6 +10165,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicSqliteProvider" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -10036,6 +10275,10 @@
                 <option name="name" value="splitsDiscoveryTaskDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the sub-projects of project ':treebolicTemplate'." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="projects" />
@@ -10043,6 +10286,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="bundleAppClassesRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
@@ -10092,6 +10339,10 @@
                 <option name="name" value="bundleAppClassesDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from project ':treebolicTemplate'." />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="tasks" />
@@ -10099,6 +10350,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
@@ -10385,6 +10640,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -10418,6 +10677,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="mergeReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the Android dependencies of the project." />
@@ -10596,6 +10859,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -10605,6 +10872,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithDesugarForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
@@ -10657,6 +10928,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
                 <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicTemplate" />
+                <option name="name" value="transformClassesWithDesugarForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -10719,6 +10994,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
@@ -11070,6 +11349,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -11274,6 +11557,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne/treebolicXmlProvider" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -11387,6 +11674,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":colorLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":colorLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -11738,6 +12029,10 @@
                 <option name="name" value=":colorLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":colorLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":colorLib:extractReleaseAnnotations" />
@@ -11942,6 +12237,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":colorLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":colorLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -12055,6 +12354,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":commonLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":commonLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -12406,6 +12709,10 @@
                 <option name="name" value=":commonLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":commonLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":commonLib:extractReleaseAnnotations" />
@@ -12610,6 +12917,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":commonLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":commonLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -12723,6 +13034,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":downloadLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":downloadLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -13074,6 +13389,10 @@
                 <option name="name" value=":downloadLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":downloadLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":downloadLib:extractReleaseAnnotations" />
@@ -13278,6 +13597,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":downloadLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":downloadLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -13391,6 +13714,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":fileChooserLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":fileChooserLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -13742,6 +14069,10 @@
                 <option name="name" value=":fileChooserLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":fileChooserLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":fileChooserLib:extractReleaseAnnotations" />
@@ -13946,6 +14277,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":fileChooserLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":fileChooserLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -14059,6 +14394,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":guideLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":guideLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -14410,6 +14749,10 @@
                 <option name="name" value=":guideLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":guideLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":guideLib:extractReleaseAnnotations" />
@@ -14614,6 +14957,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":guideLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":guideLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -14727,6 +15074,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":preferenceLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":preferenceLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -15078,6 +15429,10 @@
                 <option name="name" value=":preferenceLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":preferenceLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":preferenceLib:extractReleaseAnnotations" />
@@ -15282,6 +15637,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":preferenceLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":preferenceLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -15395,6 +15754,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":searchLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":searchLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -15746,6 +16109,10 @@
                 <option name="name" value=":searchLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":searchLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":searchLib:extractReleaseAnnotations" />
@@ -15950,6 +16317,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":searchLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":searchLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -16063,6 +16434,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":storageLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":storageLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -16414,6 +16789,10 @@
                 <option name="name" value=":storageLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":storageLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":storageLib:extractReleaseAnnotations" />
@@ -16618,6 +16997,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":storageLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":storageLib:mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -16731,6 +17114,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":wheelLib:mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":wheelLib:extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -17082,6 +17469,10 @@
                 <option name="name" value=":wheelLib:processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":wheelLib:transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":wheelLib:extractReleaseAnnotations" />
@@ -17283,6 +17674,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
                 <option name="name" value=":wheelLib:transformResourcesWithMergeJavaResForDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
+                <option name="name" value=":wheelLib:transformClassesWithStackFramesFixerForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="/mnt/data2/devel/android-treebolic-as/TreebolicOne" />
@@ -19622,18 +20017,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -19648,6 +20032,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Analyzed">
           <PATH>
@@ -19754,7 +20149,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515317085380" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516093869521" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -19802,7 +20197,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515317085380" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516093869521" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -19975,7 +20370,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515317085381" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516093869522" />
       </method>
     </configuration>
     <configuration default="false" name="treebolicTemplate" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -20024,7 +20419,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515317085381" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516093869522" />
       </method>
     </configuration>
     <list size="2">
@@ -20348,11 +20743,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515053257329</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="new build chain">
+      <created>1515317104249</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1515317104249</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="27" width="1869" height="1173" extended-state="6" />
+    <frame x="51" y="27" width="1869" height="1173" extended-state="0" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -20363,14 +20765,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33005893" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33005893" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16091955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16091955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20393658" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -20404,7 +20806,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="openedit settings" />
     <MESSAGE value="missing dependencies" />
     <MESSAGE value="3.7.0" />
     <MESSAGE value="fab&#10;xml provider" />
@@ -20429,7 +20830,8 @@
     <MESSAGE value="noop" />
     <MESSAGE value="new gradle tool" />
     <MESSAGE value="new gradle tool&#10;lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="new gradle tool&#10;lint" />
+    <MESSAGE value="new build chain" />
+    <option name="LAST_COMMIT_MESSAGE" value="new build chain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -20652,7 +21054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -70,7 +70,6 @@ public class DocumentAdapter
 		 *
 		 * @param theseEdges edges in grafting tree
 		 */
-		@SuppressWarnings("synthetic-access")
 		public void run(final List<IEdge> theseEdges)
 		{
 			if (DocumentAdapter.this.theProvider == null)

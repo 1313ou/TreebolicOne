@@ -46,7 +46,6 @@ public class PeekActivity extends AppCompatCommonActivity
 		this.textView = findViewById(R.id.peek);
 		this.providerContext = new IProviderContext()
 		{
-			@SuppressWarnings("synthetic-access")
 			@Override
 			public void message(String text)
 			{
@@ -54,7 +53,6 @@ public class PeekActivity extends AppCompatCommonActivity
 				PeekActivity.this.text = text;
 			}
 
-			@SuppressWarnings("synthetic-access")
 			@Override
 			public void progress(String text, boolean arg1)
 			{
@@ -62,7 +60,6 @@ public class PeekActivity extends AppCompatCommonActivity
 				PeekActivity.this.text = text;
 			}
 
-			@SuppressWarnings("synthetic-access")
 			@Override
 			public void warn(String text)
 			{

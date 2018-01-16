@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
 			verCode = pInfo.versionCode;
 		}
-		catch (NameNotFoundException e)
+		catch (NameNotFoundException ignored)
 		{
 			//
 		}

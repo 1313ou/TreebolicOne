@@ -1,7 +1,6 @@
 package treebolic.provider.xml;
 
 import org.w3c.dom.Document;
-import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -169,16 +168,12 @@ public class Provider implements IProvider
 	{
 		try
 		{
-			return new Parser().makeDocument(thisUrl, new EntityResolver()
+			return new Parser().makeDocument(thisUrl, (publicId, systemId) ->
 			{
-				@Override
-				public InputSource resolveEntity(final String publicId, final String systemId) throws SAXException, IOException
-				{
-					if (systemId.contains("Treebolic.dtd")) //$NON-NLS-1$
-						return new InputSource(new StringReader("")); //$NON-NLS-1$
-					else
-						return null;
-				}
+				if (systemId.contains("Treebolic.dtd")) //$NON-NLS-1$
+					return new InputSource(new StringReader("")); //$NON-NLS-1$
+				else
+					return null;
 			});
 		}
 		catch (final IOException e)

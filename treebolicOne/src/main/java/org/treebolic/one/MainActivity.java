@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		}
 	}
 
-	@SuppressWarnings({"static-method", "WeakerAccess"})
+	@SuppressWarnings({"WeakerAccess"})
 	protected Fragment makeMainFragment()
 	{
 		return new MainFragment();
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
 			verCode = pInfo.versionCode;
 		}
-		catch (NameNotFoundException e)
+		catch (NameNotFoundException ignored)
 		{
 			//
 		}
@@ -497,15 +497,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		try
 		{
 			// choose bundle entry
-			EntryChooser.choose(this, new File(archiveUri.getPath()), new EntryChooser.Callback()
-			{
-				@SuppressWarnings("synthetic-access")
-				@Override
-				public void onSelect(final String zipEntry)
-				{
-					tryStartTreebolicBundle(archiveUri, zipEntry);
-				}
-			});
+			EntryChooser.choose(this, new File(archiveUri.getPath()), zipEntry -> tryStartTreebolicBundle(archiveUri, zipEntry));
 		}
 		catch (final IOException e)
 		{

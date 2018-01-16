@@ -203,7 +203,7 @@ public class Settings
 		{
 			return new URL(url);
 		}
-		catch (final MalformedURLException e)
+		catch (final MalformedURLException ignored)
 		{
 			return null;
 		}

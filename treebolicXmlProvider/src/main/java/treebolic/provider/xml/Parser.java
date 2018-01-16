@@ -97,7 +97,7 @@ public class Parser
 		{
 			thisFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate); //$NON-NLS-1$
 		}
-		catch (final Exception e)
+		catch (final Exception ignored)
 		{
 			//
 		}
