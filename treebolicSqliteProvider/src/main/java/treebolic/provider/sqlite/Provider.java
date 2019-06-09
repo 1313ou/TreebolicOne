@@ -25,137 +25,140 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 {
 	static class AndroidCursor implements AbstractProvider.Cursor
 	{
-		private final android.database.Cursor theCursor;
+		private final android.database.Cursor cursor;
 
 		/**
 		 * Constructor
 		 *
-		 * @param thisCursor android cursor
+		 * @param cursor android cursor
 		 */
-		public AndroidCursor(android.database.Cursor thisCursor)
+		@SuppressWarnings("WeakerAccess")
+		public AndroidCursor(android.database.Cursor cursor)
 		{
-			this.theCursor = thisCursor;
+			this.cursor = cursor;
 		}
 
 		@Override
 		public void close()
 		{
-			if (this.theCursor != null)
+			if (this.cursor != null)
 			{
 				try
 				{
-					this.theCursor.close();
+					this.cursor.close();
 				}
-				catch (SQLException thisException)
+				catch (SQLException e)
 				{
 					//
-					thisException.printStackTrace();
+					e.printStackTrace();
 				}
 			}
 		}
 
+		@SuppressWarnings("RedundantThrows")
 		@Override
 		public boolean moveToNext() throws Exception
 		{
-			return this.theCursor.moveToNext();
+			return this.cursor.moveToNext();
 		}
 
 		@Override
 		public int getPosition() throws SQLException
 		{
-			return this.theCursor.getPosition();
+			return this.cursor.getPosition();
 		}
 
 		@Override
-		public int getColumnIndex(String thisColumnName) throws Exception
+		public int getColumnIndex(String columnName) throws Exception
 		{
-			return this.theCursor.getColumnIndex(thisColumnName);
+			return this.cursor.getColumnIndex(columnName);
 		}
 
 		@Override
-		public boolean isNull(int thisColumnIndex) throws Exception
+		public boolean isNull(int columnIndex) throws Exception
 		{
-			return this.theCursor.isNull(thisColumnIndex);
+			return this.cursor.isNull(columnIndex);
 		}
 
 		@Override
-		public String getString(int thisColumnIndex) throws Exception
+		public String getString(int columnIndex) throws Exception
 		{
-			return this.theCursor.getString(thisColumnIndex);
-		}
-
-		@SuppressWarnings("boxing")
-		@Override
-		public Integer getInt(int thisColumnIndex) throws Exception
-		{
-			return this.theCursor.getInt(thisColumnIndex);
+			return this.cursor.getString(columnIndex);
 		}
 
 		@SuppressWarnings("boxing")
 		@Override
-		public Float getFloat(int thisColumnIndex) throws Exception
+		public Integer getInt(int columnIndex) throws Exception
 		{
-			return this.theCursor.getFloat(thisColumnIndex);
+			return this.cursor.getInt(columnIndex);
 		}
 
 		@SuppressWarnings("boxing")
 		@Override
-		public Double getDouble(int thisColumnIndex) throws Exception
+		public Float getFloat(int columnIndex) throws Exception
 		{
-			return this.theCursor.getDouble(thisColumnIndex);
+			return this.cursor.getFloat(columnIndex);
+		}
+
+		@SuppressWarnings("boxing")
+		@Override
+		public Double getDouble(int columnIndex) throws Exception
+		{
+			return this.cursor.getDouble(columnIndex);
 		}
 	}
 
 	static class AndroidDatabase implements AbstractProvider.Database<AndroidCursor>
 	{
-		private SQLiteDatabase theDB;
+		private SQLiteDatabase db;
 
-		public AndroidDatabase(final String thisDatabasePath)
+		@SuppressWarnings("WeakerAccess")
+		public AndroidDatabase(final String databasePath)
 		{
 			// path
-			System.out.println("Sqlite path: " + thisDatabasePath);
+			System.out.println("Sqlite path: " + databasePath);
 
 			try
 			{
 				// connect
-				this.theDB = SQLiteDatabase.openDatabase(thisDatabasePath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS | SQLiteDatabase.OPEN_READONLY);
+				this.db = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS | SQLiteDatabase.OPEN_READONLY);
 
 			}
-			catch (final SQLException thisException)
+			catch (final SQLException e)
 			{
-				this.theDB = null;
-				System.err.println("Sqlite exception : " + thisException.getMessage());
+				this.db = null;
+				System.err.println("Sqlite exception : " + e.getMessage());
 			}
 		}
 
 		@Override
 		public void close()
 		{
-			if (this.theDB != null)
+			if (this.db != null)
 			{
 				try
 				{
-					this.theDB.close();
+					this.db.close();
 				}
-				catch (SQLException thisException)
+				catch (SQLException e)
 				{
-					thisException.printStackTrace();
+					e.printStackTrace();
 				}
 			}
 		}
 
 		@Override
-		public AndroidCursor query(String thisSql) throws SQLException
+		public AndroidCursor query(String sql) throws SQLException
 		{
-			@SuppressLint("Recycle") final android.database.Cursor thisCursor = this.theDB.rawQuery(thisSql, null);
-			return new AndroidCursor(thisCursor);
+			@SuppressLint("Recycle") final android.database.Cursor cursor = this.db.rawQuery(sql, null);
+			return new AndroidCursor(cursor);
 		}
 	}
 
 	@Override
-	protected AndroidDatabase openDatabase(Properties theseProperties)
+	protected AndroidDatabase openDatabase(Properties properties)
 	{
-		final String thisDatabasePath = makeDatabasePath(theseProperties);
-		return new AndroidDatabase(thisDatabasePath);
+		final String database = makeDatabasePath(properties);
+		return new AndroidDatabase(database);
 	}
 }

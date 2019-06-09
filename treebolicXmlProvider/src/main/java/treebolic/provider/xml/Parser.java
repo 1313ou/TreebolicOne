@@ -46,37 +46,37 @@ public class Parser
 	 * Constructor
 	 */
 	@SuppressWarnings("WeakerAccess")
-	public Parser(@SuppressWarnings("SameParameterValue") final boolean thisValidateFlag)
+	public Parser(@SuppressWarnings("SameParameterValue") final boolean validate)
 	{
-		this.validate = thisValidateFlag;
+		this.validate = validate;
 	}
 
 	/**
 	 * Make document
 	 *
-	 * @param thisUrl      in data url
-	 * @param thisResolver entity resolver
+	 * @param url      in data url
+	 * @param resolver entity resolver
 	 * @return DOM document
 	 * @throws ParserConfigurationException parser configuration exception
 	 * @throws IOException                  io exception
 	 * @throws SAXException                 sax parser exception
 	 */
-	public Document makeDocument(final URL thisUrl, final EntityResolver thisResolver) throws ParserConfigurationException, SAXException, IOException
+	public Document makeDocument(final URL url, final EntityResolver resolver) throws ParserConfigurationException, SAXException, IOException
 	{
-		final ParseErrorLogger thisHandler = new ParseErrorLogger();
+		final ParseErrorLogger handler = new ParseErrorLogger();
 		try
 		{
-			final DocumentBuilder thisBuilder = makeDocumentBuilder();
-			thisBuilder.setErrorHandler(thisHandler);
-			if (thisResolver != null)
+			final DocumentBuilder builder = makeDocumentBuilder();
+			builder.setErrorHandler(handler);
+			if (resolver != null)
 			{
-				thisBuilder.setEntityResolver(thisResolver);
+				builder.setEntityResolver(resolver);
 			}
-			return thisBuilder.parse(thisUrl.openStream());
+			return builder.parse(url.openStream());
 		}
 		finally
 		{
-			thisHandler.terminate();
+			handler.terminate();
 		}
 	}
 
@@ -88,61 +88,61 @@ public class Parser
 	 */
 	private DocumentBuilder makeDocumentBuilder() throws ParserConfigurationException
 	{
-		final DocumentBuilderFactory thisFactory = DocumentBuilderFactory.newInstance();
-		thisFactory.setCoalescing(true);
-		thisFactory.setIgnoringComments(true);
-		thisFactory.setNamespaceAware(false);
-		thisFactory.setIgnoringElementContentWhitespace(true);
+		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setCoalescing(true);
+		factory.setIgnoringComments(true);
+		factory.setNamespaceAware(false);
+		factory.setIgnoringElementContentWhitespace(true);
 		try
 		{
-			thisFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate); //$NON-NLS-1$
+			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate); //$NON-NLS-1$
 		}
 		catch (final Exception ignored)
 		{
 			//
 		}
-		thisFactory.setValidating(this.validate);
-		return thisFactory.newDocumentBuilder();
+		factory.setValidating(this.validate);
+		return factory.newDocumentBuilder();
 	}
 
 	/**
 	 * Document
 	 *
-	 * @param thisIn       in data url
-	 * @param thisXslt     xslt url
-	 * @param thisResolver entity resolver, null if none
+	 * @param url      in data url
+	 * @param xslt     xslt url
+	 * @param resolver entity resolver, null if none
 	 * @return DOM document
 	 */
-	public Document makeDocument(final URL thisIn, final URL thisXslt, final EntityResolver thisResolver)
+	public Document makeDocument(final URL url, final URL xslt, final EntityResolver resolver)
 	{
 		try
 		{
 			// xsl
-			final Source thisXslSource = new StreamSource(thisXslt.openStream());
+			final Source xslSource = new StreamSource(xslt.openStream());
 
 			// in
-			Source thisSource;
-			if (thisResolver == null)
+			Source source;
+			if (resolver == null)
 			{
-				thisSource = new StreamSource(thisIn.openStream());
+				source = new StreamSource(url.openStream());
 			}
 			else
 			{
-				final XMLReader thisReader = XMLReaderFactory.createXMLReader();
-				thisReader.setEntityResolver(thisResolver);
-				thisSource = new SAXSource(thisReader, new InputSource(thisIn.openStream()));
+				final XMLReader reader = XMLReaderFactory.createXMLReader();
+				reader.setEntityResolver(resolver);
+				source = new SAXSource(reader, new InputSource(url.openStream()));
 			}
 
 			// out
-			final DOMResult thisResult = new DOMResult();
+			final DOMResult result = new DOMResult();
 
 			// transform
-			final TransformerFactory thisFactory = TransformerFactory.newInstance();
-			final Transformer thisTransformer = thisFactory.newTransformer(thisXslSource);
-			thisTransformer.setParameter("http://xml.org/sax/features/validation", false); //$NON-NLS-1$
-			thisTransformer.transform(thisSource, thisResult);
+			final TransformerFactory factory = TransformerFactory.newInstance();
+			final Transformer transformer = factory.newTransformer(xslSource);
+			transformer.setParameter("http://xml.org/sax/features/validation", false); //$NON-NLS-1$
+			transformer.transform(source, result);
 
-			return (Document) thisResult.getNode();
+			return (Document) result.getNode();
 		}
 		catch (final Exception e)
 		{

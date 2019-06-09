@@ -1,15 +1,14 @@
 package org.treebolic.one.sql;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.TextView;
 
 import org.treebolic.AppCompatCommonActivity;
 import org.treebolic.TreebolicIface;
 
 import java.net.URL;
-import java.util.Properties;
 
 import treebolic.model.Model;
 import treebolic.model.ModelDump;
@@ -83,8 +82,7 @@ public class PeekActivity extends AppCompatCommonActivity
 		// query provider
 		final URL base = Settings.getBase(this);
 		final String source = Settings.getStringPref(this, TreebolicIface.PREF_SOURCE);
-		final Properties properties = null;
-		final Model model = provider.makeModel(source, base, properties);
+		final Model model = provider.makeModel(source, base, null);
 
 		// display
 		final String text = this.text + '\n' + modelToString(model);

@@ -7,7 +7,7 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -35,8 +35,8 @@ dependencies {
     api project(':fileChooserLib')
     api project(':guideLib')
 
-    api 'com.android.support:appcompat-v7:27.0.2'
-    api 'com.android.support:support-v4:27.0.2'
-    api 'com.android.support:design:27.0.2'
-    implementation 'com.android.support:support-annotations:27.0.2'
+    api 'androidx.appcompat:appcompat:1.0.2'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
 }

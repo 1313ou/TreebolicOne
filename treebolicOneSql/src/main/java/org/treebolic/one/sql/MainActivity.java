@@ -8,10 +8,6 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -32,6 +28,10 @@ import org.treebolic.storage.Storage;
 
 import java.io.File;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import treebolic.glue.component.Statusbar;
 import treebolic.glue.component.WebDialog;
 
@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		updateButton();
 	}
 
+	@SuppressWarnings("SameReturnValue")
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu)
 	{
@@ -228,19 +229,17 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 
 	// S P E C I F I C R E T U R N S
 
+	/*
 	@Override
 	protected void onActivityResult(final int requestCode, final int resultCode, final Intent returnIntent)
 	{
 		// handle selection of input by other activity which returns selected input
-		switch (requestCode)
+		if (requestCode == REQUEST_DOWNLOAD_CODE)
 		{
-			case REQUEST_DOWNLOAD_CODE:
-				break;
-			default:
-				break;
 		}
 		super.onActivityResult(requestCode, resultCode, returnIntent);
 	}
+	*/
 
 	// F R A G M E N T
 
@@ -277,10 +276,10 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private String getFolder()
 	{
-		final File thisFolder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
-		if (thisFolder != null)
+		final File folder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
+		if (folder != null)
 		{
-			return thisFolder.getPath();
+			return folder.getPath();
 		}
 		return Storage.getTreebolicStorage(this).getAbsolutePath();
 	}

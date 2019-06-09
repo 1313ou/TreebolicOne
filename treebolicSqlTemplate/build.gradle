@@ -14,7 +14,7 @@ android {
         versionName rootProject.ext.versionName
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
@@ -23,7 +23,7 @@ android {
             keyPassword keystoreProperties['keyPassword']
             storeFile file(keystoreProperties['storeFile'])
             storePassword keystoreProperties['storePassword']
-         }
+        }
     }
 
     buildTypes {
@@ -42,5 +42,5 @@ android {
 dependencies {
     implementation project(':treebolicOneSql')
 
-    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 }

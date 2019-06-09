@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
+import androidx.core.app.NavUtils;
+import androidx.appcompat.app.ActionBar;
 import android.view.MenuItem;
 
 import org.treebolic.AppCompatCommonPreferenceActivity;
@@ -47,11 +47,10 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	@Override
 	public boolean onOptionsItemSelected(final MenuItem item)
 	{
-		switch (item.getItemId())
+		if (item.getItemId() == android.R.id.home)
 		{
-			case android.R.id.home:
-				NavUtils.navigateUpFromSameTask(this);
-				return true;
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -100,8 +99,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	/**
 	 * A preference value change listener that updates the preference's summary to reflect its new value.
 	 */
-	static private final Preference.OnPreferenceChangeListener listener = (preference, value) ->
-	{
+	static private final Preference.OnPreferenceChangeListener listener = (preference, value) -> {
 		// set the summary to the value's simple string representation.
 		final String stringValue = value == null ? "" : value.toString();
 		preference.setSummary(stringValue);

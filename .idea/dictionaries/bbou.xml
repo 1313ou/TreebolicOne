@@ -1,10 +1,30 @@
 <component name="ProjectDictionaryState">
   <dictionary name="bbou">
     <words>
+      <w>actionbutton</w>
       <w>currentfolder</w>
+      <w>doubletap</w>
+      <w>filechooser</w>
+      <w>firstrun</w>
+      <w>imagebase</w>
+      <w>keyw</w>
       <w>mimetype</w>
+      <w>requery</w>
+      <w>scaledown</w>
+      <w>scaleone</w>
+      <w>scaleup</w>
+      <w>sectionhead</w>
+      <w>snackbar</w>
+      <w>sqlite</w>
       <w>sqlx</w>
+      <w>startswith</w>
+      <w>treebolic</w>
+      <w>unmarshal</w>
+      <w>urlscheme</w>
       <w>zipentry</w>
+      <w>zoomin</w>
+      <w>zoomone</w>
+      <w>zoomout</w>
     </words>
   </dictionary>
 </component>

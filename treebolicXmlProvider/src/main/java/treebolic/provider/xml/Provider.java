@@ -26,13 +26,13 @@ public class Provider implements IProvider
 	 * Context used to query for Url
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected IProviderContext theContext;
+	protected IProviderContext context;
 
 	/**
 	 * Url
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected URL theUrl;
+	protected URL url;
 
 	// C O N S T R U C T O R
 
@@ -41,7 +41,7 @@ public class Provider implements IProvider
 	 */
 	public Provider()
 	{
-		this.theUrl = null;
+		this.url = null;
 	}
 
 	// M A K E
@@ -50,16 +50,16 @@ public class Provider implements IProvider
 	 * @see treebolic.provider.IProvider#setContext(treebolic.provider.IProviderContext)
 	 */
 	@Override
-	public void setContext(final IProviderContext thisContext)
+	public void setContext(final IProviderContext context)
 	{
-		this.theContext = thisContext;
+		this.context = context;
 	}
 
 	/* (non-Javadoc)
 	 * @see treebolic.provider.IProvider#setLocator(treebolic.ILocator)
 	 */
 	@Override
-	public void setLocator(final ILocator thisLocator)
+	public void setLocator(final ILocator locator)
 	{
 		// do not need
 	}
@@ -68,7 +68,7 @@ public class Provider implements IProvider
 	 * @see treebolic.provider.IProvider#setHandle(java.lang.Object)
 	 */
 	@Override
-	public void setHandle(final Object thisHandle)
+	public void setHandle(final Object handle)
 	{
 		// do not need
 	}
@@ -78,27 +78,29 @@ public class Provider implements IProvider
 	 * @see treebolic.provider.IProvider#makeTree(java.lang.String, java.net.URL, java.util.Properties, boolean)
 	 */
 	@Override
-	public Tree makeTree(final String thisSource, final URL thisBase, final Properties theseParameters, final boolean checkRecursion)
+	public Tree makeTree(final String source, final URL base, final Properties parameters, final boolean checkRecursion)
 	{
-		final URL thisUrl = ProviderUtils.makeURL(thisSource, thisBase, theseParameters, this.theContext);
-		if (thisUrl == null)
+		final URL url = ProviderUtils.makeURL(source, base, parameters, this.context);
+		if (url == null)
+		{
 			return null;
+		}
 
 		// direct recursion prevention
-		if (checkRecursion && thisUrl.equals(this.theUrl))
+		if (checkRecursion && url.equals(this.url))
 		{
-			this.theContext.message("Recursion: " + thisUrl.toString()); //$NON-NLS-1$
+			this.context.message("Recursion: " + url.toString()); //$NON-NLS-1$
 			return null;
 		}
 
-		this.theUrl = thisUrl;
-		this.theContext.progress("Loading ..." + thisUrl.toString(), false); //$NON-NLS-1$
-		final Tree thisTree = makeTree(thisUrl, thisBase, theseParameters);
-		if (thisTree != null)
+		this.url = url;
+		this.context.progress("Loading ..." + url.toString(), false); //$NON-NLS-1$
+		final Tree tree = makeTree(url, base, parameters);
+		if (tree != null)
 		{
-			this.theContext.progress("Loaded ..." + thisUrl.toString(), false); //$NON-NLS-1$
+			this.context.progress("Loaded ..." + url.toString(), false); //$NON-NLS-1$
 		}
-		return thisTree;
+		return tree;
 	}
 
 	/*
@@ -106,20 +108,22 @@ public class Provider implements IProvider
 	 * @see treebolic.provider.IProvider#makeModel(java.lang.String, java.net.URL, java.util.Properties)
 	 */
 	@Override
-	public Model makeModel(final String thisSource, final URL thisBase, final Properties theseParameters)
+	public Model makeModel(final String source, final URL base, final Properties parameters)
 	{
-		final URL thisUrl = ProviderUtils.makeURL(thisSource, thisBase, theseParameters, this.theContext);
-		if (thisUrl == null)
-			return null;
-
-		this.theUrl = thisUrl;
-		this.theContext.progress("Loading ..." + thisUrl.toString(), false); //$NON-NLS-1$
-		final Model thisModel = makeModel(thisUrl, thisBase, theseParameters);
-		if (thisModel != null)
+		final URL url = ProviderUtils.makeURL(source, base, parameters, this.context);
+		if (url == null)
 		{
-			this.theContext.progress("Loaded ..." + thisUrl.toString(), false); //$NON-NLS-1$
+			return null;
 		}
-		return thisModel;
+
+		this.url = url;
+		this.context.progress("Loading ..." + url.toString(), false); //$NON-NLS-1$
+		final Model model = makeModel(url, base, parameters);
+		if (model != null)
+		{
+			this.context.progress("Loaded ..." + url.toString(), false); //$NON-NLS-1$
+		}
+		return model;
 	}
 
 	// P A R S E
@@ -127,66 +131,70 @@ public class Provider implements IProvider
 	/**
 	 * Make model from url
 	 *
-	 * @param thisUrl
-	 *        url
+	 * @param url url
 	 * @return model
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected Model makeModel(final URL thisUrl, final URL thisBase, final Properties theseParameters)
+	protected Model makeModel(final URL url, final URL base, final Properties parameters)
 	{
-		final Document thisDocument = makeDocument(thisUrl);
-		if (thisDocument == null)
+		final Document document = makeDocument(url);
+		if (document == null)
+		{
 			return null;
-		return new DocumentAdapter(this, thisBase, theseParameters).makeModel(thisDocument);
+		}
+		return new DocumentAdapter(this, base, parameters).makeModel(document);
 	}
 
 	/**
 	 * Make tree from url
 	 *
-	 * @param thisUrl
-	 *        url
+	 * @param url url
 	 * @return tree
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected Tree makeTree(final URL thisUrl, final URL thisBase, final Properties theseParameters)
+	protected Tree makeTree(final URL url, final URL base, final Properties parameters)
 	{
-		final Document thisDocument = makeDocument(thisUrl);
-		if (thisDocument == null)
+		final Document document = makeDocument(url);
+		if (document == null)
+		{
 			return null;
-		return new DocumentAdapter(this, thisBase, theseParameters).makeTree(thisDocument);
+		}
+		return new DocumentAdapter(this, base, parameters).makeTree(document);
 	}
 
 	/**
 	 * Make DOM document from its Url
 	 *
-	 * @param thisUrl
-	 *        document url
+	 * @param url document url
 	 * @return DOM document
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected Document makeDocument(final URL thisUrl)
+	protected Document makeDocument(final URL url)
 	{
 		try
 		{
-			return new Parser().makeDocument(thisUrl, (publicId, systemId) ->
-			{
+			return new Parser().makeDocument(url, (publicId, systemId) -> {
 				if (systemId.contains("Treebolic.dtd")) //$NON-NLS-1$
+				{
 					return new InputSource(new StringReader("")); //$NON-NLS-1$
+				}
 				else
+				{
 					return null;
+				}
 			});
 		}
 		catch (final IOException e)
 		{
-			this.theContext.warn("DOM parser IO: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser IO: " + e.toString()); //$NON-NLS-1$
 		}
 		catch (final SAXException e)
 		{
-			this.theContext.warn("DOM parser SAX: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser SAX: " + e.toString()); //$NON-NLS-1$
 		}
 		catch (final ParserConfigurationException e)
 		{
-			this.theContext.warn("DOM parser CONFIG: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser CONFIG: " + e.toString()); //$NON-NLS-1$
 		}
 		return null;
 	}

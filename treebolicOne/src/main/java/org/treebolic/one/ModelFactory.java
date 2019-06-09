@@ -113,24 +113,24 @@ public class ModelFactory
 	 */
 	private static Properties makeParameters(final String source, final String base, final String imageBase, final String settings)
 	{
-		final Properties theseParameters = new Properties();
+		final Properties parameters = new Properties();
 		if (source != null)
 		{
-			theseParameters.setProperty("source", source);
+			parameters.setProperty("source", source);
 		}
 		if (base != null)
 		{
-			theseParameters.setProperty("base", base);
+			parameters.setProperty("base", base);
 		}
 		if (imageBase != null)
 		{
-			theseParameters.setProperty("imagebase", imageBase);
+			parameters.setProperty("imagebase", imageBase);
 		}
 		if (settings != null)
 		{
-			theseParameters.setProperty("settings", settings);
+			parameters.setProperty("settings", settings);
 		}
 
-		return theseParameters;
+		return parameters;
 	}
 }

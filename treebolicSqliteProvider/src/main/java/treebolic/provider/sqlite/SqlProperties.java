@@ -28,11 +28,11 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Load properties
 	 */
-	static public Properties load(final File thisPath)
+	static public Properties load(final File path)
 	{
 		try
 		{
-			return load(thisPath.toURI().toURL());
+			return load(path.toURI().toURL());
 		}
 		catch (MalformedURLException ignored)
 		{
@@ -45,28 +45,28 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	 * Load properties
 	 */
 	@SuppressWarnings("WeakerAccess")
-	static public Properties load(final URL thisUrl)
+	static public Properties load(final URL url)
 	{
-		InputStream thisInputStream = null;
+		InputStream inputStream = null;
 		try
 		{
-			final Properties theseProperties = new Properties();
-			thisInputStream = thisUrl.openStream();
-			theseProperties.load(thisInputStream);
-			return theseProperties;
+			final Properties properties = new Properties();
+			inputStream = url.openStream();
+			properties.load(inputStream);
+			return properties;
 		}
 		catch (final IOException ignored)
 		{
-			System.err.println("Sqlite load: Cannot load <" + thisUrl.toString() + ">");
+			System.err.println("Sqlite load: Cannot load <" + url.toString() + ">");
 			return null;
 		}
 		finally
 		{
-			if (thisInputStream != null)
+			if (inputStream != null)
 			{
 				try
 				{
-					thisInputStream.close();
+					inputStream.close();
 				}
 				catch (IOException ignored)
 				{
@@ -79,49 +79,33 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Save properties
 	 */
-	static void save(final Properties theseProperties, final String thisPropertyFile)
+	static void save(final Properties properties, final String propertyFile)
 	{
-		FileOutputStream fos = null;
-		try
+		try (FileOutputStream fos = new FileOutputStream(propertyFile))
 		{
-			fos = new FileOutputStream(thisPropertyFile);
-			theseProperties.store(fos, "TREEBOLIC-SQLITE");
+			properties.store(fos, "TREEBOLIC-SQLITE");
 		}
 		catch (final IOException e)
 		{
 			e.printStackTrace();
-		}
-		finally
-		{
-			if (fos != null)
-			{
-				try
-				{
-					fos.close();
-				}
-				catch (IOException ignored)
-				{
-					//
-				}
-			}
 		}
 	}
 
 	/**
 	 * Make default property
 	 */
-	static public String toString(final Properties theseProperties)
+	static public String toString(final Properties properties)
 	{
-		final StringBuilder thisBuilder = new StringBuilder();
-		for (final Enumeration<?> thisEnum = theseProperties.propertyNames(); thisEnum.hasMoreElements(); )
+		final StringBuilder sb = new StringBuilder();
+		for (final Enumeration<?> names = properties.propertyNames(); names.hasMoreElements(); )
 		{
-			final String thisName = (String) thisEnum.nextElement();
-			final String thisValue = theseProperties.getProperty(thisName);
-			thisBuilder.append(thisName);
-			thisBuilder.append("=");
-			thisBuilder.append(thisValue);
-			thisBuilder.append("\n");
+			final String name = (String) names.nextElement();
+			final String value = properties.getProperty(name);
+			sb.append(name);
+			sb.append("=");
+			sb.append(value);
+			sb.append("\n");
 		}
-		return thisBuilder.toString();
+		return sb.toString();
 	}
 }

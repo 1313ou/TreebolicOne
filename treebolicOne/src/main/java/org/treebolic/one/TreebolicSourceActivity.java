@@ -69,18 +69,18 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	@Override
 	protected Properties makeParameters()
 	{
-		final Properties theseParameters = super.makeParameters();
+		final Properties parameters = super.makeParameters();
 
 		if (this.source != null)
 		{
-			theseParameters.setProperty("source", this.source);
-			theseParameters.setProperty("doc", this.source);
+			parameters.setProperty("source", this.source);
+			parameters.setProperty("doc", this.source);
 		}
 		if (this.providerName != null)
 		{
-			theseParameters.setProperty("provider", this.providerName);
+			parameters.setProperty("provider", this.providerName);
 		}
-		return theseParameters;
+		return parameters;
 	}
 
 	// U N M A R S H A L
@@ -93,12 +93,12 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	@Override
 	protected void unmarshalArgs(final Intent intent)
 	{
-		final Bundle params = intent.getExtras();
-		assert params != null;
-		this.providerName = params.getString(TreebolicIface.ARG_PROVIDER);
+		final Bundle args = intent.getExtras();
+		assert args != null;
+		this.providerName = args.getString(TreebolicIface.ARG_PROVIDER);
 		if (!this.restoring)
 		{
-			this.source = params.getString(TreebolicIface.ARG_SOURCE);
+			this.source = args.getString(TreebolicIface.ARG_SOURCE);
 		}
 
 		// super

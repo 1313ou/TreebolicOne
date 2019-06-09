@@ -1,10 +1,10 @@
 package treebolic.provider.xml;
 
+import org.xml.sax.SAXParseException;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-
-import org.xml.sax.SAXParseException;
 
 /**
  * Parse error logger
@@ -16,12 +16,12 @@ public class ParseErrorLogger extends ParseErrorHandler
 	/**
 	 * Printer
 	 */
-	private PrintWriter theWriter;
+	private PrintWriter writer;
 
 	/**
 	 * Output stream
 	 */
-	private OutputStream theOutputStream;
+	private OutputStream outputStream;
 
 	/**
 	 * Constructor
@@ -34,25 +34,23 @@ public class ParseErrorLogger extends ParseErrorHandler
 	/**
 	 * Log
 	 *
-	 * @param thisLevel
-	 *        level
-	 * @param e
-	 *        exception
+	 * @param level level
+	 * @param e     exception
 	 */
-	private void log(final String thisLevel, final SAXParseException e)
+	private void log(final String level, final SAXParseException e)
 	{
-		if (this.theOutputStream == null)
+		if (this.outputStream == null)
 		{
-			this.theOutputStream = System.err;
+			this.outputStream = System.err;
 		}
-		if (this.theWriter == null)
+		if (this.writer == null)
 		{
-			this.theWriter = new PrintWriter(this.theOutputStream, true);
+			this.writer = new PrintWriter(this.outputStream, true);
 		}
 
-		this.theWriter.println(thisLevel);
-		this.theWriter.println(" uri: " + e.getSystemId() + "(" + e.getLineNumber() + "," + e.getColumnNumber() + ")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-		this.theWriter.println(" message: " + e.getMessage()); //$NON-NLS-1$
+		this.writer.println(level);
+		this.writer.println(" uri: " + e.getSystemId() + "(" + e.getLineNumber() + "," + e.getColumnNumber() + ")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		this.writer.println(" message: " + e.getMessage()); //$NON-NLS-1$
 	}
 
 	/**
@@ -62,15 +60,15 @@ public class ParseErrorLogger extends ParseErrorHandler
 	{
 		try
 		{
-			if (this.theWriter != null && (this.theFatalErrors != 0 || this.theErrors != 0 || this.theWarnings != 0))
+			if (this.writer != null && (this.fatalErrors != 0 || this.errors != 0 || this.warnings != 0))
 			{
-				this.theWriter.println("Fatal Errors:" + this.theFatalErrors); //$NON-NLS-1$
-				this.theWriter.println("Errors:" + this.theErrors); //$NON-NLS-1$
-				this.theWriter.println("Warnings:" + this.theWarnings); //$NON-NLS-1$
+				this.writer.println("Fatal Errors:" + this.fatalErrors); //$NON-NLS-1$
+				this.writer.println("Errors:" + this.errors); //$NON-NLS-1$
+				this.writer.println("Warnings:" + this.warnings); //$NON-NLS-1$
 			}
-			if (this.theOutputStream != null)
+			if (this.outputStream != null)
 			{
-				this.theOutputStream.close();
+				this.outputStream.close();
 			}
 		}
 		catch (final IOException ignored)

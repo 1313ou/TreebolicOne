@@ -14,19 +14,19 @@ class ParseErrorHandler implements ErrorHandler
 	 * Warning count
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected int theWarnings;
+	protected int warnings;
 
 	/**
 	 * Error count
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected final int theErrors;
+	protected final int errors;
 
 	/**
 	 * Fatal error count
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected int theFatalErrors;
+	protected int fatalErrors;
 
 	/**
 	 * Constructor
@@ -34,9 +34,9 @@ class ParseErrorHandler implements ErrorHandler
 	@SuppressWarnings("WeakerAccess")
 	protected ParseErrorHandler()
 	{
-		this.theWarnings = 0;
-		this.theErrors = 0;
-		this.theFatalErrors = 0;
+		this.warnings = 0;
+		this.errors = 0;
+		this.fatalErrors = 0;
 	}
 
 	/*
@@ -46,7 +46,7 @@ class ParseErrorHandler implements ErrorHandler
 	@Override
 	public void error(final SAXParseException e) throws SAXParseException
 	{
-		this.theFatalErrors++;
+		this.fatalErrors++;
 	}
 
 	/*
@@ -56,7 +56,7 @@ class ParseErrorHandler implements ErrorHandler
 	@Override
 	public void warning(final SAXParseException e) throws SAXParseException
 	{
-		this.theWarnings++;
+		this.warnings++;
 	}
 
 	/*
@@ -66,6 +66,6 @@ class ParseErrorHandler implements ErrorHandler
 	@Override
 	public void fatalError(final SAXParseException e) throws SAXParseException
 	{
-		this.theFatalErrors++;
+		this.fatalErrors++;
 	}
 }

@@ -9,11 +9,14 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -111,6 +114,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		updateButton();
 	}
 
+	@SuppressWarnings("SameReturnValue")
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu)
 	{
@@ -142,7 +146,10 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		else if (itemId == R.id.action_builtin_data)
 		{
 			final Uri archiveUri = Storage.copyAssetFile(this, Settings.DATA);
-			tryStartTreebolicBundle(archiveUri);
+			if (archiveUri != null)
+			{
+				tryStartTreebolicBundle(archiveUri);
+			}
 			return true;
 		}
 		//		else if (itemId == R.id.action_reset)
@@ -301,6 +308,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		/**
 		 * Constructor
 		 */
+		@SuppressWarnings("WeakerAccess")
 		public PlaceholderFragment(int layoutId0)
 		{
 			this.layoutId = layoutId0;
@@ -326,10 +334,10 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private String getFolder()
 	{
-		final File thisFolder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
-		if (thisFolder != null)
+		final File folder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
+		if (folder != null)
 		{
-			return thisFolder.getPath();
+			return folder.getPath();
 		}
 		return Storage.getTreebolicStorage(this).getAbsolutePath();
 	}
@@ -467,10 +475,10 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @param fileUri XML file uri
 	 */
-	private void tryStartTreebolic(final Uri fileUri)
+	private void tryStartTreebolic(@NonNull final Uri fileUri)
 	{
 		final String source = fileUri.toString();
-		if (source == null || source.isEmpty())
+		if (source.isEmpty())
 		{
 			Toast.makeText(this, R.string.error_null_source, Toast.LENGTH_SHORT).show();
 			return;
@@ -492,7 +500,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @param archiveUri archive uri
 	 */
-	private void tryStartTreebolicBundle(final Uri archiveUri)
+	private void tryStartTreebolicBundle(@NonNull final Uri archiveUri)
 	{
 		try
 		{
@@ -512,7 +520,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * @param zipEntry   archive entry
 	 */
 	@SuppressWarnings("UnnecessaryLocalVariable")
-	private void tryStartTreebolicBundle(final Uri archiveUri, final String zipEntry)
+	private void tryStartTreebolicBundle(@NonNull final Uri archiveUri, final String zipEntry)
 	{
 		Log.d(MainActivity.TAG, "Start treebolic from bundle uri " + archiveUri + " and zipentry " + zipEntry);
 		final String source = zipEntry; // alternatively: "jar:" + fileUri.toString() + "!/" + zipEntry;
