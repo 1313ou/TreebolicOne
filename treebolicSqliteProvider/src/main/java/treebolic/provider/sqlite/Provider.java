@@ -69,40 +69,40 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		}
 
 		@Override
-		public int getColumnIndex(String columnName) throws Exception
+		public int getColumnIndex(String columnName)
 		{
 			return this.cursor.getColumnIndex(columnName);
 		}
 
 		@Override
-		public boolean isNull(int columnIndex) throws Exception
+		public boolean isNull(int columnIndex)
 		{
 			return this.cursor.isNull(columnIndex);
 		}
 
 		@Override
-		public String getString(int columnIndex) throws Exception
+		public String getString(int columnIndex)
 		{
 			return this.cursor.getString(columnIndex);
 		}
 
 		@SuppressWarnings("boxing")
 		@Override
-		public Integer getInt(int columnIndex) throws Exception
+		public Integer getInt(int columnIndex)
 		{
 			return this.cursor.getInt(columnIndex);
 		}
 
 		@SuppressWarnings("boxing")
 		@Override
-		public Float getFloat(int columnIndex) throws Exception
+		public Float getFloat(int columnIndex)
 		{
 			return this.cursor.getFloat(columnIndex);
 		}
 
 		@SuppressWarnings("boxing")
 		@Override
-		public Double getDouble(int columnIndex) throws Exception
+		public Double getDouble(int columnIndex)
 		{
 			return this.cursor.getDouble(columnIndex);
 		}

@@ -4,11 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceFragment;
-import androidx.core.app.NavUtils;
-import androidx.appcompat.app.ActionBar;
 import android.view.MenuItem;
 
 import org.treebolic.AppCompatCommonPreferenceActivity;
@@ -17,6 +12,13 @@ import org.treebolic.preference.OpenEditTextPreference;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.app.NavUtils;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.legacy.contrib.Header;
 
 /**
  * A AppCompatPreferenceActivity that presents a set of application settings.
@@ -60,7 +62,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	private static final List<String> allowedFragments = new ArrayList<>();
 
 	@Override
-	public void onBuildHeaders(final List<Header> target)
+	public void onBuildHeaders(@NonNull final List<Header> target)
 	{
 		loadHeadersFromResource(R.xml.pref_headers, target);
 
@@ -73,7 +75,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	}
 
 	@Override
-	protected boolean isValidFragment(final String fragmentName)
+	public boolean isValidFragment(final String fragmentName)
 	{
 		return SettingsActivity.allowedFragments.contains(fragmentName);
 	}
@@ -115,7 +117,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	 *
 	 * @see #listener
 	 */
-	static private void bind(final Preference preference, final String value0, @SuppressWarnings("SameParameterValue") final OnPreferenceChangeListener listener0)
+	static private void bind(final Preference preference, final String value0, @SuppressWarnings("SameParameterValue") final Preference.OnPreferenceChangeListener listener0)
 	{
 		// set the listener to watch for value changes.
 		preference.setOnPreferenceChangeListener(listener0);
@@ -126,13 +128,11 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	// F R A G M E N T S
 
-	public static class ProviderPreferenceFragment extends PreferenceFragment
+	public static class ProviderPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreate(final Bundle savedInstanceState)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
-			super.onCreate(savedInstanceState);
-
 			// inflate
 			addPreferencesFromResource(R.xml.pref_provider);
 
@@ -146,13 +146,11 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		}
 	}
 
-	public static class DataPreferenceFragment extends PreferenceFragment
+	public static class DataPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreate(final Bundle savedInstanceState)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
-			super.onCreate(savedInstanceState);
-
 			// inflate
 			addPreferencesFromResource(R.xml.pref_data);
 
@@ -197,13 +195,11 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		}
 	}
 
-	public static class DownloadPreferenceFragment extends PreferenceFragment
+	public static class DownloadPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreate(final Bundle savedInstanceState)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
-			super.onCreate(savedInstanceState);
-
 			// inflate
 			addPreferencesFromResource(R.xml.pref_download);
 

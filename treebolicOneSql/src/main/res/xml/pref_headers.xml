@@ -1,15 +1,14 @@
-<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+<preference-headers
+	xmlns:app="http://schemas.android.com/apk/res-auto">
 
-	<!-- These settings headers are only used on tablets. -->
-
 	<header
-		android:fragment="org.treebolic.one.sql.SettingsActivity$DataPreferenceFragment"
-		android:title="@string/pref_header_data"/>
+		app:fragment="org.treebolic.one.sql.SettingsActivity$DataPreferenceFragment"
+		app:title="@string/pref_header_data"/>
 	<header
-		android:fragment="org.treebolic.one.sql.SettingsActivity$ProviderPreferenceFragment"
-		android:title="@string/pref_header_provider"/>
+		app:fragment="org.treebolic.one.sql.SettingsActivity$ProviderPreferenceFragment"
+		app:title="@string/pref_header_provider"/>
 	<header
-		android:fragment="org.treebolic.one.sql.SettingsActivity$DownloadPreferenceFragment"
-		android:title="@string/pref_header_download"/>
+		app:fragment="org.treebolic.one.sql.SettingsActivity$DownloadPreferenceFragment"
+		app:title="@string/pref_header_download"/>
 
 </preference-headers>

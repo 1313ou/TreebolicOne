@@ -24,19 +24,20 @@ android {
 }
 
 dependencies {
-    api project(':treebolicLib')
-    api project(':treebolicMutable')
-    api project(':treebolicSqliteProvider')
+    implementation project(':treebolicLib')
+    implementation project(':treebolicMutable')
+    implementation project(':treebolicSqliteProvider')
 
-    api project(':commonLib')
-    api project(':storageLib')
-    api project(':searchLib')
-    api project(':preferenceLib')
-    api project(':downloadLib')
-    api project(':fileChooserLib')
-    api project(':guideLib')
+    implementation project(':commonLib')
+    implementation project(':storageLib')
+    implementation project(':searchLib')
+    implementation project(':preferenceLib')
+    implementation project(':downloadLib')
+    implementation project(':fileChooserLib')
+    implementation project(':guideLib')
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference:1.1.0-beta01'
     implementation 'com.google.android.material:material:1.0.0'
 }

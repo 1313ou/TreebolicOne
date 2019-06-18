@@ -25,7 +25,6 @@ public class DownloadActivity extends org.treebolic.download.DownloadActivity
 
 		// parameters
 		this.expandArchiveCheckbox.setVisibility(View.VISIBLE);
-		this.destDir = Storage.getCacheDir(this);
 		this.downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD);
 		if (this.downloadUrl == null || this.downloadUrl.isEmpty())
 		{
@@ -53,12 +52,16 @@ public class DownloadActivity extends org.treebolic.download.DownloadActivity
 	@Override
 	protected boolean process(final InputStream inputStream) throws IOException
 	{
+		final File storage = Storage.getTreebolicStorage(this);
+
 		if (this.expandArchive)
 		{
 			Deploy.expand(inputStream, Storage.getTreebolicStorage(this), false);
 			return true;
 		}
-		Deploy.copy(inputStream, new File(Storage.getTreebolicStorage(this), this.destUri.getLastPathSegment()));
+
+		final File destFile = new File(storage, this.downloadUri.getLastPathSegment());
+		Deploy.copy(inputStream, destFile);
 		return true;
 	}
 }

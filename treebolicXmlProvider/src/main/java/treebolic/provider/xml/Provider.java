@@ -58,6 +58,7 @@ public class Provider implements IProvider
 	/* (non-Javadoc)
 	 * @see treebolic.provider.IProvider#setLocator(treebolic.ILocator)
 	 */
+	@SuppressWarnings("EmptyMethod")
 	@Override
 	public void setLocator(final ILocator locator)
 	{
@@ -67,6 +68,7 @@ public class Provider implements IProvider
 	/* (non-Javadoc)
 	 * @see treebolic.provider.IProvider#setHandle(java.lang.Object)
 	 */
+	@SuppressWarnings("EmptyMethod")
 	@Override
 	public void setHandle(final Object handle)
 	{

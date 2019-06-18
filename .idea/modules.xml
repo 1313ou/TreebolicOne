@@ -21,14 +21,10 @@
       <module fileurl="file://$PROJECT_DIR$/../TreebolicLib/treebolicLoadBalancer/treebolicLoadBalancer.iml" filepath="$PROJECT_DIR$/../TreebolicLib/treebolicLoadBalancer/treebolicLoadBalancer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../TreebolicLib/treebolicMutable/treebolicMutable.iml" filepath="$PROJECT_DIR$/../TreebolicLib/treebolicMutable/treebolicMutable.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicOne/treebolicOne.iml" filepath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" />
-      <module fileurl="file://$PROJECT_DIR$/treebolicOne/treebolicOne.iml" filepath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" filepath="$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" />
-      <module fileurl="file://$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" filepath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" filepath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicSqliteProvider/treebolicSqliteProvider.iml" filepath="$PROJECT_DIR$/treebolicSqliteProvider/treebolicSqliteProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" filepath="$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" filepath="$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" filepath="$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" filepath="$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/../TreebolicSupportLibs/wheelLib/wheelLib.iml" filepath="$PROJECT_DIR$/../TreebolicSupportLibs/wheelLib/wheelLib.iml" />
     </modules>

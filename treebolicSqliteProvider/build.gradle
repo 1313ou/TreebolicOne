@@ -27,5 +27,5 @@ dependencies {
     implementation project(':treebolicLib')
     implementation project(':treebolicLoadBalancer')
     api files('libs/treebolic-provider-sqlx-common.jar')
-    implementation 'androidx.annotation:annotation:1.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
 }
