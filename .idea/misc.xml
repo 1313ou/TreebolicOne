@@ -186,6 +186,14 @@
     <pattern value="treebolic.provider.sqlite.Provider" method="openDatabase" />
     <pattern value="org.treebolic.one.MainActivity.PlaceholderFragment" method="PlaceholderFragment" />
     <pattern value="treebolic.provider.sqlite.Provider.AndroidDatabase" method="query" />
+    <pattern value="org.treebolic.one.sql.SettingsActivity.ProviderPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.sql.SettingsActivity.DataPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.sql.SettingsActivity.DownloadPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.SettingsActivity.ProviderPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.SettingsActivity.DataPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.SettingsActivity.DownloadPreferenceFragment" method="onCreatePreferences" />
+    <pattern value="org.treebolic.one.sql.SettingsActivity.DownloadPreferenceFragment" method="onDisplayPreferenceDialog" />
+    <pattern value="org.treebolic.one.SettingsActivity.DownloadPreferenceFragment" method="onDisplayPreferenceDialog" />
   </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />

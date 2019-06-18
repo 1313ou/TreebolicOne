@@ -7,6 +7,8 @@ import org.treebolic.TreebolicIface;
 
 import java.util.Properties;
 
+import androidx.annotation.NonNull;
+
 public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 {
 	/**
@@ -55,7 +57,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	}
 
 	@Override
-	public void onSaveInstanceState(final Bundle savedInstanceState)
+	public void onSaveInstanceState(@NonNull final Bundle savedInstanceState)
 	{
 		// save
 		savedInstanceState.putString(TreebolicIface.ARG_SOURCE, this.source);

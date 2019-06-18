@@ -1,6 +1,5 @@
 package org.treebolic.one.sql;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -15,6 +14,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.app.NavUtils;
+import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.legacy.contrib.Header;
@@ -88,129 +88,83 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 	}
 
-	// L I S T E N E R
-
-	/**
-	 * A preference value change listener that updates the preference's summary to reflect its new value.
-	 */
-	static private final Preference.OnPreferenceChangeListener listener = (preference, value) -> {
-		// set the summary to the value's simple string representation.
-		final String stringValue = value == null ? "" : value.toString();
-		preference.setSummary(stringValue);
-		return true;
-	};
-
-	// B I N D S U M M A R Y
-
-	/**
-	 * Binds a preference's summary to its value. More specifically, when the preference's value is changed, its summary (line of text below the preference
-	 * title) is updated to reflect the value. The summary is also immediately updated upon calling this method. The exact display format is dependent on the
-	 * type of preference.
-	 *
-	 * @see #listener
-	 */
-	static private void bind(final Preference preference, final String value0, @SuppressWarnings("SameParameterValue") final Preference.OnPreferenceChangeListener listener0)
-	{
-		// set the listener to watch for value changes.
-		preference.setOnPreferenceChangeListener(listener0);
-
-		// trigger the listener immediately with the preference's current value.
-		listener0.onPreferenceChange(preference, value0);
-	}
 
 	// F R A G M E N T S
 
 	public static class ProviderPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
+		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_provider);
 
-			// activity
-			final Activity activity = getActivity();
-
 			// bind
 			final Preference providerPreference = findPreference(Settings.PREF_PROVIDER);
-			final String value = Settings.getStringPref(activity, providerPreference.getKey());
-			SettingsActivity.bind(providerPreference, value, SettingsActivity.listener);
+			assert providerPreference != null;
+			providerPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 		}
 	}
 
 	public static class DataPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
+		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_data);
 
-			// activity
-			final Activity activity = getActivity();
-
 			// bind
 			final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
-			if (sourcePreference != null)
-			{
-				final String value = Settings.getStringPref(activity, sourcePreference.getKey());
-				SettingsActivity.bind(sourcePreference, value, SettingsActivity.listener);
-			}
+			assert sourcePreference != null;
+			sourcePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
 			final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
-			if (basePreference != null)
-			{
-				final String value = Settings.getStringPref(activity, basePreference.getKey());
-				SettingsActivity.bind(basePreference, value, SettingsActivity.listener);
-			}
+			assert basePreference != null;
+			basePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
 			final Preference imageBasePreference = findPreference(TreebolicIface.PREF_IMAGEBASE);
-			if (imageBasePreference != null)
-			{
-				final String value = Settings.getStringPref(activity, imageBasePreference.getKey());
-				SettingsActivity.bind(imageBasePreference, value, SettingsActivity.listener);
-			}
+			assert imageBasePreference != null;
+			imageBasePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
 			final Preference restrictPreference = findPreference(Settings.PREF_TRUNCATE);
-			if (restrictPreference != null)
-			{
-				final String value = Settings.getStringPref(activity, restrictPreference.getKey());
-				SettingsActivity.bind(restrictPreference, value, SettingsActivity.listener);
-			}
+			assert restrictPreference != null;
+			restrictPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
 			final Preference extraRestrictPreference = findPreference(Settings.PREF_PRUNE);
-			if (extraRestrictPreference != null)
-			{
-				final String value = Settings.getStringPref(activity, extraRestrictPreference.getKey());
-				SettingsActivity.bind(extraRestrictPreference, value, SettingsActivity.listener);
-			}
+			assert extraRestrictPreference != null;
+			extraRestrictPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
 			final Preference settingsPreference = findPreference(TreebolicIface.PREF_SETTINGS);
-			if (settingsPreference != null)
-			{
-				final String value = Settings.getStringPref(activity, settingsPreference.getKey());
-				SettingsActivity.bind(settingsPreference, value, SettingsActivity.listener);
-			}
+			assert settingsPreference != null;
+			settingsPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 		}
 	}
 
 	public static class DownloadPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
+		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_download);
 
 			// override
-			final OpenEditTextPreference pref = (OpenEditTextPreference) findPreference(Settings.PREF_DOWNLOAD);
-			pref.setValues(getResources().getStringArray(R.array.pref_download_urls));
+			final OpenEditTextPreference preference = findPreference(Settings.PREF_DOWNLOAD);
+			assert preference != null;
+			preference.setValues(getResources().getStringArray(R.array.pref_download_urls));
 
 			// bind
-			final Activity activity = getActivity();
-			final Preference preference = findPreference(Settings.PREF_DOWNLOAD);
-			final String value = Settings.getStringPref(activity, preference.getKey());
-			SettingsActivity.bind(preference, value, SettingsActivity.listener);
+			preference.setSummaryProvider(OpenEditTextPreference.SUMMARY_PROVIDER);
+		}
+
+		@Override
+		public void onDisplayPreferenceDialog(final Preference preference)
+		{
+			if (!OpenEditTextPreference.onDisplayPreferenceDialog(this, preference))
+			{
+				super.onDisplayPreferenceDialog(preference);
+			}
 		}
 	}
 }
