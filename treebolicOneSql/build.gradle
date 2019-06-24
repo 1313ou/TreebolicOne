@@ -25,8 +25,9 @@ android {
 
 dependencies {
     implementation project(':treebolicLib')
+    implementation project(':treebolicLibModel')
     implementation project(':treebolicMutable')
-    implementation project(':treebolicSqliteProvider')
+    api project(':treebolicSqliteProvider')
 
     implementation project(':commonLib')
     implementation project(':storageLib')

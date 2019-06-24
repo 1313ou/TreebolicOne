@@ -5,8 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	/**
 	 * Log tag
 	 */
-	private static final String TAG = "One MainActivity";
+	private static final String TAG = "OneMainA";
 
 	/**
 	 * File request code
@@ -199,38 +200,20 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	/**
 	 * Initialize
 	 */
-	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
 	private void initialize()
 	{
 		// permissions
 		Permissions.check(this);
 
-		// version of this code
-		int verCode = -1;
-		try
-		{
-			PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-			verCode = pInfo.versionCode;
-		}
-		catch (NameNotFoundException ignored)
-		{
-			//
-		}
-
 		// initialize
-		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-		final int savedVerCode = sharedPref.getInt(Settings.PREF_INITIALIZED, -1);
-		if (savedVerCode == -1 || verCode == -1 || savedVerCode < verCode)
-		{
+		doOnUpgrade(Settings.PREF_INITIALIZED, () -> {
+
 			// default settings
 			Settings.setDefaults(this);
 
 			// deploy
 			Storage.expandZipAssetFile(this, "data.zip");
-
-			// flag as initialized
-			sharedPref.edit().putInt(Settings.PREF_INITIALIZED, verCode).commit();
-		}
+		});
 
 		// deploy
 		final File dir = Storage.getTreebolicStorage(this);
@@ -242,6 +225,58 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 				Storage.expandZipAssetFile(this, "data.zip");
 			}
 		}
+	}
+
+	/**
+	 * Do on upgrade
+	 *
+	 * @param key      key holding last version
+	 * @param runnable what to do if upgrade
+	 * @return build version
+	 */
+	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
+	@SuppressWarnings({"deprecation", "UnusedReturnValue"})
+	private long doOnUpgrade(@SuppressWarnings("SameParameterValue") @NonNull final String key, @NonNull final Runnable runnable)
+	{
+		// first run of this version
+		final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		long version;
+		try
+		{
+			version = prefs.getLong(key, -1);
+		}
+		catch (ClassCastException e)
+		{
+			version = prefs.getInt(key, -1);
+		}
+		long build = 0; //BuildConfig.VERSION_CODE;
+		try
+		{
+			final PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+			{
+				build = packageInfo.getLongVersionCode();
+			}
+			else
+			{
+				build = packageInfo.versionCode;
+			}
+		}
+		catch (PackageManager.NameNotFoundException ignored)
+		{
+			//
+		}
+		if (version < build)
+		{
+			final SharedPreferences.Editor edit = prefs.edit();
+
+			// do job
+			runnable.run();
+
+			// flag as 'has run'
+			edit.putLong(key, build).apply();
+		}
+		return build;
 	}
 
 	// S P E C I F I C R E T U R N S

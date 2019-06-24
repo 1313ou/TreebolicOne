@@ -18,6 +18,8 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+import androidx.annotation.Nullable;
+
 /**
  * Settings
  *
@@ -195,6 +197,7 @@ public class Settings
 	 * @param key     key
 	 * @return value
 	 */
+	@Nullable
 	static public String getStringPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -221,6 +224,7 @@ public class Settings
 	 * @param key     key
 	 * @return preference value as
 	 */
+	@Nullable
 	static public URL getURLPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
