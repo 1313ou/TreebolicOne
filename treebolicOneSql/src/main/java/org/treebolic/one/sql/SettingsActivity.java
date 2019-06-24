@@ -1,6 +1,7 @@
 package org.treebolic.one.sql;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -88,6 +89,18 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 	}
 
+	// S U M M A R Y
+
+	/**
+	 * Summary provider for string
+	 */
+	static private final Preference.SummaryProvider<Preference> STRING_SUMMARY_PROVIDER = (preference) -> {
+
+		final Context context = preference.getContext();
+		final SharedPreferences sharedPrefs = preference.getSharedPreferences();
+		final String value = sharedPrefs.getString(preference.getKey(), null);
+		return value == null ? context.getString(R.string.pref_value_default) : value;
+	};
 
 	// F R A G M E N T S
 
@@ -102,7 +115,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			// bind
 			final Preference providerPreference = findPreference(Settings.PREF_PROVIDER);
 			assert providerPreference != null;
-			providerPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			providerPreference.setSummaryProvider(STRING_SUMMARY_PROVIDER);
 		}
 	}
 
