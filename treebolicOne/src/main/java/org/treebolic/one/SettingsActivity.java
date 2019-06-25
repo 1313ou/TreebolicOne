@@ -140,9 +140,12 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			assert sourcePreference != null;
 			sourcePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
 
+			// entry is optional
 			final Preference sourceEntryPreference = findPreference(Settings.PREF_SOURCE_ENTRY);
-			assert sourceEntryPreference != null;
-			sourceEntryPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			if (sourceEntryPreference != null)
+			{
+				sourceEntryPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			}
 
 			final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
 			assert basePreference != null;

@@ -111,7 +111,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/runtime_library_classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
@@ -175,6 +174,22 @@
     <orderEntry type="module" module-name="treebolicLibModel" />
     <orderEntry type="module" module-name="guideLib" />
     <orderEntry type="module" module-name="downloadLib" />
+    <orderEntry type="module" module-name="commonLib" />
+    <orderEntry type="module" module-name="fileChooserLib" />
+    <orderEntry type="module" module-name="treebolicLibView" />
+    <orderEntry type="module" module-name="treebolicGraph" />
+    <orderEntry type="module" module-name="treebolicIface" />
+    <orderEntry type="module" module-name="guideLib" />
+    <orderEntry type="module" module-name="treebolicLibModel" />
+    <orderEntry type="module" module-name="treebolicGlueIface" />
+    <orderEntry type="module" module-name="storageLib" />
+    <orderEntry type="module" module-name="downloadLib" />
+    <orderEntry type="module" module-name="preferenceLib" />
+    <orderEntry type="module" module-name="treebolicLib" />
+    <orderEntry type="module" module-name="treebolicGlue" />
+    <orderEntry type="module" module-name="treebolicSqliteProvider" />
+    <orderEntry type="module" module-name="treebolicMutable" />
+    <orderEntry type="module" module-name="searchLib" />
     <orderEntry type="module" module-name="commonLib" />
     <orderEntry type="module" module-name="fileChooserLib" />
     <orderEntry type="module" module-name="treebolicLibView" />
