@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.app.NavUtils;
 import androidx.preference.EditTextPreference;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.legacy.contrib.Header;
@@ -127,30 +128,46 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			// inflate
 			addPreferencesFromResource(R.xml.pref_data);
 
-			// bind
+			// bind (can be either EditTextPreference or ListPreference or saving to string)
 			final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
 			assert sourcePreference != null;
-			sourcePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(sourcePreference);
 
 			final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
 			assert basePreference != null;
-			basePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(basePreference);
 
 			final Preference imageBasePreference = findPreference(TreebolicIface.PREF_IMAGEBASE);
 			assert imageBasePreference != null;
-			imageBasePreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(imageBasePreference);
 
 			final Preference restrictPreference = findPreference(Settings.PREF_TRUNCATE);
 			assert restrictPreference != null;
-			restrictPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(restrictPreference);
 
 			final Preference extraRestrictPreference = findPreference(Settings.PREF_PRUNE);
 			assert extraRestrictPreference != null;
-			extraRestrictPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(extraRestrictPreference);
 
 			final Preference settingsPreference = findPreference(TreebolicIface.PREF_SETTINGS);
 			assert settingsPreference != null;
-			settingsPreference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			setSummaryProvider(settingsPreference);
+		}
+
+		private void setSummaryProvider(@NonNull final Preference preference)
+		{
+			if (preference instanceof EditTextPreference)
+			{
+				preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
+			}
+			else if (preference instanceof ListPreference)
+			{
+				preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
+			}
+			else
+			{
+				preference.setSummaryProvider(STRING_SUMMARY_PROVIDER);
+			}
 		}
 	}
 

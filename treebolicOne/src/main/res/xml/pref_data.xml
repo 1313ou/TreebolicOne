@@ -10,6 +10,7 @@
 		android:singleLine="true"
 		android:summary="@string/pref_description_source"
 		android:title="@string/pref_title_source"/>
+
 	<EditTextPreference
 		android:capitalize="none"
 		android:defaultValue="@string/source_entry"
@@ -20,6 +21,7 @@
 		android:singleLine="true"
 		android:summary="@string/pref_description_source_entry"
 		android:title="@string/pref_title_source_entry"/>
+
 	<EditTextPreference
 		android:capitalize="none"
 		android:defaultValue="@string/settings"
@@ -30,6 +32,7 @@
 		android:singleLine="true"
 		android:summary="@string/pref_description_settings"
 		android:title="@string/pref_title_settings"/>
+
 	<EditTextPreference
 		android:capitalize="none"
 		android:inputType="textUri"
@@ -39,6 +42,7 @@
 		android:singleLine="true"
 		android:summary="@string/pref_description_base"
 		android:title="@string/pref_title_base"/>
+
 	<EditTextPreference
 		android:capitalize="none"
 		android:inputType="textUri"
