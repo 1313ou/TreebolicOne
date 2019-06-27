@@ -32,7 +32,9 @@ import org.treebolic.storage.Storage;
 import java.io.File;
 import java.io.IOException;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 
 	@SuppressLint("InflateParams")
 	@Override
-	protected void onCreate(final Bundle savedInstanceState)
+	protected void onCreate(@Nullable final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
@@ -100,6 +102,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		}
 	}
 
+	@NonNull
 	@SuppressWarnings({"WeakerAccess"})
 	protected Fragment makeMainFragment()
 	{
@@ -124,7 +127,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(final MenuItem item)
+	public boolean onOptionsItemSelected(@NonNull final MenuItem item)
 	{
 		int itemId = item.getItemId();
 		if (itemId == R.id.action_run)
@@ -282,14 +285,14 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	// S P E C I F I C R E T U R N S
 
 	@Override
-	protected void onActivityResult(final int requestCode, final int resultCode, final Intent returnIntent)
+	protected void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent returnIntent)
 	{
 		// handle selection of input by other activity which returns selected input
 		switch (requestCode)
 		{
 			case REQUEST_FILE_CODE:
 			case REQUEST_BUNDLE_CODE:
-				if (resultCode == AppCompatActivity.RESULT_OK)
+				if (resultCode == AppCompatActivity.RESULT_OK && returnIntent != null)
 				{
 					final Uri fileUri = returnIntent.getData();
 					if (fileUri == null)
@@ -343,7 +346,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		 * Constructor
 		 */
 		@SuppressWarnings("WeakerAccess")
-		public PlaceholderFragment(int layoutId0)
+		public PlaceholderFragment(@android.support.annotation.LayoutRes @LayoutRes int layoutId0)
 		{
 			this.layoutId = layoutId0;
 		}
@@ -471,7 +474,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @param source0 source
 	 */
-	private void tryStartTreebolic(final String source0)
+	private void tryStartTreebolic(@Nullable final String source0)
 	{
 		String source = source0 != null ? source0 : Settings.getStringPref(this, TreebolicIface.PREF_SOURCE);
 		if (source == null || source.isEmpty())
@@ -541,7 +544,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			// choose bundle entry
 			EntryChooser.choose(this, new File(archiveUri.getPath()), zipEntry -> tryStartTreebolicBundle(archiveUri, zipEntry));
 		}
-		catch (final IOException e)
+		catch (@NonNull final IOException e)
 		{
 			Log.d(MainActivity.TAG, "Failed to start treebolic from bundle uri " + archiveUri, e);
 		}

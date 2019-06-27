@@ -9,18 +9,21 @@ import org.treebolic.TreebolicIface;
 import java.util.Properties;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 {
 	/**
 	 * Parameter : source (interpreted by provider)
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String source;
 
 	/**
 	 * Parameter : data provider
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String providerName;
 
@@ -40,7 +43,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	// L I F E C Y C L E
 
 	@Override
-	protected void onCreate(final Bundle savedInstanceState)
+	protected void onCreate(@Nullable final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
@@ -49,7 +52,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(final MenuItem item)
+	public boolean onOptionsItemSelected(@NonNull final MenuItem item)
 	{
 		int itemId = item.getItemId();
 		if (itemId == R.id.action_save_narrowing)
@@ -66,7 +69,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	}
 
 	@Override
-	public void onRestoreInstanceState(final Bundle savedInstanceState)
+	public void onRestoreInstanceState(@NonNull final Bundle savedInstanceState)
 	{
 		// always call the superclass so it can restore the view hierarchy
 		super.onRestoreInstanceState(savedInstanceState);
@@ -112,7 +115,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	 * @param intent intent
 	 */
 	@Override
-	protected void unmarshalArgs(final Intent intent)
+	protected void unmarshalArgs(@NonNull final Intent intent)
 	{
 		final Bundle params = intent.getExtras();
 		assert params != null;
@@ -134,15 +137,18 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	private void saveWhere()
 	{
 		// System.out.println("source " + this.source);
-		String[] fields = this.source.split(",");
-		if (fields.length > 1)
+		if (this.source != null)
 		{
-			String where = fields[1];
-			if (where.startsWith("where:"))
+			String[] fields = this.source.split(",");
+			if (fields.length > 1)
 			{
-				where = where.substring(6);
-				// System.out.println("narrowing:" + restrict);
-				Settings.putStringPref(this, Settings.PREF_TRUNCATE, where);
+				String where = fields[1];
+				if (where.startsWith("where:"))
+				{
+					where = where.substring(6);
+					// System.out.println("narrowing:" + restrict);
+					Settings.putStringPref(this, Settings.PREF_TRUNCATE, where);
+				}
 			}
 		}
 	}

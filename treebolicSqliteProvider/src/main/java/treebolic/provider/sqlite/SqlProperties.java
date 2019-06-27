@@ -17,6 +17,8 @@ import java.net.URL;
 import java.util.Enumeration;
 import java.util.Properties;
 
+import androidx.annotation.NonNull;
+
 /**
  * SQL properties
  *
@@ -55,7 +57,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 			properties.load(inputStream);
 			return properties;
 		}
-		catch (final IOException ignored)
+		catch (@NonNull final IOException ignored)
 		{
 			System.err.println("Sqlite load: Cannot load <" + url.toString() + ">");
 			return null;
@@ -85,7 +87,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 		{
 			properties.store(fos, "TREEBOLIC-SQLITE");
 		}
-		catch (final IOException e)
+		catch (@NonNull final IOException e)
 		{
 			e.printStackTrace();
 		}

@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import treebolic.IContext;
 import treebolic.model.Model;
 import treebolic.provider.IProvider;
@@ -62,6 +64,7 @@ public class ModelFactory
 	 * @param settings  settings
 	 * @return model
 	 */
+	@Nullable
 	public Model make(final String source, final String base, final String imageBase, final String settings)
 	{
 		// provider
@@ -81,13 +84,13 @@ public class ModelFactory
 	 * @param base base
 	 * @return base URL
 	 */
-	private static URL makeBaseURL(final String base)
+	private static URL makeBaseURL(@Nullable final String base)
 	{
 		try
 		{
 			return new URL(base != null && !base.endsWith("/") ? base + "/" : base);
 		}
-		catch (final MalformedURLException ignored)
+		catch (@NonNull final MalformedURLException ignored)
 		{
 			//
 		}
@@ -103,7 +106,8 @@ public class ModelFactory
 	 * @param settings  settings
 	 * @return parameters
 	 */
-	private static Properties makeParameters(final String source, final String base, final String imageBase, final String settings)
+	@NonNull
+	private static Properties makeParameters(@Nullable final String source, @Nullable final String base, @Nullable final String imageBase, @Nullable final String settings)
 	{
 		final Properties parameters = new Properties();
 		if (source != null)

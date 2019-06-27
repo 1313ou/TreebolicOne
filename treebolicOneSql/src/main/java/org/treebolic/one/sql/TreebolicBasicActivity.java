@@ -10,6 +10,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.SearchView;
@@ -58,36 +60,42 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	/**
 	 * Parameter : Document base
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String base;
 
 	/**
 	 * Parameter : Image base
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String imageBase;
 
 	/**
 	 * Parameter : Settings
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String settings;
 
 	/**
 	 * Parameter : CSS style for WebViews
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String style;
 
 	/**
 	 * Parameter : Returned URL urlScheme that is handled
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String urlScheme;
 
 	/**
 	 * Parameter : more parameters
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected Bundle more;
 
@@ -114,6 +122,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	/**
 	 * Input
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected final String input;
 
@@ -122,6 +131,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	/**
 	 * Parent (client) activity
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected Intent parentActivity;
 
@@ -235,7 +245,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(final Menu menu)
+	public boolean onCreateOptionsMenu(@NonNull final Menu menu)
 	{
 		// inflate
 		getMenuInflater().inflate(this.menuId, menu);
@@ -276,7 +286,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 
 	@SuppressWarnings("WeakerAccess")
 	@Override
-	public boolean onOptionsItemSelected(final MenuItem item)
+	public boolean onOptionsItemSelected(@NonNull final MenuItem item)
 	{
 		int itemId = item.getItemId();
 		if (itemId == R.id.action_settings)
@@ -346,7 +356,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	 * @param intent intent
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected void unmarshalArgs(final Intent intent)
+	protected void unmarshalArgs(@NonNull final Intent intent)
 	{
 		// retrieve arguments
 		final Bundle params = intent.getExtras();
@@ -374,7 +384,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			{
 				return new URL(this.base);
 			}
-			catch (final MalformedURLException ignored)
+			catch (@NonNull final MalformedURLException ignored)
 			{
 				//
 			}
@@ -391,7 +401,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			{
 				return new URL(this.imageBase);
 			}
-			catch (final MalformedURLException ignored)
+			catch (@NonNull final MalformedURLException ignored)
 			{
 				//
 			}
@@ -413,7 +423,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	}
 
 	@Override
-	public boolean linkTo(final String url, final String target)
+	public boolean linkTo(@NonNull final String url, final String target)
 	{
 		// if url is handled by client, return query to client, which will handle it by initiating another query
 		if (this.urlScheme != null && url.startsWith(this.urlScheme))
@@ -441,13 +451,14 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 			startActivity(intent);
 			return true;
 		}
-		catch (final Exception ignored)
+		catch (@NonNull final Exception ignored)
 		{
 			Toast.makeText(this, R.string.error_link, Toast.LENGTH_LONG).show();
 		}
 		return false;
 	}
 
+	@Nullable
 	@Override
 	public String getInput()
 	{
@@ -455,14 +466,14 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	}
 
 	@Override
-	public void warn(final String message)
+	public void warn(@NonNull final String message)
 	{
 		// toast(message, Toast.LENGTH_LONG);
 		snackbar(message, Snackbar.LENGTH_LONG);
 	}
 
 	@Override
-	public void status(final String message)
+	public void status(@NonNull final String message)
 	{
 		// toast(message, Toast.LENGTH_SHORT);
 		snackbar(message, Snackbar.LENGTH_SHORT);
@@ -606,7 +617,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	// S E A R C H   I N T E R F A C E
 
 	@SuppressWarnings("WeakerAccess")
-	protected void runSearch(String scope, String mode, String target)
+	protected void runSearch(String scope, String mode, @Nullable String target)
 	{
 		if (target == null || target.isEmpty())
 		{
@@ -700,7 +711,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	 * @param message  message
 	 * @param duration duration
 	 */
-	private void snackbar(final String message, final int duration)
+	private void snackbar(@NonNull final String message, final int duration)
 	{
 		runOnUiThread(() -> {
 			Snackbar.make(TreebolicBasicActivity.this.widget, message, duration).show();

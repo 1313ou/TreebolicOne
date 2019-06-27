@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
 
+import androidx.annotation.NonNull;
+
 /**
  * Treebolic standard activity
  *
@@ -45,12 +47,15 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	}
 
 	@Override
-	protected void requery(String source0)
+	protected void requery(@NonNull String source0)
 	{
-		final String[] fields0 = source0.split(",");
-		final String[] fields = this.source.split(",");
-		this.source = fields[0] + ',' + (fields0.length > 1 ? fields0[1] : source0) + ',';
-		Log.d(TAG, "New source: " + source0 + " saved:" + this.source);
+		if (this.source != null)
+		{
+			final String[] fields0 = source0.split(",");
+			final String[] fields = this.source.split(",");
+			this.source = fields[0] + ',' + (fields0.length > 1 ? fields0[1] : source0) + ',';
+			Log.d(TAG, "New source: " + source0 + " saved:" + this.source);
+		}
 
 		this.restoring = true;
 		this.widget.reinit(source0);
@@ -72,6 +77,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	 * @param more         more data in bundle
 	 * @return intent
 	 */
+	@NonNull
 	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase, final String settings, @SuppressWarnings("SameParameterValue") final String style, final String urlScheme, final Bundle more)
 	{
 		final Intent intent = new Intent(context, TreebolicActivity.class);

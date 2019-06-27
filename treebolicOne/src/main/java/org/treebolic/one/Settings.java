@@ -17,6 +17,9 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 /**
  * Settings
  *
@@ -155,6 +158,7 @@ public class Settings
 	 * @param key     key
 	 * @return value
 	 */
+	@Nullable
 	static public String getStringPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -181,6 +185,7 @@ public class Settings
 	 * @param key     key
 	 * @return preference value as
 	 */
+	@Nullable
 	static public URL getURLPref(final Context context, final String key)
 	{
 		final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -203,7 +208,7 @@ public class Settings
 		{
 			return new URL(url);
 		}
-		catch (final MalformedURLException ignored)
+		catch (@NonNull final MalformedURLException ignored)
 		{
 			return null;
 		}
@@ -215,7 +220,7 @@ public class Settings
 	 * @param context context
 	 * @param pkgName package name
 	 */
-	static public void applicationSettings(final Context context, final String pkgName)
+	static public void applicationSettings(@NonNull final Context context, final String pkgName)
 	{
 		final int apiLevel = Build.VERSION.SDK_INT;
 		final Intent intent = new Intent();

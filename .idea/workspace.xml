@@ -11,16 +11,34 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="make data pref entry optional">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_18_jar.xml" afterDir="false" />
+    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="make data pref summary versatile">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/DownloadActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/DownloadActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/DownloadActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/DownloadActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicSqliteProvider/treebolicSqliteProvider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicSqliteProvider/treebolicSqliteProvider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicTemplate/treebolicTemplate.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicXmlProvider/treebolicXmlProvider.iml" afterDir="false" />
@@ -397,33 +415,25 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java">
+        <entry file="file://$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
+            <state relative-caret-position="378">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java">
+        <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="171" selection-start-line="156" selection-end-line="171" />
+            <state relative-caret-position="351">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding>
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_data.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_data.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -465,7 +475,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/treebolicOne/src/main/res/layout-v21/actionbutton.xml" />
         <option value="$PROJECT_DIR$/treebolicOne/src/main/res/layout/actionbutton.xml" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/treebolicOne/src/main/res/values-w820dp/dimens.xml" />
@@ -497,25 +506,26 @@
         <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/ModelFactory.java" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/ModelFactory.java" />
         <option value="$PROJECT_DIR$/treebolicOne/build.gradle" />
-        <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" />
-        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" />
-        <option value="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" />
         <option value="$PROJECT_DIR$/treebolicTemplate/build.gradle" />
         <option value="$PROJECT_DIR$/treebolicSqlTemplate/build.gradle" />
-        <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" />
-        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" />
         <option value="$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_download.xml" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_download.xml" />
         <option value="$PROJECT_DIR$/treebolicOneSql/build.gradle" />
         <option value="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/SqlProperties.java" />
         <option value="$PROJECT_DIR$/treebolicSqliteProvider/build.gradle" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java" />
-        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/PeekActivity.java" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/MainActivity.java" />
         <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java" />
+        <option value="$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java" />
       </list>
     </option>
   </component>
@@ -535,6 +545,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -546,8 +558,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -885,13 +895,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491461241017</updated>
     </task>
-    <task id="LOCAL-00004" summary="snackbar">
-      <created>1493803886380</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1493803886380</updated>
-    </task>
     <task id="LOCAL-00005" summary="settingsActivity bind data and download values">
       <created>1493830647297</created>
       <option name="number" value="00005" />
@@ -1228,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561441657951</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="make data pref summary versatile">
+      <created>1561525010463</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1561525010464</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1259,11 +1269,11 @@
       <window_info anchor="bottom" id="Android Monitor" order="12" />
       <window_info anchor="bottom" id="Gradle Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50027364" side_tool="true" weight="0.30234835" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972633" weight="0.32681018" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972633" visible="true" weight="0.4520548" />
       <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49917626" weight="0.2847358" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24986331" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24958949" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Gradle" order="5" />
@@ -1284,7 +1294,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="base app class&#10;styling and theming" />
     <MESSAGE value="rename" />
     <MESSAGE value="public PlaceHolder constructor" />
     <MESSAGE value="manifest merging" />
@@ -1309,55 +1318,42 @@
     <MESSAGE value="fix provider pref summary" />
     <MESSAGE value="fix provider pref summary&#10;version change" />
     <MESSAGE value="make data pref entry optional" />
-    <option name="LAST_COMMIT_MESSAGE" value="make data pref entry optional" />
+    <MESSAGE value="make data pref summary versatile" />
+    <option name="LAST_COMMIT_MESSAGE" value="make data pref summary versatile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../TreebolicSupportLibs/colorLib/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicSqlTemplate/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicSqlTemplate/src/main/res/xml/backup_descriptor.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.0.1/83c9f094e25516147a1070e7e30db262c6918528/appcompat-v7-27.0.1-sources.jar!/android/support/v7/app/AppCompatActivity.java" />
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/layout/activity_peek.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/res/menu/treebolic.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/menu/main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/menu/treebolic.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/artwork/ic_launcher.svg">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1474,43 +1470,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="528" column="18" selection-start-line="528" selection-start-column="18" selection-end-line="528" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="532" column="18" selection-start-line="532" selection-start-column="18" selection-end-line="532" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-          <folding>
-            <element signature="e#1141#1177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1526,35 +1492,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_download.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_download.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../TreebolicLib/treebolicGlue/src/main/java/treebolic/glue/Image.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1588,13 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="200" selection-start-line="199" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/8b7bdc00eb4d998bfbc76767b098620990f2a805/annotation-1.1.0-sources.jar!/androidx/annotation/Nullable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1621,20 +1566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="238" column="17" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2567#2568#0" expanded="true" />
-            <element signature="e#2599#2600#0" expanded="true" />
-            <element signature="e#5382#5437#0" expanded="true" />
-            <element signature="e#5441#5480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -1650,12 +1581,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/res/xml/pref_data.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/res/xml/pref_data.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1673,8 +1604,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
+        <state relative-caret-position="688">
           <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Annotation Inference Report_11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicBasicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="465" column="18" selection-start-line="465" selection-start-column="18" selection-end-line="465" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10912#10913#0" expanded="true" />
+            <element signature="e#10936#10937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicBasicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="462" column="18" selection-start-line="462" selection-start-column="18" selection-end-line="462" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10650#10651#0" expanded="true" />
+            <element signature="e#10674#10675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="287" column="81" selection-start-line="287" selection-start-column="81" selection-end-line="287" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="161" column="23" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
+          <folding>
+            <element signature="e#4383#4422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicSourceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="141" column="42" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOneSql/src/main/java/org/treebolic/one/sql/TreebolicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Annotation Inference Report_12">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/TreebolicSourceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding>
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treebolicSqliteProvider/src/main/java/treebolic/provider/sqlite/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>

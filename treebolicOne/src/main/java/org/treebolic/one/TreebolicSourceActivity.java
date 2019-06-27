@@ -7,19 +7,23 @@ import org.treebolic.TreebolicIface;
 
 import java.util.Properties;
 
+import androidx.annotation.MenuRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 {
 	/**
 	 * Parameter : source (interpreted by provider)
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String source;
 
 	/**
 	 * Parameter : data provider
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected String providerName;
 
@@ -30,7 +34,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 
 	// C O N S T R U C T O R
 
-	public TreebolicSourceActivity(int menuId0)
+	public TreebolicSourceActivity(@MenuRes int menuId0)
 	{
 		super(menuId0);
 	}
@@ -38,7 +42,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	// L I F E C Y C L E
 
 	@Override
-	protected void onCreate(final Bundle savedInstanceState)
+	protected void onCreate(@Nullable final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
@@ -47,7 +51,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	}
 
 	@Override
-	public void onRestoreInstanceState(final Bundle savedInstanceState)
+	public void onRestoreInstanceState(@NonNull final Bundle savedInstanceState)
 	{
 		// always call the superclass so it can restore the view hierarchy
 		super.onRestoreInstanceState(savedInstanceState);
@@ -93,7 +97,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 	 * @param intent intent
 	 */
 	@Override
-	protected void unmarshalArgs(final Intent intent)
+	protected void unmarshalArgs(@NonNull final Intent intent)
 	{
 		final Bundle args = intent.getExtras();
 		assert args != null;

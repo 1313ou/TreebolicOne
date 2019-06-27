@@ -30,6 +30,7 @@ import org.treebolic.storage.Storage;
 import java.io.File;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 
 	@SuppressLint("InflateParams")
 	@Override
-	protected void onCreate(final Bundle savedInstanceState)
+	protected void onCreate(@Nullable final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(final MenuItem item)
+	public boolean onOptionsItemSelected(@NonNull final MenuItem item)
 	{
 		int itemId = item.getItemId();
 		if (itemId == R.id.action_run)
@@ -363,7 +364,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @param source0 source
 	 */
-	private void tryStartTreebolic(@SuppressWarnings("SameParameterValue") final String source0)
+	private void tryStartTreebolic(@Nullable @SuppressWarnings("SameParameterValue") final String source0)
 	{
 		String source = source0 != null ? source0 : Settings.getStringPref(this, TreebolicIface.PREF_SOURCE);
 		if (source == null || source.isEmpty())

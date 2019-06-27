@@ -48,7 +48,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(final MenuItem item)
+	public boolean onOptionsItemSelected(@NonNull final MenuItem item)
 	{
 		if (item.getItemId() == android.R.id.home)
 		{

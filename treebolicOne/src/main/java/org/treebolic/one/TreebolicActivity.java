@@ -6,6 +6,8 @@ import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
 
+import androidx.annotation.NonNull;
+
 /**
  * Treebolic standard activity
  *
@@ -45,7 +47,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	}
 
 	@Override
-	protected void requery(String source0)
+	protected void requery(@NonNull String source0)
 	{
 		this.source = source0.endsWith(".xml") ? source0 : source0 + ".xml";
 		this.widget.reinit(this.source);
@@ -65,6 +67,7 @@ public class TreebolicActivity extends TreebolicSourceActivity
 	 * @param style        style
 	 * @return intent
 	 */
+	@NonNull
 	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase, final String settings, final String style)
 	{
 		final Intent intent = new Intent(context, TreebolicActivity.class);

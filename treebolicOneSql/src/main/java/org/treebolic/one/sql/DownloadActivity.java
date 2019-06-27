@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+import androidx.annotation.NonNull;
+
 /**
  * Download activity
  *
@@ -50,7 +52,7 @@ public class DownloadActivity extends org.treebolic.download.DownloadActivity
 
 	@SuppressWarnings("SameReturnValue")
 	@Override
-	protected boolean process(final InputStream inputStream) throws IOException
+	protected boolean process(@NonNull final InputStream inputStream) throws IOException
 	{
 		final File storage = Storage.getTreebolicStorage(this);
 

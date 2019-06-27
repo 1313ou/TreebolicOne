@@ -6,6 +6,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
 
+import androidx.annotation.NonNull;
+
 @SuppressWarnings("WeakerAccess")
 public class Utils
 {
@@ -51,7 +53,7 @@ public class Utils
 			final Context pluginContext = context.createPackageContext(pkg, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
 			return PreferenceManager.getDefaultSharedPreferences(pluginContext);
 		}
-		catch (final NameNotFoundException ignored)
+		catch (@NonNull final NameNotFoundException ignored)
 		{
 			//
 		}
