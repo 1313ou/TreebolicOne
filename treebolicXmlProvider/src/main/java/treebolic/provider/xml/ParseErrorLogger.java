@@ -49,8 +49,8 @@ public class ParseErrorLogger extends ParseErrorHandler
 		}
 
 		this.writer.println(level);
-		this.writer.println(" uri: " + e.getSystemId() + "(" + e.getLineNumber() + "," + e.getColumnNumber() + ")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-		this.writer.println(" message: " + e.getMessage()); //$NON-NLS-1$
+		this.writer.println(" uri: " + e.getSystemId() + "(" + e.getLineNumber() + "," + e.getColumnNumber() + ")");
+		this.writer.println(" message: " + e.getMessage());
 	}
 
 	/**
@@ -62,9 +62,9 @@ public class ParseErrorLogger extends ParseErrorHandler
 		{
 			if (this.writer != null && (this.fatalErrors != 0 || this.errors != 0 || this.warnings != 0))
 			{
-				this.writer.println("Fatal Errors:" + this.fatalErrors); //$NON-NLS-1$
-				this.writer.println("Errors:" + this.errors); //$NON-NLS-1$
-				this.writer.println("Warnings:" + this.warnings); //$NON-NLS-1$
+				this.writer.println("Fatal Errors:" + this.fatalErrors);
+				this.writer.println("Errors:" + this.errors);
+				this.writer.println("Warnings:" + this.warnings);
 			}
 			if (this.outputStream != null)
 			{
@@ -85,7 +85,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	public void error(final SAXParseException e) throws SAXParseException
 	{
 		super.error(e);
-		log("Recoverable Error", e); //$NON-NLS-1$
+		log("Recoverable Error", e);
 	}
 
 	/*
@@ -96,7 +96,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	public void warning(final SAXParseException e) throws SAXParseException
 	{
 		super.warning(e);
-		log("Warning", e); //$NON-NLS-1$
+		log("Warning", e);
 	}
 
 	/*
@@ -107,6 +107,6 @@ public class ParseErrorLogger extends ParseErrorHandler
 	public void fatalError(final SAXParseException e) throws SAXParseException
 	{
 		super.fatalError(e);
-		log("FATAL ERROR", e); //$NON-NLS-1$
+		log("FATAL ERROR", e);
 	}
 }

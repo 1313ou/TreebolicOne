@@ -74,7 +74,7 @@ public class DocumentAdapter
 		{
 			if (DocumentAdapter.this.provider == null)
 			{
-				System.err.println("Mount not performed: " + this.mountPoint + " @ " + this.mountingNode); //$NON-NLS-1$//$NON-NLS-2$
+				System.err.println("Mount not performed: " + this.mountPoint + " @ " + this.mountingNode);//$NON-NLS-2$
 				return;
 			}
 			final Tree tree = DocumentAdapter.this.provider.makeTree(this.mountPoint.url, DocumentAdapter.this.base, DocumentAdapter.this.parameters, true);
@@ -215,7 +215,7 @@ public class DocumentAdapter
 	private Tree toTree(final Document document)
 	{
 		// nodes
-		final Element rootElement = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "node"); //$NON-NLS-1$
+		final Element rootElement = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "node");
 		if (rootElement == null)
 		{
 			return null;
@@ -249,27 +249,27 @@ public class DocumentAdapter
 	private MutableNode toNode(final Element nodeElement, final MutableNode parent)
 	{
 		// id
-		final String id = nodeElement.getAttribute("id"); //$NON-NLS-1$
+		final String id = nodeElement.getAttribute("id");
 
 		// make
 		final MutableNode node = makeNode(parent, id);
 		this.idToNodeMap.put(id, node);
 
 		// colors
-		final Color backColor = Utils.stringToColor(nodeElement.getAttribute("backcolor")); //$NON-NLS-1$
+		final Color backColor = Utils.stringToColor(nodeElement.getAttribute("backcolor"));
 		node.setBackColor(backColor);
-		final Color foreColor = Utils.stringToColor(nodeElement.getAttribute("forecolor")); //$NON-NLS-1$
+		final Color foreColor = Utils.stringToColor(nodeElement.getAttribute("forecolor"));
 		node.setForeColor(foreColor);
 
 		// weight
-		final String weight = nodeElement.getAttribute("weight"); //$NON-NLS-1$
+		final String weight = nodeElement.getAttribute("weight");
 		if (weight != null && !weight.isEmpty())
 		{
 			node.setWeight(-Double.parseDouble(weight));
 		}
 
 		// label
-		Element element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "label"); //$NON-NLS-1$
+		Element element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "label");
 		if (element != null)
 		{
 			final String label = element.getTextContent();
@@ -281,10 +281,10 @@ public class DocumentAdapter
 
 		// image
 		String imageSrc = null;
-		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "img"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "img");
 		if (element != null)
 		{
-			imageSrc = element.getAttribute("src"); //$NON-NLS-1$
+			imageSrc = element.getAttribute("src");
 			if (imageSrc != null && !imageSrc.isEmpty())
 			{
 				node.setImageFile(imageSrc);
@@ -292,7 +292,7 @@ public class DocumentAdapter
 		}
 
 		// content
-		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "content"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "content");
 		if (element != null)
 		{
 			final String content = element.getTextContent();
@@ -322,11 +322,11 @@ public class DocumentAdapter
 		}
 
 		// tree.edge
-		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "treeedge"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "treeedge");
 		if (element != null)
 		{
 			// label
-			final Element labelElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "label"); //$NON-NLS-1$
+			final Element labelElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "label");
 			if (labelElement != null)
 			{
 				final String label = labelElement.getTextContent();
@@ -337,10 +337,10 @@ public class DocumentAdapter
 			}
 
 			// image
-			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String edgeImageSrc = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String edgeImageSrc = imageElement.getAttribute("src");
 				if (edgeImageSrc != null && !edgeImageSrc.isEmpty())
 				{
 					node.setEdgeImageFile(edgeImageSrc);
@@ -348,14 +348,14 @@ public class DocumentAdapter
 			}
 
 			// color
-			final Color color = Utils.stringToColor(element.getAttribute("color")); //$NON-NLS-1$
+			final Color color = Utils.stringToColor(element.getAttribute("color"));
 			if (color != null)
 			{
 				node.setEdgeColor(color);
 			}
 
 			// style
-			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
+			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden"));
 			if (style != null)
 			{
 				node.setEdgeStyle(style);
@@ -363,10 +363,10 @@ public class DocumentAdapter
 		}
 
 		// link
-		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "a"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "a");
 		if (element != null)
 		{
-			final String href = element.getAttribute("href"); //$NON-NLS-1$
+			final String href = element.getAttribute("href");
 			if (href != null && !href.isEmpty())
 			{
 				node.setLink(href);
@@ -374,20 +374,20 @@ public class DocumentAdapter
 		}
 
 		// mount
-		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "mountpoint"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstLevel1ElementByTagName(nodeElement, "mountpoint");
 		if (element != null)
 		{
-			final Element aElement = DocumentAdapter.getFirstElementByTagName(element, "a"); //$NON-NLS-1$
+			final Element aElement = DocumentAdapter.getFirstElementByTagName(element, "a");
 			if (aElement != null)
 			{
-				final String href = aElement.getAttribute("href"); //$NON-NLS-1$
+				final String href = aElement.getAttribute("href");
 				if (href != null && !href.isEmpty())
 				{
 					final MountPoint.Mounting mountPoint = new MountPoint.Mounting();
 					mountPoint.url = href;
 
 					// mount now ?
-					final String value = element.getAttribute("now"); //$NON-NLS-1$
+					final String value = element.getAttribute("now");
 					if (value != null && !value.isEmpty() && Boolean.valueOf(value))
 					{
 						mountPoint.now = true;
@@ -405,7 +405,7 @@ public class DocumentAdapter
 		}
 
 		// recurse to children
-		final List<Element> childElements = DocumentAdapter.getLevel1ChildElementsByTagName(nodeElement, "node"); //$NON-NLS-1$
+		final List<Element> childElements = DocumentAdapter.getLevel1ChildElementsByTagName(nodeElement, "node");
 		for (final Element childElement : childElements)
 		{
 			toNode(childElement, node);
@@ -422,14 +422,14 @@ public class DocumentAdapter
 	 */
 	private MutableEdge toEdge(final Element edgeElement)
 	{
-		final String fromId = edgeElement.getAttribute("from"); //$NON-NLS-1$
-		final String toId = edgeElement.getAttribute("to"); //$NON-NLS-1$
+		final String fromId = edgeElement.getAttribute("from");
+		final String toId = edgeElement.getAttribute("to");
 		final MutableNode fromNode = this.idToNodeMap.get(fromId);
 		final MutableNode toNode = this.idToNodeMap.get(toId);
 		final MutableEdge edge = makeEdge(fromNode, toNode);
 
 		// label
-		final Element labelElement = DocumentAdapter.getFirstLevel1ElementByTagName(edgeElement, "label"); //$NON-NLS-1$
+		final Element labelElement = DocumentAdapter.getFirstLevel1ElementByTagName(edgeElement, "label");
 		if (labelElement != null)
 		{
 			final String label = labelElement.getTextContent();
@@ -440,10 +440,10 @@ public class DocumentAdapter
 		}
 
 		// image
-		final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(edgeElement, "img"); //$NON-NLS-1$
+		final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(edgeElement, "img");
 		if (imageElement != null)
 		{
-			final String imageSrc = imageElement.getAttribute("src"); //$NON-NLS-1$
+			final String imageSrc = imageElement.getAttribute("src");
 			if (imageSrc != null && !imageSrc.isEmpty())
 			{
 				edge.setImageFile(imageSrc);
@@ -451,15 +451,15 @@ public class DocumentAdapter
 		}
 
 		// color
-		final Color color = Utils.stringToColor(edgeElement.getAttribute("color")); //$NON-NLS-1$
+		final Color color = Utils.stringToColor(edgeElement.getAttribute("color"));
 		if (color != null)
 		{
 			edge.setColor(color);
 		}
 
 		// style
-		final Integer style = Utils.parseStyle(edgeElement.getAttribute("stroke"), edgeElement.getAttribute("fromterminator"), edgeElement.getAttribute("toterminator"), edgeElement.getAttribute("line"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-				edgeElement.getAttribute("hidden")); //$NON-NLS-1$
+		final Integer style = Utils.parseStyle(edgeElement.getAttribute("stroke"), edgeElement.getAttribute("fromterminator"), edgeElement.getAttribute("toterminator"), edgeElement.getAttribute("line"),
+				edgeElement.getAttribute("hidden"));
 		if (style != null)
 		{
 			edge.setStyle(style);
@@ -476,7 +476,7 @@ public class DocumentAdapter
 	private List<IEdge> toEdges(final Document document)
 	{
 		List<IEdge> edgeList = null;
-		final NodeList children = document.getElementsByTagName("edge"); //$NON-NLS-1$
+		final NodeList children = document.getElementsByTagName("edge");
 		for (int i = 0; i < children.getLength(); i++)
 		{
 			final Node node = children.item(i);
@@ -503,59 +503,59 @@ public class DocumentAdapter
 
 		// T O P
 		Element element = document.getDocumentElement();
-		if (element != null && element.getNodeName().equals("treebolic")) //$NON-NLS-1$
+		if (element != null && element.getNodeName().equals("treebolic"))
 		{
-			String attribute = element.getAttribute("toolbar"); //$NON-NLS-1$
+			String attribute = element.getAttribute("toolbar");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.hasToolbarFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("statusbar"); //$NON-NLS-1$
+			attribute = element.getAttribute("statusbar");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.hasStatusbarFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("popupmenu"); //$NON-NLS-1$
+			attribute = element.getAttribute("popupmenu");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.hasPopUpMenuFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("tooltip"); //$NON-NLS-1$
+			attribute = element.getAttribute("tooltip");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.hasToolTipFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("tooltip-displays-content"); //$NON-NLS-1$
+			attribute = element.getAttribute("tooltip-displays-content");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.toolTipDisplaysContentFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("focus"); //$NON-NLS-1$
+			attribute = element.getAttribute("focus");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.focus = attribute;
 			}
-			attribute = element.getAttribute("focus-on-hover"); //$NON-NLS-1$
+			attribute = element.getAttribute("focus-on-hover");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.focusOnHoverFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("xmoveto"); //$NON-NLS-1$
+			attribute = element.getAttribute("xmoveto");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.xMoveTo = Float.valueOf(attribute);
 			}
-			attribute = element.getAttribute("ymoveto"); //$NON-NLS-1$
+			attribute = element.getAttribute("ymoveto");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.yMoveTo = Float.valueOf(attribute);
 			}
-			attribute = element.getAttribute("xshift"); //$NON-NLS-1$
+			attribute = element.getAttribute("xshift");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.xShift = Float.valueOf(attribute);
 			}
-			attribute = element.getAttribute("yshift"); //$NON-NLS-1$
+			attribute = element.getAttribute("yshift");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.yShift = Float.valueOf(attribute);
@@ -563,14 +563,14 @@ public class DocumentAdapter
 		}
 
 		// T R E E
-		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "tree"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "tree");
 		if (element != null)
 		{
 			// img
-			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String src = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String src = imageElement.getAttribute("src");
 				if (src != null && !src.isEmpty())
 				{
 					settings.backgroundImageFile = src;
@@ -578,12 +578,12 @@ public class DocumentAdapter
 			}
 
 			// colors
-			Color color = Utils.stringToColor(element.getAttribute("backcolor")); //$NON-NLS-1$
+			Color color = Utils.stringToColor(element.getAttribute("backcolor"));
 			if (color != null)
 			{
 				settings.backColor = color;
 			}
-			color = Utils.stringToColor(element.getAttribute("forecolor")); //$NON-NLS-1$
+			color = Utils.stringToColor(element.getAttribute("forecolor"));
 			if (color != null)
 			{
 				settings.foreColor = color;
@@ -591,52 +591,52 @@ public class DocumentAdapter
 
 			// attributes
 			String attribute;
-			attribute = element.getAttribute("orientation"); //$NON-NLS-1$
+			attribute = element.getAttribute("orientation");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.orientation = attribute;
 			}
-			attribute = element.getAttribute("expansion"); //$NON-NLS-1$
+			attribute = element.getAttribute("expansion");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.expansion = Float.valueOf(attribute);
 			}
-			attribute = element.getAttribute("sweep"); //$NON-NLS-1$
+			attribute = element.getAttribute("sweep");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.sweep = Float.valueOf(attribute);
 			}
-			attribute = element.getAttribute("preserve-orientation"); //$NON-NLS-1$
+			attribute = element.getAttribute("preserve-orientation");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.preserveOrientationFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("fontface"); //$NON-NLS-1$
+			attribute = element.getAttribute("fontface");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.fontFace = attribute;
 			}
-			attribute = element.getAttribute("fontsize"); //$NON-NLS-1$
+			attribute = element.getAttribute("fontsize");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.fontSize = Integer.valueOf(attribute);
 			}
-			attribute = element.getAttribute("scalefonts"); //$NON-NLS-1$
+			attribute = element.getAttribute("scalefonts");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.downscaleFontsFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("fontscaler"); //$NON-NLS-1$
+			attribute = element.getAttribute("fontscaler");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.fontDownscaler = Utils.stringToFloats(attribute);
 			}
-			attribute = element.getAttribute("scaleimages"); //$NON-NLS-1$
+			attribute = element.getAttribute("scaleimages");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.downscaleImagesFlag = Boolean.valueOf(attribute);
 			}
-			attribute = element.getAttribute("imagescaler"); //$NON-NLS-1$
+			attribute = element.getAttribute("imagescaler");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.imageDownscaler = Utils.stringToFloats(attribute);
@@ -644,14 +644,14 @@ public class DocumentAdapter
 		}
 
 		// N O D E S
-		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "nodes"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "nodes");
 		if (element != null)
 		{
 			// img
-			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String src = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String src = imageElement.getAttribute("src");
 				if (src != null && !src.isEmpty())
 				{
 					settings.defaultNodeImage = src;
@@ -659,25 +659,25 @@ public class DocumentAdapter
 			}
 
 			// colors
-			Color color = Utils.stringToColor(element.getAttribute("backcolor")); //$NON-NLS-1$
+			Color color = Utils.stringToColor(element.getAttribute("backcolor"));
 			if (color != null)
 			{
 				settings.nodeBackColor = color;
 			}
-			color = Utils.stringToColor(element.getAttribute("forecolor")); //$NON-NLS-1$
+			color = Utils.stringToColor(element.getAttribute("forecolor"));
 			if (color != null)
 			{
 				settings.nodeForeColor = color;
 			}
 
 			// label
-			String attribute = element.getAttribute("border"); //$NON-NLS-1$
+			String attribute = element.getAttribute("border");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.borderFlag = Boolean.valueOf(attribute);
 			}
 
-			attribute = element.getAttribute("ellipsize"); //$NON-NLS-1$
+			attribute = element.getAttribute("ellipsize");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.ellipsizeFlag = Boolean.valueOf(attribute);
@@ -685,14 +685,14 @@ public class DocumentAdapter
 		}
 
 		// E D G E S
-		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "edges"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "edges");
 		if (element != null)
 		{
 			// img
-			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstLevel1ElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String src = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String src = imageElement.getAttribute("src");
 				if (src != null && !src.isEmpty())
 				{
 					settings.defaultEdgeImage = src;
@@ -700,7 +700,7 @@ public class DocumentAdapter
 			}
 
 			// arc
-			final String attribute = element.getAttribute("arc"); //$NON-NLS-1$
+			final String attribute = element.getAttribute("arc");
 			if (attribute != null && !attribute.isEmpty())
 			{
 				settings.edgesAsArcsFlag = Boolean.valueOf(attribute);
@@ -708,14 +708,14 @@ public class DocumentAdapter
 		}
 
 		// D E F A U L T . T R E E . E D G E
-		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "default.treeedge"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "default.treeedge");
 		if (element != null)
 		{
 			// img
-			final Element imageElement = DocumentAdapter.getFirstElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String src = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String src = imageElement.getAttribute("src");
 				if (src != null && !src.isEmpty())
 				{
 					settings.defaultTreeEdgeImage = src;
@@ -723,14 +723,14 @@ public class DocumentAdapter
 			}
 
 			// color
-			final Color color = Utils.stringToColor(element.getAttribute("color")); //$NON-NLS-1$
+			final Color color = Utils.stringToColor(element.getAttribute("color"));
 			if (color != null)
 			{
 				settings.treeEdgeColor = color;
 			}
 
 			// style
-			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
+			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden"));
 			if (style != null)
 			{
 				settings.treeEdgeStyle = style;
@@ -738,14 +738,14 @@ public class DocumentAdapter
 		}
 
 		// D E F A U L T . E D G E
-		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "default.edge"); //$NON-NLS-1$
+		element = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "default.edge");
 		if (element != null)
 		{
 			// img
-			final Element imageElement = DocumentAdapter.getFirstElementByTagName(element, "img"); //$NON-NLS-1$
+			final Element imageElement = DocumentAdapter.getFirstElementByTagName(element, "img");
 			if (imageElement != null)
 			{
-				final String src = imageElement.getAttribute("src"); //$NON-NLS-1$
+				final String src = imageElement.getAttribute("src");
 				if (src != null && !src.isEmpty())
 				{
 					settings.defaultEdgeImage = src;
@@ -753,14 +753,14 @@ public class DocumentAdapter
 			}
 
 			// color
-			final Color color = Utils.stringToColor(element.getAttribute("color")); //$NON-NLS-1$
+			final Color color = Utils.stringToColor(element.getAttribute("color"));
 			if (color != null)
 			{
 				settings.edgeColor = color;
 			}
 
 			// style
-			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
+			final Integer style = Utils.parseStyle(element.getAttribute("stroke"), element.getAttribute("fromterminator"), element.getAttribute("toterminator"), element.getAttribute("line"), element.getAttribute("hidden"));
 			if (style != null)
 			{
 				settings.edgeStyle = style;
@@ -769,7 +769,7 @@ public class DocumentAdapter
 
 		// D E F A U L T . E D G E
 		List<MenuItem> menuItemList = null;
-		final NodeList children = document.getElementsByTagName("menuitem"); //$NON-NLS-1$
+		final NodeList children = document.getElementsByTagName("menuitem");
 		for (int i = 0; i < children.getLength(); i++)
 		{
 			final Node node = children.item(i);
@@ -796,24 +796,24 @@ public class DocumentAdapter
 	static private MenuItem toMenuItem(final Element element)
 	{
 		final MenuItem menuItem = new MenuItem();
-		Utils.parseMenuItem(menuItem, element.getAttribute("action"), element.getAttribute("match-scope"), element.getAttribute("match-mode")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		Utils.parseMenuItem(menuItem, element.getAttribute("action"), element.getAttribute("match-scope"), element.getAttribute("match-mode"));
 
 		// match target
 		menuItem.matchTarget = element.getAttribute("match-target");
 
 		// label
-		final Element labelElement = DocumentAdapter.getFirstElementByTagName(element, "label"); //$NON-NLS-1$
+		final Element labelElement = DocumentAdapter.getFirstElementByTagName(element, "label");
 		if (labelElement != null)
 		{
 			menuItem.label = labelElement.getTextContent();
 		}
 
 		// link
-		final Element linkElement = DocumentAdapter.getFirstElementByTagName(element, "a"); //$NON-NLS-1$
+		final Element linkElement = DocumentAdapter.getFirstElementByTagName(element, "a");
 		if (linkElement != null)
 		{
-			menuItem.link = linkElement.getAttribute("href"); //$NON-NLS-1$
-			menuItem.target = linkElement.getAttribute("target"); //$NON-NLS-1$
+			menuItem.link = linkElement.getAttribute("href");
+			menuItem.target = linkElement.getAttribute("target");
 		}
 
 		return menuItem;

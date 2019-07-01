@@ -95,7 +95,7 @@ public class Parser
 		factory.setIgnoringElementContentWhitespace(true);
 		try
 		{
-			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate); //$NON-NLS-1$
+			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate);
 		}
 		catch (final Exception ignored)
 		{
@@ -139,14 +139,14 @@ public class Parser
 			// transform
 			final TransformerFactory factory = TransformerFactory.newInstance();
 			final Transformer transformer = factory.newTransformer(xslSource);
-			transformer.setParameter("http://xml.org/sax/features/validation", false); //$NON-NLS-1$
+			transformer.setParameter("http://xml.org/sax/features/validation", false);
 			transformer.transform(source, result);
 
 			return (Document) result.getNode();
 		}
 		catch (final Exception e)
 		{
-			System.err.println("Dom parser: " + e.getMessage()); //$NON-NLS-1$
+			System.err.println("Dom parser: " + e.getMessage());
 		}
 		return null;
 	}

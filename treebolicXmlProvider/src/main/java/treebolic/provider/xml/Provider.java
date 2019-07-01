@@ -91,16 +91,16 @@ public class Provider implements IProvider
 		// direct recursion prevention
 		if (checkRecursion && url.equals(this.url))
 		{
-			this.context.message("Recursion: " + url.toString()); //$NON-NLS-1$
+			this.context.message("Recursion: " + url.toString());
 			return null;
 		}
 
 		this.url = url;
-		this.context.progress("Loading ..." + url.toString(), false); //$NON-NLS-1$
+		this.context.progress("Loading ..." + url.toString(), false);
 		final Tree tree = makeTree(url, base, parameters);
 		if (tree != null)
 		{
-			this.context.progress("Loaded ..." + url.toString(), false); //$NON-NLS-1$
+			this.context.progress("Loaded ..." + url.toString(), false);
 		}
 		return tree;
 	}
@@ -119,11 +119,11 @@ public class Provider implements IProvider
 		}
 
 		this.url = url;
-		this.context.progress("Loading ..." + url.toString(), false); //$NON-NLS-1$
+		this.context.progress("Loading ..." + url.toString(), false);
 		final Model model = makeModel(url, base, parameters);
 		if (model != null)
 		{
-			this.context.progress("Loaded ..." + url.toString(), false); //$NON-NLS-1$
+			this.context.progress("Loaded ..." + url.toString(), false);
 		}
 		return model;
 	}
@@ -176,9 +176,9 @@ public class Provider implements IProvider
 		try
 		{
 			return new Parser().makeDocument(url, (publicId, systemId) -> {
-				if (systemId.contains("Treebolic.dtd")) //$NON-NLS-1$
+				if (systemId.contains("Treebolic.dtd"))
 				{
-					return new InputSource(new StringReader("")); //$NON-NLS-1$
+					return new InputSource(new StringReader(""));
 				}
 				else
 				{
@@ -188,15 +188,15 @@ public class Provider implements IProvider
 		}
 		catch (final IOException e)
 		{
-			this.context.warn("DOM parser IO: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser IO: " + e.toString());
 		}
 		catch (final SAXException e)
 		{
-			this.context.warn("DOM parser SAX: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser SAX: " + e.toString());
 		}
 		catch (final ParserConfigurationException e)
 		{
-			this.context.warn("DOM parser CONFIG: " + e.toString()); //$NON-NLS-1$
+			this.context.warn("DOM parser CONFIG: " + e.toString());
 		}
 		return null;
 	}

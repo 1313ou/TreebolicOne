@@ -11,9 +11,8 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="infer nullability&#10;infer annotations">
+    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="infer annotations error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOne/treebolicOne.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicOneSql/treebolicOneSql.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/treebolicSqlTemplate/treebolicSqlTemplate.iml" afterDir="false" />
@@ -391,20 +390,7 @@
     <favorites_list name="TreebolicOne" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="348" column="35" selection-start-line="348" selection-start-column="35" selection-end-line="348" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -501,11 +487,11 @@
   <component name="NamedScopeManager">
     <scope name="Analyzed" pattern="(file[TreebolicOne]:build.gradle||file[TreebolicOne]:local.properties||file[TreebolicOne]:settings.gradle||file[treebolicOne]:src//*||file[treebolicOne]:build.gradle||file[treebolicOneSql]:src//*||file[treebolicOneSql]:build.gradle||file[treebolicSqliteProvider]:src//*||file[treebolicSqliteProvider]:build.gradle||file[treebolicSqlTemplate]:src//*||file[treebolicTemplate]:src//*||file[treebolicTemplate]:build.gradle||file[treebolicSqlTemplate]:build.gradle||file[TreebolicOne]:gradle.properties)&amp;&amp;!file[treebolicTemplate]:src/main/assets/help/fr-index.html&amp;&amp;!file[treebolicSqlTemplate]:src/main/assets/help/fr-index.html&amp;&amp;!file[treebolicOneSql]:src/main/assets/help/fr-index.html&amp;&amp;!file[treebolicOne]:src/main/assets/help/fr-index.html" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
-    <option name="y" value="27" />
-    <option name="width" value="1258" />
-    <option name="height" value="1171" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="53" />
+    <option name="y" value="31" />
+    <option name="width" value="1238" />
+    <option name="height" value="921" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -513,27 +499,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
-            <path>
-              <item name="TreebolicOne" type="1abcf292:AndroidViewProjectNode" />
-              <item name="treebolicOne" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="TreebolicOne" type="1abcf292:AndroidViewProjectNode" />
-              <item name="treebolicOne" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="TreebolicOne" type="1abcf292:AndroidViewProjectNode" />
-              <item name="treebolicOne" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="one" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
             <path>
               <item name="TreebolicOne" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -542,6 +510,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -879,13 +850,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491461241017</updated>
     </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1494233783403</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1494233783403</updated>
-    </task>
     <task id="LOCAL-00007" summary="lint">
       <created>1494568703579</created>
       <option name="number" value="00007" />
@@ -1222,14 +1186,20 @@
       <option name="project" value="LOCAL" />
       <updated>1561620401314</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="infer annotations error">
+      <created>1561622085770</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1561622085770</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="27" width="1869" height="1173" extended-state="6" />
-    <editor active="true" />
+    <frame x="52" y="124" width="1248" height="879" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17350848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17330016" />
       <window_info id="Structure" order="1" weight="0.20393658" />
       <window_info id="Designer" order="2" />
       <window_info id="Captures" order="3" side_tool="true" weight="0.25" />
@@ -1248,13 +1218,13 @@
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.327451" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.4178082" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.41758242" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Android Monitor" order="12" />
       <window_info anchor="bottom" id="Gradle Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50027364" side_tool="true" weight="0.30234835" />
       <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972633" weight="0.4520548" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49917626" visible="true" weight="0.2847358" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49917626" visible="true" weight="0.28434065" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24958949" />
@@ -1278,7 +1248,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="public PlaceHolder constructor" />
     <MESSAGE value="manifest merging" />
     <MESSAGE value="tint error in scope search wheel" />
     <MESSAGE value="widget's container's layout params" />
@@ -1303,7 +1272,8 @@
     <MESSAGE value="make data pref entry optional" />
     <MESSAGE value="make data pref summary versatile" />
     <MESSAGE value="infer nullability&#10;infer annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="infer nullability&#10;infer annotations" />
+    <MESSAGE value="infer annotations error" />
+    <option name="LAST_COMMIT_MESSAGE" value="infer annotations error" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.0.1/83c9f094e25516147a1070e7e30db262c6918528/appcompat-v7-27.0.1-sources.jar!/android/support/v7/app/AppCompatActivity.java" />
@@ -1455,12 +1425,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1667,8 +1637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicOne/src/main/java/org/treebolic/one/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="348" column="35" selection-start-line="348" selection-start-column="35" selection-end-line="348" selection-end-column="35" />
+        <state relative-caret-position="170">
+          <caret line="323" column="70" selection-start-line="323" selection-start-column="70" selection-end-line="323" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
