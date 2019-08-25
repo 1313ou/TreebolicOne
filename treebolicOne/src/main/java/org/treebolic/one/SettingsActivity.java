@@ -15,6 +15,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
@@ -38,7 +39,8 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		super.onCreate(savedInstanceState);
 
 		// toolbar
-		setupToolbar(R.layout.toolbar, R.id.toolbar);
+		final Toolbar toolbar = findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
 
 		// set up the action bar
 		final ActionBar actionBar = getSupportActionBar();

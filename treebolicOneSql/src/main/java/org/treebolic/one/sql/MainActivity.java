@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * @return build version
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	@SuppressWarnings({"deprecation", "UnusedReturnValue"})
+	@SuppressWarnings({"UnusedReturnValue"})
 	private long doOnUpgrade(@SuppressWarnings("SameParameterValue") @NonNull final String key, @NonNull final Runnable runnable)
 	{
 		// first run of this version

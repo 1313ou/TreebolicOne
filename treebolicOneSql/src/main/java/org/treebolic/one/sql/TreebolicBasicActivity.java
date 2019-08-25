@@ -1,6 +1,5 @@
 package org.treebolic.one.sql;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
@@ -9,14 +8,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +31,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import treebolic.IContext;
 import treebolic.Widget;
 import treebolic.glue.component.TreebolicThread;
@@ -158,19 +155,17 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	{
 		super.onCreate(savedInstanceState);
 
-		// toolbar
-		@SuppressLint("InflateParams") final Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar, null);
-
 		// widget
 		this.widget = new Widget(this, this);
 
 		// content view
-		final LinearLayout contentView = new LinearLayout(this);
-		contentView.setOrientation(LinearLayout.VERTICAL);
-		contentView.addView(toolbar);
+		setContentView(R.layout.activity_treebolic);
+		final ViewGroup container = findViewById(R.id.container);
 		final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1.F);
-		contentView.addView(this.widget, params);
-		setContentView(contentView);
+		container.addView(this.widget, params);
+
+		// toolbar
+		final Toolbar toolbar = findViewById(R.id.toolbar);
 
 		// action bar
 		setSupportActionBar(toolbar);
@@ -536,7 +531,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 				Log.d(TAG, "Source" + ' ' + '"' + query + '"');
 				//if (submit)
 				//{
-					requery(query);
+				requery(query);
 				//}
 				return;
 			}
