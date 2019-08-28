@@ -89,7 +89,7 @@ public class Settings
 	 * @param context context
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	static public void setDefaults(final Context context)
+	static public void setDefaults(@NonNull final Context context)
 	{
 		final Resources resources = context.getResources();
 
@@ -201,6 +201,7 @@ public class Settings
 	 * @param url url string
 	 * @return url
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	static public URL makeURL(final String url)
 	{

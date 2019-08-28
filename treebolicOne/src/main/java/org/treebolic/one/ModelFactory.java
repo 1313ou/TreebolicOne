@@ -92,6 +92,7 @@ public class ModelFactory
 	 * @param base base
 	 * @return base URL
 	 */
+	@Nullable
 	private static URL makeBaseURL(@Nullable final String base)
 	{
 		try

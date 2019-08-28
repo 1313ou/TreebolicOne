@@ -18,6 +18,7 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * SQL properties
@@ -30,7 +31,8 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Load properties
 	 */
-	static public Properties load(final File path)
+	@Nullable
+	static public Properties load(@NonNull final File path)
 	{
 		try
 		{
@@ -46,8 +48,9 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Load properties
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
-	static public Properties load(final URL url)
+	static public Properties load(@NonNull final URL url)
 	{
 		InputStream inputStream = null;
 		try
@@ -81,7 +84,7 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Save properties
 	 */
-	static void save(final Properties properties, final String propertyFile)
+	static void save(@NonNull final Properties properties, final String propertyFile)
 	{
 		try (FileOutputStream fos = new FileOutputStream(propertyFile))
 		{
@@ -96,7 +99,8 @@ public class SqlProperties extends treebolic.provider.sqlx.SqlProperties
 	/**
 	 * Make default property
 	 */
-	static public String toString(final Properties properties)
+	@NonNull
+	static public String toString(@NonNull final Properties properties)
 	{
 		final StringBuilder sb = new StringBuilder();
 		for (final Enumeration<?> names = properties.propertyNames(); names.hasMoreElements(); )

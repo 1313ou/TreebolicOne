@@ -34,7 +34,7 @@ public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
 
 	// C O N S T R U C T O R
 
-	public TreebolicSourceActivity(@MenuRes int menuId0)
+	public TreebolicSourceActivity(@android.support.annotation.MenuRes @MenuRes int menuId0)
 	{
 		super(menuId0);
 	}

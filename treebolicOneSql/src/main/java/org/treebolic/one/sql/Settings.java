@@ -110,7 +110,7 @@ public class Settings
 	 * @param context context
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	static public void setDefaults(final Context context)
+	static public void setDefaults(@NonNull final Context context)
 	{
 		final Resources resources = context.getResources();
 
@@ -241,6 +241,7 @@ public class Settings
 	 * @param url url string
 	 * @return url
 	 */
+	@Nullable
 	static public URL makeURL(final String url)
 	{
 		try
@@ -287,6 +288,7 @@ public class Settings
 	 *
 	 * @return query file
 	 */
+	@Nullable
 	static public File getQuery(final Context context)
 	{
 		final String source = Settings.getStringPref(context, TreebolicIface.PREF_SOURCE);
@@ -316,6 +318,7 @@ public class Settings
 	 *
 	 * @return base URL
 	 */
+	@Nullable
 	static public URL getBase(final Context context)
 	{
 		final String base = Settings.getStringPref(context, TreebolicIface.PREF_BASE);

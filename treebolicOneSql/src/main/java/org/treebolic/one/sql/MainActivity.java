@@ -325,7 +325,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @param fileUri uri
 	 */
-	private void setFolder(final Uri fileUri)
+	private void setFolder(@NonNull final Uri fileUri)
 	{
 		final String path = new File(fileUri.getPath()).getParent();
 		FileChooserActivity.setFolder(this, MainActivity.PREF_CURRENTFOLDER, path);

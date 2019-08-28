@@ -8,6 +8,7 @@ import org.treebolic.TreebolicIface;
 
 import java.net.URL;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
@@ -90,6 +91,7 @@ public class PeekActivity extends AppCompatCommonActivity
 		this.textView.setText(text);
 	}
 
+	@NonNull
 	private static String modelToString(@Nullable final Model model)
 	{
 		if (model == null)

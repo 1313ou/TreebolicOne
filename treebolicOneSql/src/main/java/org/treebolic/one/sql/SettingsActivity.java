@@ -87,7 +87,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	/**
 	 * Helper method to determine if the device has an extra-large screen. For example, 10" tablets are extra-large.
 	 */
-	private static boolean isLargeTablet(final Context context)
+	private static boolean isLargeTablet(@NonNull final Context context)
 	{
 		return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 	}
