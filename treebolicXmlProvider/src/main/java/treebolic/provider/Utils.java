@@ -11,6 +11,8 @@ import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
 
+import androidx.annotation.NonNull;
+
 /**
  * Image utilities
  *
@@ -19,12 +21,12 @@ import java.io.ByteArrayOutputStream;
 @SuppressWarnings("WeakerAccess")
 public class Utils
 {
-	static private Bitmap bytesToImage(final byte[] imageBytes)
+	static private Bitmap bytesToImage(@NonNull final byte[] imageBytes)
 	{
 		return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 	}
 
-	static public Bitmap roundCrop(final Bitmap bitmap)
+	static public Bitmap roundCrop(@NonNull final Bitmap bitmap)
 	{
 		final int w = bitmap.getWidth();
 		final int h = bitmap.getHeight();
@@ -45,12 +47,13 @@ public class Utils
 		return output;
 	}
 
-	static public Bitmap scale(final Bitmap bitmap, int w, int h)
+	static public Bitmap scale(@NonNull final Bitmap bitmap, int w, int h)
 	{
 		return Bitmap.createScaledBitmap(bitmap, w, h, false);
 	}
 
-	static String bitmapToUrl(final Bitmap bitmap)
+	@NonNull
+	static String bitmapToUrl(@NonNull final Bitmap bitmap)
 	{
 		final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 		bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);

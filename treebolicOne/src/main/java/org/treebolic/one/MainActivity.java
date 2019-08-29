@@ -345,7 +345,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		 * Constructor
 		 */
 		@SuppressWarnings("WeakerAccess")
-		public PlaceholderFragment(@android.support.annotation.LayoutRes @LayoutRes int layoutId0)
+		public PlaceholderFragment(@LayoutRes int layoutId0)
 		{
 			this.layoutId = layoutId0;
 		}

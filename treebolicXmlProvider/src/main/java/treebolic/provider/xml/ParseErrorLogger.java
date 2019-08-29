@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
+import androidx.annotation.NonNull;
+
 /**
  * Parse error logger
  *
@@ -37,7 +39,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	 * @param level level
 	 * @param e     exception
 	 */
-	private void log(final String level, final SAXParseException e)
+	private void log(final String level, @NonNull final SAXParseException e)
 	{
 		if (this.outputStream == null)
 		{
@@ -71,7 +73,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 				this.outputStream.close();
 			}
 		}
-		catch (final IOException ignored)
+		catch (@NonNull final IOException ignored)
 		{
 			// do nothing
 		}
@@ -82,7 +84,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	 * @see treebolic.provider.xml.dom.ParseErrorHandler#error(org.xml.sax.SAXParseException)
 	 */
 	@Override
-	public void error(final SAXParseException e) throws SAXParseException
+	public void error(@NonNull final SAXParseException e) throws SAXParseException
 	{
 		super.error(e);
 		log("Recoverable Error", e);
@@ -93,7 +95,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	 * @see treebolic.provider.xml.dom.ParseErrorHandler#warning(org.xml.sax.SAXParseException)
 	 */
 	@Override
-	public void warning(final SAXParseException e) throws SAXParseException
+	public void warning(@NonNull final SAXParseException e) throws SAXParseException
 	{
 		super.warning(e);
 		log("Warning", e);
@@ -104,7 +106,7 @@ public class ParseErrorLogger extends ParseErrorHandler
 	 * @see treebolic.provider.xml.dom.ParseErrorHandler#fatalError(org.xml.sax.SAXParseException)
 	 */
 	@Override
-	public void fatalError(final SAXParseException e) throws SAXParseException
+	public void fatalError(@NonNull final SAXParseException e) throws SAXParseException
 	{
 		super.fatalError(e);
 		log("FATAL ERROR", e);

@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.TreeMap;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import treebolic.glue.Color;
 import treebolic.model.IEdge;
 import treebolic.model.MenuItem;
@@ -70,7 +72,7 @@ public class DocumentAdapter
 		 *
 		 * @param edges edges in grafting tree
 		 */
-		public void run(final List<IEdge> edges)
+		public void run(@Nullable final List<IEdge> edges)
 		{
 			if (DocumentAdapter.this.provider == null)
 			{
@@ -88,6 +90,7 @@ public class DocumentAdapter
 	/**
 	 * Protracted mount tasks
 	 */
+	@Nullable
 	private List<MountTask> mountTasks = null;
 
 	/**
@@ -154,7 +157,8 @@ public class DocumentAdapter
 	 * @param document document
 	 * @return model
 	 */
-	public Model makeModel(final Document document)
+	@Nullable
+	public Model makeModel(@NonNull final Document document)
 	{
 		this.idToNodeMap = new TreeMap<>();
 		final Tree tree = toTree(document);
@@ -172,7 +176,8 @@ public class DocumentAdapter
 	 * @param document document
 	 * @return tree
 	 */
-	public Tree makeTree(final Document document)
+	@Nullable
+	public Tree makeTree(@NonNull final Document document)
 	{
 		this.idToNodeMap = new Hashtable<>();
 		return toTree(document);
@@ -187,6 +192,7 @@ public class DocumentAdapter
 	 * @param id     id
 	 * @return model node
 	 */
+	@NonNull
 	@SuppressWarnings("WeakerAccess")
 	protected MutableNode makeNode(final MutableNode parent, final String id)
 	{
@@ -200,6 +206,7 @@ public class DocumentAdapter
 	 * @param toNode   model to-node end
 	 * @return model edge
 	 */
+	@NonNull
 	@SuppressWarnings("WeakerAccess")
 	protected MutableEdge makeEdge(final MutableNode fromNode, final MutableNode toNode)
 	{
@@ -212,7 +219,8 @@ public class DocumentAdapter
 	 * @param document document
 	 * @return graph
 	 */
-	private Tree toTree(final Document document)
+	@Nullable
+	private Tree toTree(@NonNull final Document document)
 	{
 		// nodes
 		final Element rootElement = DocumentAdapter.getFirstElementByTagName(document.getDocumentElement(), "node");
@@ -246,7 +254,8 @@ public class DocumentAdapter
 	 * @param parent      model parent node
 	 * @return model node
 	 */
-	private MutableNode toNode(final Element nodeElement, final MutableNode parent)
+	@NonNull
+	private MutableNode toNode(@NonNull final Element nodeElement, final MutableNode parent)
 	{
 		// id
 		final String id = nodeElement.getAttribute("id");
@@ -420,7 +429,8 @@ public class DocumentAdapter
 	 * @param edgeElement edge DOM element
 	 * @return edge
 	 */
-	private MutableEdge toEdge(final Element edgeElement)
+	@NonNull
+	private MutableEdge toEdge(@NonNull final Element edgeElement)
 	{
 		final String fromId = edgeElement.getAttribute("from");
 		final String toId = edgeElement.getAttribute("to");
@@ -473,7 +483,8 @@ public class DocumentAdapter
 	 * @param document DOM document
 	 * @return list of edges
 	 */
-	private List<IEdge> toEdges(final Document document)
+	@Nullable
+	private List<IEdge> toEdges(@NonNull final Document document)
 	{
 		List<IEdge> edgeList = null;
 		final NodeList children = document.getElementsByTagName("edge");
@@ -497,7 +508,8 @@ public class DocumentAdapter
 	 * @param document DOM document
 	 * @return settings
 	 */
-	static private Settings toSettings(final Document document)
+	@NonNull
+	static private Settings toSettings(@NonNull final Document document)
 	{
 		final Settings settings = new Settings();
 
@@ -793,7 +805,8 @@ public class DocumentAdapter
 	 * @param element menu item DOM element
 	 * @return menu item
 	 */
-	static private MenuItem toMenuItem(final Element element)
+	@NonNull
+	static private MenuItem toMenuItem(@NonNull final Element element)
 	{
 		final MenuItem menuItem = new MenuItem();
 		Utils.parseMenuItem(menuItem, element.getAttribute("action"), element.getAttribute("match-scope"), element.getAttribute("match-mode"));
@@ -828,7 +841,8 @@ public class DocumentAdapter
 	 * @param tagName tag
 	 * @return DOM element if found, null if none
 	 */
-	static private Element getFirstElementByTagName(final Element element, final String tagName)
+	@Nullable
+	static private Element getFirstElementByTagName(@Nullable final Element element, final String tagName)
 	{
 		if (element != null)
 		{
@@ -848,7 +862,8 @@ public class DocumentAdapter
 	 * @param tagName tag
 	 * @return DOM element if found, null if none
 	 */
-	static private Element getFirstLevel1ElementByTagName(final Element element, final String tagName)
+	@Nullable
+	static private Element getFirstLevel1ElementByTagName(@NonNull final Element element, final String tagName)
 	{
 		final List<Element> childElements = DocumentAdapter.getLevel1ChildElementsByTagName(element, tagName);
 		if (!childElements.isEmpty())
@@ -865,7 +880,8 @@ public class DocumentAdapter
 	 * @param tagName tag
 	 * @return DOM element if found, null if none
 	 */
-	static private List<Element> getLevel1ChildElementsByTagName(final Element element, final String tagName)
+	@NonNull
+	static private List<Element> getLevel1ChildElementsByTagName(@NonNull final Element element, final String tagName)
 	{
 		final ArrayList<Element> elements = new ArrayList<>();
 		final NodeList children = element.getChildNodes();

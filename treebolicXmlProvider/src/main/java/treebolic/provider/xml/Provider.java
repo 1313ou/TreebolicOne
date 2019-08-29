@@ -11,6 +11,8 @@ import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import treebolic.ILocator;
 import treebolic.model.Model;
 import treebolic.model.Tree;
@@ -31,6 +33,7 @@ public class Provider implements IProvider
 	/**
 	 * Url
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
 	protected URL url;
 
@@ -136,8 +139,9 @@ public class Provider implements IProvider
 	 * @param url url
 	 * @return model
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
-	protected Model makeModel(final URL url, final URL base, final Properties parameters)
+	protected Model makeModel(@NonNull final URL url, final URL base, final Properties parameters)
 	{
 		final Document document = makeDocument(url);
 		if (document == null)
@@ -153,8 +157,9 @@ public class Provider implements IProvider
 	 * @param url url
 	 * @return tree
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
-	protected Tree makeTree(final URL url, final URL base, final Properties parameters)
+	protected Tree makeTree(@NonNull final URL url, final URL base, final Properties parameters)
 	{
 		final Document document = makeDocument(url);
 		if (document == null)
@@ -170,8 +175,9 @@ public class Provider implements IProvider
 	 * @param url document url
 	 * @return DOM document
 	 */
+	@Nullable
 	@SuppressWarnings("WeakerAccess")
-	protected Document makeDocument(final URL url)
+	protected Document makeDocument(@NonNull final URL url)
 	{
 		try
 		{
@@ -186,15 +192,15 @@ public class Provider implements IProvider
 				}
 			});
 		}
-		catch (final IOException e)
+		catch (@NonNull final IOException e)
 		{
 			this.context.warn("DOM parser IO: " + e.toString());
 		}
-		catch (final SAXException e)
+		catch (@NonNull final SAXException e)
 		{
 			this.context.warn("DOM parser SAX: " + e.toString());
 		}
-		catch (final ParserConfigurationException e)
+		catch (@NonNull final ParserConfigurationException e)
 		{
 			this.context.warn("DOM parser CONFIG: " + e.toString());
 		}

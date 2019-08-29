@@ -11,7 +11,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="toolbar" />
+    <list default="true" id="4dfa3865-8f21-4664-941f-c68edfa5ee6c" name="Default" comment="theming materialcomponents&#10;inferred nullity" />
     <ignored path="TreebolicOne.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -370,7 +370,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Samsung_S7_edge_API_25" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="410326156afd500f" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -496,8 +496,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
@@ -836,13 +836,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491461241017</updated>
     </task>
-    <task id="LOCAL-00011" summary="update openedit">
-      <created>1494693044250</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1494693044250</updated>
-    </task>
     <task id="LOCAL-00012" summary="openedit settings">
       <created>1494749347737</created>
       <option name="number" value="00012" />
@@ -1179,13 +1172,20 @@
       <option name="project" value="LOCAL" />
       <updated>1566836105020</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="theming materialcomponents&#10;inferred nullity">
+      <created>1566986300956</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1566986300956</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="31" width="1254" height="1173" extended-state="0" />
+    <frame x="55" y="27" width="1250" height="1172" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20874588" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20860927" />
       <window_info id="Structure" order="1" weight="0.20393658" />
       <window_info id="Designer" order="2" />
       <window_info id="Captures" order="3" side_tool="true" weight="0.25" />
@@ -1195,7 +1195,7 @@
       <window_info id="Build Variants" order="7" side_tool="true" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.26908022" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26836434" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1204,13 +1204,13 @@
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.327451" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.41585127" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.41527915" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Android Monitor" order="12" />
       <window_info anchor="bottom" id="Gradle Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50027364" side_tool="true" weight="0.30234835" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972633" weight="0.24481738" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49917626" weight="0.21428572" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972633" weight="0.24387854" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49917626" weight="0.21351616" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24958949" />
@@ -1234,7 +1234,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="widget's container's layout params" />
     <MESSAGE value="formatted" />
     <MESSAGE value="updated sql provider common jar" />
     <MESSAGE value="SQLiteDatabase.NO_LOCALIZED_COLLATORS added to open flag to avoid search for android_metadata table (localization data)" />
@@ -1259,16 +1258,10 @@
     <MESSAGE value="infer annotations error" />
     <MESSAGE value="remove NLS comments" />
     <MESSAGE value="toolbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="toolbar" />
+    <MESSAGE value="theming materialcomponents&#10;inferred nullity" />
+    <option name="LAST_COMMIT_MESSAGE" value="theming materialcomponents&#10;inferred nullity" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/treebolicTemplate/src/main/assets/help/fr-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="235" column="61" selection-start-line="235" selection-start-column="61" selection-end-line="235" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TreebolicSupportLibs/searchLib/src/main/java/org/treebolic/search/SearchSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1347,12 +1340,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/treebolicTemplate/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1629,6 +1622,9 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Annotation Inference Report_16">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

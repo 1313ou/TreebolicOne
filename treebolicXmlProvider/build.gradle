@@ -26,4 +26,5 @@ android {
 dependencies {
     implementation project(':treebolicLibModel')
     implementation project(':treebolicMutable')
+    implementation 'androidx.annotation:annotation:1.1.0'
 }

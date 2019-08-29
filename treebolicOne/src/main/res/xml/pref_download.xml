@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:app="http://schemas.android.com/apk/res-auto">
 
 	<org.treebolic.preference.OpenEditTextPreference
@@ -10,4 +10,4 @@
 		app:labels="@array/pref_download_labels"
 		app:values="@array/pref_download_urls"/>
 
-</androidx.preference.PreferenceScreen>
+</PreferenceScreen>

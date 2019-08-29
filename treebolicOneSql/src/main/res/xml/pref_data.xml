@@ -1,4 +1,4 @@
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<EditTextPreference
 		android:defaultValue="@string/source_default"
@@ -56,4 +56,4 @@
 		android:summary="@string/pref_description_prune"
 		android:title="@string/pref_title_prune" />
 
-</androidx.preference.PreferenceScreen>
+</PreferenceScreen>

@@ -20,6 +20,9 @@ import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 /**
  * DOM Parser
  *
@@ -61,7 +64,7 @@ public class Parser
 	 * @throws IOException                  io exception
 	 * @throws SAXException                 sax parser exception
 	 */
-	public Document makeDocument(final URL url, final EntityResolver resolver) throws ParserConfigurationException, SAXException, IOException
+	public Document makeDocument(@NonNull final URL url, @Nullable final EntityResolver resolver) throws ParserConfigurationException, SAXException, IOException
 	{
 		final ParseErrorLogger handler = new ParseErrorLogger();
 		try
@@ -97,7 +100,7 @@ public class Parser
 		{
 			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", this.validate);
 		}
-		catch (final Exception ignored)
+		catch (@NonNull final Exception ignored)
 		{
 			//
 		}
@@ -113,7 +116,8 @@ public class Parser
 	 * @param resolver entity resolver, null if none
 	 * @return DOM document
 	 */
-	public Document makeDocument(final URL url, final URL xslt, final EntityResolver resolver)
+	@Nullable
+	public Document makeDocument(@NonNull final URL url, @NonNull final URL xslt, @Nullable final EntityResolver resolver)
 	{
 		try
 		{
@@ -144,7 +148,7 @@ public class Parser
 
 			return (Document) result.getNode();
 		}
-		catch (final Exception e)
+		catch (@NonNull final Exception e)
 		{
 			System.err.println("Dom parser: " + e.getMessage());
 		}
