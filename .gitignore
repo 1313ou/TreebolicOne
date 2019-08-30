@@ -1,2 +1,9 @@
 /build
-keystore.properties
+/gradle
+/.gradle
+/.idea
+/captures
+
+**/build
+
+**/*.iml
