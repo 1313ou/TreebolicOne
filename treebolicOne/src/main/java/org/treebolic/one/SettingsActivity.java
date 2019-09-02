@@ -36,6 +36,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 
 	// F R A G M E N T S
 
+	@SuppressWarnings("WeakerAccess")
 	public static class ProviderPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
@@ -51,6 +52,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		}
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public static class DataPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
@@ -101,6 +103,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 		}
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public static class DownloadPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override

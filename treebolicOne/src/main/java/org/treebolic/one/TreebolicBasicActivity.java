@@ -261,14 +261,16 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		this.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
 		{
 			@Override
-			public boolean onQueryTextSubmit(final String query)
+			public boolean onQueryTextSubmit(@NonNull final String query)
 			{
+				TreebolicBasicActivity.this.searchView.clearFocus();
+				TreebolicBasicActivity.this.searchView.setQuery("", false);
 				handleQueryChanged(query, true);
 				return true;
 			}
 
 			@Override
-			public boolean onQueryTextChange(final String query)
+			public boolean onQueryTextChange(@NonNull final String query)
 			{
 				handleQueryChanged(query, false);
 				return true;
@@ -515,7 +517,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	 * @param submit whether submit was changed
 	 */
 	@SuppressWarnings("WeakerAccess")
-	protected void handleQueryChanged(final String query, boolean submit)
+	protected void handleQueryChanged(@NonNull final String query, boolean submit)
 	{
 		// clear keyboard out of the way
 		if (submit)
