@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Process;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +20,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.bbou.donate.DonateActivity;
+import com.bbou.others.OthersActivity;
+import com.bbou.rate.AppRate;
 
 import org.treebolic.AppCompatCommonActivity;
 import org.treebolic.TreebolicIface;
@@ -74,6 +79,9 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	protected void onCreate(@Nullable final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+
+		// rate
+		AppRate.invoke(this);
 
 		// init
 		initialize();
@@ -171,14 +179,14 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			tryStartTreebolicSettings();
 			return true;
 		}
-		else if (itemId == R.id.action_tips)
-		{
-			Tip.show(getSupportFragmentManager());
-			return true;
-		}
 		else if (itemId == R.id.action_help)
 		{
 			startActivity(new Intent(this, HelpActivity.class));
+			return true;
+		}
+		else if (itemId == R.id.action_tips)
+		{
+			Tip.show(getSupportFragmentManager());
 			return true;
 		}
 		else if (itemId == R.id.action_about)
@@ -186,14 +194,34 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			startActivity(new Intent(this, AboutActivity.class));
 			return true;
 		}
-		else if (itemId == R.id.action_finish)
+		else if (itemId == R.id.action_others)
 		{
-			finish();
+			startActivity(new Intent(this, OthersActivity.class));
+			return true;
+		}
+		else if (itemId == R.id.action_donate)
+		{
+			startActivity(new Intent(this, DonateActivity.class));
+			return true;
+		}
+		else if (itemId == R.id.action_rate)
+		{
+			AppRate.rate(this);
 			return true;
 		}
 		else if (itemId == R.id.action_app_settings)
 		{
 			Settings.applicationSettings(this, getApplicationContext().getPackageName());
+			return true;
+		}
+		else if (itemId == R.id.action_finish)
+		{
+			finish();
+			return true;
+		}
+		else if (itemId == R.id.action_kill)
+		{
+			Process.killProcess(Process.myPid());
 			return true;
 		}
 

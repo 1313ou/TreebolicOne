@@ -26,9 +26,9 @@
 	<string name="title_run_bundle">Open bundle</string>
 	<string name="title_builtin_data">Built-in data</string>
 	<string name="title_settings">Settings</string>
-	<string name="title_finish">Finish</string>
 	<string name="title_start">Start</string>
-	<!-- <string name="title_kill">Kill</string> -->
+	<string name="title_finish">Finish</string>
+	<string name="title_kill">Kill</string>
 
 	<!-- search settings -->
 	<string name="title_search_settings_dialog">Treebolic search</string>
