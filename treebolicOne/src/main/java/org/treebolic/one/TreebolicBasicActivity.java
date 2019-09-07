@@ -21,11 +21,11 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.treebolic.AppCompatCommonActivity;
-import org.treebolic.ColorUtils;
 import org.treebolic.TreebolicIface;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
+import org.treebolic.search.ColorUtils;
 import org.treebolic.search.SearchSettings;
 
 import java.net.MalformedURLException;
