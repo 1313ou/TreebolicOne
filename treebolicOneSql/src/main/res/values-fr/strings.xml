@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
 	<string name="app_name">Treebolic One Sql</string>
 	<string name="treebolic">Treebolic</string>
 
 	<!-- menu+actionbar -->
-	<string name="hint_search">source</string>
-	<string name="hint_search_treebolic">requête</string>
+	<string name="hint_search" tools:keep="@string/hint_search">source</string>
 
 	<!-- activity -->
 	<string name="title_activity_main">Treebolic One Sql</string>
@@ -29,18 +28,12 @@
 	<string name="title_finish">Finir</string>
 	<string name="title_kill">Terminer</string>
 
-	<!-- search settings -->
-	<string name="title_search_settings_dialog">Recherche Treebolic</string>
-	<string name="message_search_settings_dialog">Paramètres de recherche</string>
-	<string name="ok_search_settings_dialog">OK</string>
-	<string name="cancel_search_settings_dialog">Annuler</string>
-
 	<!-- errors -->
 	<string name="error_null_source">Source nulle</string>
 	<string name="error_null_zipentry">Entrée zip nulle</string>
-	<string name="error_null_model">Modèle null</string>
+	<string name="error_null_model" tools:keep="@string/error_null_model">Modèle null</string>
 	<string name="error_null_data">Données  nulles</string>
 	<string name="error_link">Error de lien</string>
-	<string name="error_query">Error dans la requête</string>
+	<string name="error_query" tools:keep="@string/error_query">Error dans la requête</string>
 
 </resources>
