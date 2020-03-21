@@ -397,7 +397,7 @@ public class DocumentAdapter
 
 					// mount now ?
 					final String value = element.getAttribute("now");
-					if (value != null && !value.isEmpty() && Boolean.valueOf(value))
+					if (value != null && !value.isEmpty() && Boolean.parseBoolean(value))
 					{
 						mountPoint.now = true;
 

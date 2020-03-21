@@ -39,7 +39,7 @@ public class Utils
 		final Paint paint = new Paint();
 		paint.setAntiAlias(true);
 		paint.setColor(color);
-		canvas.drawCircle(h / 2, h / 2, h / 2, paint);    // canvas.drawRoundRect(rect, roundPx, roundPx, paint);
+		canvas.drawCircle(h / 2F, h / 2F, h / 2F, paint);    // canvas.drawRoundRect(rect, roundPx, roundPx, paint);
 
 		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
 		canvas.drawBitmap(bitmap, rect, rect, paint);
