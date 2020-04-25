@@ -40,7 +40,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import treebolic.glue.component.Statusbar;
-import treebolic.glue.component.WebDialog;
+import treebolic.glue.component.Dialog;
 
 /**
  * Treebolic main activity (home)
@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		String base = Settings.getStringPref(this, TreebolicIface.PREF_IMAGEBASE);
 		if (base != null)
 		{
-			WebDialog.setBase(base);
+			Dialog.setBase(base);
 			Statusbar.setBase(base);
 		}
 	}

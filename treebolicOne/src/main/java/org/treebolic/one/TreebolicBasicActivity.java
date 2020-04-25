@@ -44,7 +44,7 @@ import treebolic.Widget;
 import treebolic.glue.component.Container;
 import treebolic.glue.component.Statusbar;
 import treebolic.glue.component.TreebolicThread;
-import treebolic.glue.component.WebDialog;
+import treebolic.glue.component.Dialog;
 import treebolic.view.View;
 
 /**
@@ -377,7 +377,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		this.parentActivity = params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY);
 
 		// base
-		WebDialog.setBase(this.base);
+		Dialog.setBase(this.base);
 		Statusbar.setBase(this.base);
 	}
 
