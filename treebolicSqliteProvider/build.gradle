@@ -24,7 +24,10 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicLib')
+    implementation project(':treebolicIface')
+    implementation project(':treebolicLibView')
+    implementation project(':treebolicLibModel')
+    implementation project(':treebolicGraph')
     implementation project(':treebolicLoadBalancer')
 
     api files('libs/treebolic-provider-sqlx-common.jar')

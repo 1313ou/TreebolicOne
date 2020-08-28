@@ -24,7 +24,10 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicLib')
+    implementation project(':treebolicIface')
+    implementation project(':treebolicLibView')
+    implementation project(':treebolicLibModel')
+    implementation project(':treebolicGraph')
     implementation project(':treebolicLibModel')
     implementation project(':treebolicMutable')
     api project(':treebolicSqliteProvider')
@@ -40,7 +43,7 @@ dependencies {
     implementation project(':othersLib')
     implementation project(':donateLib')
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
 }

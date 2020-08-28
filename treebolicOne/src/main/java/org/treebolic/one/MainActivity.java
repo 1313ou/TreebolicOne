@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -44,6 +43,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 /**
  * Treebolic main activity (home)
@@ -250,7 +250,8 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		final File dir = Storage.getTreebolicStorage(this);
 		if (dir.isDirectory())
 		{
-			if (dir.list().length == 0)
+			final String[] dirContent = dir.list();
+			if (dirContent == null || dirContent.length == 0)
 			{
 				// deploy
 				Storage.expandZipAssetFile(this, "data.zip");
@@ -266,7 +267,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * @return build version
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	@SuppressWarnings({"UnusedReturnValue"})
+	@SuppressWarnings({"UnusedReturnValue", "deprecation"})
 	private long doOnUpgrade(@SuppressWarnings("SameParameterValue") @NonNull final String key, @NonNull final Runnable runnable)
 	{
 		// first run of this version
@@ -413,8 +414,12 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private void setFolder(@NonNull final Uri fileUri)
 	{
-		final String path = new File(fileUri.getPath()).getParent();
-		FileChooserActivity.setFolder(this, MainActivity.PREF_CURRENTFOLDER, path);
+		String path = fileUri.getPath();
+		if (path != null)
+		{
+			final String parentPath = new File(path).getParent();
+			FileChooserActivity.setFolder(this, MainActivity.PREF_CURRENTFOLDER, parentPath);
+		}
 	}
 
 	@Override
@@ -449,7 +454,16 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		final String base = Settings.getStringPref(context, TreebolicIface.PREF_BASE);
 		if (source != null && !source.isEmpty())
 		{
-			final File baseFile = base == null ? null : new File(Uri.parse(base).getPath());
+			File baseFile = null;
+			if (base != null)
+			{
+				Uri baseUri = Uri.parse(base);
+				String path = baseUri.getPath();
+				if (path != null)
+				{
+					baseFile = new File(path);
+				}
+			}
 			final File file = new File(baseFile, source);
 			Log.d(MainActivity.TAG, "file=" + file);
 			return file.exists();
@@ -566,14 +580,18 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private void tryStartTreebolicBundle(@NonNull final Uri archiveUri)
 	{
-		try
+		String path = archiveUri.getPath();
+		if (path != null)
 		{
-			// choose bundle entry
-			EntryChooser.choose(this, new File(archiveUri.getPath()), zipEntry -> tryStartTreebolicBundle(archiveUri, zipEntry));
-		}
-		catch (@NonNull final IOException e)
-		{
-			Log.d(MainActivity.TAG, "Failed to start treebolic from bundle uri " + archiveUri, e);
+			try
+			{
+				// choose bundle entry
+				EntryChooser.choose(this, new File(path), zipEntry -> tryStartTreebolicBundle(archiveUri, zipEntry));
+			}
+			catch (@NonNull final IOException e)
+			{
+				Log.d(MainActivity.TAG, "Failed to start treebolic from bundle uri " + archiveUri, e);
+			}
 		}
 	}
 

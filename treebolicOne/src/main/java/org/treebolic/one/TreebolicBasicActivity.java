@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -39,12 +38,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.preference.PreferenceManager;
 import treebolic.IContext;
 import treebolic.Widget;
 import treebolic.glue.component.Container;
+import treebolic.glue.component.Dialog;
 import treebolic.glue.component.Statusbar;
 import treebolic.glue.component.TreebolicThread;
-import treebolic.glue.component.Dialog;
 import treebolic.view.View;
 
 /**

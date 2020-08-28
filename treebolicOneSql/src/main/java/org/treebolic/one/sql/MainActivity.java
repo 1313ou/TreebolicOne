@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -39,8 +38,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import treebolic.glue.component.Statusbar;
+import androidx.preference.PreferenceManager;
 import treebolic.glue.component.Dialog;
+import treebolic.glue.component.Statusbar;
 
 /**
  * Treebolic main activity (home)
@@ -223,7 +223,8 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		final File dir = Storage.getTreebolicStorage(this);
 		if (dir.isDirectory())
 		{
-			if (dir.list().length == 0)
+			final String[] dirContent = dir.list();
+			if (dirContent == null || dirContent.length == 0)
 			{
 				// deploy
 				Storage.expandZipAssetFile(this, "data.zip");
@@ -247,7 +248,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * @return build version
 	 */
 	@SuppressLint({"CommitPrefEdits", "ApplySharedPref"})
-	@SuppressWarnings({"UnusedReturnValue"})
+	@SuppressWarnings({"UnusedReturnValue", "deprecation"})
 	private long doOnUpgrade(@SuppressWarnings("SameParameterValue") @NonNull final String key, @NonNull final Runnable runnable)
 	{
 		// first run of this version
@@ -355,8 +356,12 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private void setFolder(@NonNull final Uri fileUri)
 	{
-		final String path = new File(fileUri.getPath()).getParent();
-		FileChooserActivity.setFolder(this, MainActivity.PREF_CURRENTFOLDER, path);
+		String path = fileUri.getPath();
+		if (path != null)
+		{
+			final String parentPath = new File(path).getParent();
+			FileChooserActivity.setFolder(this, MainActivity.PREF_CURRENTFOLDER, parentPath);
+		}
 	}
 
 	/**
