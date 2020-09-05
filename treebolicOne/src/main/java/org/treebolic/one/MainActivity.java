@@ -580,18 +580,18 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 */
 	private void tryStartTreebolicBundle(@NonNull final Uri archiveUri)
 	{
-		String path = archiveUri.getPath();
-		if (path != null)
+		try
 		{
-			try
+			String path = archiveUri.getPath();
+			if (path != null)
 			{
 				// choose bundle entry
 				EntryChooser.choose(this, new File(path), zipEntry -> tryStartTreebolicBundle(archiveUri, zipEntry));
 			}
-			catch (@NonNull final IOException e)
-			{
-				Log.d(MainActivity.TAG, "Failed to start treebolic from bundle uri " + archiveUri, e);
-			}
+		}
+		catch (@NonNull final IOException e)
+		{
+			Log.d(MainActivity.TAG, "Failed to start treebolic from bundle uri " + archiveUri, e);
 		}
 	}
 
