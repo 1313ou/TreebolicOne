@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-	<string name="source" translatable="false">template.xml</string>
-	<string name="source_entry" translatable="false"/>
-	<string name="settings" translatable="false"/>
+	<string name="source" translatable="false" tools:keep="@string/source">template.xml</string>
+	<string name="source_entry" translatable="false" tools:keep="@string/source_entry" />
+	<string name="settings" translatable="false" tools:keep="@string/settings" />
 
 </resources>

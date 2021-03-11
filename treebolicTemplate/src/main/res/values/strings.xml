@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
 	<string name="app_name">Treebolic Template</string>
 
 	<!-- activity -->
-	<string name="title_activity_main">Treebolic Template</string>
-	<string name="title_activity_treebolic">Treebolic Template</string>
-	<string name="title_activity_settings">Settings</string>
-	<string name="title_activity_app_settings">Application</string>
+	<string name="title_activity_main" tools:keep="@string/title_activity_main">Treebolic Template</string>
+	<string name="title_activity_treebolic" tools:keep="@string/title_activity_treebolic">Treebolic Template</string>
+	<string name="title_activity_settings" tools:keep="@string/title_activity_settings">Settings</string>
+	<string name="title_activity_app_settings" tools:keep="@string/title_activity_app_settings">Application</string>
 
 </resources>

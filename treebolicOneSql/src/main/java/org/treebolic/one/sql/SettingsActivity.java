@@ -40,7 +40,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	public static class ProviderPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_provider);
@@ -56,7 +56,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	public static class DataPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_data);
@@ -108,7 +108,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 	public static class DownloadPreferenceFragment extends PreferenceFragmentCompat
 	{
 		@Override
-		public void onCreatePreferences(@SuppressWarnings("unused") final Bundle savedInstanceState, @SuppressWarnings("unused") final String rootKey)
+		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
 		{
 			// inflate
 			addPreferencesFromResource(R.xml.pref_download);
