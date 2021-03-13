@@ -30,6 +30,7 @@ import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
 import org.treebolic.storage.Storage;
+import org.treebolic.storage.Deployer;
 
 import java.io.File;
 
@@ -134,11 +135,11 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		else if (itemId == R.id.action_reset)
 		{
 			Log.d(MainActivity.TAG, "data cleanup");
-			Storage.cleanup(this);
+			Deployer.cleanup(this);
 			Log.d(MainActivity.TAG, "settings reset");
 			Settings.setDefaults(this);
 			Log.d(MainActivity.TAG, "data reset from internal source");
-			Storage.expandZipAssetFile(this, "data.zip");
+			Deployer.expandZipAssetFile(this, "data.zip");
 		}
 		else if (itemId == R.id.action_download)
 		{
@@ -216,7 +217,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			Settings.setDefaults(this);
 
 			// deploy
-			Storage.expandZipAssetFile(this, "data.zip");
+			Deployer.expandZipAssetFile(this, "data.zip");
 		});
 
 		// deploy
@@ -227,7 +228,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			if (dirContent == null || dirContent.length == 0)
 			{
 				// deploy
-				Storage.expandZipAssetFile(this, "data.zip");
+				Deployer.expandZipAssetFile(this, "data.zip");
 			}
 		}
 

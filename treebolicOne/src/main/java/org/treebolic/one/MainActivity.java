@@ -32,6 +32,7 @@ import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
 import org.treebolic.storage.Storage;
+import org.treebolic.storage.Deployer;
 
 import java.io.File;
 import java.io.IOException;
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		}
 		else if (itemId == R.id.action_builtin_data)
 		{
-			final Uri archiveUri = Storage.copyAssetFile(this, Settings.DATA);
+			final Uri archiveUri = Deployer.copyAssetFile(this, Settings.DATA);
 			if (archiveUri != null)
 			{
 				tryStartTreebolicBundle(archiveUri);
@@ -243,7 +244,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			Settings.setDefaults(this);
 
 			// deploy
-			Storage.expandZipAssetFile(this, "data.zip");
+			Deployer.expandZipAssetFile(this, "data.zip");
 		});
 
 		// deploy
@@ -254,7 +255,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			if (dirContent == null || dirContent.length == 0)
 			{
 				// deploy
-				Storage.expandZipAssetFile(this, "data.zip");
+				Deployer.expandZipAssetFile(this, "data.zip");
 			}
 		}
 	}
