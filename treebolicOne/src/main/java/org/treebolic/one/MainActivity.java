@@ -31,8 +31,8 @@ import org.treebolic.filechooser.FileChooserActivity;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
-import org.treebolic.storage.Storage;
 import org.treebolic.storage.Deployer;
+import org.treebolic.storage.Storage;
 
 import java.io.File;
 import java.io.IOException;
@@ -163,11 +163,11 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			}
 			return true;
 		}
-		//		else if (itemId == R.id.action_reset)
-		//		{
-		//			Settings.setDefaults(this);
-		//			Storage.expandZipAssetFile(this, "data.zip");
-		//		}
+		else if (itemId == R.id.action_reset)
+		{
+			Settings.setDefaults(this);
+			Deployer.expandZipAssetFile(this, "data.zip");
+		}
 		else if (itemId == R.id.action_download)
 		{
 			final Intent intent = new Intent(this, DownloadActivity.class);
