@@ -29,11 +29,13 @@ import org.treebolic.filechooser.FileChooserActivity;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
-import org.treebolic.storage.Storage;
 import org.treebolic.storage.Deployer;
+import org.treebolic.storage.Storage;
 
 import java.io.File;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -54,11 +56,11 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * Log tag
 	 */
 	private static final String TAG = "OneSQLMainA";
-
+	
 	/**
-	 * Download request
+	 * Activity result launcher
 	 */
-	private static final int REQUEST_DOWNLOAD_CODE = 10;
+	protected ActivityResultLauncher<Intent> activityResultLauncher;
 
 	// L I F E C Y C L E O V E R R I D E S
 
@@ -71,6 +73,15 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		// rate
 		AppRate.invoke(this);
 
+		// activity result launcher
+		this.activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+			
+//			boolean success = result.getResultCode() == Activity.RESULT_OK;
+//			if (success)
+//			{
+//			}
+		});
+		
 		// layout
 		setContentView(R.layout.activity_main);
 
@@ -145,7 +156,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		{
 			final Intent intent = new Intent(this, DownloadActivity.class);
 			intent.putExtra(org.treebolic.download.DownloadActivity.ARG_ALLOW_EXPAND_ARCHIVE, true);
-			startActivityForResult(intent, MainActivity.REQUEST_DOWNLOAD_CODE);
+			this.activityResultLauncher.launch(intent);
 			return true;
 		}
 		else if (itemId == R.id.action_settings)

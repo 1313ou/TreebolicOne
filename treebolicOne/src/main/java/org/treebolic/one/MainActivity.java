@@ -1,6 +1,7 @@
 package org.treebolic.one;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -37,11 +38,12 @@ import org.treebolic.storage.Storage;
 import java.io.File;
 import java.io.IOException;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
@@ -59,19 +61,19 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	private static final String TAG = "OneMainA";
 
 	/**
-	 * File request code
+	 * Activity file result launcher
 	 */
-	private static final int REQUEST_FILE_CODE = 1;
+	protected ActivityResultLauncher<Intent> activityFileResultLauncher;
 
 	/**
-	 * Bundle request code
+	 * Activity bundle result launcher
 	 */
-	private static final int REQUEST_BUNDLE_CODE = 2;
+	protected ActivityResultLauncher<Intent> activityBundleResultLauncher;
 
 	/**
-	 * Download request
+	 * Activity download result launcher
 	 */
-	private static final int REQUEST_DOWNLOAD_CODE = 10;
+	protected ActivityResultLauncher<Intent> activityDownloadResultLauncher;
 
 	// L I F E C Y C L E O V E R R I D E S
 
@@ -86,6 +88,64 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 
 		// init
 		initialize();
+
+		// activity file result launcher
+		this.activityFileResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+			boolean success = result.getResultCode() == Activity.RESULT_OK;
+			if (success)
+			{
+				// handle selection of input by other activity which returns selected input
+				Intent returnIntent = result.getData();
+				if (returnIntent != null)
+				{
+					final Uri fileUri = returnIntent.getData();
+					if (fileUri != null)
+					{
+						Toast.makeText(this, fileUri.toString(), Toast.LENGTH_SHORT).show();
+
+						setFolder(fileUri);
+						tryStartTreebolic(fileUri);
+					}
+				}
+			}
+		});
+
+		// activity bundle result launcher
+		this.activityBundleResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+			boolean success = result.getResultCode() == Activity.RESULT_OK;
+			if (success)
+			{
+				// handle selection of input by other activity which returns selected input
+				Intent returnIntent = result.getData();
+				if (returnIntent != null)
+				{
+					final Uri fileUri = returnIntent.getData();
+					if (fileUri != null)
+					{
+						setFolder(fileUri);
+						tryStartTreebolicBundle(fileUri);
+					}
+				}
+			}
+		});
+
+		// activity download result launcher
+		this.activityDownloadResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+
+			//			boolean success = result.getResultCode() == Activity.RESULT_OK;
+			//			if (success)
+			//			{
+			//				// handle selection of input by other activity which returns selected input
+			//				Intent returnIntent = result.getData();
+			//				if (returnIntent != null)
+			//				{
+			//					final Uri fileUri = returnIntent.getData();
+			//					if (fileUri != null)
+			//					{
+			//					}
+			//				}
+			//			}
+		});
 
 		// layout
 		setContentView(R.layout.activity_main);
@@ -172,7 +232,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		{
 			final Intent intent = new Intent(this, DownloadActivity.class);
 			intent.putExtra(org.treebolic.download.DownloadActivity.ARG_ALLOW_EXPAND_ARCHIVE, true);
-			startActivityForResult(intent, MainActivity.REQUEST_DOWNLOAD_CODE);
+			this.activityDownloadResultLauncher.launch(intent);
 			return true;
 		}
 		else if (itemId == R.id.action_settings)
@@ -312,47 +372,6 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		return build;
 	}
 
-	// S P E C I F I C R E T U R N S
-
-	@Override
-	protected void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent returnIntent)
-	{
-		// handle selection of input by other activity which returns selected input
-		switch (requestCode)
-		{
-			case REQUEST_FILE_CODE:
-			case REQUEST_BUNDLE_CODE:
-				if (resultCode == AppCompatActivity.RESULT_OK && returnIntent != null)
-				{
-					final Uri fileUri = returnIntent.getData();
-					if (fileUri == null)
-					{
-						break;
-					}
-
-					Toast.makeText(this, fileUri.toString(), Toast.LENGTH_SHORT).show();
-					switch (requestCode)
-					{
-						case REQUEST_FILE_CODE:
-							setFolder(fileUri);
-							tryStartTreebolic(fileUri);
-							break;
-						case REQUEST_BUNDLE_CODE:
-							setFolder(fileUri);
-							tryStartTreebolicBundle(fileUri);
-							break;
-						default:
-							break;
-					}
-				}
-				break;
-			case REQUEST_DOWNLOAD_CODE:
-			default:
-				break;
-		}
-		super.onActivityResult(requestCode, resultCode, returnIntent);
-	}
-
 	// F R A G M E N T
 
 	public static class MainFragment extends PlaceholderFragment
@@ -489,7 +508,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_INITIAL_DIR, base);
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_EXTENSION_FILTER, extensionsArray);
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
-		startActivityForResult(intent, MainActivity.REQUEST_FILE_CODE);
+		this.activityFileResultLauncher.launch(intent);
 	}
 
 	/**
@@ -506,7 +525,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_INITIAL_DIR, base);
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_EXTENSION_FILTER, extensionsArray);
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
-		startActivityForResult(intent, MainActivity.REQUEST_BUNDLE_CODE);
+		this.activityFileResultLauncher.launch(intent);
 	}
 
 	// R E Q U E S T S ( S T A R T A C T I V I T Y )
