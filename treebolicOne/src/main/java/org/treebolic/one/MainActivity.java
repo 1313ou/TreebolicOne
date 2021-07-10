@@ -525,7 +525,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_INITIAL_DIR, base);
 		intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_EXTENSION_FILTER, extensionsArray);
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
-		this.activityFileResultLauncher.launch(intent);
+		this.activityBundleResultLauncher.launch(intent);
 	}
 
 	// R E Q U E S T S ( S T A R T A C T I V I T Y )
