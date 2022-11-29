@@ -1,25 +1,25 @@
 // CORE
 
-include ':treebolicLibModel'
-project(':treebolicLibModel').projectDir = new File('../TreebolicLib/treebolicLibModel/')
+// include ':treebolicLibModel'
+// project(':treebolicLibModel').projectDir = new File('../TreebolicLib/treebolicLibModel/')
 
-include ':treebolicLibView'
-project(':treebolicLibView').projectDir = new File('../TreebolicLib/treebolicLibView/')
+// include ':treebolicLibView'
+// project(':treebolicLibView').projectDir = new File('../TreebolicLib/treebolicLibView/')
 
-include ':treebolicGraph'
-project(':treebolicGraph').projectDir = new File('../TreebolicLib/treebolicGraph/')
+// include ':treebolicGraph'
+// project(':treebolicGraph').projectDir = new File('../TreebolicLib/treebolicGraph/')
 
-include ':treebolicMutable'
-project(':treebolicMutable').projectDir = new File('../TreebolicLib/treebolicMutable/')
+// include ':treebolicMutable'
+// project(':treebolicMutable').projectDir = new File('../TreebolicLib/treebolicMutable/')
 
-include ':treebolicLoadBalancer'
-project(':treebolicLoadBalancer').projectDir = new File('../TreebolicLib/treebolicLoadBalancer/')
+// include ':treebolicLoadBalancer'
+// project(':treebolicLoadBalancer').projectDir = new File('../TreebolicLib/treebolicLoadBalancer/')
+
+// include ':treebolicGlueIface'
+// project(':treebolicGlueIface').projectDir = new File('../TreebolicLib/treebolicGlueIface/')
 
 include ':treebolicGlue'
 project(':treebolicGlue').projectDir = new File('../TreebolicLib/treebolicGlue/')
-
-include ':treebolicGlueIface'
-project(':treebolicGlueIface').projectDir = new File('../TreebolicLib/treebolicGlueIface/')
 
 include ':treebolicIface'
 project(':treebolicIface').projectDir = new File('../TreebolicLib/treebolicIface/')
@@ -65,11 +65,14 @@ project(':donateLib').projectDir = new File('../TreebolicSponsorLibs/donateLib/'
 // STUB
 
 include ':treebolicXmlProvider'
+include ':treebolicOwlProvider'
 include ':treebolicSqliteProvider'
 include ':treebolicOne'
 include ':treebolicOneSql'
+include ':treebolicOneOwl'
 
 // APP
 
 include ':treebolicTemplate'
 include ':treebolicSqlTemplate'
+include ':treebolicOwlTemplate'
