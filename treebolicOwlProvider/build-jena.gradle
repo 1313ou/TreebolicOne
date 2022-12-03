@@ -30,6 +30,6 @@ dependencies {
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
     implementation 'io.github.treebolic:treebolic-model:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
-    implementation 'io.github.treebolic:provider-owl-owlapi:4.0-SNAPSHOT'
+    implementation 'io.github.treebolic:provider-owl-jena:4.0-SNAPSHOT'
     implementation 'androidx.annotation:annotation:1.5.0'
 }
