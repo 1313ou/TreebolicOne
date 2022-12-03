@@ -8,8 +8,11 @@ import treebolic.model.ImageDecorator;
 import treebolic.model.Model;
 import treebolic.model.MutableEdge;
 import treebolic.model.MutableNode;
-import treebolic.provider.owl.jena.BaseProvider;
-import treebolic.provider.owl.jena.OwlModelFactory;
+import treebolic.provider.owl.owlapi.BaseProvider;
+import treebolic.provider.owl.owlapi.OwlModelFactory;
+
+//import treebolic.provider.owl.jena.BaseProvider;
+//import treebolic.provider.owl.jena.OwlModelFactory;
 
 public class Provider2 extends BaseProvider
 {
