@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<string name="app_name">Treebolic Owl Template</string>
+
+	<!-- activity -->
+	<string name="title_activity_main" tools:keep="@string/title_activity_main">Treebolic Owl Template</string>
+	<string name="title_activity_treebolic" tools:keep="@string/title_activity_treebolic">Treebolic Owl Template</string>
+
+</resources>
