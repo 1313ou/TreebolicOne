@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<!-- Headers settings -->
+	<string name="pref_header_provider">Fournisseur de données</string>
+<!--	<string name="pref_summary_header_provider">Paramètres du fournisseur de données</string>-->
+	<string name="pref_header_data">Données</string>
+<!--	<string name="pref_summary_header_data">Paramètres des données</string>-->
+
+	<!-- active built-in provider -->
+	<!-- provider -->
+	<string name="pref_description_provider">Fournisseur de données</string>
+	<string name="pref_title_provider">Fournisseur de données</string>
+	<!-- name -->
+	<string name="pref_title_provider_name" tools:keep="@string/pref_title_provider_name">Nom</string>
+	<string name="pref_description_provider_name" tools:keep="@string/pref_description_provider_name">Nom du fournisseur de données</string>
+	<!-- source -->
+	<string name="pref_title_source">Source</string>
+	<string name="pref_description_source">Source (chaîne de caractères)</string>
+	<!-- base -->
+	<string name="pref_title_base">Base</string>
+	<string name="pref_description_base">URL de base</string>
+	<!-- imagebase -->
+	<string name="pref_title_imagebase">Base pour images</string>
+	<string name="pref_description_imagebase">URL de base pour images</string>
+	<!-- settings -->
+	<string name="pref_title_settings">Rendu</string>
+	<string name="pref_description_settings">Propriétés du rendu</string>
+
+</resources>

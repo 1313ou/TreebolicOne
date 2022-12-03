@@ -1,0 +1,82 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".MainActivity">
+
+	<item
+		android:id="@+id/action_settings"
+		android:title="@string/title_settings"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/action_run"
+		android:title="@string/title_run"
+		app:showAsAction="never" />
+	<item
+		android:title="@string/title_menu_data"
+		app:showAsAction="never">
+		<menu>
+			<item
+				android:id="@+id/action_reset"
+				android:title="@string/title_reset"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_download"
+				android:title="@string/title_download"
+				app:showAsAction="never" />
+		</menu>
+	</item>
+	<item
+		android:title="@string/title_menu_help"
+		app:showAsAction="never">
+		<menu>
+			<item
+				android:id="@+id/action_help"
+				android:title="@string/title_help"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_tips"
+				android:title="@string/title_tips"
+				app:showAsAction="never" />
+		</menu>
+	</item>
+	<item
+		android:title="@string/title_menu_about"
+		app:showAsAction="never">
+		<menu>
+			<item
+				android:id="@+id/action_about"
+				android:title="@string/title_about"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_rate"
+				android:title="@string/title_rate"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_others"
+				android:title="@string/title_others"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_donate"
+				android:title="@string/title_donate"
+				app:showAsAction="never" />
+		</menu>
+	</item>
+	<item
+		android:title="@string/title_menu_app"
+		app:showAsAction="never">
+		<menu>
+			<item
+				android:id="@+id/action_app_settings"
+				android:title="@string/title_activity_app_settings"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_finish"
+				android:title="@string/title_finish"
+				app:showAsAction="never" />
+			<item
+				android:id="@+id/action_kill"
+				android:title="@string/title_kill"
+				app:showAsAction="never"/>
+		</menu>
+	</item>
+</menu>

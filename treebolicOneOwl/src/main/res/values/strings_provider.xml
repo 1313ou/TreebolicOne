@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- builtin provider -->
+<!--	<string name="provider_name" translatable="false">owl</string>-->
+	<string name="provider_class" translatable="false">treebolic.provider.owl.Provider2</string>
+	<string name="provider_mime" translatable="false">application/x-owl</string>
+	<string name="provider_extension" translatable="false">owl</string>
+<!--	<string name="provider_scheme" translatable="false">owl:</string>-->
+
+</resources>

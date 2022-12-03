@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2019. Bernard Bou <1313ou@gmail.com>
+  -->
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<Preference
+		app:fragment="org.treebolic.one.owl.SettingsActivity$DataPreferenceFragment"
+		app:icon="@null"
+		app:key="pref_data"
+		app:title="@string/pref_header_data" />
+	<Preference
+		app:fragment="org.treebolic.one.owl.SettingsActivity$ProviderPreferenceFragment"
+		app:icon="@null"
+		app:key="pref_provider"
+		app:title="@string/pref_header_provider" />
+	<Preference
+		app:fragment="org.treebolic.one.owl.SettingsActivity$DownloadPreferenceFragment"
+		app:icon="@null"
+		app:key="pref_download"
+		app:title="@string/pref_header_download" />
+
+</PreferenceScreen>

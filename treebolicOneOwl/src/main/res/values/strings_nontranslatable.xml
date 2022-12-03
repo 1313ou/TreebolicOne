@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="source_default" translatable="false">sumo.owl</string>
+	<string name="settings" translatable="false">rendering.properties</string>
+	<string name="urlScheme" translatable="false">owl:</string>
+
+	<!-- download -->
+	<string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/owl/data.zip</string>
+	<string-array name="pref_download_urls" translatable="false">
+		<item>@string/pref_download_url_default</item>
+	</string-array>
+
+</resources>
