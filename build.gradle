@@ -28,6 +28,7 @@ allprojects {
         minSdkVersion = 14
         targetSdkVersion = 33
         compileSdkVersion = 33
+        multiDexEnabled = true
     }
 
     gradle.projectsEvaluated {
