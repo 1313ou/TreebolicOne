@@ -16,16 +16,16 @@ import java.util.Properties;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import treebolic.provider.sqlx.AbstractProvider;
+import treebolic.provider.sql.AbstractProvider;
 
 /**
  * Provider for SQL
  *
  * @author Bernard Bou
  */
-public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provider.AndroidCursor>
+public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provider.AndroidCursor, SQLException>
 {
-	static class AndroidCursor implements AbstractProvider.Cursor
+	static class AndroidCursor implements AbstractProvider.Cursor<SQLException>
 	{
 		@Nullable
 		private final android.database.Cursor cursor;
@@ -60,7 +60,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 
 		@SuppressWarnings("RedundantThrows")
 		@Override
-		public boolean moveToNext() throws Exception
+		public boolean moveToNext() throws SQLException
 		{
 			if (this.cursor == null)
 			{
@@ -143,7 +143,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 		}
 	}
 
-	static class AndroidDatabase implements AbstractProvider.Database<AndroidCursor>
+	static class AndroidDatabase implements AbstractProvider.Database<AndroidCursor, SQLException>
 	{
 		@Nullable
 		private SQLiteDatabase db;
