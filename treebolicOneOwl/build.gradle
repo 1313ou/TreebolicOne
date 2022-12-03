@@ -5,6 +5,9 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        // applicationId "org.treebolic.owl"
+        // versionCode rootProject.ext.versionCode
+        // versionName rootProject.ext.versionName
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled = true
@@ -20,7 +23,13 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
     }
+}
+
+configurations.implementation {
+    exclude group: 'org.apache.httpcomponents', module: 'httpcore-osgi'
+    exclude group: 'org.apache.httpcomponents', module: 'httpclient-osgi'
 }
 
 dependencies {
@@ -36,8 +45,7 @@ dependencies {
     implementation 'io.github.treebolic:treebolic-graph:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-view:4.0-SNAPSHOT'
-    implementation 'io.github.treebolic:provider-owl:4.0-SNAPSHOT'
-    
+
     implementation project(':treebolicOwlProvider')
 
     implementation project(':commonLib')
@@ -51,6 +59,7 @@ dependencies {
     implementation project(':othersLib')
     implementation project(':donateLib')
 
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'com.google.android.material:material:1.7.0'
