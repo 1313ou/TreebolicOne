@@ -1,8 +1,25 @@
+/*
+ * Copyright (c) Treebolic 2019. Bernard Bou <1313ou@gmail.com>
+ */
+
 apply plugin: 'com.android.application'
 
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        google()
+        maven { url System.getenv('HOME') + "/.m2/repository/" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+    }
+}
 
 android {
 
@@ -12,7 +29,9 @@ android {
         applicationId "org.treebolic.owl.template"
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-        minSdkVersion rootProject.ext.minSdkVersion
+        //TODO version can't desugar static in interface
+        //minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 24
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -35,12 +54,23 @@ android {
     }
 
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+configurations.implementation {
+    exclude group: 'org.apache.httpcomponents', module: 'httpcore-osgi'
+    exclude group: 'org.apache.httpcomponents', module: 'httpclient-osgi'
 }
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
     implementation project(':treebolicOneOwl')
     implementation 'androidx.appcompat:appcompat:1.5.1'
 }
