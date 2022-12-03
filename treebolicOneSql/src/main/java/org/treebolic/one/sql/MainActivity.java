@@ -429,14 +429,14 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		if (truncate != null && !truncate.isEmpty())
 		{
 			truncate = truncate.trim();
-			more.putString(treebolic.provider.sqlx.SqlProperties.TRUNCATE_NODES, truncate);
-			more.putString(treebolic.provider.sqlx.SqlProperties.TRUNCATE_TREEEDGES, truncate);
+			more.putString(treebolic.provider.sql.SqlProperties.TRUNCATE_NODES, truncate);
+			more.putString(treebolic.provider.sql.SqlProperties.TRUNCATE_TREEEDGES, truncate);
 		}
 		if (prune != null && !prune.isEmpty())
 		{
 			prune = prune.trim();
-			more.putString(treebolic.provider.sqlx.SqlProperties.PRUNE_NODES, prune);
-			more.putString(treebolic.provider.sqlx.SqlProperties.PRUNE_TREEEDGES, prune);
+			more.putString(treebolic.provider.sql.SqlProperties.PRUNE_NODES, prune);
+			more.putString(treebolic.provider.sql.SqlProperties.PRUNE_TREEEDGES, prune);
 		}
 
 		final Intent intent = TreebolicActivity.makeTreebolicIntent(this, provider, source, base, imageBase, settings, null, urlScheme, more);
