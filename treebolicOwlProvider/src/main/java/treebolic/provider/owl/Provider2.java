@@ -8,11 +8,8 @@ import treebolic.model.ImageDecorator;
 import treebolic.model.Model;
 import treebolic.model.MutableEdge;
 import treebolic.model.MutableNode;
-import treebolic.provider.owl.owlapi.BaseProvider;
-import treebolic.provider.owl.owlapi.OwlModelFactory;
-
-//import treebolic.provider.owl.jena.BaseProvider;
-//import treebolic.provider.owl.jena.OwlModelFactory;
+import treebolic.provider.owl.sax.BaseProvider;
+import treebolic.provider.owl.sax.OwlModelFactory;
 
 public class Provider2 extends BaseProvider
 {
@@ -81,7 +78,10 @@ public class Provider2 extends BaseProvider
 		@Override
 		public void setEdgeImage(final MutableEdge edge, final int index)
 		{
-
+			if (index != -1)
+			{
+				edge.setImageIndex(index);
+			}
 		}
 
 		/**
