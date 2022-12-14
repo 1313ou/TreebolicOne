@@ -64,7 +64,7 @@ project(':donateLib').projectDir = new File('../TreebolicSponsorLibs/donateLib/'
 
 // STUB
 
-// include ':treebolicXmlProvider'
+include ':treebolicXmlProvider'
 include ':treebolicOwlProvider'
 include ':treebolicSqliteProvider'
 include ':treebolicOneXml'
