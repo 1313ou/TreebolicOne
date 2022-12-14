@@ -372,8 +372,16 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		this.settings = params.getString(TreebolicIface.ARG_SETTINGS);
 		this.style = params.getString(TreebolicIface.ARG_STYLE);
 		this.urlScheme = params.getString(TreebolicIface.ARG_URLSCHEME);
-		this.more = params.getParcelable(TreebolicIface.ARG_MORE);
-		this.parentActivity = params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+		{
+			this.more = params.getParcelable(TreebolicIface.ARG_MORE, Bundle.class);
+			this.parentActivity = params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY, Intent.class);
+		}
+		else
+		{
+			this.more = params.getParcelable(TreebolicIface.ARG_MORE);
+			this.parentActivity = params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY);
+		}
 	}
 
 	// T R E E B O L I C C O N T E X T
@@ -676,10 +684,10 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		{
 			for (String key : this.more.keySet())
 			{
-				final Object value = this.more.get(key);
+				final String value = this.more.getString(key);
 				if (value != null)
 				{
-					parameters.setProperty(key, value.toString());
+					parameters.setProperty(key, value);
 				}
 			}
 		}
