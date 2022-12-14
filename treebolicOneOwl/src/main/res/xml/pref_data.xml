@@ -11,16 +11,6 @@
 		android:title="@string/pref_title_source" />
 
 	<EditTextPreference
-		android:defaultValue="@string/settings"
-		android:inputType="textUri"
-		android:key="pref_settings"
-		android:maxLines="1"
-		android:selectAllOnFocus="true"
-		android:singleLine="true"
-		android:summary="@string/pref_description_settings"
-		android:title="@string/pref_title_settings" />
-
-	<EditTextPreference
 		android:inputType="textUri"
 		android:key="pref_base"
 		android:maxLines="1"
@@ -37,5 +27,15 @@
 		android:singleLine="true"
 		android:summary="@string/pref_description_imagebase"
 		android:title="@string/pref_title_imagebase" />
+
+	<EditTextPreference
+		android:defaultValue="@string/settings"
+		android:inputType="textUri"
+		android:key="pref_settings"
+		android:maxLines="1"
+		android:selectAllOnFocus="true"
+		android:singleLine="true"
+		android:summary="@string/pref_description_settings"
+		android:title="@string/pref_title_settings" />
 
 </PreferenceScreen>
