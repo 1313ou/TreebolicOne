@@ -10,20 +10,11 @@ android {
         // versionName rootProject.ext.versionName
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        multiDexEnabled = true
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-        coreLibraryDesugaringEnabled true
     }
 }
 
@@ -33,19 +24,13 @@ configurations.implementation {
 }
 
 dependencies {
-    implementation project(':treebolicIface')
-    implementation project(':treebolicGlue')
-
-    // implementation project(':treebolicLibView')
-    // implementation project(':treebolicLibModel')
-    // implementation project(':treebolicGraph')
-    // implementation project(':treebolicMutable')
-
     implementation 'io.github.treebolic:treebolic-model:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-graph:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-view:4.0-SNAPSHOT'
 
+    implementation project(':treebolicIface')
+    implementation project(':treebolicGlue')
     implementation project(':treebolicOwlProvider')
 
     implementation project(':commonLib')
@@ -59,11 +44,7 @@ dependencies {
     implementation project(':othersLib')
     implementation project(':donateLib')
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'com.google.android.material:material:1.7.0'
-
-    //TODO remove when bug fixed in appcompat:1.6.0
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }
