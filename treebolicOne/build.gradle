@@ -23,6 +23,7 @@ dependencies {
     implementation 'io.github.treebolic:treebolic-graph:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-view:4.0-SNAPSHOT'
+    implementation 'io.github.treebolic:provider-xml-sax:4.0-SNAPSHOT'
 
     implementation project(':commonLib')
     implementation project(':storageLib')
@@ -39,7 +40,4 @@ dependencies {
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.annotation:annotation:1.5.0'
-
-    //TODO remove when bug fixed in appcompat:1.6.0
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }

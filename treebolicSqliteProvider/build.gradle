@@ -17,10 +17,6 @@ android {
 
 dependencies {
     implementation project(':treebolicIface')
-    // implementation project(':treebolicLibView')
-    // implementation project(':treebolicLibModel')
-    // implementation project(':treebolicGraph')
-    // implementation project(':treebolicLoadBalancer')
 
     implementation 'io.github.treebolic:treebolic-model:4.0-SNAPSHOT'
     implementation 'io.github.treebolic:treebolic-graph:4.0-SNAPSHOT'
@@ -28,7 +24,4 @@ dependencies {
     implementation 'io.github.treebolic:provider-sql-generic:4.0-SNAPSHOT'
 
     implementation 'androidx.annotation:annotation:1.5.0'
-
-    //TODO remove when bug fixed in appcompat:1.6.0
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }
