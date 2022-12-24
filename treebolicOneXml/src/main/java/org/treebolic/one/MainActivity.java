@@ -633,7 +633,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		}
 
 		final String provider = Settings.getStringPref(this, Settings.PREF_PROVIDER);
-		final String base = "jar:" + archiveUri.toString() + "!/";
+		final String base = "jar:" + archiveUri + "!/";
 		final String imageBase = base;
 		final String settings = Settings.getStringPref(this, TreebolicIface.PREF_SETTINGS);
 		final String style = Settings.getStringPref(this, Settings.PREF_STYLE);
