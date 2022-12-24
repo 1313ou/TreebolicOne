@@ -5,13 +5,16 @@ import java.util.Properties;
 
 import androidx.annotation.NonNull;
 import treebolic.glue.iface.Image;
+import treebolic.model.ImageDecorator;
 import treebolic.model.Model;
 import treebolic.model.MutableEdge;
 import treebolic.model.MutableNode;
 
-public class Provider2 extends treebolic.provider.xml.sax.Provider
+public class Provider2 extends treebolic.provider.xml.sax.Provider implements ImageDecorator
 {
 	// D E C O R A T I O N   M E M B E R S
+
+	static String[] images = new String[]{root};
 
 	static Image[] images2;
 
