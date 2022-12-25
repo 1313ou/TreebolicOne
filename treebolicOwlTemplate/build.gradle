@@ -33,8 +33,8 @@ android {
         //minSdkVersion rootProject.ext.minSdkVersion
         minSdkVersion 24
         targetSdkVersion rootProject.ext.targetSdkVersion
-        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     signingConfigs {
