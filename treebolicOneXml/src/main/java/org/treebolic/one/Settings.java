@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 
 import org.treebolic.TreebolicIface;
+import org.treebolic.one.xml.R;
 import org.treebolic.storage.Storage;
 
 import java.io.File;

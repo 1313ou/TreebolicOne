@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import org.treebolic.download.Deploy;
+import org.treebolic.one.xml.R;
 import org.treebolic.storage.Storage;
 
 import java.io.File;

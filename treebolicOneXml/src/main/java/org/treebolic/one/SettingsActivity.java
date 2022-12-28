@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import org.treebolic.AppCompatCommonPreferenceActivity;
 import org.treebolic.TreebolicIface;
+import org.treebolic.one.xml.R;
 import org.treebolic.preference.OpenEditTextPreference;
 
 import androidx.annotation.NonNull;

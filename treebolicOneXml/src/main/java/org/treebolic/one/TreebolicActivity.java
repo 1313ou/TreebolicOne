@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import org.treebolic.TreebolicIface;
+import org.treebolic.one.xml.R;
 
 import androidx.annotation.NonNull;
 
@@ -15,12 +16,7 @@ import androidx.annotation.NonNull;
  */
 public class TreebolicActivity extends TreebolicSourceActivity
 {
-	// --Commented out by Inspection START (9/23/17 5:08 PM):
-	//	/**
-	//	 * Log tag
-	//	 */
 	//	private static final String TAG = "TreebolicA";
-	// --Commented out by Inspection STOP (9/23/17 5:08 PM)
 
 	// C O N S T R U C T O R
 

@@ -25,6 +25,8 @@ import org.treebolic.TreebolicIface;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
+import org.treebolic.one.xml.BuildConfig;
+import org.treebolic.one.xml.R;
 import org.treebolic.search.ColorUtils;
 import org.treebolic.search.SearchSettings;
 

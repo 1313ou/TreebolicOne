@@ -32,6 +32,7 @@ import org.treebolic.filechooser.FileChooserActivity;
 import org.treebolic.guide.AboutActivity;
 import org.treebolic.guide.HelpActivity;
 import org.treebolic.guide.Tip;
+import org.treebolic.one.xml.R;
 import org.treebolic.storage.Deployer;
 import org.treebolic.storage.Storage;
 
