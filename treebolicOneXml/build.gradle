@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 
 android {
 
+    namespace "org.treebolic.one.xml"
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {

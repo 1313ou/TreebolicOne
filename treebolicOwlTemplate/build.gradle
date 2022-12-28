@@ -23,6 +23,8 @@ buildscript {
 
 android {
 
+    namespace "org.treebolic.owl.template"
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {

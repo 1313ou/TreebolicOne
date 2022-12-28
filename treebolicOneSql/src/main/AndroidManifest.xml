@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.treebolic.one.sql">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<supports-screens
 		android:largeScreens="true"
 		android:normalScreens="true"
 		android:requiresSmallestWidthDp="360"
 		android:smallScreens="false"
-		android:xlargeScreens="true"/>
+		android:xlargeScreens="true" />
 
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
 
 	<application
 		android:icon="@mipmap/ic_launcher"
@@ -21,33 +19,28 @@
 		<activity
 			android:name=".MainActivity"
 			android:exported="true"
-			android:label="@string/title_activity_main">
-		</activity>
+			android:label="@string/title_activity_main"></activity>
 
 		<activity
 			android:name=".TreebolicActivity"
 			android:exported="true"
 			android:hardwareAccelerated="true"
-			android:label="@string/title_activity_treebolic">
-		</activity>
+			android:label="@string/title_activity_treebolic"></activity>
 
 		<activity
 			android:name=".PeekActivity"
 			android:exported="false"
-			android:label="@string/title_activity_peek">
-		</activity>
+			android:label="@string/title_activity_peek"></activity>
 
 		<activity
 			android:name=".SettingsActivity"
 			android:exported="false"
-			android:label="@string/title_activity_settings">
-		</activity>
+			android:label="@string/title_activity_settings"></activity>
 
 		<activity
 			android:name=".DownloadActivity"
 			android:exported="false"
-			android:label="@string/title_activity_download">
-		</activity>
+			android:label="@string/title_activity_download"></activity>
 
 	</application>
 
