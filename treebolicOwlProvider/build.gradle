@@ -24,8 +24,8 @@ android {
 dependencies {
     implementation project(':treebolicGlue')
 
-    implementation 'io.github.treebolic:treebolic-model:4.0-SNAPSHOT'
-    implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
-    implementation 'io.github.treebolic:provider-owl-sax:4.0-SNAPSHOT'
+    implementation 'io.github.treebolic:treebolic-model:4.0-0'
+    implementation 'io.github.treebolic:treebolic-mutable:4.0-0'
+    implementation 'io.github.treebolic:provider-owl-sax:4.0-0'
     implementation 'androidx.annotation:annotation:1.5.0'
 }
