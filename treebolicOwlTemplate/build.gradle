@@ -73,6 +73,7 @@ configurations.implementation {
 
 dependencies {
     implementation project(':treebolicOneOwl')
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'

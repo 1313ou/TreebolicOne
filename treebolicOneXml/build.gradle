@@ -20,15 +20,14 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicIface')
-    implementation project(':treebolicGlue')
-
     implementation 'io.github.treebolic:treebolic-model:4.0-0'
     implementation 'io.github.treebolic:treebolic-graph:4.0-0'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-0'
     implementation 'io.github.treebolic:treebolic-view:4.0-0'
     implementation 'io.github.treebolic:provider-xml-sax:4.0-0'
 
+    implementation project(':treebolicIface')
+    implementation project(':treebolicGlue')
     implementation project(':commonLib')
     implementation project(':storageLib')
     implementation project(':searchLib')

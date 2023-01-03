@@ -20,10 +20,11 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicGlue')
-
     implementation 'io.github.treebolic:treebolic-model:4.0-0'
     implementation 'io.github.treebolic:treebolic-mutable:4.0-0'
     implementation 'io.github.treebolic:provider-owl-owlapi:4.0-0'
+
+    implementation project(':treebolicGlue')
+
     implementation 'androidx.annotation:annotation:1.5.0'
 }

@@ -29,7 +29,6 @@ dependencies {
     implementation project(':treebolicIface')
     implementation project(':treebolicGlue')
     implementation project(':treebolicSqliteProvider')
-
     implementation project(':commonLib')
     implementation project(':storageLib')
     implementation project(':searchLib')

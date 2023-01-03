@@ -20,12 +20,12 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicIface')
-
     implementation 'io.github.treebolic:treebolic-model:4.0-0'
     implementation 'io.github.treebolic:treebolic-graph:4.0-0'
     implementation 'io.github.treebolic:treebolic-loadbalancer:4.0-0'
     implementation 'io.github.treebolic:provider-sql-generic:4.0-0'
+
+    implementation project(':treebolicIface')
 
     implementation 'androidx.annotation:annotation:1.5.0'
 }
