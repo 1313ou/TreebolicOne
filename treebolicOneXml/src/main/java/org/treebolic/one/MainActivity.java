@@ -346,15 +346,13 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		long build = 0; //BuildConfig.VERSION_CODE;
 		try
 		{
-			final PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-			{
-				build = packageInfo.getLongVersionCode();
-			}
-			else
-			{
-				build = packageInfo.versionCode;
-			}
+			final PackageInfo packageInfo = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU ? //
+					this.getPackageManager().getPackageInfo(getPackageName(), PackageManager.PackageInfoFlags.of(0)) : //
+					this.getPackageManager().getPackageInfo(getPackageName(), 0);
+
+			build = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? //
+					packageInfo.getLongVersionCode() : //
+					packageInfo.versionCode;
 		}
 		catch (PackageManager.NameNotFoundException ignored)
 		{

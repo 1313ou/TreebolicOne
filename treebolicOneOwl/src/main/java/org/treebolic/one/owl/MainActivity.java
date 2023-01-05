@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 * Log tag
 	 */
 	private static final String TAG = "OneOwlMainA";
-	
+
 	/**
 	 * Activity result launcher
 	 */
@@ -75,13 +75,13 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 
 		// activity result launcher
 		this.activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-			
-//			boolean success = result.getResultCode() == Activity.RESULT_OK;
-//			if (success)
-//			{
-//			}
+
+			//			boolean success = result.getResultCode() == Activity.RESULT_OK;
+			//			if (success)
+			//			{
+			//			}
 		});
-		
+
 		// layout
 		setContentView(R.layout.activity_main);
 
@@ -269,18 +269,16 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 		{
 			version = prefs.getInt(key, -1);
 		}
-		long build = 0; //BuildConfig.VERSION_CODE;
+		long build = 0;
 		try
 		{
-			final PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-			{
-				build = packageInfo.getLongVersionCode();
-			}
-			else
-			{
-				build = packageInfo.versionCode;
-			}
+			final PackageInfo packageInfo = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU ? //
+					this.getPackageManager().getPackageInfo(getPackageName(), PackageManager.PackageInfoFlags.of(0)) : //
+					this.getPackageManager().getPackageInfo(getPackageName(), 0);
+
+			build = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? //
+					packageInfo.getLongVersionCode() : //
+					packageInfo.versionCode;
 		}
 		catch (PackageManager.NameNotFoundException ignored)
 		{
