@@ -9,7 +9,6 @@
 	android:layout_gravity="bottom|center"
 	android:layout_marginBottom="@dimen/action_button_group_margin"
 	android:contentDescription="@string/title_start"
-	android:onClick="onClick"
 	android:elevation="4dp"
 	android:visibility="invisible"
 	app:fabSize="normal"

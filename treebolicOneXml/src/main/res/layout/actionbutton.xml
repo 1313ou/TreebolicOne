@@ -10,7 +10,6 @@
 	android:layout_marginBottom="@dimen/action_button_group_margin"
 	android:contentDescription="@string/title_start"
 	android:elevation="4dp"
-	android:onClick="onClick"
 	android:visibility="invisible"
 	app:fabSize="normal"
 	app:tint="@android:color/white"

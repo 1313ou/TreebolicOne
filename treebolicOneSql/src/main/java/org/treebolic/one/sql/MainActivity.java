@@ -383,6 +383,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	{
 		final ImageButton button = findViewById(R.id.treebolicButton);
 		button.setVisibility(sourceSet() ? View.VISIBLE : View.INVISIBLE);
+		button.setOnClickListener(this);
 	}
 
 	/**

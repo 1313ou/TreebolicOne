@@ -460,6 +460,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 			boolean sourceSet = sourceSet(this);
 			Log.d(TAG, "treebolicButton" + ' ' + sourceSet);
 			button.setVisibility(sourceSet ? View.VISIBLE : View.INVISIBLE);
+			button.setOnClickListener(this);
 		}
 	}
 
