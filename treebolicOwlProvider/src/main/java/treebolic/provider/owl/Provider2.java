@@ -13,6 +13,7 @@ import treebolic.provider.owl.sax.OwlModelFactory;
 
 public class Provider2 extends BaseProvider
 {
+	@NonNull
 	protected OwlModelFactory factory(@NonNull Properties properties)
 	{
 		return new AndroidOwlModelFactory(properties);
@@ -48,6 +49,7 @@ public class Provider2 extends BaseProvider
 		 * @param ontologyUrlString ontology URL string
 		 * @return model if successful
 		 */
+		@NonNull
 		@Override
 		public Model makeModel(final String ontologyUrlString)
 		{
@@ -58,7 +60,7 @@ public class Provider2 extends BaseProvider
 		// D E C O R A T E
 
 		@Override
-		public void setNodeImage(final MutableNode node, final int index)
+		public void setNodeImage(@NonNull final MutableNode node, final int index)
 		{
 			if (index != -1)
 			{
@@ -67,7 +69,7 @@ public class Provider2 extends BaseProvider
 		}
 
 		@Override
-		public void setTreeEdgeImage(final MutableNode node, final int index)
+		public void setTreeEdgeImage(@NonNull final MutableNode node, final int index)
 		{
 			if (index != -1)
 			{
@@ -76,7 +78,7 @@ public class Provider2 extends BaseProvider
 		}
 
 		@Override
-		public void setEdgeImage(final MutableEdge edge, final int index)
+		public void setEdgeImage(@NonNull final MutableEdge edge, final int index)
 		{
 			if (index != -1)
 			{
@@ -90,6 +92,7 @@ public class Provider2 extends BaseProvider
 		 * @param imageUrls image urls
 		 * @return images
 		 */
+		@NonNull
 		public Image[] makeImages(@NonNull final String[] imageUrls)
 		{
 			Image[] images = new Image[imageUrls.length];

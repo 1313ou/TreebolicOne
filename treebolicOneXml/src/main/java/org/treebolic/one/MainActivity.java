@@ -416,6 +416,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @return initial folder
 	 */
+	@NonNull
 	private String getFolder()
 	{
 		final File folder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
@@ -467,7 +468,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @return true if source is set
 	 */
-	static private boolean sourceSet(final Context context)
+	static private boolean sourceSet(@NonNull final Context context)
 	{
 		final String source = Settings.getStringPref(context, TreebolicIface.PREF_SOURCE);
 		final String base = Settings.getStringPref(context, TreebolicIface.PREF_BASE);

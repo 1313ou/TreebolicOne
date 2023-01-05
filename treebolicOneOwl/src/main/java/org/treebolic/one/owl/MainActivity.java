@@ -344,6 +344,7 @@ public class MainActivity extends AppCompatCommonActivity implements OnClickList
 	 *
 	 * @return initial folder
 	 */
+	@NonNull
 	private String getFolder()
 	{
 		final File folder = FileChooserActivity.getFolder(this, MainActivity.PREF_CURRENTFOLDER);
