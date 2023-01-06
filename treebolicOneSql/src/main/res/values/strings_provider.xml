@@ -2,10 +2,10 @@
 <resources>
 
 	<!-- builtin provider -->
-<!--	<string name="provider_name" translatable="false">sqlite</string>-->
+	<!--	<string name="provider_name" translatable="false">sqlite</string>-->
 	<string name="provider_class" translatable="false">treebolic.provider.sqlite.Provider</string>
 	<string name="provider_mime" translatable="false">application/x-sqlite3</string>
 	<string name="provider_extension" translatable="false">sqlite</string>
-<!--	<string name="provider_scheme" translatable="false">sqlite:</string>-->
+	<!--	<string name="provider_scheme" translatable="false">sqlite:</string>-->
 
 </resources>

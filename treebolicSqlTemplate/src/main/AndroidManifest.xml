@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools">
+	xmlns:tools="http://schemas.android.com/tools">
 
 	<application
 		android:allowBackup="true"
@@ -15,52 +15,45 @@
 			android:name="org.treebolic.one.sql.MainActivity"
 			android:launchMode="singleTop">
 			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 
 		<activity
 			android:name="org.treebolic.one.sql.TreebolicActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean">
-		</activity>
+			tools:targetApi="jelly_bean"></activity>
 
 		<activity
 			android:name="org.treebolic.one.sql.SettingsActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean">
-		</activity>
+			tools:targetApi="jelly_bean"></activity>
 
 		<activity
 			android:name="org.treebolic.one.sql.DownloadActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean">
-		</activity>
+			tools:targetApi="jelly_bean"></activity>
 
 		<activity
 			android:name="org.treebolic.one.sql.PeekActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean">
-		</activity>
+			tools:targetApi="jelly_bean"></activity>
 
 		<activity
 			android:name="org.treebolic.guide.HelpActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean">
-		</activity>
+			tools:targetApi="jelly_bean"></activity>
 
 		<activity
 			android:name="org.treebolic.guide.AboutActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:ignore="UnusedAttribute">
-		</activity>
+			tools:ignore="UnusedAttribute"></activity>
 
 		<activity
 			android:name="org.treebolic.filechooser.FileChooserActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:ignore="MissingRegistered">
-		</activity>
+			tools:ignore="MissingRegistered"></activity>
 
 	</application>
 

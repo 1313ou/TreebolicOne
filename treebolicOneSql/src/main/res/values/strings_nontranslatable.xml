@@ -4,8 +4,8 @@
 	<string name="source_default" translatable="false">query.properties</string>
 	<string name="settings" translatable="false">rendering.properties</string>
 	<string name="urlScheme" translatable="false">sql:</string>
-	<string name="truncate_default" translatable="false"/>
-	<string name="prune_default" translatable="false"/>
+	<string name="truncate_default" translatable="false" />
+	<string name="prune_default" translatable="false" />
 
 	<!-- download -->
 	<string name="pref_download_url_default" translatable="false">http://treebolic.sourceforge.net/one/sql/data.zip</string>

@@ -8,7 +8,7 @@
 		android:selectAllOnFocus="true"
 		android:singleLine="true"
 		android:summary="@string/pref_description_source"
-		android:title="@string/pref_title_source"/>
+		android:title="@string/pref_title_source" />
 
 	<EditTextPreference
 		android:defaultValue="@string/source_entry"
@@ -18,7 +18,7 @@
 		android:selectAllOnFocus="true"
 		android:singleLine="true"
 		android:summary="@string/pref_description_source_entry"
-		android:title="@string/pref_title_source_entry"/>
+		android:title="@string/pref_title_source_entry" />
 
 	<EditTextPreference
 		android:defaultValue="@string/settings"
@@ -28,7 +28,7 @@
 		android:selectAllOnFocus="true"
 		android:singleLine="true"
 		android:summary="@string/pref_description_settings"
-		android:title="@string/pref_title_settings"/>
+		android:title="@string/pref_title_settings" />
 
 	<EditTextPreference
 		android:inputType="textUri"
@@ -37,7 +37,7 @@
 		android:selectAllOnFocus="true"
 		android:singleLine="true"
 		android:summary="@string/pref_description_base"
-		android:title="@string/pref_title_base"/>
+		android:title="@string/pref_title_base" />
 
 	<EditTextPreference
 		android:inputType="textUri"
@@ -46,6 +46,6 @@
 		android:selectAllOnFocus="true"
 		android:singleLine="true"
 		android:summary="@string/pref_description_imagebase"
-		android:title="@string/pref_title_imagebase"/>
+		android:title="@string/pref_title_imagebase" />
 
 </PreferenceScreen>
