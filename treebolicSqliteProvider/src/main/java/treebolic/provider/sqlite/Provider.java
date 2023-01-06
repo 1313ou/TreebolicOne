@@ -1,4 +1,8 @@
 /*
+ * Copyright (c) 2023. Bernard Bou
+ */
+
+/*
   Title : Treebolic SQL provider
   Description : Treebolic SQL provider
   Version : 3.x

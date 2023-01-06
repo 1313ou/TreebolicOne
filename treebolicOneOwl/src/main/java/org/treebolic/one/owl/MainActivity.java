@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023. Bernard Bou
+ */
+
 package org.treebolic.one.owl;
 
 import android.annotation.SuppressLint;

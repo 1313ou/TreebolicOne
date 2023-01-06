@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023. Bernard Bou
+ */
+
 package treebolic.provider;
 
 import android.graphics.Bitmap;

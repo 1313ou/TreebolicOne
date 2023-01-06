@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023. Bernard Bou
+ */
+
 package treebolic.provider.owl;
 
 import java.util.Properties;
