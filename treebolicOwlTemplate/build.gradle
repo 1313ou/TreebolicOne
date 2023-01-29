@@ -31,8 +31,7 @@ android {
         applicationId "org.treebolic.owl.template"
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-        //TODO version can't desugar static in interface
-        //minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion rootProject.ext.minSdkVersion
         minSdkVersion 24
         targetSdkVersion rootProject.ext.targetSdkVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -74,10 +73,8 @@ configurations.implementation {
 dependencies {
     implementation project(':treebolicOneOwl')
 
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.0'
     implementation "androidx.multidex:multidex:2.0.1"
-    //TODO remove when bug fixed in appcompat:1.6.0
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }
