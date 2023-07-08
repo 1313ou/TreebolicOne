@@ -54,6 +54,6 @@ include ':treebolicOneOwl'
 
 // APP
 
-include ':treebolicTemplate'
+include ':treebolicXmlTemplate'
 include ':treebolicSqlTemplate'
 include ':treebolicOwlTemplate'
