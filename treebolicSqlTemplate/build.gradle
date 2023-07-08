@@ -45,6 +45,8 @@ android {
 
 dependencies {
     implementation project(':treebolicOneSql')
+    implementation project(':guideLib')
+    implementation project(':fileChooserLib')
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
