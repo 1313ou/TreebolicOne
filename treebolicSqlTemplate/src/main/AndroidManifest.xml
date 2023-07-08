@@ -23,37 +23,37 @@
 		<activity
 			android:name="org.treebolic.one.sql.TreebolicActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean"></activity>
+			tools:targetApi="jelly_bean" />
 
 		<activity
 			android:name="org.treebolic.one.sql.SettingsActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean"></activity>
+			tools:targetApi="jelly_bean" />
 
 		<activity
 			android:name="org.treebolic.one.sql.DownloadActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean"></activity>
+			tools:targetApi="jelly_bean" />
 
 		<activity
 			android:name="org.treebolic.one.sql.PeekActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean"></activity>
+			tools:targetApi="jelly_bean" />
 
 		<activity
 			android:name="org.treebolic.guide.HelpActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:targetApi="jelly_bean"></activity>
+			tools:targetApi="jelly_bean" />
 
 		<activity
 			android:name="org.treebolic.guide.AboutActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:ignore="UnusedAttribute"></activity>
+			tools:ignore="UnusedAttribute" />
 
 		<activity
 			android:name="org.treebolic.filechooser.FileChooserActivity"
 			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			tools:ignore="MissingRegistered"></activity>
+			tools:ignore="MissingRegistered" />
 
 	</application>
 
