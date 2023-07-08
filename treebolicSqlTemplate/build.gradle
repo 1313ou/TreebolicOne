@@ -46,8 +46,8 @@ android {
 dependencies {
     implementation project(':treebolicOneSql')
 
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
     implementation "androidx.multidex:multidex:2.0.1"
 }
