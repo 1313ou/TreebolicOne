@@ -12,7 +12,6 @@
 	<string name="title_activity_treebolic">Treebolic One Owl</string>
 	<string name="title_activity_settings">Paramètres</string>
 	<string name="title_activity_app_settings">Application</string>
-	<string name="title_activity_peek">Aperçu</string>
 	<string name="title_reset">Réinitialiser données</string>
 	<string name="title_help">Aide</string>
 	<string name="title_tips">Astuces</string>
@@ -20,7 +19,6 @@
 
 	<!-- menu -->
 	<string name="title_run">Lancer</string>
-	<string name="title_peek">Aperçu</string>
 	<string name="title_settings">Paramètres</string>
 	<string name="title_start">Démarrer</string>
 	<string name="title_finish">Finir</string>
