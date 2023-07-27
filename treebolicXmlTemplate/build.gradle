@@ -8,7 +8,7 @@ android {
 
     namespace "org.treebolic.template"
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
         applicationId "org.treebolic.template"

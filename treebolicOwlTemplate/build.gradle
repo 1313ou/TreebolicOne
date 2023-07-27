@@ -25,7 +25,7 @@ android {
 
     namespace "org.treebolic.owl.template"
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
         applicationId "org.treebolic.owl.template"

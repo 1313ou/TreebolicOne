@@ -4,7 +4,7 @@ android {
 
     namespace "org.treebolic.one.xml"
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -40,7 +40,7 @@ dependencies {
     implementation project(':donateLib')
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.preference:preference:1.2.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.annotation:annotation:1.6.0'
 }
