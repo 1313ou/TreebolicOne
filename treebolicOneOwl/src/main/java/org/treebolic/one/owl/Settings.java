@@ -291,11 +291,7 @@ public class Settings
 				final File basedir = new File(url.toURI());
 				return new File(basedir, source);
 			}
-			catch (URISyntaxException ignored)
-			{
-				//
-			}
-			catch (MalformedURLException ignored)
+			catch (URISyntaxException | MalformedURLException ignored)
 			{
 				//
 			}
