@@ -4,7 +4,6 @@
 
 package org.treebolic.one.owl;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -341,7 +340,6 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 	}
 
 	@Nullable
-	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	@Override
 	public Intent getParentActivityIntent()
 	{
@@ -349,11 +347,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		{
 			return this.parentActivity;
 		}
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
-		{
-			return super.getParentActivityIntent();
-		}
-		return null;
+		return super.getParentActivityIntent();
 	}
 
 	// T R E E B O L I C M O D E L
