@@ -17,28 +17,28 @@
 		android:supportsRtl="true">
 
 		<activity
-			android:name=".MainActivity"
+			android:name="org.treebolic.one.sql.MainActivity"
 			android:exported="true"
 			android:label="@string/title_activity_main" />
 
 		<activity
-			android:name=".TreebolicActivity"
+			android:name="org.treebolic.one.sql.TreebolicActivity"
 			android:exported="true"
 			android:hardwareAccelerated="true"
 			android:label="@string/title_activity_treebolic" />
 
 		<activity
-			android:name=".PeekActivity"
+			android:name="org.treebolic.one.sql.PeekActivity"
 			android:exported="false"
 			android:label="@string/title_activity_peek" />
 
 		<activity
-			android:name=".SettingsActivity"
+			android:name="org.treebolic.one.sql.SettingsActivity"
 			android:exported="false"
 			android:label="@string/title_activity_settings" />
 
 		<activity
-			android:name=".DownloadActivity"
+			android:name="org.treebolic.one.sql.DownloadActivity"
 			android:exported="false"
 			android:label="@string/title_activity_download" />
 
