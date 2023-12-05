@@ -17,6 +17,11 @@ import treebolic.provider.owl.sax.OwlModelFactory;
 
 public class Provider2 extends BaseProvider
 {
+	public Provider2()
+	{
+		super();
+	}
+
 	@NonNull
 	protected OwlModelFactory factory(@NonNull Properties properties)
 	{
@@ -58,6 +63,7 @@ public class Provider2 extends BaseProvider
 		public Model makeModel(final String ontologyUrlString)
 		{
 			Model model = super.makeModel(ontologyUrlString);
+			model.settings.fontSize = 12;
 			return new Model(model.tree, model.settings, images2);
 		}
 
