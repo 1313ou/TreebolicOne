@@ -22,11 +22,11 @@ android {
 dependencies {
     implementation "io.github.treebolic:treebolic-model:${treebolicVersion}"
     implementation "io.github.treebolic:treebolic-mutable:${treebolicVersion}"
-    implementation "io.github.treebolic:provider-owl-owlapi:4.0-1'
+    implementation "io.github.treebolic:provider-owl-owlapi:4.0-1"
 
     implementation project(':treebolicGlue')
 
-    implementation 'androidx.annotation:annotation:1.7.0'
+    implementation 'androidx.annotation:annotation:1.7.1'
 
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${desugaringVersion}"
 }
