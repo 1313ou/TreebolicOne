@@ -8,19 +8,6 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
-buildscript {
-
-    repositories {
-        mavenCentral()
-        google()
-        maven { url System.getenv('HOME') + "/.m2/repository/" }
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.4'
-    }
-}
-
 android {
 
     namespace "org.treebolic.owl.template"
