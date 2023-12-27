@@ -113,6 +113,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			return this.cursor.getString(columnIndex);
 		}
 
+		@NonNull
 		@SuppressWarnings("boxing")
 		@Override
 		public Integer getInt(final int columnIndex)
@@ -124,6 +125,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			return this.cursor.getInt(columnIndex);
 		}
 
+		@NonNull
 		@SuppressWarnings("boxing")
 		@Override
 		public Float getFloat(final int columnIndex)
@@ -135,6 +137,7 @@ public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provide
 			return this.cursor.getFloat(columnIndex);
 		}
 
+		@NonNull
 		@SuppressWarnings("boxing")
 		@Override
 		public Double getDouble(final int columnIndex)
