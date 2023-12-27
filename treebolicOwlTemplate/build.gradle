@@ -60,7 +60,7 @@ configurations.implementation {
 }
 
 dependencies {
-    implementation project(':treebolicOneOwl')
+    implementation project(':treebolicOneOwl') // for inclusion
     implementation project(':guideLib')
     // implementation project(':fileChooserLib')
 

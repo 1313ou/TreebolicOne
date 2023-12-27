@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-    implementation project(':treebolicOneSql')
+    implementation project(':treebolicOneSql') // for inclusion
     implementation project(':guideLib')
     // implementation project(':fileChooserLib')
 
