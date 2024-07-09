@@ -62,7 +62,7 @@ configurations.implementation {
 dependencies {
     implementation project(':treebolicOneOwl') // for inclusion
     implementation project(':guideLib')
-    // implementation project(':fileChooserLib')
+    implementation project(':fileChooserLib') // for manifest
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
 
