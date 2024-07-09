@@ -608,7 +608,7 @@ abstract public class TreebolicBasicActivity extends AppCompatCommonActivity imp
 		TreebolicBasicActivity.this.searchView.setQuery("", false);
 
 		// query was already empty
-		if ("".equals(query))
+		if (query.isEmpty())
 		{
 			resetSearch();
 		}
