@@ -113,7 +113,7 @@ public class SettingsActivity extends AppCompatCommonPreferenceActivity
 			// override
 			final OpenEditTextPreference preference = findPreference(Settings.PREF_DOWNLOAD);
 			assert preference != null;
-			preference.setValues(getResources().getStringArray(R.array.pref_download_urls));
+			preference.values = getResources().getStringArray(R.array.pref_download_urls);
 
 			// bind
 			preference.setSummaryProvider(OpenEditTextPreference.SUMMARY_PROVIDER);
