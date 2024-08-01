@@ -1,117 +1,88 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one
 
-package org.treebolic.one;
+import android.content.Intent
+import android.os.Bundle
+import androidx.annotation.MenuRes
+import org.treebolic.TreebolicIface
+import java.util.Properties
 
-import android.content.Intent;
-import android.os.Bundle;
+abstract class TreebolicSourceActivity(@MenuRes menuRes: Int) : TreebolicBasicActivity(menuRes) {
 
-import org.treebolic.TreebolicIface;
+    /**
+     * Parameter : source (interpreted by provider)
+     */
+    @JvmField
+    protected var source: String? = null
 
-import java.util.Properties;
+    /**
+     * Parameter : data provider
+     */
+    @JvmField
+    protected var providerName: String? = null
 
-import androidx.annotation.MenuRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+    /**
+     * Restoring
+     */
+    private var restoring = false
 
-public abstract class TreebolicSourceActivity extends TreebolicBasicActivity
-{
-	/**
-	 * Parameter : source (interpreted by provider)
-	 */
-	@Nullable
-	@SuppressWarnings("WeakerAccess")
-	protected String source;
+    // L I F E C Y C L E
 
-	/**
-	 * Parameter : data provider
-	 */
-	@Nullable
-	@SuppressWarnings("WeakerAccess")
-	protected String providerName;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-	/**
-	 * Restoring
-	 */
-	private boolean restoring;
+        // restoring status
+        this.restoring = savedInstanceState != null
+    }
 
-	// C O N S T R U C T O R
+    public override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        // always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState)
 
-	public TreebolicSourceActivity(@MenuRes int menuId0)
-	{
-		super(menuId0);
-	}
+        // restore
+        this.source = savedInstanceState.getString(TreebolicIface.ARG_SOURCE)
+    }
 
-	// L I F E C Y C L E
+    public override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        // save
+        savedInstanceState.putString(TreebolicIface.ARG_SOURCE, this.source)
 
-	@Override
-	protected void onCreate(@Nullable final Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
+        // always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState)
+    }
 
-		// restoring status
-		this.restoring = savedInstanceState != null;
-	}
+    // T R E E B O L I C C O N T E X T
 
-	@Override
-	public void onRestoreInstanceState(@NonNull final Bundle savedInstanceState)
-	{
-		// always call the superclass so it can restore the view hierarchy
-		super.onRestoreInstanceState(savedInstanceState);
+    override fun makeParameters(): Properties? {
+        val parameters = super.makeParameters()
 
-		// restore
-		this.source = savedInstanceState.getString(TreebolicIface.ARG_SOURCE);
-	}
+        if (this.source != null) {
+            parameters!!.setProperty("source", this.source)
+            parameters.setProperty("doc", this.source)
+        }
+        if (this.providerName != null) {
+            parameters!!.setProperty("provider", this.providerName)
+        }
+        return parameters
+    }
 
-	@Override
-	public void onSaveInstanceState(@NonNull final Bundle savedInstanceState)
-	{
-		// save
-		savedInstanceState.putString(TreebolicIface.ARG_SOURCE, this.source);
+    // U N M A R S H A L
 
-		// always call the superclass so it can save the view hierarchy state
-		super.onSaveInstanceState(savedInstanceState);
-	}
+    /**
+     * Unmarshal parameters from intent
+     *
+     * @param intent intent
+     */
+    override fun unmarshalArgs(intent: Intent) {
+        val args = checkNotNull(intent.extras)
+        this.providerName = args.getString(TreebolicIface.ARG_PROVIDER)
+        if (!this.restoring) {
+            this.source = args.getString(TreebolicIface.ARG_SOURCE)
+        }
 
-	// T R E E B O L I C C O N T E X T
-
-	@Override
-	protected Properties makeParameters()
-	{
-		final Properties parameters = super.makeParameters();
-
-		if (this.source != null)
-		{
-			parameters.setProperty("source", this.source);
-			parameters.setProperty("doc", this.source);
-		}
-		if (this.providerName != null)
-		{
-			parameters.setProperty("provider", this.providerName);
-		}
-		return parameters;
-	}
-
-	// U N M A R S H A L
-
-	/**
-	 * Unmarshal parameters from intent
-	 *
-	 * @param intent intent
-	 */
-	@Override
-	protected void unmarshalArgs(@NonNull final Intent intent)
-	{
-		final Bundle args = intent.getExtras();
-		assert args != null;
-		this.providerName = args.getString(TreebolicIface.ARG_PROVIDER);
-		if (!this.restoring)
-		{
-			this.source = args.getString(TreebolicIface.ARG_SOURCE);
-		}
-
-		// super
-		super.unmarshalArgs(intent);
-	}
+        // super
+        super.unmarshalArgs(intent)
+    }
 }

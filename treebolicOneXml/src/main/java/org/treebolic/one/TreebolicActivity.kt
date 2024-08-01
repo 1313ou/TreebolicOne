@@ -1,82 +1,67 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one
 
-package org.treebolic.one;
-
-import android.content.Context;
-import android.content.Intent;
-import android.widget.Toast;
-
-import org.treebolic.TreebolicIface;
-import org.treebolic.one.xml.R;
-
-import androidx.annotation.NonNull;
+import android.content.Context
+import android.content.Intent
+import android.widget.Toast
+import org.treebolic.TreebolicIface
+import org.treebolic.one.xml.R
+import java.util.Properties
 
 /**
  * Treebolic standard activity
  *
  * @author Bernard Bou
  */
-public class TreebolicActivity extends TreebolicSourceActivity
-{
-	//	private static final String TAG = "TreebolicA";
+class TreebolicActivity : TreebolicSourceActivity(R.menu.treebolic) {
 
-	// C O N S T R U C T O R
+    // Q U E R Y
 
-	public TreebolicActivity()
-	{
-		super(R.menu.treebolic);
-	}
+    override fun query() {
 
-	// Q U E R Y
+        // sanity check
+        if (this.providerName == null && this.source == null) {
+            Toast.makeText(this, R.string.error_null_data, Toast.LENGTH_LONG).show()
+            finish()
+            return
+        }
 
-	@Override
-	protected void query()
-	{
-		// sanity check
-		if (this.providerName == null && this.source == null)
-		{
-			Toast.makeText(this, R.string.error_null_data, Toast.LENGTH_LONG).show();
-			finish();
-			return;
-		}
+        // query
+        widget!!.init(this.providerName, this.source)
+    }
 
-		// query
-		this.widget.init(this.providerName, this.source);
-	}
+    override fun requery(source: String?) {
+        if (source != null) {
+            this.source = if (source.endsWith(".xml")) source else "$source.xml"
+        }
+        widget!!.reinit(this.source)
+    }
 
-	@Override
-	protected void requery(@NonNull String source0)
-	{
-		this.source = source0.endsWith(".xml") ? source0 : source0 + ".xml";
-		this.widget.reinit(this.source);
-	}
+    companion object {
 
-	// I N T E N T
-
-	/**
-	 * Make Treebolic activity intent
-	 *
-	 * @param context      context
-	 * @param providerName providerName class
-	 * @param source       source
-	 * @param base         base
-	 * @param imageBase    image base
-	 * @param settings     settings
-	 * @param style        style
-	 * @return intent
-	 */
-	@NonNull
-	static public Intent makeTreebolicIntent(final Context context, final String providerName, final String source, final String base, final String imageBase, final String settings, final String style)
-	{
-		final Intent intent = new Intent(context, TreebolicActivity.class);
-		intent.putExtra(TreebolicIface.ARG_PROVIDER, providerName);
-		intent.putExtra(TreebolicIface.ARG_SOURCE, source);
-		intent.putExtra(TreebolicIface.ARG_BASE, base);
-		intent.putExtra(TreebolicIface.ARG_IMAGEBASE, imageBase);
-		intent.putExtra(TreebolicIface.ARG_SETTINGS, settings);
-		intent.putExtra(TreebolicIface.ARG_STYLE, style);
-		return intent;
-	}
+         /**
+         * Make Treebolic activity intent
+         *
+         * @param context      context
+         * @param providerName providerName class
+         * @param source       source
+         * @param base         base
+         * @param imageBase    image base
+         * @param settings     settings
+         * @param style        style
+         * @return intent
+         */
+        fun makeTreebolicIntent(context: Context?, providerName: String?, source: String?, base: String?, imageBase: String?, settings: String?, style: String?): Intent {
+            val intent = Intent(context, TreebolicActivity::class.java)
+            intent.putExtra(TreebolicIface.ARG_PROVIDER, providerName)
+            intent.putExtra(TreebolicIface.ARG_SOURCE, source)
+            intent.putExtra(TreebolicIface.ARG_BASE, base)
+            intent.putExtra(TreebolicIface.ARG_IMAGEBASE, imageBase)
+            intent.putExtra(TreebolicIface.ARG_SETTINGS, settings)
+            intent.putExtra(TreebolicIface.ARG_STYLE, style)
+            return intent
+        }
+    }
 }

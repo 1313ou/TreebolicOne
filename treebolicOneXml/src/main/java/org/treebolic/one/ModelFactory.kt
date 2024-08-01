@@ -1,145 +1,99 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one
 
-package org.treebolic.one;
-
-import android.content.Context;
-import android.util.Log;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Properties;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import treebolic.IContext;
-import treebolic.model.Model;
-import treebolic.provider.IProvider;
-import treebolic.provider.IProviderContext;
+import android.content.Context
+import android.util.Log
+import treebolic.IContext
+import treebolic.model.Model
+import treebolic.provider.IProvider
+import treebolic.provider.IProviderContext
+import java.net.MalformedURLException
+import java.net.URL
+import java.util.Properties
 
 /**
  * Model factory
  *
+ * @property provider           provider
+ * @property providerContext    provider context
+ * @property locatorContext     locator context
+ * @property applicationContext application context
+ *
  * @author Bernard Bou
  */
-@SuppressWarnings("WeakerAccess")
-public class ModelFactory
-{
-	/**
-	 * Log tag
-	 */
-	static private final String TAG = "OneModelFactory";
+class ModelFactory(
+    private val provider: IProvider,
+    private val providerContext: IProviderContext,
+    private val locatorContext: IContext,
+    private val applicationContext: Context
+) {
 
-	/**
-	 * Provider
-	 */
-	private final IProvider provider;
+    /**
+     * Make model
+     *
+     * @param source    source
+     * @param base      base
+     * @param imageBase image base
+     * @param settings  settings
+     * @return model
+     */
+    fun make(source: String?, base: String?, imageBase: String?, settings: String?): Model? {
+        // provider
+        provider.setContext(this.providerContext)
+        provider.setLocator(this.locatorContext)
+        provider.setHandle(this.applicationContext)
 
-	/**
-	 * Provider context
-	 */
-	private final IProviderContext providerContext;
+        // model
+        val model = provider.makeModel(source, makeBaseURL(base), makeParameters(source, base, imageBase, settings))
+        Log.d(TAG, "Model=$model")
+        return model
+    }
 
-	/**
-	 * Locator Context
-	 */
-	private final IContext locatorContext;
+    companion object {
 
-	/**
-	 * Application context
-	 */
-	private final Context applicationContext;
+         private const val TAG = "OneModelFactory"
 
-	/**
-	 * Constructor
-	 *
-	 * @param provider0           provider
-	 * @param providerContext0    provider context
-	 * @param locatorContext0     locator context0
-	 * @param applicationContext0 application context0
-	 */
-	public ModelFactory(final IProvider provider0, final IProviderContext providerContext0, final IContext locatorContext0, final Context applicationContext0)
-	{
-		this.provider = provider0;
-		this.providerContext = providerContext0;
-		this.locatorContext = locatorContext0;
-		this.applicationContext = applicationContext0;
-	}
+        /**
+         * Make base URL
+         *
+         * @param base base
+         * @return base URL
+         */
+        private fun makeBaseURL(base: String?): URL? {
+            try {
+                return URL(if (base != null && !base.endsWith("/")) "$base/" else base)
+            } catch (ignored: MalformedURLException) {
+                //
+            }
+            return null
+        }
 
-	/**
-	 * Make model
-	 *
-	 * @param source    source
-	 * @param base      base
-	 * @param imageBase image base
-	 * @param settings  settings
-	 * @return model
-	 */
-	@Nullable
-	public Model make(final String source, final String base, final String imageBase, final String settings)
-	{
-		// provider
-		this.provider.setContext(this.providerContext);
-		this.provider.setLocator(this.locatorContext);
-		this.provider.setHandle(this.applicationContext);
-
-		// model
-		final Model model = this.provider.makeModel(source, ModelFactory.makeBaseURL(base), ModelFactory.makeParameters(source, base, imageBase, settings));
-		Log.d(ModelFactory.TAG, "model=" + model);
-		return model;
-	}
-
-	/**
-	 * Make base URL
-	 *
-	 * @param base base
-	 * @return base URL
-	 */
-	@Nullable
-	private static URL makeBaseURL(@Nullable final String base)
-	{
-		try
-		{
-			return new URL(base != null && !base.endsWith("/") ? base + "/" : base);
-		}
-		catch (@NonNull final MalformedURLException ignored)
-		{
-			//
-		}
-		return null;
-	}
-
-	/**
-	 * Make parameters
-	 *
-	 * @param source    source
-	 * @param base      base
-	 * @param imageBase image base
-	 * @param settings  settings
-	 * @return parameters
-	 */
-	@NonNull
-	private static Properties makeParameters(@Nullable final String source, @Nullable final String base, @Nullable final String imageBase, @Nullable final String settings)
-	{
-		final Properties parameters = new Properties();
-		if (source != null)
-		{
-			parameters.setProperty("source", source);
-		}
-		if (base != null)
-		{
-			parameters.setProperty("base", base);
-		}
-		if (imageBase != null)
-		{
-			parameters.setProperty("imagebase", imageBase);
-		}
-		if (settings != null)
-		{
-			parameters.setProperty("settings", settings);
-		}
-
-		return parameters;
-	}
+        /**
+         * Make parameters
+         *
+         * @param source    source
+         * @param base      base
+         * @param imageBase image base
+         * @param settings  settings
+         * @return parameters
+         */
+        private fun makeParameters(source: String?, base: String?, imageBase: String?, settings: String?): Properties {
+            val parameters = Properties()
+            if (source != null) {
+                parameters.setProperty("source", source)
+            }
+            if (base != null) {
+                parameters.setProperty("base", base)
+            }
+            if (imageBase != null) {
+                parameters.setProperty("imagebase", imageBase)
+            }
+            if (settings != null) {
+                parameters.setProperty("settings", settings)
+            }
+            return parameters
+        }
+    }
 }
