@@ -141,7 +141,7 @@ abstract class TreebolicBasicActivity protected constructor(
         return input
     }
 
-    // Parent
+    // parent
 
     /**
      * Parent (client) activity
@@ -351,7 +351,7 @@ abstract class TreebolicBasicActivity protected constructor(
         Statusbar.setBase(base)
     }
 
-    // T R E E B O L I C C O N T E X T
+    // T R E E B O L I C   C O N T E X T
 
     override fun linkTo(url: String, target: String): Boolean {
         // if url is handled by client, return query to client, which will handle it by initiating another query
@@ -391,6 +391,7 @@ abstract class TreebolicBasicActivity protected constructor(
     }
 
     // Q U E R Y
+
     /**
      * Initial query
      */
@@ -403,7 +404,6 @@ abstract class TreebolicBasicActivity protected constructor(
      */
     protected abstract fun requery(source: String?)
 
-    //static public int SEARCH_TRIGGER_LEVEL = Integer.MAX_VALUE;
     /**
      * Search pending flag
      */
@@ -430,10 +430,7 @@ abstract class TreebolicBasicActivity protected constructor(
             val scope = sharedPrefs.getString(SearchSettings.PREF_SEARCH_SCOPE, SearchSettings.SCOPE_LABEL) // label, content, link, id
             if (SearchSettings.SCOPE_SOURCE == scope) {
                 Log.d(TAG, "Source \"$query\"")
-                //if (submit)
-                //{
                 requery(query)
-                //}
                 return
             }
 
