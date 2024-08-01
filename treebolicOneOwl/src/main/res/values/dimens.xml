@@ -1,5 +1,8 @@
 <resources>
 
+	<!-- Splitter position percent -->
+	<item name="splitter_position_percent" format="float" type="dimen">.7</item>
+
 	<!-- Action button -->
 	<dimen name="action_button_group_margin">50dp</dimen>
 

@@ -1,139 +1,107 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one.sql
 
-package org.treebolic.one.sql;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-
-import org.treebolic.AppCompatCommonPreferenceActivity;
-import org.treebolic.TreebolicIface;
-import org.treebolic.preference.OpenEditTextPreference;
-
-import androidx.annotation.NonNull;
-import androidx.preference.EditTextPreference;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
+import android.os.Bundle
+import androidx.preference.EditTextPreference
+import androidx.preference.ListPreference
+import androidx.preference.Preference
+import androidx.preference.Preference.SummaryProvider
+import androidx.preference.PreferenceFragmentCompat
+import org.treebolic.AppCompatCommonPreferenceActivity
+import org.treebolic.TreebolicIface
+import org.treebolic.preference.OpenEditTextPreference
+import org.treebolic.preference.OpenEditTextPreference.Companion.onDisplayPreferenceDialog
 
 /**
  * Settings activity
  *
  * @author Bernard Bou
  */
-public class SettingsActivity extends AppCompatCommonPreferenceActivity
-{
-	// S U M M A R Y
+object SettingsActivity : AppCompatCommonPreferenceActivity() {
 
-	/**
-	 * Summary provider for string
-	 */
-	static private final Preference.SummaryProvider<Preference> STRING_SUMMARY_PROVIDER = (preference) -> {
+    // S U M M A R Y
 
-		final Context context = preference.getContext();
-		final SharedPreferences sharedPrefs = preference.getSharedPreferences();
-		assert sharedPrefs != null;
-		final String value = sharedPrefs.getString(preference.getKey(), null);
-		return value == null ? context.getString(R.string.pref_value_default) : value;
-	};
+    /**
+     * Summary provider for string
+     */
+    private val STRING_SUMMARY_PROVIDER = SummaryProvider { preference: Preference ->
+        val context = preference.context
+        val sharedPrefs = checkNotNull(preference.sharedPreferences)
+        val value = sharedPrefs.getString(preference.key, null)
+        value ?: context.getString(R.string.pref_value_default)
+    }
 
-	// F R A G M E N T S
+    // F R A G M E N T S
 
-	@SuppressWarnings("WeakerAccess")
-	public static class ProviderPreferenceFragment extends PreferenceFragmentCompat
-	{
-		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
-		{
-			// inflate
-			addPreferencesFromResource(R.xml.pref_provider);
+    class ProviderPreferenceFragment : PreferenceFragmentCompat() {
 
-			// bind
-			final Preference providerPreference = findPreference(Settings.PREF_PROVIDER);
-			assert providerPreference != null;
-			providerPreference.setSummaryProvider(STRING_SUMMARY_PROVIDER);
-		}
-	}
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+            // inflate
+            addPreferencesFromResource(R.xml.pref_provider)
 
-	@SuppressWarnings("WeakerAccess")
-	public static class DataPreferenceFragment extends PreferenceFragmentCompat
-	{
-		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
-		{
-			// inflate
-			addPreferencesFromResource(R.xml.pref_data);
+            // bind
+            val providerPreference = checkNotNull(findPreference(Settings.PREF_PROVIDER))
+            providerPreference.summaryProvider = STRING_SUMMARY_PROVIDER
+        }
+    }
 
-			// bind (can be either EditTextPreference or ListPreference or saving to string)
-			final Preference sourcePreference = findPreference(TreebolicIface.PREF_SOURCE);
-			assert sourcePreference != null;
-			setSummaryProvider(sourcePreference);
+    class DataPreferenceFragment : PreferenceFragmentCompat() {
 
-			final Preference basePreference = findPreference(TreebolicIface.PREF_BASE);
-			assert basePreference != null;
-			setSummaryProvider(basePreference);
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+            // inflate
+            addPreferencesFromResource(R.xml.pref_data)
 
-			final Preference imageBasePreference = findPreference(TreebolicIface.PREF_IMAGEBASE);
-			assert imageBasePreference != null;
-			setSummaryProvider(imageBasePreference);
+            // bind (can be either EditTextPreference or ListPreference or saving to string)
+            val sourcePreference = checkNotNull(findPreference(TreebolicIface.PREF_SOURCE))
+            setSummaryProvider(sourcePreference)
 
-			final Preference restrictPreference = findPreference(Settings.PREF_TRUNCATE);
-			assert restrictPreference != null;
-			setSummaryProvider(restrictPreference);
+            val basePreference = checkNotNull(findPreference(TreebolicIface.PREF_BASE))
+            setSummaryProvider(basePreference)
 
-			final Preference extraRestrictPreference = findPreference(Settings.PREF_PRUNE);
-			assert extraRestrictPreference != null;
-			setSummaryProvider(extraRestrictPreference);
+            val imageBasePreference = checkNotNull(findPreference(TreebolicIface.PREF_IMAGEBASE))
+            setSummaryProvider(imageBasePreference)
 
-			final Preference settingsPreference = findPreference(TreebolicIface.PREF_SETTINGS);
-			assert settingsPreference != null;
-			setSummaryProvider(settingsPreference);
-		}
+            val restrictPreference = checkNotNull(findPreference(Settings.PREF_TRUNCATE))
+            setSummaryProvider(restrictPreference)
 
-		private void setSummaryProvider(@NonNull final Preference preference)
-		{
-			if (preference instanceof EditTextPreference)
-			{
-				preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance());
-			}
-			else if (preference instanceof ListPreference)
-			{
-				preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
-			}
-			else
-			{
-				preference.setSummaryProvider(STRING_SUMMARY_PROVIDER);
-			}
-		}
-	}
+            val extraRestrictPreference = checkNotNull(findPreference(Settings.PREF_PRUNE))
+            setSummaryProvider(extraRestrictPreference)
 
-	@SuppressWarnings("WeakerAccess")
-	public static class DownloadPreferenceFragment extends PreferenceFragmentCompat
-	{
-		@Override
-		public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey)
-		{
-			// inflate
-			addPreferencesFromResource(R.xml.pref_download);
+            val settingsPreference = checkNotNull(findPreference(TreebolicIface.PREF_SETTINGS))
+            setSummaryProvider(settingsPreference)
+        }
 
-			// override
-			final OpenEditTextPreference preference = findPreference(Settings.PREF_DOWNLOAD);
-			assert preference != null;
-			preference.values = getResources().getStringArray(R.array.pref_download_urls);
+        private fun setSummaryProvider(preference: Preference) {
+            if (preference is EditTextPreference) {
+                preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance())
+            } else if (preference is ListPreference) {
+                preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance())
+            } else {
+                preference.summaryProvider = STRING_SUMMARY_PROVIDER
+            }
+        }
+    }
 
-			// bind
-			preference.setSummaryProvider(OpenEditTextPreference.SUMMARY_PROVIDER);
-		}
+    class DownloadPreferenceFragment : PreferenceFragmentCompat() {
 
-		@Override
-		public void onDisplayPreferenceDialog(@NonNull final Preference preference)
-		{
-			if (!OpenEditTextPreference.onDisplayPreferenceDialog(this, preference))
-			{
-				super.onDisplayPreferenceDialog(preference);
-			}
-		}
-	}
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+            // inflate
+            addPreferencesFromResource(R.xml.pref_download)
+
+            // override
+            val preference = checkNotNull(findPreference<OpenEditTextPreference>(Settings.PREF_DOWNLOAD))
+            preference.values = resources.getStringArray(R.array.pref_download_urls)
+
+            // bind
+            preference.summaryProvider = OpenEditTextPreference.SUMMARY_PROVIDER
+        }
+
+        override fun onDisplayPreferenceDialog(preference: Preference) {
+            if (!onDisplayPreferenceDialog(this, preference)) {
+                super.onDisplayPreferenceDialog(preference)
+            }
+        }
+    }
 }

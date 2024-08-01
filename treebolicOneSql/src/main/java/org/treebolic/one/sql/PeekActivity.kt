@@ -1,107 +1,90 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one.sql
 
-package org.treebolic.one.sql;
+import android.os.Bundle
+import android.widget.TextView
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
+import org.treebolic.AppCompatCommonActivity
+import org.treebolic.TreebolicIface
+import org.treebolic.one.sql.Settings.getBase
+import org.treebolic.one.sql.Settings.getStringPref
+import treebolic.model.Model
+import treebolic.model.ModelDump
+import treebolic.provider.IProviderContext
+import treebolic.provider.sqlite.Provider
 
-import android.os.Bundle;
-import android.widget.TextView;
+class PeekActivity : AppCompatCommonActivity() {
 
-import org.treebolic.AppCompatCommonActivity;
-import org.treebolic.TreebolicIface;
+    private var text: String? = null
 
-import java.net.URL;
+    private lateinit var textView: TextView
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
-import treebolic.model.Model;
-import treebolic.model.ModelDump;
-import treebolic.provider.IProviderContext;
-import treebolic.provider.sqlite.Provider;
+    private var providerContext: IProviderContext? = null
 
-public class PeekActivity extends AppCompatCommonActivity
-{
-	private String text;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-	private TextView textView;
+        // layout
+        setContentView(R.layout.activity_peek)
 
-	private IProviderContext providerContext;
+        // toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
+        // set up the action bar
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.displayOptions = ActionBar.DISPLAY_USE_LOGO or ActionBar.DISPLAY_SHOW_TITLE or ActionBar.DISPLAY_SHOW_HOME or ActionBar.DISPLAY_HOME_AS_UP
+        }
 
-		// layout
-		setContentView(R.layout.activity_peek);
+        textView = findViewById(R.id.peek)
+        providerContext = object : IProviderContext {
+            override fun message(text: String) {
+                textView.text = text
+                this@PeekActivity.text = text
+            }
 
-		// toolbar
-		final Toolbar toolbar = findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
+            override fun progress(text: String, arg1: Boolean) {
+                textView.text = text
+                this@PeekActivity.text = text
+            }
 
-		// set up the action bar
-		final ActionBar actionBar = getSupportActionBar();
-		if (actionBar != null)
-		{
-			actionBar.setDisplayOptions(ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
-		}
+            override fun warn(text: String) {
+                textView.text = text
+                this@PeekActivity.text = text
+            }
+        }
+    }
 
-		this.textView = findViewById(R.id.peek);
-		this.providerContext = new IProviderContext()
-		{
-			@Override
-			public void message(String text)
-			{
-				PeekActivity.this.textView.setText(text);
-				PeekActivity.this.text = text;
-			}
+    override fun onResume() {
+        super.onResume()
 
-			@Override
-			public void progress(String text, boolean arg1)
-			{
-				PeekActivity.this.textView.setText(text);
-				PeekActivity.this.text = text;
-			}
+        // create provider
+        val provider = Provider()
+        provider.setContext(this.providerContext)
+        provider.setLocator(null)
+        provider.setHandle(null)
 
-			@Override
-			public void warn(String text)
-			{
-				PeekActivity.this.textView.setText(text);
-				PeekActivity.this.text = text;
-			}
-		};
-	}
+        // query provider
+        val base = getBase(this)
+        val source = getStringPref(this, TreebolicIface.PREF_SOURCE)
+        val model = if (source == null) null else provider.makeModel(source, base, null)
 
-	@Override
-	protected void onResume()
-	{
-		super.onResume();
+        // display
+        val text = "\n${text}\n${modelToString(model)}\n"
+        textView.text = text
+    }
 
-		// create provider
-		final Provider provider = new Provider();
-		provider.setContext(this.providerContext);
-		provider.setLocator(null);
-		provider.setHandle(null);
+    companion object {
 
-		// query provider
-		final URL base = Settings.getBase(this);
-		final String source = Settings.getStringPref(this, TreebolicIface.PREF_SOURCE);
-		final Model model = source == null ? null : provider.makeModel(source, base, null);
-
-		// display
-		final String text = this.text + '\n' + modelToString(model);
-		this.textView.setText(text);
-	}
-
-	@NonNull
-	private static String modelToString(@Nullable final Model model)
-	{
-		if (model == null)
-		{
-			return "<null>";
-		}
-		return ModelDump.toString(model);
-	}
+        private fun modelToString(model: Model?): String {
+            if (model == null) {
+                return "<null>"
+            }
+            return ModelDump.toString(model)
+        }
+    }
 }

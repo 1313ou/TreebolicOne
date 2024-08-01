@@ -1,137 +1,98 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one.sql
 
-package org.treebolic.one.sql;
-
-import android.util.Log;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Properties;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import treebolic.IContext;
-import treebolic.model.Model;
-import treebolic.provider.IProvider;
-import treebolic.provider.IProviderContext;
+import android.util.Log
+import treebolic.IContext
+import treebolic.model.Model
+import treebolic.provider.IProvider
+import treebolic.provider.IProviderContext
+import java.net.MalformedURLException
+import java.net.URL
+import java.util.Properties
 
 /**
  * Model factory
  *
+ * @property provider        provider
+ * @property providerContext provider context
+ * @property context         context
+ *
  * @author Bernard Bou
  */
-@SuppressWarnings("WeakerAccess")
-public class ModelFactory
-{
-	/**
-	 * Log tag
-	 */
-	static private final String TAG = "OneSqlModelFactory";
+class ModelFactory(
 
-	/**
-	 * Provider
-	 */
-	private final IProvider provider;
+    private val provider: IProvider,
+    private val providerContext: IProviderContext,
+    private val context: IContext
 
-	/**
-	 * Provider context
-	 */
-	private final IProviderContext providerContext;
+) {
 
-	/**
-	 * Context
-	 */
-	private final IContext context;
+    /**
+     * Make model
+     *
+     * @param source    source
+     * @param base      base
+     * @param imageBase image base
+     * @param settings  settings
+     * @return model
+     */
+    fun make(source: String?, base: String?, imageBase: String?, settings: String?): Model? {
+        // provider
+        provider.setContext(this.providerContext)
+        provider.setLocator(this.context)
+        provider.setHandle(null)
 
-	/**
-	 * Constructor
-	 *
-	 * @param provider0        provider
-	 * @param providerContext0 provider context
-	 * @param context0         context
-	 */
-	public ModelFactory(final IProvider provider0, final IProviderContext providerContext0, final IContext context0)
-	{
-		this.provider = provider0;
-		this.providerContext = providerContext0;
-		this.context = context0;
-	}
+        // model
+        val model = provider.makeModel(source, makeBaseURL(base), makeParameters(source, base, imageBase, settings))
+        Log.d(TAG, "model=$model")
+        return model
+    }
 
-	/**
-	 * Make model
-	 *
-	 * @param source    source
-	 * @param base      base
-	 * @param imageBase image base
-	 * @param settings  settings
-	 * @return model
-	 */
-	@Nullable
-	public Model make(final String source, final String base, final String imageBase, final String settings)
-	{
-		// provider
-		this.provider.setContext(this.providerContext);
-		this.provider.setLocator(this.context);
-		this.provider.setHandle(null);
+    companion object {
 
-		// model
-		final Model model = this.provider.makeModel(source, ModelFactory.makeBaseURL(base), ModelFactory.makeParameters(source, base, imageBase, settings));
-		Log.d(ModelFactory.TAG, "model=" + model);
-		return model;
-	}
+        private const val TAG = "OneSqlModelFactory"
 
-	/**
-	 * Make base URL
-	 *
-	 * @param base base
-	 * @return base URL
-	 */
-	@Nullable
-	private static URL makeBaseURL(@Nullable final String base)
-	{
-		try
-		{
-			return new URL(base != null && !base.endsWith("/") ? base + "/" : base);
-		}
-		catch (@NonNull final MalformedURLException ignored)
-		{
-			//
-		}
-		return null;
-	}
+        /**
+         * Make base URL
+         *
+         * @param base base
+         * @return base URL
+         */
+        private fun makeBaseURL(base: String?): URL? {
+            try {
+                return URL(if (base != null && !base.endsWith("/")) "$base/" else base)
+            } catch (ignored: MalformedURLException) {
+                //
+            }
+            return null
+        }
 
-	/**
-	 * Make parameters
-	 *
-	 * @param source    source
-	 * @param base      base
-	 * @param imageBase image base
-	 * @param settings  settings
-	 * @return parameters
-	 */
-	@NonNull
-	private static Properties makeParameters(@Nullable final String source, @Nullable final String base, @Nullable final String imageBase, @Nullable final String settings)
-	{
-		final Properties parameters = new Properties();
-		if (source != null)
-		{
-			parameters.setProperty("source", source);
-		}
-		if (base != null)
-		{
-			parameters.setProperty("base", base);
-		}
-		if (imageBase != null)
-		{
-			parameters.setProperty("imagebase", imageBase);
-		}
-		if (settings != null)
-		{
-			parameters.setProperty("settings", settings);
-		}
-
-		return parameters;
-	}
+        /**
+         * Make parameters
+         *
+         * @param source    source
+         * @param base      base
+         * @param imageBase image base
+         * @param settings  settings
+         * @return parameters
+         */
+        private fun makeParameters(source: String?, base: String?, imageBase: String?, settings: String?): Properties {
+            val parameters = Properties()
+            if (source != null) {
+                parameters.setProperty("source", source)
+            }
+            if (base != null) {
+                parameters.setProperty("base", base)
+            }
+            if (imageBase != null) {
+                parameters.setProperty("imagebase", imageBase)
+            }
+            if (settings != null) {
+                parameters.setProperty("settings", settings)
+            }
+            return parameters
+        }
+    }
 }

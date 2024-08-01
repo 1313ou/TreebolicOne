@@ -1,68 +1,56 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package org.treebolic.one.owl
 
-package org.treebolic.one.owl;
+import android.content.Context
+import android.content.SharedPreferences
+import android.content.pm.PackageManager
+import android.content.res.Resources
+import androidx.preference.PreferenceManager
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.res.Resources;
+object Utils {
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.preference.PreferenceManager;
+    /**
+     * Get package class loader
+     *
+     * @param context current context
+     * @param pkgName package name
+     * @return package class loader
+     */
+    @Throws(PackageManager.NameNotFoundException::class)
+    fun getClassLoader(context: Context, pkgName: String?): ClassLoader {
+        val providerContext = context.createPackageContext(pkgName, Context.CONTEXT_INCLUDE_CODE or Context.CONTEXT_IGNORE_SECURITY)
+        return providerContext.classLoader
+    }
 
-@SuppressWarnings("WeakerAccess")
-public class Utils
-{
-	/**
-	 * Get package class loader
-	 *
-	 * @param context current context
-	 * @param pkgName package name
-	 * @return package class loader
-	 * @throws NameNotFoundException name not found exception
-	 */
-	static ClassLoader getClassLoader(@NonNull final Context context, final String pkgName) throws NameNotFoundException
-	{
-		final Context providerContext = context.createPackageContext(pkgName, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
-		return providerContext.getClassLoader();
-	}
+    /**
+     * Get package resources
+     *
+     * @param context current context
+     * @param pkgName package name
+     * @return package resources
+     */
+    @Throws(PackageManager.NameNotFoundException::class)
+    fun getResources(context: Context, pkgName: String?): Resources {
+        val providerContext = context.createPackageContext(pkgName, Context.CONTEXT_INCLUDE_CODE or Context.CONTEXT_IGNORE_SECURITY)
+        return providerContext.resources
+    }
 
-	/**
-	 * Get package resources
-	 *
-	 * @param context current context
-	 * @param pkgName package name
-	 * @return package resources
-	 * @throws NameNotFoundException name not found exception
-	 */
-	static Resources getResources(@NonNull final Context context, final String pkgName) throws NameNotFoundException
-	{
-		final Context providerContext = context.createPackageContext(pkgName, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
-		return providerContext.getResources();
-	}
-
-	/**
-	 * Get plugin default shared preferences
-	 *
-	 * @param context current context
-	 * @param pkg     package name
-	 * @return default shared preferences
-	 */
-	@Nullable
-	static SharedPreferences getPluginDefaultSharedPreferences(@NonNull final Context context, final String pkg)
-	{
-		try
-		{
-			final Context pluginContext = context.createPackageContext(pkg, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
-			return PreferenceManager.getDefaultSharedPreferences(pluginContext);
-		}
-		catch (@NonNull final NameNotFoundException ignored)
-		{
-			//
-		}
-		return null;
-	}
+    /**
+     * Get plugin default shared preferences
+     *
+     * @param context current context
+     * @param pkg     package name
+     * @return default shared preferences
+     */
+    fun getPluginDefaultSharedPreferences(context: Context, pkg: String?): SharedPreferences? {
+        try {
+            val pluginContext = context.createPackageContext(pkg, Context.CONTEXT_INCLUDE_CODE or Context.CONTEXT_IGNORE_SECURITY)
+            return PreferenceManager.getDefaultSharedPreferences(pluginContext)
+        } catch (ignored: PackageManager.NameNotFoundException) {
+            //
+        }
+        return null
+    }
 }
