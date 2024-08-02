@@ -147,7 +147,14 @@ abstract class TreebolicBasicActivity protected constructor(
     /**
      * Parent (client) activity
      */
-    private var parentActivity: Intent? = null
+    private var parentActivityIntentArg: Intent? = null
+
+    override fun getParentActivityIntent(): Intent? {
+        if (parentActivityIntentArg != null) {
+            return parentActivityIntentArg
+        }
+        return super.getParentActivityIntent()
+    }
 
     // L I F E C Y C L E
 
@@ -317,13 +324,6 @@ abstract class TreebolicBasicActivity protected constructor(
         }
     }
 
-    override fun getParentActivityIntent(): Intent? {
-        if (parentActivity != null) {
-            return parentActivity
-        }
-        return super.getParentActivityIntent()
-    }
-
     // T R E E B O L I C   M O D E L
 
     /**
@@ -343,7 +343,7 @@ abstract class TreebolicBasicActivity protected constructor(
         style = params.getString(TreebolicIface.ARG_STYLE)
         urlScheme = params.getString(TreebolicIface.ARG_URLSCHEME)
         @Suppress("DEPRECATION")
-        parentActivity = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+        parentActivityIntentArg = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
             params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY, Intent::class.java) else
             params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY)
         @Suppress("DEPRECATION")
