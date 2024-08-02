@@ -350,7 +350,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
     /**
      * Update button visibility
      */
-    protected fun updateButton() {
+    protected open fun updateButton() {
         val button = findViewById<ImageButton>(R.id.treebolicButton)
         if (button != null) {
             val sourceSet = sourceSet(this)
