@@ -1,70 +1,58 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
+package treebolic.provider
 
-package treebolic.provider;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.util.Base64;
-
-import java.io.ByteArrayOutputStream;
-
-import androidx.annotation.NonNull;
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffXfermode
+import android.graphics.Rect
+import android.util.Base64
+import java.io.ByteArrayOutputStream
 
 /**
  * Image utilities
  *
- * @author <a href="mailto:1313ou@gmail.com">Bernard Bou</a>
+ * @author [Bernard Bou](mailto:1313ou@gmail.com)
  */
-@SuppressWarnings("WeakerAccess")
-public class Utils
-{
-	static private Bitmap bytesToImage(@NonNull final byte[] imageBytes)
-	{
-		return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-	}
+object Utils {
 
-	static public Bitmap roundCrop(@NonNull final Bitmap bitmap)
-	{
-		final int w = bitmap.getWidth();
-		final int h = bitmap.getHeight();
-		final Bitmap output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-		final Canvas canvas = new Canvas(output);
-		canvas.drawARGB(0, 0, 0, 0);
-		final Rect rect = new Rect(0, 0, w, h);
+    private fun bytesToImage(imageBytes: ByteArray): Bitmap {
+        return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+    }
 
-		final int color = 0xff808080;
-		final Paint paint = new Paint();
-		paint.setAntiAlias(true);
-		paint.setColor(color);
-		canvas.drawCircle(h / 2F, h / 2F, h / 2F, paint);    // canvas.drawRoundRect(rect, roundPx, roundPx, paint);
+    fun roundCrop(bitmap: Bitmap): Bitmap {
+        val w = bitmap.width
+        val h = bitmap.height
+        val output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(output)
+        canvas.drawARGB(0, 0, 0, 0)
+        val rect = Rect(0, 0, w, h)
 
-		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-		canvas.drawBitmap(bitmap, rect, rect, paint);
+        val color = -0x7f7f80
+        val paint = Paint()
+        paint.isAntiAlias = true
+        paint.color = color
+        canvas.drawCircle(h / 2f, h / 2f, h / 2f, paint) // canvas.drawRoundRect(rect, roundPx, roundPx, paint);
 
-		return output;
-	}
+        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
+        canvas.drawBitmap(bitmap, rect, rect, paint)
 
-	static public Bitmap scale(@NonNull final Bitmap bitmap, int w, int h)
-	{
-		return Bitmap.createScaledBitmap(bitmap, w, h, false);
-	}
+        return output
+    }
 
-	@NonNull
-	static String bitmapToUrl(@NonNull final Bitmap bitmap)
-	{
-		final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-		bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-		final byte[] byteArray = byteArrayOutputStream.toByteArray();
-		final String imageBase64 = Base64.encodeToString(byteArray, Base64.DEFAULT);
-		return "data:image/png;base64," + imageBase64;
+    fun scale(bitmap: Bitmap, w: Int, h: Int): Bitmap {
+        return Bitmap.createScaledBitmap(bitmap, w, h, false)
+    }
 
-		// webview.loadUrl(dataURL); //pass the bitmap base64 dataUrl in URL parameter
-	}
+    fun bitmapToUrl(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray = byteArrayOutputStream.toByteArray()
+        val imageBase64 = Base64.encodeToString(byteArray, Base64.DEFAULT)
+        return "data:image/png;base64,$imageBase64"
+    }
 }
