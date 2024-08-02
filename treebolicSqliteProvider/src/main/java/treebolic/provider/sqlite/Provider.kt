@@ -1,7 +1,6 @@
 /*
  * Copyright (c) 2023. Bernard Bou
  */
-
 /*
   Title : Treebolic SQL provider
   Description : Treebolic SQL provider
@@ -10,205 +9,138 @@
   Terms of use : see license agreement at http://treebolic.sourceforge.net/en/license.htm
   Author : Bernard Bou
  */
-package treebolic.provider.sqlite;
+package treebolic.provider.sqlite
 
-import android.annotation.SuppressLint;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
-
-import java.util.Properties;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import treebolic.provider.sql.AbstractProvider;
+import android.annotation.SuppressLint
+import android.database.SQLException
+import android.database.sqlite.SQLiteDatabase
+import treebolic.provider.sql.AbstractProvider
+import treebolic.provider.sqlite.Provider.AndroidCursor
+import treebolic.provider.sqlite.Provider.AndroidDatabase
+import java.util.Properties
 
 /**
  * Provider for SQL
  *
  * @author Bernard Bou
  */
-public class Provider extends AbstractProvider<Provider.AndroidDatabase, Provider.AndroidCursor, SQLException>
-{
-	static class AndroidCursor implements AbstractProvider.Cursor<SQLException>
-	{
-		@Nullable
-		private final android.database.Cursor cursor;
+class Provider : AbstractProvider<AndroidDatabase, AndroidCursor?, SQLException?>() {
 
-		/**
-		 * Constructor
-		 *
-		 * @param cursor android cursor
-		 */
-		@SuppressWarnings("WeakerAccess")
-		public AndroidCursor(@Nullable final android.database.Cursor cursor)
-		{
-			this.cursor = cursor;
-		}
+    class AndroidCursor
+    /**
+     * Constructor
+     *
+     * @param cursor android cursor
+     */(private val cursor: android.database.Cursor?) : Cursor<SQLException?> {
 
-		@Override
-		public void close()
-		{
-			if (this.cursor != null)
-			{
-				try
-				{
-					this.cursor.close();
-				}
-				catch (SQLException e)
-				{
-					//
-					e.printStackTrace();
-				}
-			}
-		}
+        override fun close() {
+            if (cursor != null) {
+                try {
+                    cursor.close()
+                } catch (e: SQLException) {
+                    e.printStackTrace()
+                }
+            }
+        }
 
-		@SuppressWarnings("RedundantThrows")
-		@Override
-		public boolean moveToNext() throws SQLException
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.moveToNext();
-		}
+        @Throws(SQLException::class)
+        override fun moveToNext(): Boolean {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.moveToNext()
+        }
 
-		@Override
-		public int getPosition() throws SQLException
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getPosition();
-		}
+        @Throws(SQLException::class)
+        override fun getPosition(): Int {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.position
+        }
 
-		@Override
-		public int getColumnIndex(@NonNull final String columnName)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getColumnIndex(columnName);
-		}
+        override fun getColumnIndex(columnName: String): Int {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.getColumnIndex(columnName)
+        }
 
-		@Override
-		public boolean isNull(final int columnIndex)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.isNull(columnIndex);
-		}
+        override fun isNull(columnIndex: Int): Boolean {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.isNull(columnIndex)
+        }
 
-		@Override
-		public String getString(final int columnIndex)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getString(columnIndex);
-		}
+        override fun getString(columnIndex: Int): String {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.getString(columnIndex)
+        }
 
-		@NonNull
-		@SuppressWarnings("boxing")
-		@Override
-		public Integer getInt(final int columnIndex)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getInt(columnIndex);
-		}
+        override fun getInt(columnIndex: Int): Int {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.getInt(columnIndex)
+        }
 
-		@NonNull
-		@SuppressWarnings("boxing")
-		@Override
-		public Float getFloat(final int columnIndex)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getFloat(columnIndex);
-		}
+        override fun getFloat(columnIndex: Int): Float {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.getFloat(columnIndex)
+        }
 
-		@NonNull
-		@SuppressWarnings("boxing")
-		@Override
-		public Double getDouble(final int columnIndex)
-		{
-			if (this.cursor == null)
-			{
-				throw new SQLException("Null database");
-			}
-			return this.cursor.getDouble(columnIndex);
-		}
-	}
+        override fun getDouble(columnIndex: Int): Double {
+            if (cursor == null) {
+                throw SQLException("Null database")
+            }
+            return cursor.getDouble(columnIndex)
+        }
+    }
 
-	static class AndroidDatabase implements AbstractProvider.Database<AndroidCursor, SQLException>
-	{
-		@Nullable
-		private SQLiteDatabase db;
+    class AndroidDatabase(databasePath: String) : Database<AndroidCursor?, SQLException?> {
 
-		@SuppressWarnings("WeakerAccess")
-		public AndroidDatabase(@NonNull final String databasePath)
-		{
-			// path
-			System.out.println("Sqlite path: " + databasePath);
+        private var db: SQLiteDatabase? = null
 
-			try
-			{
-				// connect
-				this.db = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS | SQLiteDatabase.OPEN_READONLY);
+        init {
+            // path
+            println("Sqlite path: $databasePath")
 
-			}
-			catch (@NonNull final SQLException e)
-			{
-				this.db = null;
-				System.err.println("Sqlite exception : " + e.getMessage());
-			}
-		}
+            try {
+                // connect
+                db = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS or SQLiteDatabase.OPEN_READONLY)
+            } catch (e: SQLException) {
+                db = null
+                System.err.println("Sqlite exception : " + e.message)
+            }
+        }
 
-		@Override
-		public void close()
-		{
-			if (this.db != null)
-			{
-				try
-				{
-					this.db.close();
-				}
-				catch (SQLException e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
+        override fun close() {
+            if (db != null) {
+                try {
+                    db!!.close()
+                } catch (e: SQLException) {
+                    e.printStackTrace()
+                }
+            }
+        }
 
-		@Nullable
-		@Override
-		public AndroidCursor query(@NonNull final String sql) throws SQLException
-		{
-			if (this.db == null)
-			{
-				return null;
-			}
+        @Throws(SQLException::class)
+        override fun query(sql: String): AndroidCursor? {
+            if (db == null) {
+                return null
+            }
+            @SuppressLint("Recycle") val cursor = db!!.rawQuery(sql, null)
+            return AndroidCursor(cursor)
+        }
+    }
 
-			@SuppressLint("Recycle") final android.database.Cursor cursor = this.db.rawQuery(sql, null);
-			return new AndroidCursor(cursor);
-		}
-	}
-
-	@NonNull
-	@Override
-	protected AndroidDatabase openDatabase(@NonNull final Properties properties)
-	{
-		final String database = makeDatabasePath(properties);
-		return new AndroidDatabase(database);
-	}
+    override fun openDatabase(properties: Properties): AndroidDatabase {
+        val database = makeDatabasePath(properties)
+        return AndroidDatabase(database)
+    }
 }
