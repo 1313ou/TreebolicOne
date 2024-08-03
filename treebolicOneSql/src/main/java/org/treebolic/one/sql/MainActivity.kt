@@ -379,12 +379,8 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
 
     companion object {
 
-        /**
-         * Log tag
-         */
         private const val TAG = "OneSQLMainA"
 
-        // T E S T
         // F O L D E R P R E F E R E N C E
         private const val PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder"
     }
