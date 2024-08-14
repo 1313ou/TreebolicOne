@@ -347,8 +347,8 @@ abstract class TreebolicBasicActivity protected constructor(
             params.getParcelable(TreebolicIface.ARG_PARENTACTIVITY)
 
         // base
-        Dialog.setBase(base)
-        Statusbar.setBase(base)
+        Dialog.base = base!!
+        Statusbar.base = base!!
     }
 
     // T R E E B O L I C   C O N T E X T
