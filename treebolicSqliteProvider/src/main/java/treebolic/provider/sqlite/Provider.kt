@@ -73,7 +73,7 @@ class Provider : AbstractProvider<AndroidDatabase, AndroidCursor?, SQLException?
             return cursor.isNull(columnIndex)
         }
 
-        override fun getString(columnIndex: Int): String {
+        override fun getString(columnIndex: Int): String? {
             if (cursor == null) {
                 throw SQLException("Null database")
             }
