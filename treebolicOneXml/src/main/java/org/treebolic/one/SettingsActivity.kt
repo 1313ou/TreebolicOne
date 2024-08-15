@@ -20,19 +20,7 @@ import org.treebolic.preference.OpenEditTextPreference.Companion.onDisplayPrefer
  *
  * @author Bernard Bou
  */
-object SettingsActivity : AppCompatCommonPreferenceActivity() {
-
-    // S U M M A R Y
-
-    /**
-     * Summary provider for string
-     */
-    private val STRING_SUMMARY_PROVIDER = SummaryProvider { preference: Preference ->
-        val context = preference.context
-        val sharedPrefs = checkNotNull(preference.sharedPreferences)
-        val value = sharedPrefs.getString(preference.key, null)
-        value ?: context.getString(R.string.pref_value_default)
-    }
+class SettingsActivity : AppCompatCommonPreferenceActivity() {
 
     // F R A G M E N T S
 
@@ -75,12 +63,18 @@ object SettingsActivity : AppCompatCommonPreferenceActivity() {
         }
 
         private fun setSummaryProvider(preference: Preference) {
-            if (preference is EditTextPreference) {
-                preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance())
-            } else if (preference is ListPreference) {
-                preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance())
-            } else {
-                preference.summaryProvider = STRING_SUMMARY_PROVIDER
+            when (preference) {
+                is EditTextPreference -> {
+                    preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance())
+                }
+
+                is ListPreference -> {
+                    preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance())
+                }
+
+                else -> {
+                    preference.summaryProvider = STRING_SUMMARY_PROVIDER
+                }
             }
         }
     }
@@ -104,6 +98,22 @@ object SettingsActivity : AppCompatCommonPreferenceActivity() {
             if (!onDisplayPreferenceDialog(this, preference)) {
                 super.onDisplayPreferenceDialog(preference)
             }
+        }
+    }
+
+
+    companion object {
+
+        // S U M M A R Y
+
+        /**
+         * Summary provider for string
+         */
+        private val STRING_SUMMARY_PROVIDER = SummaryProvider { preference: Preference ->
+            val context = preference.context
+            val sharedPrefs = checkNotNull(preference.sharedPreferences)
+            val value = sharedPrefs.getString(preference.key, null)
+            value ?: context.getString(R.string.pref_value_default)
         }
     }
 }
