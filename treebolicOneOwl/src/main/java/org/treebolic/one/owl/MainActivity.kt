@@ -211,7 +211,7 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         // base
         val base = Settings.getStringPref(this, TreebolicIface.PREF_IMAGEBASE)
         if (base != null) {
-            Dialog.setBase(base)
+            Dialog.base = base
             Statusbar.base = base
         }
     }
