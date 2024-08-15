@@ -134,7 +134,7 @@ class Provider : AbstractProvider<AndroidDatabase, AndroidCursor?, SQLException?
             if (db == null) {
                 return null
             }
-            @SuppressLint("Recycle") val cursor = db!!.rawQuery(sql, null)
+            val cursor = db!!.rawQuery(sql, null)
             return AndroidCursor(cursor)
         }
     }
