@@ -11,7 +11,6 @@
  */
 package treebolic.provider.sqlite
 
-import android.annotation.SuppressLint
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import treebolic.provider.sql.AbstractProvider

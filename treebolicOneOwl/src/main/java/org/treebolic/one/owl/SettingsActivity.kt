@@ -56,12 +56,18 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
         }
 
         private fun setSummaryProvider(preference: Preference) {
-            if (preference is EditTextPreference) {
-                preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance())
-            } else if (preference is ListPreference) {
-                preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance())
-            } else {
-                preference.summaryProvider = STRING_SUMMARY_PROVIDER
+            when (preference) {
+                is EditTextPreference -> {
+                    preference.setSummaryProvider(EditTextPreference.SimpleSummaryProvider.getInstance())
+                }
+
+                is ListPreference -> {
+                    preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance())
+                }
+
+                else -> {
+                    preference.summaryProvider = STRING_SUMMARY_PROVIDER
+                }
             }
         }
     }

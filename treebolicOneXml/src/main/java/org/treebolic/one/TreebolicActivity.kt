@@ -8,7 +8,6 @@ import android.content.Intent
 import android.widget.Toast
 import org.treebolic.TreebolicIface
 import org.treebolic.one.xml.R
-import java.util.Properties
 
 /**
  * Treebolic standard activity

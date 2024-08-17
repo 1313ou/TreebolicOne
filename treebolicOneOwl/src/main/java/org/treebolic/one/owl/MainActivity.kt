@@ -280,13 +280,11 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Initial folder
+     */
     private val folder: String
-        /**
-         * Get initial folder
-         *
-         * @return initial folder
-         */
-        get() {
+         get() {
             val folder = getFolder(this, PREF_CURRENTFOLDER)
             if (folder != null) {
                 return folder.path
