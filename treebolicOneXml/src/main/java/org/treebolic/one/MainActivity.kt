@@ -266,7 +266,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
      * @return build version
      */
     @SuppressLint("CommitPrefEdits", "ApplySharedPref")
-    private fun doOnUpgrade(key: String, runnable: Runnable): Long {
+    private fun doOnUpgrade(@Suppress("SameParameterValue") key: String, runnable: Runnable): Long {
 
         // first run of this version
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)

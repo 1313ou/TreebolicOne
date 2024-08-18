@@ -52,12 +52,12 @@ object Settings {
     /**
      * Mimetype preference name
      */
-    const val PREF_MIMETYPE: String = "pref_mimetype"
+    private const val PREF_MIMETYPE: String = "pref_mimetype"
 
     /**
      * File extensions preference name
      */
-    const val PREF_EXTENSIONS: String = "pref_extensions"
+    private const val PREF_EXTENSIONS: String = "pref_extensions"
 
     /**
      * URL scheme preference name

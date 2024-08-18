@@ -30,7 +30,6 @@ import com.bbou.rate.AppRate.invoke
 import com.bbou.rate.AppRate.rate
 import org.treebolic.AppCompatCommonActivity
 import org.treebolic.TreebolicIface
-import org.treebolic.filechooser.FileChooserActivity.Companion.getFolder
 import org.treebolic.filechooser.FileChooserActivity.Companion.setFolder
 import org.treebolic.guide.AboutActivity
 import org.treebolic.guide.HelpActivity
@@ -217,7 +216,7 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
      * @return build version
      */
     @SuppressLint("CommitPrefEdits", "ApplySharedPref")
-    private fun doOnUpgrade(key: String, runnable: Runnable): Long {
+    private fun doOnUpgrade(@Suppress("SameParameterValue") key: String, runnable: Runnable): Long {
         // first run of this version
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val version = try {
@@ -263,18 +262,6 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
     }
 
     /**
-     * Initial folder
-     */
-    private val folder: String
-        get() {
-            val folder = getFolder(this, PREF_CURRENTFOLDER)
-            if (folder != null) {
-                return folder.path
-            }
-            return getTreebolicStorage(this).absolutePath
-        }
-
-    /**
      * Set folder to parent of given uri
      *
      * @param fileUri uri
@@ -311,12 +298,13 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
     }
 
     // R E Q U E S T S ( S T A R T A C T I V I T Y )
+
     /**
      * Try to start Treebolic activity from source
      *
      * @param source0 source
      */
-    private fun tryStartTreebolic(source0: String?) {
+    private fun tryStartTreebolic(@Suppress("SameParameterValue") source0: String?) {
         val source = source0 ?: Settings.getStringPref(this, TreebolicIface.PREF_SOURCE)
         if (source.isNullOrEmpty()) {
             Toast.makeText(this, R.string.error_null_source, Toast.LENGTH_SHORT).show()
