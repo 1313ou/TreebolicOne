@@ -301,6 +301,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
     }
 
     // F R A G M E N T
+
     open class MainFragment : PlaceholderFragment(R.layout.fragment_main)
 
     /**

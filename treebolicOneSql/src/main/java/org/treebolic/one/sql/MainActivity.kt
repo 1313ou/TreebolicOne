@@ -250,19 +250,8 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         return build
     }
 
-    // S P E C I F I C R E T U R N S
-    /*
-	@Override
-	protected void onActivityResult(final int requestCode, final int resultCode, final Intent returnIntent)
-	{
-		// handle selection of input by other activity which returns selected input
-		if (requestCode == REQUEST_DOWNLOAD_CODE)
-		{
-		}
-		super.onActivityResult(requestCode, resultCode, returnIntent);
-	}
-	*/
     // F R A G M E N T
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -380,6 +369,7 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         private const val TAG = "OneSQLMainA"
 
         // F O L D E R P R E F E R E N C E
+
         private const val PREF_CURRENTFOLDER = "org.treebolic.one.sql.folder"
     }
 }
