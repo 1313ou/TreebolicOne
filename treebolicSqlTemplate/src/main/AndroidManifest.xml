@@ -24,28 +24,23 @@
 
 		<activity
 			android:name="org.treebolic.one.sql.TreebolicActivity"
-			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.sql.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.one.sql.SettingsActivity"
-			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.sql.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.one.sql.DownloadActivity"
-			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.sql.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.one.sql.PeekActivity"
-			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.sql.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.guide.HelpActivity"
-			android:parentActivityName="org.treebolic.one.sql.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.sql.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.guide.AboutActivity"

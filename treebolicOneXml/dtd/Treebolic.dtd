@@ -2,135 +2,38 @@
   - Copyright (c) 2022. Bernard Bou
   -->
 
-<!-- DTD for treebolic v 1.2 20151128 -->
+	<!-- DTD for treebolic v 1.2 20151128 -->
 
-<!ELEMENT treebolic (tree,tools?)>
-<!ATTLIST treebolic
-	toolbar (true|false) #IMPLIED
-	statusbar (true|false) #IMPLIED
-	popupmenu (true|false) #IMPLIED
-	content-format CDATA #IMPLIED
-	tooltip (true|false) #IMPLIED
-	tooltip-displays-content (true|false) #IMPLIED
-	focus-on-hover (true|false) #IMPLIED
-	focus IDREF #IMPLIED
-	xmoveto CDATA #IMPLIED
-	ymoveto CDATA #IMPLIED
-	xshift CDATA #IMPLIED
-	yshift CDATA #IMPLIED
->
+	<!ELEMENT treebolic (tree,tools?)><!ATTLIST treebolic	toolbar (true|false) #IMPLIED	statusbar (true|false) #IMPLIED	popupmenu (true|false) #IMPLIED	content-format CDATA #IMPLIED	tooltip (true|false) #IMPLIED	tooltip-displays-content (true|false) #IMPLIED	focus-on-hover (true|false) #IMPLIED	focus IDREF #IMPLIED	xmoveto CDATA #IMPLIED	ymoveto CDATA #IMPLIED	xshift CDATA #IMPLIED	yshift CDATA #IMPLIED>
 
-<!ELEMENT tree (img?,nodes,edges?)>
-<!ATTLIST tree
-	backcolor CDATA #IMPLIED
-	forecolor CDATA #IMPLIED
-	orientation CDATA #IMPLIED
-	expansion CDATA #IMPLIED
-	sweep CDATA #IMPLIED
-	preserve-orientation (true|false) #IMPLIED
-	fontface CDATA #IMPLIED
-	fontsize CDATA #IMPLIED
-	scalefonts CDATA #IMPLIED
-	fontscaler CDATA #IMPLIED
-	scaleimages CDATA #IMPLIED
-	imagescaler CDATA #IMPLIED
->
+	<!ELEMENT tree (img?,nodes,edges?)><!ATTLIST tree	backcolor CDATA #IMPLIED	forecolor CDATA #IMPLIED	orientation CDATA #IMPLIED	expansion CDATA #IMPLIED	sweep CDATA #IMPLIED	preserve-orientation (true|false) #IMPLIED	fontface CDATA #IMPLIED	fontsize CDATA #IMPLIED	scalefonts CDATA #IMPLIED	fontscaler CDATA #IMPLIED	scaleimages CDATA #IMPLIED	imagescaler CDATA #IMPLIED>
 
-<!ELEMENT nodes (img?,default.treeedge?,node)>
-<!ATTLIST nodes
-	backcolor CDATA #IMPLIED
-	forecolor CDATA #IMPLIED
-	border (true|false) #IMPLIED
-	ellipsize (true|false) #IMPLIED
->
+	<!ELEMENT nodes (img?,default.treeedge?,node)><!ATTLIST nodes	backcolor CDATA #IMPLIED	forecolor CDATA #IMPLIED	border (true|false) #IMPLIED	ellipsize (true|false) #IMPLIED>
 
-<!ELEMENT node (label?,content?,treeedge?,img?,a?,mountpoint?,node*)>
-<!ATTLIST node
-	id ID #REQUIRED
-	backcolor CDATA #IMPLIED
-	forecolor CDATA #IMPLIED
-	weight CDATA #IMPLIED
->
+	<!ELEMENT node (label?,content?,treeedge?,img?,a?,mountpoint?,node*)><!ATTLIST node	id ID #REQUIRED	backcolor CDATA #IMPLIED	forecolor CDATA #IMPLIED	weight CDATA #IMPLIED>
 
-<!ELEMENT label (#PCDATA)>
+	<!ELEMENT label (#PCDATA)>
 
-<!ELEMENT content (#PCDATA)>
+	<!ELEMENT content (#PCDATA)>
 
-<!ELEMENT a (#PCDATA)>
-<!ATTLIST a
-	href CDATA #REQUIRED
-	target CDATA #IMPLIED
->
+	<!ELEMENT a (#PCDATA)><!ATTLIST a	href CDATA #REQUIRED	target CDATA #IMPLIED>
 
-<!ELEMENT img (#PCDATA)>
-<!ATTLIST img
-	src CDATA #REQUIRED
->
+	<!ELEMENT img (#PCDATA)><!ATTLIST img	src CDATA #REQUIRED>
 
-<!ELEMENT mountpoint (a)>
-<!ATTLIST mountpoint
-	now (true|false) #IMPLIED
->
+	<!ELEMENT mountpoint (a)><!ATTLIST mountpoint	now (true|false) #IMPLIED>
 
-<!ELEMENT treeedge (label?,img?)>
-<!ATTLIST treeedge
-	color CDATA #IMPLIED
-	stroke CDATA #IMPLIED
-	toterminator (z|a|h|c|d|t|cf|df|tf) #IMPLIED
-	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	line (true|false) #IMPLIED
-	hidden (true|false) #IMPLIED
->
+	<!ELEMENT treeedge (label?,img?)><!ATTLIST treeedge	color CDATA #IMPLIED	stroke CDATA #IMPLIED	toterminator (z|a|h|c|d|t|cf|df|tf) #IMPLIED	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	line (true|false) #IMPLIED	hidden (true|false) #IMPLIED>
 
-<!ELEMENT edges (default.edge?,edge*)>
-<!ATTLIST edges
-	arcs (true|false) #IMPLIED
->
+	<!ELEMENT edges (default.edge?,edge*)><!ATTLIST edges	arcs (true|false) #IMPLIED>
 
-<!ELEMENT edge (label?,img?)>
-<!ATTLIST edge
-	from IDREF #REQUIRED
-	to IDREF #REQUIRED
-	color CDATA #IMPLIED
-	stroke CDATA #IMPLIED
-	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	line (true|false) #IMPLIED
-	hidden (true|false) #IMPLIED
->
+	<!ELEMENT edge (label?,img?)><!ATTLIST edge	from IDREF #REQUIRED	to IDREF #REQUIRED	color CDATA #IMPLIED	stroke CDATA #IMPLIED	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	line (true|false) #IMPLIED	hidden (true|false) #IMPLIED>
 
-<!ELEMENT default.treeedge (img?)>
-<!ATTLIST default.treeedge
-	color CDATA #IMPLIED
-	stroke CDATA #IMPLIED
-	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	line (true|false) #IMPLIED
-	hidden (true|false) #IMPLIED
->
+	<!ELEMENT default.treeedge (img?)><!ATTLIST default.treeedge	color CDATA #IMPLIED	stroke CDATA #IMPLIED	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	line (true|false) #IMPLIED	hidden (true|false) #IMPLIED>
 
-<!ELEMENT default.edge (img?)>
-<!ATTLIST default.edge
-	color CDATA #IMPLIED
-	stroke CDATA #IMPLIED
-	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED
-	line (true|false) #IMPLIED
-	hidden (true|false) #IMPLIED
->
+	<!ELEMENT default.edge (img?)><!ATTLIST default.edge	color CDATA #IMPLIED	stroke CDATA #IMPLIED	toterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	fromterminator (z|a|c|d|t|h|cf|df|tf) #IMPLIED	line (true|false) #IMPLIED	hidden (true|false) #IMPLIED>
 
-<!ELEMENT tools (menu?)>
-<!ATTLIST tools
->
+	<!ELEMENT tools (menu?)><!ATTLIST tools>
 
-<!ELEMENT menu (menuitem*)>
-<!ATTLIST menu
->
+	<!ELEMENT menu (menuitem*)><!ATTLIST menu>
 
-<!ELEMENT menuitem (label, a?)>
-<!ATTLIST menuitem
-	action (goto|search|focus|GOTO|SEARCH|FOCUS) #REQUIRED
-	match-target CDATA #IMPLIED
-	match-scope (label|content|link|id|LABEL|CONTENT|LINK|ID) #IMPLIED
-	match-mode (equals|startswith|includes|EQUALS|STARTSWITH|INCLUDES) #IMPLIED
->
+	<!ELEMENT menuitem (label, a?)><!ATTLIST menuitem	action (goto|search|focus|GOTO|SEARCH|FOCUS) #REQUIRED	match-target CDATA #IMPLIED	match-scope (label|content|link|id|LABEL|CONTENT|LINK|ID) #IMPLIED	match-mode (equals|startswith|includes|EQUALS|STARTSWITH|INCLUDES) #IMPLIED>

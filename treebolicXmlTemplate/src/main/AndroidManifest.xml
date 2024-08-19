@@ -24,33 +24,27 @@
 
 		<activity
 			android:name="org.treebolic.one.TreebolicActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.one.SettingsActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.one.DownloadActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.guide.HelpActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.guide.AboutActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 		<activity
 			android:name="org.treebolic.filechooser.FileChooserActivity"
-			android:parentActivityName="org.treebolic.one.MainActivity"
-			 />
+			android:parentActivityName="org.treebolic.one.MainActivity" />
 
 	</application>
 

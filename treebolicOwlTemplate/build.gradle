@@ -75,4 +75,4 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation "androidx.multidex:multidex:${multiDexVersion}"
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${desugaringVersion}"
- }
+}
