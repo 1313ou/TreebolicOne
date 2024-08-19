@@ -101,7 +101,6 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
         }
     }
 
-
     companion object {
 
         // S U M M A R Y

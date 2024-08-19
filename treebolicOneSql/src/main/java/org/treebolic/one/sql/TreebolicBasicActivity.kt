@@ -431,8 +431,8 @@ abstract class TreebolicBasicActivity protected constructor(
             val scope = sharedPrefs.getString(SearchSettings.PREF_SEARCH_SCOPE, SearchSettings.SCOPE_LABEL) // label, content, link, id
             if (SearchSettings.SCOPE_SOURCE == scope) {
                 Log.d(TAG, "Source \"$query\"")
-                 requery(query)
-                 return
+                requery(query)
+                return
             }
 
             // query applies to non-source scope (label, content, ..): tree search

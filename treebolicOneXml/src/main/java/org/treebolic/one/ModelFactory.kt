@@ -53,7 +53,7 @@ class ModelFactory(
 
     companion object {
 
-         private const val TAG = "OneModelFactory"
+        private const val TAG = "OneModelFactory"
 
         /**
          * Make base URL

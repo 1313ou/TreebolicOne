@@ -162,14 +162,17 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
                 tryStartTreebolic(null as String?)
                 return true
             }
+
             R.id.action_run_source -> {
                 requestTreebolicSource()
                 return true
             }
+
             R.id.action_run_bundle -> {
                 requestTreebolicBundle()
                 return true
             }
+
             R.id.action_builtin_data -> {
                 val archiveUri = copyAssetFile(this, Settings.DATA)
                 if (archiveUri != null) {
@@ -177,52 +180,64 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
                 }
                 return true
             }
+
             R.id.action_reset -> {
                 Settings.setDefaults(this)
                 expandZipAssetFile(this, "data.zip")
             }
+
             R.id.action_download -> {
                 val intent = Intent(this, DownloadActivity::class.java)
                 intent.putExtra(org.treebolic.download.DownloadActivity.ARG_ALLOW_EXPAND_ARCHIVE, true)
                 activityDownloadResultLauncher!!.launch(intent)
                 return true
             }
+
             R.id.action_settings -> {
                 tryStartTreebolicSettings()
                 return true
             }
+
             R.id.action_help -> {
                 startActivity(Intent(this, HelpActivity::class.java))
                 return true
             }
+
             R.id.action_tips -> {
                 show(supportFragmentManager)
                 return true
             }
+
             R.id.action_about -> {
                 startActivity(Intent(this, AboutActivity::class.java))
                 return true
             }
+
             R.id.action_others -> {
                 startActivity(Intent(this, OthersActivity::class.java))
                 return true
             }
+
             R.id.action_donate -> {
                 startActivity(Intent(this, DonateActivity::class.java))
                 return true
             }
+
             R.id.action_rate -> {
                 rate(this)
                 return true
             }
+
             R.id.action_app_settings -> {
                 Settings.applicationSettings(this, applicationContext.packageName)
                 return true
             }
+
             R.id.action_finish -> {
                 finish()
                 return true
             }
+
             R.id.action_kill -> {
                 Process.killProcess(Process.myPid())
                 return true
