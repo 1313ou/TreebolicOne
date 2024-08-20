@@ -107,14 +107,12 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
      * Save truncate
      */
     private fun saveWhere() {
-        // System.out.println("source " + this.source);
         if (this.source != null) {
             val fields = source!!.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
             if (fields.size > 1) {
                 var where = fields[1]
                 if (where.startsWith("where:")) {
                     where = where.substring(6)
-                    // System.out.println("narrowing:" + restrict);
                     putStringPref(this, Settings.PREF_TRUNCATE, where)
                 }
             }

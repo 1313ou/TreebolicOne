@@ -290,7 +290,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         } catch (e: ClassCastException) {
             prefs.getInt(key, -1).toLong()
         }
-        var build: Long = 0 //BuildConfig.VERSION_CODE;
+        var build: Long = 0
         try {
             val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) //
                 this.packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
@@ -495,7 +495,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
      */
     private fun tryStartTreebolicBundle(archiveUri: Uri, zipEntry: String) {
         Log.d(TAG, "Start treebolic from bundle uri $archiveUri and zipentry $zipEntry")
-        val source = zipEntry // alternatively: "jar:" + fileUri.toString() + "!/" + zipEntry;
+        val source = zipEntry // alternatively: "jar:" + fileUri.toString() + "!/" + zipEntry
 
         val provider = Settings.getStringPref(this, Settings.PREF_PROVIDER)
         val base = "jar:$archiveUri!/"

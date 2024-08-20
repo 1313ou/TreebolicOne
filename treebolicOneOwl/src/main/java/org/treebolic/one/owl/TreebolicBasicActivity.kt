@@ -382,12 +382,12 @@ abstract class TreebolicBasicActivity protected constructor(
     }
 
     override fun warn(message: String) {
-        // toast(message, Toast.LENGTH_LONG);
+        // toast(message, Toast.LENGTH_LONG)
         snackbar(message, Snackbar.LENGTH_LONG)
     }
 
     override fun status(message: String) {
-        // toast(message, Toast.LENGTH_SHORT);
+        // toast(message, Toast.LENGTH_SHORT)
         snackbar(message, Snackbar.LENGTH_SHORT)
     }
 
