@@ -61,8 +61,8 @@ class Provider2 : BaseProvider() {
          * @param ontologyUrlString ontology URL string
          * @return model if successful
          */
-        override fun makeModel(ontologyUrlString: String): Model {
-            val model = super.makeModel(ontologyUrlString)
+        override fun makeModel(ontologyUrlString: String): Model? {
+            val model = super.makeModel(ontologyUrlString) ?: return null
             model.settings.fontSize = 12
             return Model(model.tree, model.settings, images2)
         }
