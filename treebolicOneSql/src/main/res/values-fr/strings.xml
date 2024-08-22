@@ -32,7 +32,7 @@
 	<string name="error_null_source">Source nulle</string>
 	<string name="error_null_zipentry">Entrée zip nulle</string>
 	<string name="error_null_model" tools:keep="@string/error_null_model">Modèle null</string>
-	<string name="error_null_data">Données  nulles</string>
+	<string name="error_null_data">Données nulles</string>
 	<string name="error_link">Error de lien</string>
 	<string name="error_query" tools:keep="@string/error_query">Error dans la requête</string>
 

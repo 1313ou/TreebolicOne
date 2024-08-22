@@ -352,9 +352,9 @@ abstract class TreebolicBasicActivity protected constructor(
             params.getParcelable(TreebolicIface.ARG_MORE)
     }
 
-    // T R E E B O L I C    C O N T E X T
+    // T R E E B O L I C   C O N T E X T
 
-    override fun linkTo(url: String, target: String): Boolean {
+    override fun linkTo(url: String, target: String?): Boolean {
         // if url is handled by client, return query to client, which will handle it by initiating another query
         if (urlScheme != null && url.startsWith(urlScheme!!)) {
             val source2 = url.substring(urlScheme!!.length)
