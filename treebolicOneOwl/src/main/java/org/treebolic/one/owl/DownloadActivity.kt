@@ -26,8 +26,8 @@ class DownloadActivity : org.treebolic.download.DownloadActivity() {
 
         // parameters
         expandArchiveCheckbox!!.visibility = View.VISIBLE
-        this.downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD)
-        if (this.downloadUrl == null || downloadUrl!!.isEmpty()) {
+        downloadUrl = Settings.getStringPref(this, Settings.PREF_DOWNLOAD)
+        if (downloadUrl == null || downloadUrl!!.isEmpty()) {
             Toast.makeText(this, R.string.error_null_download_url, Toast.LENGTH_SHORT).show()
             finish()
         }
@@ -47,12 +47,12 @@ class DownloadActivity : org.treebolic.download.DownloadActivity() {
     override fun process(inputStream: InputStream): Boolean {
         val storage = getTreebolicStorage(this)
 
-        if (this.expandArchive) {
+        if (expandArchive) {
             expand(inputStream, getTreebolicStorage(this), false)
             return true
         }
 
-        val downloadUri = Uri.parse(this.downloadUrl)
+        val downloadUri = Uri.parse(downloadUrl)
         val lastSegment = downloadUri.lastPathSegment ?: return false
         val destFile = File(storage, lastSegment)
         copy(inputStream, destFile)
