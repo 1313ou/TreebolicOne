@@ -34,7 +34,7 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
         super.onCreate(savedInstanceState)
 
         // restoring status
-        this.restoring = savedInstanceState != null
+        restoring = savedInstanceState != null
     }
 
     public override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -42,15 +42,15 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
         super.onRestoreInstanceState(savedInstanceState)
 
         // restore
-        this.source = savedInstanceState.getString(TreebolicIface.ARG_SOURCE)
+        source = savedInstanceState.getString(TreebolicIface.ARG_SOURCE)
     }
 
-    public override fun onSaveInstanceState(savedInstanceState: Bundle) {
+    public override fun onSaveInstanceState(outState: Bundle) {
         // save
-        savedInstanceState.putString(TreebolicIface.ARG_SOURCE, this.source)
+        outState.putString(TreebolicIface.ARG_SOURCE, source)
 
         // always call the superclass so it can save the view hierarchy state
-        super.onSaveInstanceState(savedInstanceState)
+        super.onSaveInstanceState(outState)
     }
 
     // T R E E B O L I C C O N T E X T
@@ -58,12 +58,12 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
     override fun makeParameters(): Properties? {
         val parameters = super.makeParameters()
 
-        if (this.source != null) {
-            parameters!!.setProperty("source", this.source)
-            parameters.setProperty("doc", this.source)
+        if (source != null) {
+            parameters!!.setProperty("source", source)
+            parameters.setProperty("doc", source)
         }
-        if (this.providerName != null) {
-            parameters!!.setProperty("provider", this.providerName)
+        if (providerName != null) {
+            parameters!!.setProperty("provider", providerName)
         }
         return parameters
     }
@@ -77,9 +77,9 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
      */
     override fun unmarshalArgs(intent: Intent) {
         val params = checkNotNull(intent.extras)
-        this.providerName = params.getString(TreebolicIface.ARG_PROVIDER)
-        if (!this.restoring) {
-            this.source = params.getString(TreebolicIface.ARG_SOURCE)
+        providerName = params.getString(TreebolicIface.ARG_PROVIDER)
+        if (!restoring) {
+            source = params.getString(TreebolicIface.ARG_SOURCE)
         }
 
         // super
