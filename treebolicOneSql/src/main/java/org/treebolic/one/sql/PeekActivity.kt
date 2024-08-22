@@ -64,7 +64,7 @@ class PeekActivity : AppCompatCommonActivity() {
 
         // create provider
         val provider = Provider()
-        provider.setContext(this.providerContext)
+        provider.setContext(providerContext)
         provider.setLocator(null)
         provider.setHandle(null)
 
