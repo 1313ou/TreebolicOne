@@ -82,7 +82,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         initialize()
 
         // activity file result launcher
-        this.activityFileResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+        activityFileResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             val success = result.resultCode == RESULT_OK
             if (success) {
                 // handle selection of input by other activity which returns selected input
@@ -115,7 +115,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         }
 
         // activity download result launcher
-        this.activityDownloadResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { }
+        activityDownloadResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { }
 
         // layout
         setContentView(R.layout.activity_main)
@@ -293,8 +293,8 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         var build: Long = 0
         try {
             val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) //
-                this.packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
-                this.packageManager.getPackageInfo(packageName, 0)
+                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
+                packageManager.getPackageInfo(packageName, 0)
 
             @Suppress("DEPRECATION")
             build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) //
@@ -322,13 +322,10 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
     /**
      * A placeholder fragment containing a simple view.
      */
-    abstract class PlaceholderFragment
-    /**
-     * Constructor
-     */(@param:LayoutRes private val layoutId: Int) : Fragment() {
+    abstract class PlaceholderFragment(@param:LayoutRes private val layoutId: Int) : Fragment() {
 
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-            return inflater.inflate(this.layoutId, container, false)
+            return inflater.inflate(layoutId, container, false)
         }
     }
 
