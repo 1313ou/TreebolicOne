@@ -64,7 +64,7 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         invoke(this)
 
         // activity result launcher
-        this.activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { }
+        activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { }
 
         // layout
         setContentView(R.layout.activity_main)
@@ -240,8 +240,8 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         var build: Long = 0
         try {
             val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) //
-                this.packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
-                this.packageManager.getPackageInfo(packageName, 0)
+                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
+                packageManager.getPackageInfo(packageName, 0)
 
             @Suppress("DEPRECATION")
             build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) //

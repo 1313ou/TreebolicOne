@@ -40,8 +40,8 @@ class ModelFactory(
      */
     fun make(source: String?, base: String?, imageBase: String?, settings: String?): Model? {
         // provider
-        provider.setContext(this.providerContext)
-        provider.setLocator(this.context)
+        provider.setContext(providerContext)
+        provider.setLocator(context)
         provider.setHandle(null)
 
         // model
