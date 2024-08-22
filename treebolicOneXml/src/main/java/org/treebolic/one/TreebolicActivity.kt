@@ -21,21 +21,21 @@ class TreebolicActivity : TreebolicSourceActivity(R.menu.treebolic) {
     override fun query() {
 
         // sanity check
-        if (this.providerName == null && this.source == null) {
+        if (providerName == null && source == null) {
             Toast.makeText(this, R.string.error_null_data, Toast.LENGTH_LONG).show()
             finish()
             return
         }
 
         // query
-        widget!!.init(this.providerName, this.source)
+        widget!!.init(providerName, source)
     }
 
-    override fun requery(source: String?) {
-        if (source != null) {
-            this.source = if (source.endsWith(".xml")) source else "$source.xml"
+    override fun requery(newSource: String?) {
+        if (newSource != null) {
+            source = if (newSource.endsWith(".xml")) newSource else "$newSource.xml"
         }
-        widget!!.reinit(this.source)
+        widget!!.reinit(newSource)
     }
 
     companion object {
