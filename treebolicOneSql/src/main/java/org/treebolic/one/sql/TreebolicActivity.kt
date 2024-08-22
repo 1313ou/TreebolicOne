@@ -32,15 +32,17 @@ class TreebolicActivity : TreebolicSourceActivity(R.menu.treebolic) {
         widget!!.init(providerName, source)
     }
 
-    override fun requery(source: String) {
-        if (this.source != null) {
-            val fields0 = source.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            val fields = this.source!!.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            this.source = fields[0] + ',' + (if (fields0.size > 1) fields0[1] else source) + ','
-            Log.d(TAG, "New source: " + source + " saved:" + this.source)
+    override fun requery(newSource: String?) {
+        if (source != null) {
+            val fields = source!!.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+            val newFields = newSource?.split(",".toRegex())?.dropLastWhile { it.isEmpty() }?.toTypedArray()
+            if (newFields != null) {
+                source = fields[0] + ',' + (if (newFields.size > 1) newFields[1] else newSource) + ','
+            }
+            Log.d(TAG, "New source: $newSource saved:$source")
         }
         restoring = true
-        widget!!.reinit(source)
+        widget!!.reinit(newSource)
     }
 
     companion object {
