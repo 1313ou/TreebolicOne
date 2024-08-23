@@ -20,7 +20,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
         minSdkVersion rootProject.ext.minSdkVersion
-        minSdkVersion 24
+        minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
