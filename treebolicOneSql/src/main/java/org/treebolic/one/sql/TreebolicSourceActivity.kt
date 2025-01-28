@@ -91,7 +91,7 @@ abstract class TreebolicSourceActivity(menuId0: Int) : TreebolicBasicActivity(me
      * @param intent intent
      */
     override fun unmarshalArgs(intent: Intent) {
-        val params = checkNotNull(intent.extras)
+        val params = intent.extras!!
         providerName = params.getString(TreebolicIface.ARG_PROVIDER)
         if (!restoring) {
             source = params.getString(TreebolicIface.ARG_SOURCE)

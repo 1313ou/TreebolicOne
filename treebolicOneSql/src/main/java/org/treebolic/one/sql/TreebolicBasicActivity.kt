@@ -62,7 +62,7 @@ abstract class TreebolicBasicActivity protected constructor(
         if (base != null) {
             try {
                 return URL(base)
-            } catch (ignored: MalformedURLException) {
+            } catch (_: MalformedURLException) {
                 //
             }
         }
@@ -78,7 +78,7 @@ abstract class TreebolicBasicActivity protected constructor(
         if (imagesBase != null) {
             try {
                 return URL(imagesBase)
-            } catch (ignored: MalformedURLException) {
+            } catch (_: MalformedURLException) {
                 //
             }
         }
@@ -333,7 +333,7 @@ abstract class TreebolicBasicActivity protected constructor(
      */
     protected open fun unmarshalArgs(intent: Intent) {
         // retrieve arguments
-        val params = checkNotNull(intent.extras)
+        val params = intent.extras!!
         params.classLoader = classLoader
 
         // retrieve arguments
@@ -375,7 +375,7 @@ abstract class TreebolicBasicActivity protected constructor(
             }
             startActivity(intent)
             return true
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
             Toast.makeText(this, R.string.error_link, Toast.LENGTH_LONG).show()
         }
         return false
@@ -491,7 +491,7 @@ abstract class TreebolicBasicActivity protected constructor(
     private fun closeKeyboard() {
         val view = currentFocus
         if (view != null) {
-            val imm = checkNotNull(getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager)
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }

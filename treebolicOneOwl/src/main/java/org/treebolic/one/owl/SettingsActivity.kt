@@ -30,7 +30,7 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
             addPreferencesFromResource(R.xml.pref_provider)
 
             // bind
-            val providerPreference = checkNotNull(findPreference(Settings.PREF_PROVIDER))
+            val providerPreference: Preference = findPreference(Settings.PREF_PROVIDER)!!
             providerPreference.summaryProvider = STRING_SUMMARY_PROVIDER
         }
     }
@@ -42,16 +42,16 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
             addPreferencesFromResource(R.xml.pref_data)
 
             // bind (can be either EditTextPreference or ListPreference or saving to string)
-            val sourcePreference = checkNotNull(findPreference(TreebolicIface.PREF_SOURCE))
+            val sourcePreference: Preference = findPreference(TreebolicIface.PREF_SOURCE)!!
             setSummaryProvider(sourcePreference)
 
-            val basePreference = checkNotNull(findPreference(TreebolicIface.PREF_BASE))
+            val basePreference: Preference = findPreference(TreebolicIface.PREF_BASE)!!
             setSummaryProvider(basePreference)
 
-            val imageBasePreference = checkNotNull(findPreference(TreebolicIface.PREF_IMAGEBASE))
+            val imageBasePreference: Preference = findPreference(TreebolicIface.PREF_IMAGEBASE)!!
             setSummaryProvider(imageBasePreference)
 
-            val settingsPreference = checkNotNull(findPreference(TreebolicIface.PREF_SETTINGS))
+            val settingsPreference: Preference = findPreference(TreebolicIface.PREF_SETTINGS)!!
             setSummaryProvider(settingsPreference)
         }
 
@@ -79,7 +79,7 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
             addPreferencesFromResource(R.xml.pref_download)
 
             // override
-            val preference = checkNotNull(findPreference<OpenEditTextPreference>(Settings.PREF_DOWNLOAD))
+            val preference: OpenEditTextPreference = findPreference(Settings.PREF_DOWNLOAD)!!
             preference.values = resources.getStringArray(R.array.pref_download_urls)
 
             // bind
@@ -101,10 +101,8 @@ class SettingsActivity : AppCompatCommonPreferenceActivity() {
          * Summary provider for string
          */
         private val STRING_SUMMARY_PROVIDER = SummaryProvider { preference: Preference ->
-            val context = preference.context
-            val sharedPrefs = checkNotNull(preference.sharedPreferences)
-            val value = sharedPrefs.getString(preference.key, null)
-            value ?: context.getString(R.string.pref_value_default)
+            val value = preference.sharedPreferences!!.getString(preference.key, null)
+            value ?: preference.context.getString(R.string.pref_value_default)
         }
     }
 }
