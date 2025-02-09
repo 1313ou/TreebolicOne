@@ -1,6 +1,14 @@
+/*
+ * Copyright (c) 2024. Bernard Bou <1313ou@gmail.com>
+ */
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+    ext {
+        kotlin_version = '2.0.21'
+    }
 
     repositories {
         mavenCentral()
@@ -9,8 +17,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2'
-        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.android.tools.build:gradle:8.8.0'
+        classpath 'com.google.gms:google-services:4.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -25,13 +34,22 @@ allprojects {
     ext {
         versionCode = 1
         versionName = '0.1'
-        minSdkVersion = 14
-        targetSdkVersion = 33
-        compileSdk = 34
-        treebolicVersion = '4.1-8'
+        minSdkVersion = 24
+        targetSdkVersion = 35
+        compileSdk = 35
+        coreVersion = "1.15.0"
+        appcompatVersion = "1.7.0"
+        treebolicVersion = "4.2-0"
         multiDexEnabled = true
-        desugaringVersion = "2.0.4"
+        desugaringVersion = "2.1.4"
         multiDexVersion = "2.0.1"
+    }
+
+    configurations.configureEach {
+        resolutionStrategy {
+            force("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
+            force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22")
+        }
     }
 
     gradle.projectsEvaluated {
