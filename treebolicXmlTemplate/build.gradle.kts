@@ -18,12 +18,12 @@ private val vTargetSdk by lazy { rootProject.extra["targetSdk"] as Int }
 
 android {
 
-    namespace = "org.treebolic.sql.template"
+    namespace = "org.treebolic.xml.template"
 
     compileSdk = vCompileSdk
 
     defaultConfig {
-        applicationId = "org.treebolic.sql.template"
+        applicationId = "org.treebolic.xml.template"
         versionCode = vCode
         versionName = vName
         minSdk = vMinSdk
@@ -62,7 +62,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":treebolicOneSql")) // for inclusion
+    implementation(project(":treebolicOneXml")) // for inclusion
     implementation(project(":guideLib"))
     implementation(project(":fileChooserLib")) // for manifest
 
