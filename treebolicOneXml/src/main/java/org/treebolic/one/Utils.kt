@@ -49,7 +49,7 @@ object Utils {
             val pluginContext = context.createPackageContext(pkg, Context.CONTEXT_INCLUDE_CODE or Context.CONTEXT_IGNORE_SECURITY)
             return PreferenceManager.getDefaultSharedPreferences(pluginContext)
         } catch (ignored: PackageManager.NameNotFoundException) {
-            //
+            
         }
         return null
     }

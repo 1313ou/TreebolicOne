@@ -10,8 +10,8 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
 }
 
-val keystorePropertiesFile = rootProject.file("keystore.properties")
-val keystoreProperties = Properties()
+val keystorePropertiesFile: File = rootProject.file("keystore.properties")
+val keystoreProperties: Properties = Properties()
 keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 private val vCode by lazy { rootProject.extra["versionCode"] as Int }
@@ -64,7 +64,7 @@ android {
         jvmTarget = "17"
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes.add("META-INF/DEPENDENCIES")
         }

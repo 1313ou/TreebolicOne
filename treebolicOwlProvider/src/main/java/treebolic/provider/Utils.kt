@@ -12,6 +12,7 @@ import android.graphics.PorterDuffXfermode
 import android.graphics.Rect
 import android.util.Base64
 import java.io.ByteArrayOutputStream
+import androidx.core.graphics.createBitmap
 
 /**
  * Image utilities
@@ -27,7 +28,7 @@ object Utils {
     fun roundCrop(bitmap: Bitmap): Bitmap {
         val w = bitmap.width
         val h = bitmap.height
-        val output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val output = createBitmap(w, h)
         val canvas = Canvas(output)
         canvas.drawARGB(0, 0, 0, 0)
         val rect = Rect(0, 0, w, h)
@@ -38,7 +39,7 @@ object Utils {
         paint.color = color
         canvas.drawCircle(h / 2f, h / 2f, h / 2f, paint) // canvas.drawRoundRect(rect, roundPx, roundPx, paint)
 
-        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
+        paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
         canvas.drawBitmap(bitmap, rect, rect, paint)
 
         return output

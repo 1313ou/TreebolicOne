@@ -64,7 +64,7 @@ class ModelFactory(
             try {
                 return URL(if (base != null && !base.endsWith("/")) "$base/" else base)
             } catch (ignored: MalformedURLException) {
-                //
+                
             }
             return null
         }

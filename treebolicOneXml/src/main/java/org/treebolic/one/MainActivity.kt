@@ -46,6 +46,8 @@ import org.treebolic.storage.Deployer.expandZipAssetFile
 import org.treebolic.storage.Storage.getTreebolicStorage
 import java.io.File
 import java.io.IOException
+import androidx.core.content.edit
+import androidx.core.net.toUri
 
 /**
  * Treebolic main activity (home)
@@ -132,9 +134,9 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
 
         // fragment
         if (savedInstanceState == null) {
-            supportFragmentManager //
-                .beginTransaction() //
-                .add(R.id.container, makeMainFragment()) //
+            supportFragmentManager 
+                .beginTransaction() 
+                .add(R.id.container, makeMainFragment()) 
                 .commit()
         }
     }
@@ -292,25 +294,26 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         }
         var build: Long = 0
         try {
-            val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) //
-                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
+            val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) 
+                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  
                 packageManager.getPackageInfo(packageName, 0)
 
             @Suppress("DEPRECATION")
-            build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) //
-                packageInfo.longVersionCode else  //
+            build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) 
+                packageInfo.longVersionCode else  
                 packageInfo.versionCode.toLong()
         } catch (ignored: PackageManager.NameNotFoundException) {
-            //
+            
         }
         if (version < build) {
-            val edit = prefs.edit()
+            prefs.edit {
 
-            // do job
-            runnable.run()
+                // do job
+                runnable.run()
 
-            // flag as 'has run'
-            edit.putLong(key, build).apply()
+                // flag as 'has run'
+                putLong(key, build)
+            }
         }
         return build
     }
@@ -385,7 +388,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         val extensionsArray = extensions?.split(",".toRegex())?.dropLastWhile { it.isEmpty() }?.toTypedArray()
 
         val intent = Intent(this, FileChooserActivity::class.java)
-        intent.setType(mimeType)
+        intent.type = mimeType
         intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_INITIAL_DIR, base)
         intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_EXTENSION_FILTER, extensionsArray)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
@@ -401,7 +404,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         val extensionsArray = arrayOf("zip", "jar")
 
         val intent = Intent(this, FileChooserActivity::class.java)
-        intent.setType(mimeType)
+        intent.type = mimeType
         intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_INITIAL_DIR, base)
         intent.putExtra(FileChooserActivity.ARG_FILECHOOSER_EXTENSION_FILTER, extensionsArray)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
@@ -531,7 +534,7 @@ open class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
             if (!source.isNullOrEmpty()) {
                 var baseFile: File? = null
                 if (base != null) {
-                    val baseUri = Uri.parse(base)
+                    val baseUri = base.toUri()
                     val path = baseUri.path
                     if (path != null) {
                         baseFile = File(path)

@@ -4,7 +4,6 @@
 package org.treebolic.one.sql
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Process
@@ -22,6 +21,8 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
 import com.google.android.material.snackbar.Snackbar
 import org.treebolic.AppCompatCommonActivity
@@ -63,7 +64,7 @@ abstract class TreebolicBasicActivity protected constructor(
             try {
                 return URL(base)
             } catch (_: MalformedURLException) {
-                //
+                
             }
         }
         return getURLPref(this, TreebolicIface.PREF_BASE)
@@ -79,7 +80,7 @@ abstract class TreebolicBasicActivity protected constructor(
             try {
                 return URL(imagesBase)
             } catch (_: MalformedURLException) {
-                //
+                
             }
         }
         return getURLPref(this, TreebolicIface.PREF_IMAGEBASE)
@@ -216,10 +217,11 @@ abstract class TreebolicBasicActivity protected constructor(
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val hasRun = prefs.getBoolean(Settings.PREF_FIRSTRUN, false)
         if (!hasRun) {
-            val edit = prefs.edit()
+            prefs.edit {
 
-            // flag as 'has run'
-            edit.putBoolean(Settings.PREF_FIRSTRUN, true).apply()
+                // flag as 'has run'
+                putBoolean(Settings.PREF_FIRSTRUN, true)
+            }
 
             // tips
             Tip.show(supportFragmentManager)
@@ -365,11 +367,11 @@ abstract class TreebolicBasicActivity protected constructor(
         // standard handling
         try {
             val intent = Intent(Intent.ACTION_VIEW)
-            val uri = Uri.parse(url)
+            val uri = url.toUri()
             val extension = MimeTypeMap.getFileExtensionFromUrl(uri.toString())
             val mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension)
             if (mimetype == null) {
-                intent.setData(uri)
+                intent.data = uri
             } else {
                 intent.setDataAndType(uri, mimetype)
             }

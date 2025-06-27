@@ -16,6 +16,8 @@ import java.io.File
 import java.net.MalformedURLException
 import java.net.URISyntaxException
 import java.net.URL
+import androidx.core.net.toUri
+import androidx.core.content.edit
 
 /**
  * Settings
@@ -77,11 +79,11 @@ object Settings {
     /**
      * Default CSS
      */
-    const val STYLE_DEFAULT: String = ".content { }\n" +  //
-            ".link {color: #FFA500;font-size: small;}\n" +  //
-            ".linking {color: #FFA500; font-size: small; }" +  //
-            ".mount {color: #CD5C5C; font-size: small;}" +  //
-            ".mounting {color: #CD5C5C; font-size: small; }" +  //
+    const val STYLE_DEFAULT: String = ".content { }\n" +  
+            ".link {color: #FFA500;font-size: small;}\n" +  
+            ".linking {color: #FFA500; font-size: small; }" +  
+            ".mount {color: #CD5C5C; font-size: small;}" +  
+            ".mounting {color: #CD5C5C; font-size: small; }" +  
             ".searching {color: #FF7F50; font-size: small; }"
 
     /**
@@ -110,20 +112,20 @@ object Settings {
 
         // preferences
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
-        val editor = sharedPref.edit()
+        sharedPref.edit(commit = true) {
 
-        editor.putString(PREF_PROVIDER, provider)
-        editor.putString(PREF_MIMETYPE, mime)
-        editor.putString(PREF_EXTENSIONS, extensions)
-        editor.putString(PREF_URLSCHEME, urlScheme)
+            putString(PREF_PROVIDER, provider)
+            putString(PREF_MIMETYPE, mime)
+            putString(PREF_EXTENSIONS, extensions)
+            putString(PREF_URLSCHEME, urlScheme)
 
-        editor.putString(TreebolicIface.PREF_SOURCE, source)
-        editor.putString(TreebolicIface.PREF_SETTINGS, settings)
+            putString(TreebolicIface.PREF_SOURCE, source)
+            putString(TreebolicIface.PREF_SETTINGS, settings)
 
-        editor.putString(TreebolicIface.PREF_BASE, treebolicBase)
-        editor.putString(TreebolicIface.PREF_IMAGEBASE, treebolicBase)
+            putString(TreebolicIface.PREF_BASE, treebolicBase)
+            putString(TreebolicIface.PREF_IMAGEBASE, treebolicBase)
 
-        editor.commit()
+        }
     }
 
     /**
@@ -136,7 +138,7 @@ object Settings {
     @SuppressLint("CommitPrefEdits", "ApplySharedPref")
     fun putStringPref(context: Context, key: String?, value: String?) {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
-        sharedPref.edit().putString(key, value).commit()
+        sharedPref.edit(commit = true) { putString(key, value) }
     }
 
     /**
@@ -147,7 +149,7 @@ object Settings {
      */
     fun clearPref(context: Context, key: String?) {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
-        sharedPref.edit().remove(key).apply()
+        sharedPref.edit { remove(key) }
     }
 
     /**
@@ -160,7 +162,7 @@ object Settings {
     @SuppressLint("CommitPrefEdits", "ApplySharedPref")
     fun putIntPref(context: Context, key: String?, value: Int) {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
-        sharedPref.edit().putInt(key, value).commit()
+        sharedPref.edit(commit = true) { putInt(key, value) }
     }
 
     /**
@@ -212,7 +214,7 @@ object Settings {
     private fun makeURL(url: String?): URL? {
         return try {
             URL(url)
-        } catch (ignored: MalformedURLException) {
+        } catch (_: MalformedURLException) {
             null
         }
     }
@@ -228,12 +230,12 @@ object Settings {
         val intent = Intent()
 
         if (apiLevel >= 9) {
-            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-            intent.setData(Uri.parse("package:$pkgName"))
+            intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+            intent.data = "package:$pkgName".toUri()
         } else {
             val appPkgName = if (apiLevel == 8) "pkg" else "com.android.settings.ApplicationPkgName"
 
-            intent.setAction(Intent.ACTION_VIEW)
+            intent.action = Intent.ACTION_VIEW
             intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails")
             intent.putExtra(appPkgName, pkgName)
         }
@@ -255,9 +257,9 @@ object Settings {
                 val url = URL(base)
                 val basedir = File(url.toURI())
                 return File(basedir, source)
-            } catch (ignored: URISyntaxException) {
-                //
-            } catch (ignored: MalformedURLException) {
+            } catch (_: URISyntaxException) {
+                
+            } catch (_: MalformedURLException) {
             }
         }
         return null
@@ -272,8 +274,8 @@ object Settings {
         val base = getStringPref(context, TreebolicIface.PREF_BASE)
         try {
             return URL(base)
-        } catch (ignored: MalformedURLException) {
-            //
+        } catch (_: MalformedURLException) {
+            
         }
         return null
     }

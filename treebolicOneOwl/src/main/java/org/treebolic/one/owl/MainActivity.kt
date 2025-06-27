@@ -40,6 +40,7 @@ import org.treebolic.storage.Storage.getTreebolicStorage
 import treebolic.glue.component.Dialog
 import treebolic.glue.component.Statusbar
 import java.io.File
+import androidx.core.content.edit
 
 /**
  * Treebolic main activity (home)
@@ -233,25 +234,26 @@ class MainActivity : AppCompatCommonActivity(), View.OnClickListener {
         }
         var build: Long = 0
         try {
-            val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) //
-                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  //
+            val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) 
+                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0)) else  
                 packageManager.getPackageInfo(packageName, 0)
 
             @Suppress("DEPRECATION")
-            build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) //
-                packageInfo.longVersionCode else  //
+            build = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) 
+                packageInfo.longVersionCode else  
                 packageInfo.versionCode.toLong()
         } catch (ignored: PackageManager.NameNotFoundException) {
-            //
+            
         }
         if (version < build) {
-            val edit = prefs.edit()
+            prefs.edit {
 
-            // do job
-            runnable.run()
+                // do job
+                runnable.run()
 
-            // flag as 'has run'
-            edit.putLong(key, build).apply()
+                // flag as 'has run'
+                putLong(key, build)
+            }
         }
         return build
     }
