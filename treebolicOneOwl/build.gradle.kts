@@ -28,13 +28,12 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
     }
 }
 
 configurations.implementation {
-    exclude(group= "org.apache.httpcomponents", module= "httpcore-osgi")
-    exclude(group= "org.apache.httpcomponents", module= "httpclient-osgi")
+    exclude(group = "org.apache.httpcomponents", module = "httpcore-osgi")
+    exclude(group = "org.apache.httpcomponents", module = "httpclient-osgi")
 }
 
 dependencies {
