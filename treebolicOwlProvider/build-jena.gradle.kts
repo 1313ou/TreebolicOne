@@ -25,6 +25,10 @@ android {
     }
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 dependencies {
     implementation "io.github.treebolic:treebolic-model:${treebolicVersion}"
     implementation "io.github.treebolic:treebolic-mutable:${treebolicVersion}"

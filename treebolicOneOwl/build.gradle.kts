@@ -28,7 +28,12 @@ android {
     }
 
     kotlinOptions {
+        
     }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 configurations.implementation {

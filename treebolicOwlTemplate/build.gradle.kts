@@ -61,6 +61,7 @@ android {
     }
 
     kotlinOptions {
+        
     }
 
     packaging {
@@ -68,6 +69,10 @@ android {
             excludes.add("META-INF/DEPENDENCIES")
         }
     }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 configurations.implementation {
