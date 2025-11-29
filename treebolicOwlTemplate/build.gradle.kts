@@ -60,10 +60,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        
-    }
-
     packaging {
         resources {
             excludes.add("META-INF/DEPENDENCIES")
